@@ -41,6 +41,7 @@
 **/*.sha256
 
 # Sub-workspaces are versioned by their own local repos.
+/growth/
 /producto/
 /saas/
 /tecnico/
