@@ -7,6 +7,15 @@ umask 077
 RUN_ID="$(date +%Y%m%d-%H%M%S)"
 WORKSPACE="/home/salamirin/.openclaw/workspace"
 OPENCLAW_HOME="/home/salamirin/.openclaw"
+ENV_FILE="${OPENCLAW_HOME}/nightly-protection.env"
+
+if [[ -r "${ENV_FILE}" ]]; then
+  set -a
+  # shellcheck disable=SC1090
+  source "${ENV_FILE}"
+  set +a
+fi
+
 BACKUP_DIR="/home/salamirin/Backups/openclaw/nightly"
 LOG_DIR="${OPENCLAW_HOME}/logs/protection"
 PASSPHRASE_FILE="${OPENCLAW_HOME}/secrets/backup-encryption-openclaw-full-2026-06-01_16-22-56.passphrase"
