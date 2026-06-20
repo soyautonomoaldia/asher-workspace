@@ -14,7 +14,7 @@
 
 ## Local Security Tools
 
-- Personal Antivirus skill installed at `/home/salamirin/.openclaw/agents/main/agent/codex-home/skills/personal-antivirus`. Use it for conservative local-first triage of downloaded files, attachments, archives, scripts, binaries, installers, USB/imported files or anything Salva asks to scan before opening/executing. Do not upload files to VirusTotal or external services without explicit approval; prefer local scan, hash, static analysis and quarantine.
+- Personal Antivirus skill installed at `/home/salamirin/.openclaw/agents/main/agent/codex-home/skills/personal-antivirus`. Use it for conservative local-first triage of downloaded files, attachments, archives, scripts, binaries, installers, USB/imported files or anything Salva asks to scan before opening/executing. Do not upload files to VirusTotal or external services without explicit approval; prefer local scan, hash, static analysis, bundled YARA baseline rules, optional local ClamAV/YARA engines, and quarantine.
 
 ## nuevo_AD_V01
 
