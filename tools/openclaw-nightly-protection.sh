@@ -64,7 +64,7 @@ git_snapshot_repo() {
 
 run_git_layer() {
   echo "[$(date --iso-8601=seconds)] layer 1: git snapshots"
-  git_snapshot_repo "${WORKSPACE}" "workspace"
+  git_snapshot_repo "${WORKSPACE}" "asher-workspace"
   git_snapshot_repo "${WORKSPACE}/growth" "growth"
   git_snapshot_repo "${WORKSPACE}/saas" "saas"
   git_snapshot_repo "${WORKSPACE}/producto" "producto"
