@@ -12,6 +12,10 @@
 
 - Private Finance Copilot: Phase 1 only. Analysis, risk review, broker/tool evaluation, token-cost estimation and decision checklists. No autonomous trading or real-money order execution.
 
+## Local Security Tools
+
+- Personal Antivirus skill installed at `/home/salamirin/.openclaw/agents/main/agent/codex-home/skills/personal-antivirus`. Use it for conservative local-first triage of downloaded files, attachments, archives, scripts, binaries, installers, USB/imported files or anything Salva asks to scan before opening/executing. Do not upload files to VirusTotal or external services without explicit approval; prefer local scan, hash, static analysis and quarantine.
+
 ## nuevo_AD_V01
 
 - The active project reference is `nuevo_AD_V01`.
