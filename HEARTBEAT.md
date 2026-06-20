@@ -2,9 +2,20 @@
 
 ## Estado
 
-Heartbeat automatico desactivado por defecto.
+Heartbeat automatico nativo de OpenClaw desactivado por configuracion.
 
 Motivo: el heartbeat anterior interrumpia a Salva cada 2h y generaba ruido operativo.
+
+Heartbeat local determinista activo:
+
+- script: `tools/openclaw-local-heartbeat.sh`
+- systemd user timer: `openclaw-local-heartbeat.timer`
+- frecuencia: 1 vez al dia, despues del backup nocturno
+- siguiente horario previsto: 04:30 Europe/Madrid, con `RandomizedDelaySec=5m`
+- estado persistido: `memory/heartbeat-state.json`
+- log local: `/home/salamirin/.openclaw/logs/local-heartbeat.log`
+
+Nota tecnica: el gateway puede registrar `[heartbeat] started` al arrancar el modulo interno. Eso no equivale a una tarea programada si `openclaw cron status` muestra `nextWakeAtMs=null` y no hay jobs habilitados.
 
 ## Regla principal
 
@@ -12,9 +23,9 @@ El heartbeat no debe notificar si no hay una incidencia real.
 
 Un chequeo `OK` se registra, pero no interrumpe a Salva.
 
-## Politica silenciosa propuesta
+## Politica silenciosa activa
 
-Cuando se reactive, debe operar con estas reglas:
+Debe operar con estas reglas:
 
 - frecuencia maxima recomendada: 1 vez al dia;
 - canal: OpenClaw, no Telegram salvo urgencia real;
@@ -59,4 +70,4 @@ Si hay problema:
 
 ## Restriccion
 
-Este archivo define comportamiento. No reactiva el heartbeat por si solo.
+Este archivo define comportamiento. La ejecucion real depende del timer local `openclaw-local-heartbeat.timer`.
