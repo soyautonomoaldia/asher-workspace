@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AD Captura - Bandeja</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f4f5f7;
+      color: #1d2733;
+    }
+    .frame {
+      width: 1180px;
+      min-height: 760px;
+      padding: 44px;
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 28px;
+    }
+    .sidebar, .main, .card {
+      background: #ffffff;
+      border: 1px solid #d9dee6;
+      border-radius: 8px;
+      box-shadow: 0 8px 22px rgba(29, 39, 51, 0.06);
+    }
+    .sidebar {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 760;
+      font-size: 28px;
+      letter-spacing: 0;
+    }
+    .mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      background: #0f766e;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 18px;
+    }
+    .capture {
+      border: 0;
+      border-radius: 8px;
+      background: #0f766e;
+      color: #fff;
+      height: 56px;
+      font-size: 18px;
+      font-weight: 750;
+    }
+    .input-box {
+      border: 1px solid #d9dee6;
+      border-radius: 8px;
+      padding: 16px;
+      background: #f8fafb;
+      min-height: 118px;
+    }
+    .input-label {
+      color: #5d6978;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .input-text {
+      font-size: 18px;
+      line-height: 1.35;
+      color: #1d2733;
+    }
+    .nav {
+      display: grid;
+      gap: 10px;
+    }
+    .nav-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 15px;
+      border-radius: 8px;
+      background: #f8fafb;
+      color: #283544;
+      font-size: 17px;
+      font-weight: 640;
+    }
+    .nav-item.active {
+      background: #e7f4f1;
+      color: #0f5f59;
+    }
+    .count {
+      min-width: 30px;
+      height: 28px;
+      border-radius: 14px;
+      background: #dfe5ec;
+      display: grid;
+      place-items: center;
+      font-size: 14px;
+      font-weight: 750;
+    }
+    .main {
+      padding: 30px;
+    }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    h1 {
+      margin: 0 0 7px;
+      font-size: 34px;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      color: #5d6978;
+      font-size: 17px;
+    }
+    .status {
+      background: #fff7ed;
+      color: #9a3412;
+      border: 1px solid #fed7aa;
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-size: 15px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+    .card {
+      padding: 22px;
+      box-shadow: none;
+    }
+    .card.primary {
+      border-color: #99d5cd;
+      background: #fbfffe;
+    }
+    .card h2 {
+      margin: 0 0 12px;
+      font-size: 22px;
+      letter-spacing: 0;
+    }
+    .quote {
+      border-left: 4px solid #0f766e;
+      padding-left: 14px;
+      margin: 0 0 18px;
+      font-size: 18px;
+      line-height: 1.35;
+      color: #283544;
+    }
+    .detected {
+      display: grid;
+      gap: 9px;
+      margin: 16px 0;
+    }
+    .row {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 10px;
+      font-size: 16px;
+      line-height: 1.3;
+    }
+    .label {
+      color: #5d6978;
+      font-weight: 680;
+    }
+    .value {
+      color: #1d2733;
+      font-weight: 650;
+    }
+    .actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .btn {
+      border: 1px solid #cfd6df;
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 11px 16px;
+      font-weight: 760;
+      color: #283544;
+      font-size: 15px;
+    }
+    .btn.main-action {
+      background: #0f766e;
+      color: #ffffff;
+      border-color: #0f766e;
+    }
+    .note {
+      margin-top: 16px;
+      padding: 12px 14px;
+      background: #eef2f6;
+      border-radius: 8px;
+      color: #3c4858;
+      font-size: 15px;
+      font-weight: 650;
+    }
+    .mini-list {
+      display: grid;
+      gap: 12px;
+    }
+    .mini {
+      border: 1px solid #d9dee6;
+      border-radius: 8px;
+      padding: 15px;
+      background: #fff;
+    }
+    .mini-title {
+      font-size: 17px;
+      font-weight: 760;
+      margin-bottom: 5px;
+    }
+    .mini-copy {
+      font-size: 15px;
+      color: #5d6978;
+      line-height: 1.35;
+    }
+    .warn {
+      border-color: #fde68a;
+      background: #fffbeb;
+    }
+    .money {
+      border-color: #bbf7d0;
+      background: #f0fdf4;
+    }
+  </style>
+</head>
+<body>
+  <main class="frame">
+    <aside class="sidebar">
+      <div class="brand"><div class="mark">AD</div><div>AD Captura</div></div>
+      <button class="capture">+ Capturar</button>
+      <div class="input-box">
+        <div class="input-label">Entrada rapida</div>
+        <div class="input-text">Habla o escribe lo que no quieres olvidar.</div>
+      </div>
+      <nav class="nav">
+        <div class="nav-item active"><span>Bandeja</span><span class="count">6</span></div>
+        <div class="nav-item"><span>Hoy</span><span class="count">3</span></div>
+        <div class="nav-item"><span>Materiales</span><span class="count">2</span></div>
+        <div class="nav-item"><span>Cobros</span><span class="count">1</span></div>
+        <div class="nav-item"><span>Presupuestos</span><span class="count">1</span></div>
+        <div class="nav-item"><span>Dudosas</span><span class="count">2</span></div>
+      </nav>
+    </aside>
+
+    <section class="main">
+      <div class="topbar">
+        <div>
+          <h1>Bandeja de capturas</h1>
+          <div class="subtitle">Revisa lo importante antes de que se pierda.</div>
+        </div>
+        <div class="status">No hay acciones externas</div>
+      </div>
+
+      <div class="grid">
+        <article class="card primary">
+          <h2>Visita pendiente</h2>
+          <p class="quote">"Manana nueve volver a Carmen, fuga bajo fregadero, llevar sifon y revisar presion."</p>
+          <div class="detected">
+            <div class="row"><div class="label">Cliente</div><div class="value">Carmen</div></div>
+            <div class="row"><div class="label">Trabajo</div><div class="value">Fuga bajo fregadero</div></div>
+            <div class="row"><div class="label">Momento</div><div class="value">Manana 09:00</div></div>
+            <div class="row"><div class="label">Material</div><div class="value">Sifon</div></div>
+            <div class="row"><div class="label">Tarea</div><div class="value">Revisar presion</div></div>
+          </div>
+          <div class="actions">
+            <button class="btn main-action">Confirmar</button>
+            <button class="btn">Editar</button>
+            <button class="btn">Descartar</button>
+          </div>
+          <div class="note">Guardado para revisar despues. No se ha enviado nada.</div>
+        </article>
+
+        <div class="mini-list">
+          <article class="mini">
+            <div class="mini-title">Material pendiente</div>
+            <div class="mini-copy">Comprar dos llaves de paso de media para Pilar antes del jueves.</div>
+          </article>
+          <article class="mini money">
+            <div class="mini-title">Cobro pendiente</div>
+            <div class="mini-copy">Reclamar a Javi los 180 de la reparacion de ayer. AD no cobra ni envia mensajes.</div>
+          </article>
+          <article class="mini">
+            <div class="mini-title">Presupuesto pendiente</div>
+            <div class="mini-copy">Lavabo pequeno para Ines, maximo 300. AD no genera presupuesto legal.</div>
+          </article>
+          <article class="mini warn">
+            <div class="mini-title">Necesita revisar</div>
+            <div class="mini-copy">Demasiados frentes en una captura. Mejor dividirla en varias tarjetas.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

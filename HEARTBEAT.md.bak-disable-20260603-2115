@@ -1,0 +1,16 @@
+# Heartbeat checklist
+
+When heartbeats run, keep this lightweight:
+
+- Check Telegram/OpenClaw health at most once every 2 hours, and only during allowed contact hours unless urgent.
+- Run `tools/openclaw-telegram-healthcheck.sh "2 hours ago"`.
+- If output is `CRITICAL`, send Salva a short Telegram alert with the cause and timestamp.
+- If output is `WARN`, record it in `memory/heartbeat-state.json` and only alert if it repeats twice.
+- If output is `OK`, stay quiet.
+
+Watch especially for:
+
+- Codex usage/rate limit errors.
+- Harness/model mismatch errors such as `Requested agent harness "codex" does not support ...`.
+- Telegram inbound messages followed by no outbound response.
+- Repeated gateway restarts.

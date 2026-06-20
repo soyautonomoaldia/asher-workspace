@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resumen visual - AD Captura Pack</title>
+  <style>
+    :root {
+      --ink: #18212f;
+      --muted: #586477;
+      --line: #d8dde7;
+      --paper: #f7f8fb;
+      --ok: #16845b;
+      --warn: #b36b00;
+      --stop: #b42318;
+      --blue: #2454b5;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.45;
+    }
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 18px 48px;
+    }
+    h1, h2, h3 { margin: 0; line-height: 1.15; }
+    h1 { font-size: 30px; }
+    h2 { font-size: 20px; margin-top: 28px; }
+    h3 { font-size: 16px; margin-bottom: 8px; }
+    p { margin: 8px 0 0; }
+    .top {
+      padding: 22px;
+      border: 1px solid var(--line);
+      background: white;
+      border-radius: 8px;
+    }
+    .label {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .card strong { display: block; margin-bottom: 6px; }
+    .muted { color: var(--muted); }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 13px;
+      background: #eaf7f1;
+      color: var(--ok);
+      margin-top: 10px;
+    }
+    .dot { width: 10px; height: 10px; border-radius: 50%; background: currentColor; }
+    .ok { color: var(--ok); }
+    .warn { color: var(--warn); }
+    .stop { color: var(--stop); }
+    .bar {
+      height: 10px;
+      background: #e7ebf2;
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+    .fill { height: 100%; background: var(--ok); }
+    .fill.warn { background: var(--warn); }
+    .fill.stop { background: var(--stop); }
+    ul { margin: 8px 0 0; padding-left: 18px; }
+    li { margin: 5px 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td {
+      text-align: left;
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+    th { background: #eef2f8; font-size: 13px; }
+    tr:last-child td { border-bottom: 0; }
+    .decision {
+      border-left: 5px solid var(--blue);
+      background: white;
+      padding: 16px;
+      border-radius: 8px;
+      margin-top: 12px;
+    }
+    .footer {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    @media (max-width: 720px) {
+      .grid, .grid.two { grid-template-columns: 1fr; }
+      h1 { font-size: 24px; }
+      main { padding: 18px 12px 36px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <section class="top">
+    <span class="label">nuevo_AD_V01 · AD Captura Pack</span>
+    <h1>Resumen visual del sign-off final</h1>
+    <p class="muted">Consolidado por Gael el 2026-06-08. Fase documental interna. No desbloquea validacion externa.</p>
+    <div class="pill"><span class="dot"></span> Veredicto: aprobar matriz como base interna estrecha</div>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <strong class="ok">Lo aprobado</strong>
+      <p>AD Captura Pack puede seguir como hipotesis documental estrecha.</p>
+    </div>
+    <div class="card">
+      <strong class="warn">Lo pendiente</strong>
+      <p>Buyer, canal, WTP, alternativa actual, metodo de prueba y consentimiento.</p>
+    </div>
+    <div class="card">
+      <strong class="stop">Lo prohibido</strong>
+      <p>Validacion externa, datos reales, pricing, build, integraciones y outreach.</p>
+    </div>
+  </section>
+
+  <h2>Semaforo De Owners</h2>
+  <table>
+    <tr><th>Owner</th><th>Area</th><th>Veredicto</th><th>Condicion clave</th></tr>
+    <tr><td>Asirin</td><td>Producto/scope</td><td class="ok">Aprueba</td><td>Solo captura simple y tarjeta accionable revisable.</td></tr>
+    <tr><td>Irinas</td><td>UX/confianza</td><td class="ok">Aprueba</td><td>Debe quedar claro que AD no envia, factura, cobra ni agenda.</td></tr>
+    <tr><td>Nathan</td><td>Datos/tecnica</td><td class="ok">Aprueba</td><td>Solo datos ficticios, sin backend, persistencia real ni integraciones.</td></tr>
+    <tr><td>Mercury</td><td>Metodo/evidencia</td><td class="ok">Aprueba</td><td>Es decision documental; no prueba mercado, WTP ni retencion.</td></tr>
+    <tr><td>Gael</td><td>Comercial</td><td class="ok">Aprueba</td><td>Gate interno estrecho, no permiso comercial u operativo.</td></tr>
+  </table>
+
+  <h2>Que Queda Realmente Aprobado</h2>
+  <div class="decision">
+    <h3>AD Captura Pack sigue vivo solo en esta forma:</h3>
+    <p><strong>Capturas simples de reparacion domestica sencilla que preparan acciones manuales internas mediante tarjetas revisables.</strong></p>
+    <p>No es ERP. No factura. No cumple VeriFactu. No envia WhatsApp. No agenda. No cobra. No sustituye a gestoría.</p>
+  </div>
+
+  <h2>Riesgos Criticos</h2>
+  <div class="grid two">
+    <div class="card">
+      <strong>Buyer</strong>
+      <p>El autonomo puede no pagar si lo ve como otra lista o si WhatsApp/notas ya le bastan.</p>
+      <div class="bar"><div class="fill warn" style="width: 70%"></div></div>
+    </div>
+    <div class="card">
+      <strong>Canal</strong>
+      <p>No hay canal defendible todavia. No se autoriza outreach, anuncios ni landing publica.</p>
+      <div class="bar"><div class="fill warn" style="width: 75%"></div></div>
+    </div>
+    <div class="card">
+      <strong>WTP</strong>
+      <p>9-19 EUR/mes y 19-39 EUR/mes son hipotesis privadas, no pricing aprobado.</p>
+      <div class="bar"><div class="fill warn" style="width: 65%"></div></div>
+    </div>
+    <div class="card">
+      <strong>Scope creep</strong>
+      <p>Si el valor exige factura, VeriFactu, WhatsApp real, calendario, fotos o pagos, hay que recortar o bloquear.</p>
+      <div class="bar"><div class="fill stop" style="width: 85%"></div></div>
+    </div>
+  </div>
+
+  <h2>No Desbloquea</h2>
+  <div class="grid">
+    <div class="card"><strong>Mercado</strong><p>No prueba demanda, canal, pago, retencion ni uso real.</p></div>
+    <div class="card"><strong>Operacion</strong><p>No permite usuarios reales, datos reales, outreach ni preventa.</p></div>
+    <div class="card"><strong>Producto</strong><p>No permite build operativo, backend, persistencia ni integraciones.</p></div>
+  </div>
+
+  <h2>Decision Para Salva</h2>
+  <div class="decision">
+    <p><strong>Recomendacion:</strong> aceptar el consolidado como cierre de la fase documental.</p>
+    <p><strong>Siguiente decision, si quieres avanzar:</strong> definir un metodo de prueba controlada, con target formal, buyer, canal, muestra, guion, datos permitidos/prohibidos, consentimiento, criterio de parada e invalidadores.</p>
+    <p><strong>No hacer todavia:</strong> build, pricing, outreach, usuarios reales, datos reales ni integraciones.</p>
+  </div>
+
+  <p class="footer">Fuente: `GAEL_CONSOLIDADO_SIGNOFF_MATRIZ_AD_CAPTURA_PACK_nuevo_AD_V01.md` y `SOURCE_OF_TRUTH_nuevo_AD_V01.md`.</p>
+</main>
+</body>
+</html>

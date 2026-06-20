@@ -1,0 +1,46 @@
+# Local/runtime state
+.clawhub/
+.openclaw/
+**/.openclaw/
+
+# Secrets and credentials
+**/.env
+**/.env.*
+**/*secret*
+**/*token*
+**/*credential*
+**/*auth*
+**/*.pem
+**/*.key
+**/*.p12
+**/*.pfx
+
+# Logs, caches, generated data
+**/*.log
+**/logs/
+**/.cache/
+**/cache/
+**/tmp/
+**/.DS_Store
+
+# Heavy or generated dependencies
+**/node_modules/
+**/.venv/
+**/venv/
+**/__pycache__/
+
+# Backup artifacts
+**/backups/
+**/*backup*
+**/*.tar
+**/*.tar.gz
+**/*.tgz
+**/*.zip
+**/*.gpg
+**/*.sha256
+
+# Sub-workspaces are versioned by their own local repos.
+/producto/
+/saas/
+/tecnico/
+/ux/

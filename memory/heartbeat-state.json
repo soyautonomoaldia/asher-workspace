@@ -1,0 +1,17 @@
+{
+  "lastCheck": {
+    "timestamp": "2026-06-19T07:14:30+02:00",
+    "status": "OK",
+    "summary": "OK: heartbeat silencioso ejecutado sin incidencias.",
+    "checks": {
+      "gatewayActive": true,
+      "gatewayLoopbackOnly": true,
+      "heartbeatSilent": true,
+      "stuckSessions": false,
+      "oldOpenclawHooksCpu": false,
+      "diskUsagePercent": 18,
+      "sshListening": false,
+      "notify": false
+    }
+  }
+}
