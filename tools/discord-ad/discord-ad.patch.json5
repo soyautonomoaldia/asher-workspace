@@ -1,0 +1,57 @@
+{
+  plugins: {
+    entries: {
+      discord: { enabled: true },
+    },
+    allow: [
+      "workboard",
+      "acpx",
+      "codex",
+      "telegram",
+      "discord",
+      "memory-core",
+      "talk-voice",
+      "microsoft",
+      "openai",
+    ],
+  },
+  channels: {
+    discord: {
+      enabled: true,
+      token: { source: "env", provider: "default", id: "DISCORD_BOT_TOKEN" },
+      dmPolicy: "disabled",
+      groupPolicy: "allowlist",
+      guilds: {
+        "1517883781615452202": {
+          requireMention: true,
+          ignoreOtherMentions: true,
+          channels: {
+            "1517883886506606642": {
+              requireMention: true,
+            },
+          },
+        },
+      },
+    },
+  },
+  bindings: [
+    {
+      match: {
+        channel: "telegram",
+      },
+      agentId: "main",
+    },
+    {
+      type: "route",
+      match: {
+        channel: "discord",
+        guildId: "1517883781615452202",
+        peer: {
+          kind: "channel",
+          id: "1517883886506606642",
+        },
+      },
+      agentId: "saas",
+    },
+  ],
+}

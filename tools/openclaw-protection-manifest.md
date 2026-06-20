@@ -48,12 +48,23 @@ The encrypted backup covers `/home/salamirin/.openclaw` with explicit exclusions
 
 Sensitive runtime files, credentials, secrets and OpenClaw configuration are not put into Layer 1 Git. They are covered only by the encrypted backup.
 
-After local creation and verification, encrypted backup artifacts are copied to Google Drive through `rclone`:
+After local creation and verification, encrypted backup artifacts are copied to configured remotes through `rclone`.
+
+Current remote:
 
 - remote: `gdrive-autonomos:OpenClaw Backups/nightly`
 - files: `openclaw-nightly-*.tar.gz.gpg` and matching `.sha256`
 - local and remote retention: 21 days
 - rclone binary: `/home/salamirin/.local/bin/rclone`
+
+Planned technical remote:
+
+- Backblaze B2 via `rclone` remote `b2-openclaw`
+- target shape: `b2-openclaw:<bucket>/nightly`
+- local setup guide: `tools/backblaze-b2/README.md`
+- activation variable: `B2_BACKUP_DIR=b2-openclaw:<bucket>/nightly`
+
+The nightly script supports multiple destinations. Drive remains active unless `REMOTE_BACKUP_DIRS` is explicitly used to replace the destination list.
 
 ## Important boundary
 

@@ -13,6 +13,18 @@ PASSPHRASE_FILE="${OPENCLAW_HOME}/secrets/backup-encryption-openclaw-full-2026-0
 RETENTION_DAYS="${RETENTION_DAYS:-21}"
 RCLONE_BIN="${RCLONE_BIN:-/home/salamirin/.local/bin/rclone}"
 REMOTE_BACKUP_DIR="${REMOTE_BACKUP_DIR:-gdrive-autonomos:OpenClaw Backups/nightly}"
+B2_BACKUP_DIR="${B2_BACKUP_DIR:-}"
+
+build_remote_backup_dirs() {
+  if [[ -n "${REMOTE_BACKUP_DIRS:-}" ]]; then
+    mapfile -t REMOTE_BACKUP_DIRS_LIST < <(printf '%s\n' "${REMOTE_BACKUP_DIRS}" | sed '/^[[:space:]]*$/d')
+  else
+    REMOTE_BACKUP_DIRS_LIST=("${REMOTE_BACKUP_DIR}")
+    if [[ -n "${B2_BACKUP_DIR}" ]]; then
+      REMOTE_BACKUP_DIRS_LIST+=("${B2_BACKUP_DIR}")
+    fi
+  fi
+}
 
 mkdir -p "${BACKUP_DIR}" "${LOG_DIR}"
 LOG_FILE="${LOG_DIR}/nightly-protection-${RUN_ID}.log"
@@ -33,6 +45,24 @@ require_file() {
     echo "Required file is not readable: ${path}" >&2
     return 1
   fi
+}
+
+sync_encrypted_backup_remote() {
+  local remote_dir="$1"
+  local output="$2"
+  local checksum="$3"
+
+  echo "[backup:remote] syncing encrypted backup to ${remote_dir}"
+  "${RCLONE_BIN}" mkdir "${remote_dir}"
+  "${RCLONE_BIN}" copyto "${output}" "${remote_dir}/$(basename "${output}")"
+  "${RCLONE_BIN}" copyto "${checksum}" "${remote_dir}/$(basename "${checksum}")"
+  "${RCLONE_BIN}" delete "${remote_dir}" \
+    --min-age "${RETENTION_DAYS}d" \
+    --include "openclaw-nightly-*.tar.gz.gpg" \
+    --include "openclaw-nightly-*.tar.gz.gpg.sha256"
+  "${RCLONE_BIN}" lsf "${remote_dir}/$(basename "${output}")" >/dev/null
+  "${RCLONE_BIN}" lsf "${remote_dir}/$(basename "${checksum}")" >/dev/null
+  echo "[backup:remote] uploaded encrypted backup and checksum to ${remote_dir}"
 }
 
 git_snapshot_repo() {
@@ -117,17 +147,10 @@ run_encrypted_backup_layer() {
   echo "[backup] checksum ${checksum}"
 
   if [[ -x "${RCLONE_BIN}" ]]; then
-    echo "[backup:remote] syncing encrypted backup to ${REMOTE_BACKUP_DIR}"
-    "${RCLONE_BIN}" mkdir "${REMOTE_BACKUP_DIR}"
-    "${RCLONE_BIN}" copyto "${output}" "${REMOTE_BACKUP_DIR}/$(basename "${output}")"
-    "${RCLONE_BIN}" copyto "${checksum}" "${REMOTE_BACKUP_DIR}/$(basename "${checksum}")"
-    "${RCLONE_BIN}" delete "${REMOTE_BACKUP_DIR}" \
-      --min-age "${RETENTION_DAYS}d" \
-      --include "openclaw-nightly-*.tar.gz.gpg" \
-      --include "openclaw-nightly-*.tar.gz.gpg.sha256"
-    "${RCLONE_BIN}" lsf "${REMOTE_BACKUP_DIR}/$(basename "${output}")" >/dev/null
-    "${RCLONE_BIN}" lsf "${REMOTE_BACKUP_DIR}/$(basename "${checksum}")" >/dev/null
-    echo "[backup:remote] uploaded encrypted backup and checksum"
+    build_remote_backup_dirs
+    for remote_dir in "${REMOTE_BACKUP_DIRS_LIST[@]}"; do
+      sync_encrypted_backup_remote "${remote_dir}" "${output}" "${checksum}"
+    done
   else
     echo "[backup:remote] skipped, rclone not executable at ${RCLONE_BIN}"
   fi
