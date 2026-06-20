@@ -48,6 +48,13 @@ The encrypted backup covers `/home/salamirin/.openclaw` with explicit exclusions
 
 Sensitive runtime files, credentials, secrets and OpenClaw configuration are not put into Layer 1 Git. They are covered only by the encrypted backup.
 
+After local creation and verification, encrypted backup artifacts are copied to Google Drive through `rclone`:
+
+- remote: `gdrive-autonomos:OpenClaw Backups/nightly`
+- files: `openclaw-nightly-*.tar.gz.gpg` and matching `.sha256`
+- local and remote retention: 21 days
+- rclone binary: `/home/salamirin/.local/bin/rclone`
+
 ## Important boundary
 
 Asher's operational runtime under `/home/salamirin/.openclaw/agents/main/agent/codex-home` is deliberately not a Layer 1 Git repo because it contains auth/runtime/session material. Curated Asher continuity lives in the root `asher-workspace`; raw runtime state belongs in Layer 2 encrypted backup.

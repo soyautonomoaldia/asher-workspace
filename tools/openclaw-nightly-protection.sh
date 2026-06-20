@@ -11,6 +11,8 @@ BACKUP_DIR="/home/salamirin/Backups/openclaw/nightly"
 LOG_DIR="${OPENCLAW_HOME}/logs/protection"
 PASSPHRASE_FILE="${OPENCLAW_HOME}/secrets/backup-encryption-openclaw-full-2026-06-01_16-22-56.passphrase"
 RETENTION_DAYS="${RETENTION_DAYS:-21}"
+RCLONE_BIN="${RCLONE_BIN:-/home/salamirin/.local/bin/rclone}"
+REMOTE_BACKUP_DIR="${REMOTE_BACKUP_DIR:-gdrive-autonomos:OpenClaw Backups/nightly}"
 
 mkdir -p "${BACKUP_DIR}" "${LOG_DIR}"
 LOG_FILE="${LOG_DIR}/nightly-protection-${RUN_ID}.log"
@@ -113,6 +115,23 @@ run_encrypted_backup_layer() {
 
   echo "[backup] created ${output}"
   echo "[backup] checksum ${checksum}"
+
+  if [[ -x "${RCLONE_BIN}" ]]; then
+    echo "[backup:remote] syncing encrypted backup to ${REMOTE_BACKUP_DIR}"
+    "${RCLONE_BIN}" mkdir "${REMOTE_BACKUP_DIR}"
+    "${RCLONE_BIN}" copyto "${output}" "${REMOTE_BACKUP_DIR}/$(basename "${output}")"
+    "${RCLONE_BIN}" copyto "${checksum}" "${REMOTE_BACKUP_DIR}/$(basename "${checksum}")"
+    "${RCLONE_BIN}" delete "${REMOTE_BACKUP_DIR}" \
+      --min-age "${RETENTION_DAYS}d" \
+      --include "openclaw-nightly-*.tar.gz.gpg" \
+      --include "openclaw-nightly-*.tar.gz.gpg.sha256"
+    "${RCLONE_BIN}" lsf "${REMOTE_BACKUP_DIR}/$(basename "${output}")" >/dev/null
+    "${RCLONE_BIN}" lsf "${REMOTE_BACKUP_DIR}/$(basename "${checksum}")" >/dev/null
+    echo "[backup:remote] uploaded encrypted backup and checksum"
+  else
+    echo "[backup:remote] skipped, rclone not executable at ${RCLONE_BIN}"
+  fi
+
   echo "[$(date --iso-8601=seconds)] layer 2 complete"
 }
 
