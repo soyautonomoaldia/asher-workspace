@@ -18,6 +18,7 @@
 # Logs, caches, generated data
 **/*.log
 **/logs/
+**/test-results/
 **/.cache/
 **/cache/
 **/tmp/
