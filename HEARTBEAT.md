@@ -17,6 +17,15 @@ Heartbeat local determinista activo:
 
 Nota tecnica: el gateway puede registrar `[heartbeat] started` al arrancar el modulo interno. Eso no equivale a una tarea programada si `openclaw cron status` muestra `nextWakeAtMs=null` y no hay jobs habilitados.
 
+Postcheck puntual aprobado por Salva para 2026-06-21:
+
+- script: `tools/openclaw-local-heartbeat-postcheck.sh`
+- systemd user timer: `openclaw-local-heartbeat-postcheck-20260621.timer`
+- horario: 2026-06-21 04:40 Europe/Madrid
+- estado persistido: `memory/heartbeat-postcheck-state.json`
+- log local: `/home/salamirin/.openclaw/logs/local-heartbeat-postcheck.log`
+- objetivo: confirmar que la primera ejecucion automatica queda OK, silenciosa y con cron interno inerte.
+
 ## Regla principal
 
 El heartbeat no debe notificar si no hay una incidencia real.
