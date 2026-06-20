@@ -87,6 +87,8 @@ run_encrypted_backup_layer() {
     --exclude=".openclaw/backups" \
     --exclude=".openclaw/npm" \
     --exclude=".openclaw/agents/*/sessions" \
+    --exclude=".openclaw/agents/*/agent/codex-home/*.sqlite" \
+    --exclude=".openclaw/agents/*/agent/codex-home/*.sqlite-*" \
     --exclude=".openclaw/logs/protection" \
     --exclude=".openclaw/**/*.sock" \
     --exclude=".openclaw/**/*.tmp" \
