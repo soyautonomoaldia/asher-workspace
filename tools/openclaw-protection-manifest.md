@@ -22,9 +22,18 @@ The root `asher-workspace` repo includes the main Asher workspace files and shar
 
 The sub-workspaces are excluded from the root repo and versioned by their own repos to avoid duplicate ownership.
 
-## Layer 1: not pushed externally yet
+## Layer 1: GitHub remotes
 
-GitHub push is intentionally skipped until an `origin` remote exists. No private GitHub repo has been created or configured yet.
+GitHub push is enabled through private repositories under `soyautonomoaldia`:
+
+- `asher-workspace`
+- `asher-growth`
+- `asher-saas`
+- `asher-producto`
+- `asher-tecnico`
+- `asher-ux`
+
+The remotes use SSH authentication through the local key `~/.ssh/openclaw_asher_github`.
 
 ## Layer 2: encrypted backup
 
