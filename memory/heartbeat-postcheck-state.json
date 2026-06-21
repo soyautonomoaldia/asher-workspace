@@ -1,7 +1,7 @@
 {
   "lastPostcheck": {
-    "timestamp": "2026-06-20T20:35:22+02:00",
-    "checkDate": "2026-06-20",
+    "timestamp": "2026-06-21T04:40:07+02:00",
+    "checkDate": "2026-06-21",
     "status": "OK",
     "summary": "OK: postcheck heartbeat local sin incidencias.",
     "checks": {
