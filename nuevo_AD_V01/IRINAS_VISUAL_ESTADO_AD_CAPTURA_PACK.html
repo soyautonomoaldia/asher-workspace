@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estado visual - AD Captura Pack</title>
+  <style>
+    :root {
+      --ink: #18202a;
+      --muted: #5c6675;
+      --line: #d9dee6;
+      --paper: #ffffff;
+      --bg: #f5f7fa;
+      --green: #1f9d67;
+      --green-soft: #e8f7ef;
+      --amber: #d88a13;
+      --amber-soft: #fff3dc;
+      --red: #c83d3d;
+      --red-soft: #fdecec;
+      --blue: #2563eb;
+      --blue-soft: #eaf1ff;
+      --teal: #0f8b8d;
+      --teal-soft: #e7f7f7;
+      --violet: #7856c9;
+      --violet-soft: #f0ebff;
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      letter-spacing: 0;
+    }
+
+    main {
+      width: min(1180px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 24px 0 40px;
+    }
+
+    .hero {
+      min-height: calc(100vh - 48px);
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 18px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .mark {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius);
+      background: var(--blue);
+      display: grid;
+      place-items: center;
+      color: white;
+      font-weight: 800;
+      box-shadow: 0 8px 20px rgba(24, 32, 42, 0.13);
+      flex: 0 0 auto;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 4.2vw, 56px);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .date {
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .status-strip {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 12px;
+    }
+
+    .statement,
+    .signal,
+    .block {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 12px 28px rgba(24, 32, 42, 0.06);
+    }
+
+    .statement {
+      padding: 18px;
+      border-left: 8px solid var(--amber);
+      display: grid;
+      align-content: center;
+      gap: 8px;
+    }
+
+    .kicker {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .statement strong {
+      font-size: clamp(20px, 2.5vw, 34px);
+      line-height: 1.05;
+    }
+
+    .signal {
+      padding: 16px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .lamp {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--amber);
+      box-shadow: inset 0 -7px 0 rgba(0,0,0,0.12), 0 0 0 8px var(--amber-soft);
+    }
+
+    .lamp.red {
+      background: var(--red);
+      box-shadow: inset 0 -7px 0 rgba(0,0,0,0.12), 0 0 0 8px var(--red-soft);
+    }
+
+    .signal b {
+      display: block;
+      font-size: 20px;
+      line-height: 1.1;
+    }
+
+    .signal span {
+      color: var(--muted);
+      display: block;
+      margin-top: 4px;
+      font-size: 14px;
+      line-height: 1.25;
+    }
+
+    .workflow {
+      display: grid;
+      grid-template-columns: 1fr 52px 1fr 52px 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .stage {
+      padding: 18px;
+      min-height: 174px;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 12px;
+    }
+
+    .stage h2,
+    .block h2 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.1;
+    }
+
+    .stage p,
+    .block p,
+    .mini-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.28;
+      font-size: 15px;
+    }
+
+    .visual {
+      min-height: 54px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      min-height: 30px;
+      padding: 6px 9px;
+      border-radius: 999px;
+      background: #f3f5f8;
+      border: 1px solid var(--line);
+      font-size: 12px;
+      font-weight: 750;
+      white-space: nowrap;
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      display: inline-block;
+      background: var(--muted);
+    }
+
+    .dot.green { background: var(--green); }
+    .dot.amber { background: var(--amber); }
+    .dot.red { background: var(--red); }
+    .dot.blue { background: var(--blue); }
+    .dot.teal { background: var(--teal); }
+    .dot.violet { background: var(--violet); }
+
+    .arrow {
+      height: 100%;
+      min-height: 174px;
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      font-size: 30px;
+      font-weight: 800;
+    }
+
+    .arrow::before {
+      content: "->";
+    }
+
+    .stage.now { border-top: 8px solid var(--amber); }
+    .stage.have { border-top: 8px solid var(--green); }
+    .stage.missing { border-top: 8px solid var(--red); }
+    .stage.stop { border-top: 8px solid var(--violet); }
+    .stage.gate { border-top: 8px solid var(--blue); }
+    .stage.decide { border-top: 8px solid var(--teal); }
+
+    .stage.now .icon { background: var(--amber-soft); color: var(--amber); }
+    .stage.have .icon { background: var(--green-soft); color: var(--green); }
+    .stage.missing .icon { background: var(--red-soft); color: var(--red); }
+    .stage.stop .icon { background: var(--violet-soft); color: var(--violet); }
+    .stage.gate .icon { background: var(--blue-soft); color: var(--blue); }
+    .stage.decide .icon { background: var(--teal-soft); color: var(--teal); }
+
+    .icon {
+      width: 46px;
+      height: 46px;
+      border-radius: var(--radius);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      font-size: 14px;
+      border: 1px solid currentColor;
+    }
+
+    .stage-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .span-two { grid-column: span 2; }
+
+    .operation {
+      margin-top: 18px;
+      padding: 18px;
+    }
+
+    .rail {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .person {
+      min-height: 102px;
+      padding: 12px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: #fbfcfe;
+      display: grid;
+      gap: 7px;
+      align-content: start;
+    }
+
+    .person b { font-size: 16px; }
+    .person span {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.22;
+    }
+
+    .rail-arrow {
+      text-align: center;
+      color: var(--muted);
+      font-weight: 900;
+      font-size: 22px;
+    }
+
+    .detail-grid {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .block {
+      padding: 16px;
+      min-height: 188px;
+    }
+
+    .block h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .mini-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .mini-card {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 9px;
+      align-items: start;
+      padding: 9px;
+      border-radius: var(--radius);
+      background: #f8fafc;
+      border: 1px solid #e8ecf2;
+    }
+
+    .mini-card b {
+      font-size: 14px;
+      line-height: 1.15;
+    }
+
+    .mini-card p {
+      font-size: 13px;
+      margin-top: 3px;
+    }
+
+    .decision-row {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .decision {
+      min-height: 104px;
+      padding: 14px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      display: grid;
+      gap: 8px;
+      align-content: start;
+      background: var(--paper);
+    }
+
+    .decision.go { border-left: 8px solid var(--green); }
+    .decision.adjust { border-left: 8px solid var(--amber); }
+    .decision.stop { border-left: 8px solid var(--red); }
+
+    .decision b { font-size: 18px; }
+    .decision span {
+      color: var(--muted);
+      line-height: 1.25;
+      font-size: 14px;
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      padding: 13px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 980px) {
+      .hero { min-height: auto; }
+      .status-strip,
+      .workflow,
+      .detail-grid,
+      .decision-row {
+        grid-template-columns: 1fr;
+      }
+
+      .arrow,
+      .rail-arrow {
+        min-height: 28px;
+      }
+
+      .arrow::before,
+      .rail-arrow {
+        content: "v";
+      }
+
+      .rail {
+        grid-template-columns: 1fr;
+      }
+
+      .stage,
+      .block {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 640px) {
+      main { width: min(100vw - 20px, 1180px); padding-top: 14px; }
+      .topbar { align-items: flex-start; }
+      .date { white-space: normal; text-align: right; }
+      .statement strong { font-size: 24px; }
+      .visual { min-height: auto; }
+      .chip { white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero" aria-label="Estado visual AD Captura Pack">
+      <div class="topbar">
+        <div class="brand">
+          <div class="mark" aria-hidden="true">AD</div>
+          <div>
+            <div class="kicker">Mapa visual interno</div>
+            <h1>AD Captura Pack</h1>
+          </div>
+        </div>
+        <div class="date">22 jun 2026 - Owner final: Salva</div>
+      </div>
+
+      <div class="status-strip">
+        <div class="statement">
+          <div class="kicker">Lectura clara</div>
+          <strong>Bien armado como hipotesis interna. Aun no probado como SaaS.</strong>
+        </div>
+        <div class="signal">
+          <div class="lamp" aria-hidden="true"></div>
+          <div>
+            <b>Avanzar solo al gate</b>
+            <span>Sin build, sin pricing, sin integraciones.</span>
+          </div>
+        </div>
+        <div class="signal">
+          <div class="lamp red" aria-hidden="true"></div>
+          <div>
+            <b>SaaS no decidido</b>
+            <span>Faltan dolor real, WTP y canal.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="workflow">
+        <article class="stage now statement">
+          <div class="stage-head">
+            <div class="icon">1</div>
+            <h2>Donde estamos ahora</h2>
+          </div>
+          <p>Ultimo tramo antes de evidencia anonima.</p>
+          <div class="visual">
+            <span class="chip"><span class="dot amber"></span>Preparado</span>
+            <span class="chip"><span class="dot red"></span>No probado</span>
+          </div>
+        </article>
+
+        <div class="arrow" aria-hidden="true"></div>
+
+        <article class="stage have statement">
+          <div class="stage-head">
+            <div class="icon">2</div>
+            <h2>Que ya tenemos</h2>
+          </div>
+          <p>Tesis estrecha, UX, mock privado y guion.</p>
+          <div class="visual">
+            <span class="chip"><span class="dot green"></span>36 capturas</span>
+            <span class="chip"><span class="dot green"></span>12 workflows</span>
+            <span class="chip"><span class="dot green"></span>sign-off</span>
+          </div>
+        </article>
+
+        <div class="arrow" aria-hidden="true"></div>
+
+        <article class="stage missing statement">
+          <div class="stage-head">
+            <div class="icon">3</div>
+            <h2>Que falta para decidir SaaS</h2>
+          </div>
+          <p>Respuesta anonima P1/P2/P3 y senal de pago.</p>
+          <div class="visual">
+            <span class="chip"><span class="dot red"></span>WTP</span>
+            <span class="chip"><span class="dot red"></span>canal</span>
+            <span class="chip"><span class="dot amber"></span>dolor real</span>
+          </div>
+        </article>
+
+        <article class="stage stop statement span-two">
+          <div class="stage-head">
+            <div class="icon">NO</div>
+            <h2>Que NO debemos crear aun</h2>
+          </div>
+          <p>Producto operativo, backend, datos reales, landing comercial o integraciones.</p>
+          <div class="visual">
+            <span class="chip"><span class="dot violet"></span>build bloqueado</span>
+            <span class="chip"><span class="dot violet"></span>pricing bloqueado</span>
+            <span class="chip"><span class="dot violet"></span>pagos bloqueados</span>
+          </div>
+        </article>
+
+        <div class="arrow" aria-hidden="true"></div>
+
+        <article class="stage gate statement">
+          <div class="stage-head">
+            <div class="icon">G</div>
+            <h2>Siguiente gate</h2>
+          </div>
+          <p>Envio externo condicionado y registro anonimo.</p>
+          <div class="visual">
+            <span class="chip"><span class="dot blue"></span>enviado?</span>
+            <span class="chip"><span class="dot blue"></span>acepta?</span>
+            <span class="chip"><span class="dot blue"></span>entiende?</span>
+          </div>
+        </article>
+
+        <div class="arrow" aria-hidden="true"></div>
+
+        <article class="stage decide statement">
+          <div class="stage-head">
+            <div class="icon">6</div>
+            <h2>Decision final</h2>
+          </div>
+          <p>Seguir, ajustar o parar despues del gate anonimo.</p>
+          <div class="visual">
+            <span class="chip"><span class="dot green"></span>seguir</span>
+            <span class="chip"><span class="dot amber"></span>ajustar</span>
+            <span class="chip"><span class="dot red"></span>parar</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="operation block" aria-label="Flujo operativo corregido">
+      <h2><span class="dot teal"></span>Flujo operativo real corregido</h2>
+      <div class="rail">
+        <div class="person">
+          <b>Salva</b>
+          <span>decide gates</span>
+        </div>
+        <div class="rail-arrow" aria-hidden="true">-&gt;</div>
+        <div class="person">
+          <b>Gael</b>
+          <span>opera Trello</span>
+        </div>
+        <div class="rail-arrow" aria-hidden="true">-&gt;</div>
+        <div class="person">
+          <b>Owners</b>
+          <span>aportan criterio interno</span>
+        </div>
+        <div class="rail-arrow" aria-hidden="true">-&gt;</div>
+        <div class="person">
+          <b>Gael</b>
+          <span>actualiza tablero y source</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-grid" aria-label="Detalles minimos para decidir">
+      <article class="block">
+        <h2><span class="dot green"></span>Existe</h2>
+        <div class="mini-list">
+          <div class="mini-card"><span class="dot green"></span><div><b>Hipotesis</b><p>Captura rapida + tarjeta revisable.</p></div></div>
+          <div class="mini-card"><span class="dot green"></span><div><b>Artefactos</b><p>One-pager, UX, mock privado.</p></div></div>
+          <div class="mini-card"><span class="dot green"></span><div><b>Limites</b><p>Scope estrecho y owners alineados.</p></div></div>
+        </div>
+      </article>
+
+      <article class="block">
+        <h2><span class="dot amber"></span>Falta</h2>
+        <div class="mini-list">
+          <div class="mini-card"><span class="dot amber"></span><div><b>Dolor real</b><p>No basta "suena util".</p></div></div>
+          <div class="mini-card"><span class="dot amber"></span><div><b>Alternativa falla</b><p>WhatsApp/notas deben quedarse cortos.</p></div></div>
+          <div class="mini-card"><span class="dot amber"></span><div><b>WTP privada</b><p>Pago o compromiso serio.</p></div></div>
+        </div>
+      </article>
+
+      <article class="block">
+        <h2><span class="dot red"></span>Bloqueado</h2>
+        <div class="mini-list">
+          <div class="mini-card"><span class="dot red"></span><div><b>Build</b><p>Sin producto operativo.</p></div></div>
+          <div class="mini-card"><span class="dot red"></span><div><b>Datos reales</b><p>Sin nombres, chats, fotos o importes.</p></div></div>
+          <div class="mini-card"><span class="dot red"></span><div><b>Integraciones</b><p>Sin WhatsApp, calendario, pagos o facturas.</p></div></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="decision-row" aria-label="Decision despues del gate">
+      <div class="decision go">
+        <b>Seguir</b>
+        <span>Dolor claro + alternativa insuficiente + WTP.</span>
+      </div>
+      <div class="decision adjust">
+        <b>Ajustar</b>
+        <span>Dolor existe, pero scope o mensaje no encaja.</span>
+      </div>
+      <div class="decision stop">
+        <b>Parar</b>
+        <span>No hay dolor, piden integraciones o WhatsApp basta.</span>
+      </div>
+    </section>
+
+    <div class="footer-note">
+      Fuente activa: SOURCE_OF_TRUTH_nuevo_AD_V01.md, MAPA_VISUAL_ESTADO_AD_CAPTURA_PACK_nuevo_AD_V01.md y CORRECCION_MODELO_OPERATIVO_TRELLO_MULTIAGENTE_nuevo_AD_V01.md. Documento interno, sin datos personales.
+    </div>
+  </main>
+</body>
+</html>

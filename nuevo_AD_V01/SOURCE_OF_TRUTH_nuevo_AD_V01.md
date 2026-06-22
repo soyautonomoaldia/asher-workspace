@@ -474,6 +474,76 @@ Condiciones activas:
 - activar criterios de parada si aparecen datos reales, precio, demo operativa, backend, integraciones o confusion sobre `AD prepara, no ejecuta`;
 - reportar despues solo estado anonimo por P1/P2/P3: enviado/no enviado, acepto/no acepto/sin respuesta, invalidadores sin datos personales.
 
+Decision de Salva el 2026-06-21:
+
+> Quiero Kanban operativo del equipo AD coordinado por Gael, Salva como decision final en gates.
+
+Se crea propuesta interna de tablero:
+
+- `KANBAN_PROPUESTA_HITOS_AD_CAPTURA_PACK_nuevo_AD_V01.md`
+
+La decision de gobierno queda:
+
+- el Kanban debe ser operativo del equipo AD;
+- Gael debe coordinar el tablero, owners y entregables;
+- Salva mantiene decision final sobre gates;
+- Mercury, Asirin, Nathan e Irinas deben entrar solo por tarjetas concretas y entregables verificables, no por debate abierto.
+
+Esta decision no autoriza acciones externas nuevas, contacto, envio, outreach, datos reales, validacion, pricing, build operativo, backend ni integraciones.
+
+Decision de Salva el 2026-06-22:
+
+> Solicita estado de situacion visual: que hay creado y que falta para valorar si seguir o dejar AD Captura.
+
+Gael crea:
+
+- `MAPA_VISUAL_ESTADO_AD_CAPTURA_PACK_nuevo_AD_V01.md`
+
+Estado del mapa:
+
+> resumen ejecutivo interno para decidir seguir, ajustar o parar.
+
+Lectura incorporada: AD Captura Pack esta bien armado como hipotesis interna estrecha, pero aun no esta probado como SaaS. El siguiente gate no es construir, vender ni publicar precio; es confirmar si la ejecucion externa condicionada produjo o no resultado anonimo P1/P2/P3 suficiente para valorar seguir, ajustar o parar.
+
+Esta incorporacion no autoriza acciones externas nuevas, contacto, envio, outreach, datos reales, validacion, pricing, build operativo, backend ni integraciones.
+
+Decision de Salva el 2026-06-22:
+
+> Tras detectar que las cuentas Trello de Nathan y Mercury no permiten operativa multiagente automatica desde OpenClaw, solicita documentar la correccion y pedir a Irinas un documento visual simple.
+
+Gael crea:
+
+- `CORRECCION_MODELO_OPERATIVO_TRELLO_MULTIAGENTE_nuevo_AD_V01.md`
+
+Decision operativa corregida:
+
+- Trello puede mantenerse como tablero visual central.
+- Gael queda como unico operador tecnico de Trello via API/token.
+- Nathan, Mercury, Asirin e Irinas no operan Trello directamente desde runtime salvo verificacion tecnica futura separada.
+- Los owners aportan criterio por conversacion interna o entregable documental.
+- Gael traslada el estado al tablero y conserva la trazabilidad formal en `nuevo_AD_V01`.
+- No se deben crear mas cuentas, tokens o herramientas sin prueba tecnica previa.
+
+Se encarga a Irinas preparar un documento visual muy simple para Salva, con poco texto, orientado a entender que existe, que falta, que esta bloqueado y cual es el flujo real de decision.
+
+Irinas crea:
+
+- `IRINAS_VISUAL_ESTADO_AD_CAPTURA_PACK.html`
+
+Estado del entregable:
+
+> HTML visual interno tipo workflow/infografia.
+
+Contenido principal:
+
+- lectura clara: AD Captura esta bien armado como hipotesis interna, pero aun no probado como SaaS;
+- semaforo de avance solo hasta gate;
+- bloques visuales de existe, falta y bloqueado;
+- flujo operativo corregido: Salva decide gates, Gael opera Trello, owners aportan criterio interno, Gael actualiza tablero/source;
+- decision final posterior al gate anonimo: seguir, ajustar o parar.
+
+Esta correccion no autoriza acciones externas nuevas, contacto, envio, outreach, datos reales, validacion, pricing, build operativo, backend ni integraciones.
+
 
 ## Decisiones Base Pendientes
 
