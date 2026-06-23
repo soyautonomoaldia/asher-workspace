@@ -1,7 +1,7 @@
 # KANBAN PROPUESTA HITOS - AD CAPTURA PACK
 
 Fecha: 2026-06-21
-Estado: estructura aprobada por Salva como direccion de gobierno interna
+Estado: estructura aprobada por Salva como direccion de gobierno interna; implementacion operativa autorizada el 2026-06-22
 Owner final: Salva
 Coordinacion operativa: Gael
 
@@ -14,6 +14,12 @@ No es un tablero de ocurrencias. Cada tarjeta debe acercar el proyecto a una dec
 Decision de Salva el 2026-06-21:
 
 > Kanban operativo del equipo AD coordinado por Gael. Salva mantiene decision final en gates.
+
+Confirmacion de Salva el 2026-06-22:
+
+> Trello sigue siendo el tablero visual central. Gael queda autorizado a crear y actualizar tarjetas/reglas. Discord queda limitado por ahora a `#ad_captura`.
+
+Nota tecnica actualizada: el 2026-06-22, Salva provisiona `TRELLO_API_KEY` y `TRELLO_TOKEN` fuera del workspace, en el entorno del servicio `openclaw-gateway.service`. Gael verifica una llamada de solo lectura contra la API de Trello y materializa el tablero `AD Captura Pack` con columnas, etiquetas y tarjetas iniciales aprobadas. No se guardan secretos en `nuevo_AD_V01`.
 
 ## Regla Principal
 
@@ -216,6 +222,23 @@ Decision que desbloquea: uso regular del Kanban como tablero operativo del equip
 Estado: Aprobado / Hecho
 ```
 
+#### Regla visible: Trello no autoriza accion externa
+
+```md
+Titulo: Regla visible: Trello no autoriza accion externa
+Tipo: Gate
+Owner: Salva / Gael
+Objetivo: Mantener visible que el tablero ordena trabajo interno, no autoriza ejecucion externa.
+Entregable: regla visible en Trello.
+Criterio de hecho: cualquier owner puede ver que P1/P2/P3 requieren gate separado.
+Datos permitidos: reglas internas y referencias documentales.
+Datos prohibidos: datos personales, destinatarios, mensajes reales, emails, telefonos.
+Dependencias: SOURCE_OF_TRUTH_nuevo_AD_V01.md; PLAN_ACCION_22_26_JUNIO_AD_CAPTURA_PACK_nuevo_AD_V01.md.
+Riesgo: confundir tarjeta operativa con permiso de envio.
+Decision que desbloquea: ninguna accion externa; solo orden interno.
+Estado: Aprobado / Hecho
+```
+
 ### Archivado
 
 Sin tarjetas iniciales.
@@ -228,13 +251,15 @@ Sin tarjetas iniciales.
 
 ## Regla Para Discord
 
-Discord puede usarse para conversacion operativa, pero no debe ser la fuente de verdad.
+Discord puede usarse para conversacion operativa solo en `#ad_captura`, pero no debe ser la fuente de verdad.
 
 Cada decision tomada en Discord debe terminar en:
 
 - tarjeta actualizada;
 - documento interno actualizado;
 - o referencia clara al archivo fuente.
+
+No abrir nuevos canales Discord ni usar Discord como tablero, CRM, fuente de datos personales o lugar de aprobacion final de gates.
 
 ## Gobierno Aprobado
 

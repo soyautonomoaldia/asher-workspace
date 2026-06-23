@@ -12,7 +12,7 @@ Objetivo: usar Discord como canal operativo privado para el equipo AD sin mezcla
 - Canal detectado: `#ad_captura`.
 - Channel ID: `1517883886506606642`.
 - Bot detectado por token local: `openclaw AD` (`1517892719718957236`).
-- Pendiente: el bot aun no aparece dentro de ningun servidor segun Discord API (`/users/@me/guilds` devuelve lista vacia).
+- Verificacion final: tras reinicio de gateway, el bot resolvio el servidor/canal y respondio en `#ad_captura` como Gael.
 
 ## Servidor recomendado
 
@@ -32,6 +32,8 @@ Opcionales para mas adelante:
 - `#producto-mvp`
 - `#ux-irinas`
 - `#tecnico-nathan`
+
+Nota 2026-06-22: Salva confirma que por ahora Discord queda limitado a `#ad_captura`. No abrir estos canales sin decision separada.
 
 ## Bot Discord
 
@@ -80,11 +82,13 @@ openclaw config patch --file /home/salamirin/.openclaw/workspace/tools/discord-a
 systemctl --user restart openclaw-gateway.service
 ```
 
-5. Invitar el bot al servidor si Discord API aun no lista el guild.
-6. Probar mencionando al bot en `#ad_captura`.
+5. Invitar el bot al servidor si Discord API aun no lista el guild. Hecho.
+6. Probar mencionando al bot en `#ad_captura`. Hecho.
 
 ## Routing esperado
 
 - `#ad_captura` -> Gael (`agentId: saas`).
 
 Regla inicial: `requireMention: true` en todos los canales para evitar ruido.
+
+Regla operativa AD: Discord conversa, Trello organiza y `SOURCE_OF_TRUTH_nuevo_AD_V01.md` decide. Toda decision tomada en Discord debe acabar en tarjeta, documento interno o referencia clara al archivo fuente.

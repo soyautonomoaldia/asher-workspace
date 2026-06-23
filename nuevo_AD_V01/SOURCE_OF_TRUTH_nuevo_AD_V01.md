@@ -610,3 +610,43 @@ Si Salva quiere continuar, el siguiente gate es confirmar si el owner/fuente ext
 Siguen pendientes como decisiones formales antes de cualquier validacion real: target final, buyer economico, alternativa actual prioritaria, workflow observable, WTP privada, canal, datos permitidos/prohibidos, consentimiento, invalidadores, criterio de parada y decision final de Salva.
 
 Hasta entonces, el estado operativo sigue bloqueado para validacion externa, datos reales, outreach, usuarios reales, pricing, build operativo, backend e integraciones.
+
+Decision de Salva el 2026-06-22:
+
+> Confirma que Trello sigue siendo el tablero visual central, autoriza a Gael a crear y actualizar tarjetas/reglas del tablero, y limita Discord por ahora al canal `#ad_captura`.
+
+Gael crea:
+
+- `PLAN_ACCION_22_26_JUNIO_AD_CAPTURA_PACK_nuevo_AD_V01.md`
+
+Decision operativa incorporada:
+
+- `SOURCE_OF_TRUTH_nuevo_AD_V01.md` sigue siendo la fuente formal de decisiones y gates.
+- Trello queda como tablero visual central de `AD Captura Pack`.
+- Gael coordina el tablero, owners y entregables.
+- Discord queda como canal de conversacion operativa limitado a `#ad_captura`.
+- Toda decision tomada en Discord debe terminar en tarjeta actualizada, documento interno actualizado o referencia clara al archivo fuente.
+- Salva mantiene decision final en gates.
+
+Plan hasta 2026-06-26:
+
+- 2026-06-22: cerrar gobierno operativo y reglas Trello/Discord/fuente.
+- 2026-06-23: materializar tablero con columnas, etiquetas y tarjetas iniciales aprobadas.
+- 2026-06-24: revisar bloqueos y condiciones del gate anonimo.
+- 2026-06-25: preparar decision de Salva con evidencia anonima disponible o bloqueo explicito.
+- 2026-06-26: cerrar fase con decision seguir/ajustar/parar o nota de bloqueo.
+
+Esta decision no autoriza contacto externo, envio de emails, uso de datos personales, validacion externa, pricing, build operativo, backend, integraciones ni mensajes a P1/P2/P3. Cualquier envio real sigue requiriendo gate explicito separado de Salva.
+
+Verificacion tecnica Trello del 2026-06-22:
+
+- se habilita la skill `trello`;
+- se asigna la skill `trello` a Gael/`saas`;
+- Salva provisiona `TRELLO_API_KEY` y `TRELLO_TOKEN` fuera del workspace, en el entorno del servicio `openclaw-gateway.service`;
+- Gael verifica acceso Trello en modo solo lectura: API responde `200`;
+- se localiza el tablero `AD Captura Pack`;
+- Gael materializa columnas, etiquetas y tarjetas iniciales aprobadas;
+- se archiva una columna duplicada vacia equivalente a `Revision Salva` para dejar la estructura aprobada sin duplicidad;
+- no se guardan secretos en `nuevo_AD_V01`.
+
+Estado tecnico Trello: desbloqueado para uso operativo interno por Gael como operador central. Esto no autoriza contacto externo, envio de emails, datos personales, pricing, build operativo ni mensajes a P1/P2/P3; cualquier accion real sigue requiriendo gate explicito separado de Salva.

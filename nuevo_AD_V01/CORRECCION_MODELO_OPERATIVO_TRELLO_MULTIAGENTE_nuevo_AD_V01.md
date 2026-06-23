@@ -3,7 +3,7 @@
 Fecha: 2026-06-22
 Owner final: Salva
 Responsable de correccion: Gael
-Estado: control operativo interno
+Estado: control operativo interno; confirmacion de Salva anadida el 2026-06-22
 
 ## Motivo
 
@@ -20,7 +20,7 @@ Crear una cuenta Trello permite que una persona entre manualmente en Trello desd
 | Pieza | Estado real |
 | --- | --- |
 | Trello como tablero visual central | Valido |
-| Gael operando Trello via API/token | Valido |
+| Gael operando Trello via API/token | Verificado el 2026-06-22; API responde `200` y tablero `AD Captura Pack` materializado |
 | Nathan operando Trello directamente desde runtime | No verificado / no disponible |
 | Mercury operando Trello directamente desde runtime | No verificado / no disponible |
 | Multiagente directo sobre Trello | No resuelto |
@@ -51,6 +51,25 @@ Gael
   resume, traslada y actualiza Trello
 ```
 
+## Confirmacion Posterior De Salva
+
+Salva confirma el 2026-06-22:
+
+- Trello sigue siendo el tablero visual central.
+- Gael queda autorizado a crear y actualizar tarjetas/reglas.
+- Discord queda limitado por ahora al canal `#ad_captura`.
+
+Esta confirmacion mantiene el modelo de operador central: los demas owners no operan Trello directamente desde runtime salvo verificacion tecnica futura separada.
+
+Verificacion tecnica posterior:
+
+- la skill `trello` queda habilitada globalmente;
+- Gael/`saas` queda asignado a la skill `trello`;
+- Salva provisiona credenciales Trello fuera del workspace en el entorno del servicio `openclaw-gateway.service`;
+- Gael verifica la API en solo lectura con respuesta `200`;
+- Gael materializa columnas, etiquetas y tarjetas iniciales en el tablero `AD Captura Pack`;
+- los secretos no se guardan en `nuevo_AD_V01` ni se pegan en chat.
+
 ## Reglas Nuevas
 
 - No crear mas cuentas de herramienta para agentes sin prueba tecnica previa.
@@ -59,6 +78,7 @@ Gael
 - No duplicar tablero en Linear, Notion, Discord o similar.
 - Trello queda como visual operativo si Salva acepta que Gael sea operador central.
 - `nuevo_AD_V01` sigue siendo fuente formal de decisiones y gates.
+- Discord queda limitado a conversacion operativa en `#ad_captura`; no sustituye Trello ni `SOURCE_OF_TRUTH`.
 
 ## Herramientas Descartadas Por Ahora
 
@@ -90,4 +110,3 @@ Encargar a Irinas un documento visual muy simple para Salva:
 - explicar que tenemos, que falta y que no se debe tocar;
 - incluir el nuevo modelo operativo corregido;
 - evitar tablas largas e informe textual.
-
