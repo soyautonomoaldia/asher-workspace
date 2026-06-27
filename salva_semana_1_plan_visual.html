@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plan Semana 1 - Salva</title>
+  <style>
+    :root {
+      --ink: #17202a;
+      --muted: #5f6b7a;
+      --line: #d8dde6;
+      --panel: #f7f9fc;
+      --warn: #fff4d6;
+      --bad: #ffe5e5;
+      --ok: #e8f7ee;
+      --accent: #1f6feb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.45;
+    }
+    main { max-width: 980px; margin: 0 auto; padding: 28px 18px 48px; }
+    h1 { font-size: 30px; margin: 0 0 6px; }
+    h2 { font-size: 22px; margin: 30px 0 12px; border-bottom: 2px solid var(--line); padding-bottom: 7px; }
+    h3 { font-size: 17px; margin: 18px 0 8px; }
+    p { margin: 8px 0; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .subtitle { color: var(--muted); font-size: 15px; margin-bottom: 18px; }
+    .notice {
+      border: 1px solid #e5c864;
+      background: var(--warn);
+      padding: 12px 14px;
+      border-radius: 8px;
+      margin: 14px 0;
+    }
+    .danger {
+      border: 1px solid #e39a9a;
+      background: var(--bad);
+      padding: 12px 14px;
+      border-radius: 8px;
+      margin: 14px 0;
+    }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      padding: 14px;
+    }
+    .soft { background: var(--panel); }
+    .ok { background: var(--ok); }
+    .bad { background: var(--bad); }
+    .small { font-size: 13px; color: var(--muted); }
+    .tag {
+      display: inline-block;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 8px;
+      font-size: 12px;
+      color: var(--muted);
+      margin: 2px 4px 2px 0;
+    }
+    table { width: 100%; border-collapse: collapse; margin: 10px 0 16px; }
+    th, td { border: 1px solid var(--line); padding: 9px; vertical-align: top; text-align: left; }
+    th { background: var(--panel); }
+    ul { padding-left: 20px; margin: 8px 0; }
+    li { margin: 4px 0; }
+    .exercise {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+    .figure {
+      width: 150px;
+      height: 120px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      display: grid;
+      place-items: center;
+    }
+    svg { width: 132px; height: 102px; }
+    .person { stroke: #17202a; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+    .weight { stroke: #1f6feb; stroke-width: 6; stroke-linecap: round; fill: none; }
+    .floor { stroke: #9aa4b2; stroke-width: 3; }
+    .schedule td:first-child { width: 110px; font-weight: bold; }
+    .checklist label { display: block; margin: 5px 0; }
+    .tracking td:first-child { width: 92px; font-weight: bold; }
+    .tracking label { display: block; margin: 4px 0; white-space: nowrap; }
+    .tracking input[type="text"] { width: 100%; border: 1px solid var(--line); border-radius: 6px; padding: 6px; font: inherit; }
+    .score {
+      display: inline-grid;
+      grid-template-columns: repeat(3, minmax(80px, 1fr));
+      gap: 8px;
+      width: 100%;
+      margin-top: 6px;
+    }
+    .score label {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px;
+      background: #fff;
+      text-align: center;
+    }
+    @media (max-width: 760px) {
+      main { padding: 18px 12px 34px; }
+      .grid, .grid3 { grid-template-columns: 1fr; }
+      .exercise { grid-template-columns: 1fr; }
+      .figure { width: 100%; height: 130px; }
+      .score { grid-template-columns: 1fr; }
+      .tracking label { white-space: normal; }
+      svg { width: 160px; height: 110px; }
+      h1 { font-size: 25px; }
+    }
+    @media print {
+      body { font-size: 12px; }
+      main { padding: 10px; max-width: none; }
+      a { color: #17202a; }
+      .card, .notice, .danger { break-inside: avoid; }
+      h2 { break-after: avoid; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Plan Semana 1 - Salva</h1>
+  <p class="subtitle">Fase 0: perdida de peso, habito y seguridad. Material: eliptica, mancuernas ajustables, kettlebell 6 kg, esterilla, rodillo, cuerda y banco/aparato abdominal.</p>
+
+  <div class="danger">
+    <strong>Prioridad medica.</strong> Con deficit de proteina C, pierna izquierda con coloracion, hinchazon y pinchazos, y revision pendiente, este plan evita alta intensidad. Si aparece dolor fuerte, calor local, aumento claro de hinchazon/color, falta de aire, dolor toracico, mareo importante o sensacion rara repentina: parar y valorar urgencias.
+  </div>
+
+  <h2>Reglas Base</h2>
+  <div class="grid3">
+    <div class="card ok">
+      <h3>Objetivo</h3>
+      <p>Perder peso sin castigar la pierna, recuperar rutina, subir proteina y controlar cenas/compras.</p>
+    </div>
+    <div class="card">
+      <h3>Esfuerzo</h3>
+      <p>Trabaja en 4-6/10. Maximo 7/10. Debes poder hablar frases cortas. Nada de fallo muscular.</p>
+    </div>
+    <div class="card">
+      <h3>Respiracion</h3>
+      <p>No aguantes la respiracion. Exhala al empujar o tirar. Si necesitas hacer fuerza bloqueando aire, baja peso.</p>
+    </div>
+  </div>
+
+  <h2>Semana 1</h2>
+  <table class="schedule">
+    <tr><th>Dia</th><th>Sesion</th><th>Duracion</th><th>Notas</th></tr>
+    <tr><td>Dia 1</td><td>Fuerza superior A + core suave</td><td>40-55 min</td><td>Mancuernas ligeras/moderadas. Sin apneas.</td></tr>
+    <tr><td>Dia 2</td><td>Eliptica suave + movilidad</td><td>35-50 min</td><td>Ritmo comodo. Pierna vigilada.</td></tr>
+    <tr><td>Dia 3</td><td>Fuerza superior B + pierna minima segura</td><td>40-55 min</td><td>Sentarse/levantarse solo si no molesta.</td></tr>
+    <tr><td>Dia 4</td><td>Eliptica suave + movilidad + descarga</td><td>35-50 min</td><td>Sin saltar cuerda. Rodillo suave.</td></tr>
+  </table>
+
+  <h2>Ficha Visual de Ejercicios</h2>
+
+  <div class="card exercise">
+    <div class="figure">
+      <svg viewBox="0 0 160 120" aria-label="Press en suelo">
+        <line class="floor" x1="18" y1="92" x2="142" y2="92"/>
+        <circle class="person" cx="48" cy="70" r="10"/>
+        <path class="person" d="M58 74 L95 86 L124 86"/>
+        <path class="person" d="M88 84 L78 100 M112 86 L125 102"/>
+        <path class="person" d="M78 62 L78 34 M102 68 L102 38"/>
+        <line class="weight" x1="68" y1="34" x2="88" y2="34"/>
+        <line class="weight" x1="92" y1="38" x2="112" y2="38"/>
+      </svg>
+    </div>
+    <div>
+      <h3>Press en suelo con mancuernas</h3>
+      <p><span class="tag">Pecho</span><span class="tag">Triceps</span><span class="tag">Seguro</span></p>
+      <p><strong>Series:</strong> 2-3 x 8-12. <strong>Peso:</strong> facil-moderado, 3-4 repeticiones en reserva.</p>
+      <p><strong>Claves:</strong> tumbado, codos a unos 45 grados, empuja sin bloquear respiracion, baja lento.</p>
+      <p><strong>No debe sentirse:</strong> dolor en hombro, mareo, presion rara o necesidad de hacer fuerza con apnea.</p>
+      <p><a href="https://www.youtube.com/results?search_query=press+suelo+mancuernas+tecnica" target="_blank">Ver videos de referencia</a></p>
+    </div>
+  </div>
+
+  <div class="card exercise">
+    <div class="figure">
+      <svg viewBox="0 0 160 120" aria-label="Remo apoyado">
+        <line class="floor" x1="15" y1="95" x2="145" y2="95"/>
+        <rect x="25" y="56" width="52" height="10" fill="#9aa4b2"/>
+        <line class="person" x1="50" y1="56" x2="86" y2="48"/>
+        <circle class="person" cx="100" cy="43" r="9"/>
+        <line class="person" x1="80" y1="50" x2="92" y2="82"/>
+        <line class="person" x1="78" y1="62" x2="55" y2="92"/>
+        <line class="person" x1="86" y1="50" x2="116" y2="78"/>
+        <line class="weight" x1="112" y1="78" x2="132" y2="82"/>
+      </svg>
+    </div>
+    <div>
+      <h3>Remo apoyado con mancuerna o kettlebell</h3>
+      <p><span class="tag">Espalda</span><span class="tag">Apoyado</span><span class="tag">Control</span></p>
+      <p><strong>Series:</strong> 2-3 x 10-12 por lado. <strong>Peso:</strong> comodo.</p>
+      <p><strong>Claves:</strong> una mano apoyada en silla/banco, espalda larga, tira el codo hacia atras, sin tirones.</p>
+      <p><strong>No debe sentirse:</strong> dolor lumbar, balanceo, pinchazo en pierna o tension cervical.</p>
+      <p><a href="https://www.youtube.com/results?search_query=remo+con+mancuerna+apoyado+tecnica" target="_blank">Ver videos de referencia</a></p>
+    </div>
+  </div>
+
+  <div class="card exercise">
+    <div class="figure">
+      <svg viewBox="0 0 160 120" aria-label="Press hombro sentado">
+        <line class="floor" x1="25" y1="96" x2="140" y2="96"/>
+        <rect x="66" y="70" width="42" height="12" fill="#9aa4b2"/>
+        <circle class="person" cx="88" cy="38" r="10"/>
+        <line class="person" x1="88" y1="48" x2="88" y2="74"/>
+        <line class="person" x1="82" y1="55" x2="67" y2="30"/>
+        <line class="person" x1="94" y1="55" x2="109" y2="30"/>
+        <line class="weight" x1="58" y1="28" x2="75" y2="28"/>
+        <line class="weight" x1="101" y1="28" x2="118" y2="28"/>
+        <line class="person" x1="80" y1="82" x2="68" y2="96"/>
+        <line class="person" x1="96" y1="82" x2="108" y2="96"/>
+      </svg>
+    </div>
+    <div>
+      <h3>Press de hombro sentado</h3>
+      <p><span class="tag">Hombro</span><span class="tag">Ligero</span></p>
+      <p><strong>Series:</strong> 2 x 8-10. <strong>Peso:</strong> ligero.</p>
+      <p><strong>Claves:</strong> sentado, abdomen suave activo, sube sin arquear espalda, baja controlado.</p>
+      <p><strong>No debe sentirse:</strong> dolor de cuello, pinchazo de hombro o presion en cabeza.</p>
+      <p><a href="https://www.youtube.com/results?search_query=press+hombro+sentado+mancuernas+tecnica" target="_blank">Ver videos de referencia</a></p>
+    </div>
+  </div>
+
+  <div class="card exercise">
+    <div class="figure">
+      <svg viewBox="0 0 160 120" aria-label="Curl de biceps">
+        <line class="floor" x1="30" y1="96" x2="130" y2="96"/>
+        <circle class="person" cx="82" cy="30" r="10"/>
+        <line class="person" x1="82" y1="40" x2="82" y2="70"/>
+        <line class="person" x1="70" y1="52" x2="58" y2="72"/>
+        <line class="person" x1="94" y1="52" x2="106" y2="72"/>
+        <line class="weight" x1="50" y1="72" x2="66" y2="72"/>
+        <line class="weight" x1="98" y1="72" x2="114" y2="72"/>
+        <line class="person" x1="76" y1="70" x2="68" y2="96"/>
+        <line class="person" x1="88" y1="70" x2="96" y2="96"/>
+      </svg>
+    </div>
+    <div>
+      <h3>Curl de biceps</h3>
+      <p><span class="tag">Biceps</span><span class="tag">Simple</span></p>
+      <p><strong>Series:</strong> 2 x 10-12. <strong>Peso:</strong> moderado.</p>
+      <p><strong>Claves:</strong> codos pegados, sin balancear cuerpo, sube y baja lento.</p>
+      <p><a href="https://www.youtube.com/results?search_query=curl+biceps+mancuernas+tecnica" target="_blank">Ver videos de referencia</a></p>
+    </div>
+  </div>
+
+  <div class="card exercise">
+    <div class="figure">
+      <svg viewBox="0 0 160 120" aria-label="Extension de triceps apoyado">
+        <line class="floor" x1="20" y1="96" x2="140" y2="96"/>
+        <rect x="25" y="58" width="52" height="10" fill="#9aa4b2"/>
+        <line class="person" x1="54" y1="58" x2="90" y2="52"/>
+        <circle class="person" cx="104" cy="48" r="9"/>
+        <line class="person" x1="86" y1="53" x2="105" y2="75"/>
+        <line class="person" x1="90" y1="53" x2="130" y2="56"/>
+        <line class="weight" x1="126" y1="56" x2="143" y2="56"/>
+        <line class="person" x1="82" y1="63" x2="58" y2="94"/>
+      </svg>
+    </div>
+    <div>
+      <h3>Extension de triceps apoyado</h3>
+      <p><span class="tag">Triceps</span><span class="tag">Espalda protegida</span></p>
+      <p><strong>Series:</strong> 2 x 10-12 por lado. <strong>Peso:</strong> ligero.</p>
+      <p><strong>Claves:</strong> apoyate, brazo cerca del cuerpo, estira codo sin mover hombro.</p>
+      <p><a href="https://www.youtube.com/results?search_query=patada+triceps+mancuerna+apoyado+tecnica" target="_blank">Ver videos de referencia</a></p>
+    </div>
+  </div>
+
+  <div class="card exercise">
+    <div class="figure">
+      <svg viewBox="0 0 160 120" aria-label="Dead bug">
+        <line class="floor" x1="20" y1="92" x2="140" y2="92"/>
+        <circle class="person" cx="55" cy="73" r="9"/>
+        <line class="person" x1="65" y1="76" x2="103" y2="84"/>
+        <line class="person" x1="76" y1="70" x2="70" y2="45"/>
+        <line class="person" x1="92" y1="74" x2="112" y2="55"/>
+        <line class="person" x1="98" y1="85" x2="118" y2="68"/>
+        <line class="person" x1="88" y1="85" x2="78" y2="105"/>
+      </svg>
+    </div>
+    <div>
+      <h3>Dead bug / core tumbado</h3>
+      <p><span class="tag">Core</span><span class="tag">Sin peso</span></p>
+      <p><strong>Series:</strong> 2 x 6-8 por lado.</p>
+      <p><strong>Claves:</strong> espalda baja estable, movimiento lento, respira normal. Si se arquea la espalda, acorta recorrido.</p>
+      <p><a href="https://www.youtube.com/results?search_query=dead+bug+ejercicio+principiantes+tecnica" target="_blank">Ver videos de referencia</a></p>
+    </div>
+  </div>
+
+  <div class="card exercise">
+    <div class="figure">
+      <svg viewBox="0 0 160 120" aria-label="Sentarse y levantarse">
+        <line class="floor" x1="25" y1="96" x2="140" y2="96"/>
+        <rect x="35" y="70" width="45" height="10" fill="#9aa4b2"/>
+        <line class="person" x1="58" y1="70" x2="82" y2="54"/>
+        <circle class="person" cx="88" cy="46" r="10"/>
+        <line class="person" x1="78" y1="58" x2="66" y2="94"/>
+        <line class="person" x1="82" y1="58" x2="105" y2="94"/>
+        <line class="person" x1="82" y1="58" x2="105" y2="66"/>
+      </svg>
+    </div>
+    <div>
+      <h3>Sentarse y levantarse de silla</h3>
+      <p><span class="tag">Pierna minima</span><span class="tag">Opcional</span></p>
+      <p><strong>Series:</strong> 2 x 6-8. <strong>Peso:</strong> sin peso.</p>
+      <p><strong>Condicion:</strong> solo si la pierna izquierda no aumenta dolor, hinchazon, pinchazos o coloracion.</p>
+      <p><a href="https://www.youtube.com/results?search_query=sentarse+y+levantarse+de+silla+ejercicio+tecnica" target="_blank">Ver videos de referencia</a></p>
+    </div>
+  </div>
+
+  <h2>Entrenamientos Detallados</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Dia 1 - Fuerza superior A</h3>
+      <ul>
+        <li>Eliptica suave: 8 min.</li>
+        <li>Press en suelo: 2-3 x 8-12.</li>
+        <li>Remo apoyado: 2-3 x 10-12 por lado.</li>
+        <li>Press hombro sentado: 2 x 8-10.</li>
+        <li>Curl biceps: 2 x 10-12.</li>
+        <li>Dead bug: 2 x 6-8 por lado.</li>
+        <li>Vuelta a la calma: 5 min suave.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Dia 2 - Eliptica + movilidad</h3>
+      <ul>
+        <li>Eliptica: 20-30 min a ritmo de conversacion.</li>
+        <li>Movilidad de espalda: gato-camello 6-8 reps.</li>
+        <li>Movilidad de cadera suave: 5 min.</li>
+        <li>Tobillos: circulos lentos 1 min por lado.</li>
+        <li>Rodillo: gemelos/cuadriceps suave, sin dolor, 3-5 min.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Dia 3 - Fuerza superior B + pierna minima</h3>
+      <ul>
+        <li>Eliptica suave: 8 min.</li>
+        <li>Remo apoyado: 3 x 10-12 por lado.</li>
+        <li>Press en suelo: 2 x 8-12.</li>
+        <li>Extension triceps apoyado: 2 x 10-12 por lado.</li>
+        <li>Sentarse/levantarse: 2 x 6-8 si todo va bien.</li>
+        <li>Dead bug: 2 x 6-8 por lado.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Dia 4 - Eliptica + descarga</h3>
+      <ul>
+        <li>Eliptica: 25-35 min suave.</li>
+        <li>Movilidad general: 10 min.</li>
+        <li>Rodillo: 5 min suave.</li>
+        <li>Respiracion nasal/relajada: 3 min.</li>
+        <li>Sin cuerda saltando.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Reglas Para Comer Fuera</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Desayuno con clientes</h3>
+      <ul>
+        <li>Cafe + tostada integral con tomate y jamon, atun o tortilla.</li>
+        <li>Si hay yogur/skyr + fruta, buena opcion.</li>
+        <li>Evita rutina de bolleria, zumo y bocadillo enorme.</li>
+        <li>Regla: proteina primero, dulce solo ocasional.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Comida con clientes</h3>
+      <ul>
+        <li>Proteina clara: pollo, pescado, ternera magra, huevos, marisco o legumbre.</li>
+        <li>Verdura sin lechuga: parrillada, tomate, menestra, crema, gazpacho.</li>
+        <li>Un hidrato: patata, arroz, pan, pasta o legumbre. No todos a la vez.</li>
+        <li>Postre: fruta o cafe. Alcohol: mejor agua; si toca vino, una copa.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Cenas Flexibles</h2>
+  <p>Elige una cena cada dia segun hambre. Todas evitan lechuga y estan pensadas para cocinar en casa.</p>
+  <table>
+    <tr><th>Hambre</th><th>Cena</th><th>Paso a paso</th><th>Compra</th></tr>
+    <tr>
+      <td>Ligera</td>
+      <td>Tortilla de 2-3 huevos con calabacin/pimiento + yogur proteico</td>
+      <td>Saltea verdura 6-8 min, anade huevo batido, cuaja lento. Yogur al final si falta proteina.</td>
+      <td>Huevos, calabacin, pimiento, skyr o queso fresco batido.</td>
+    </tr>
+    <tr>
+      <td>Ligera</td>
+      <td>Merluza con menestra</td>
+      <td>Plancha u horno para la merluza. Menestra congelada salteada con ajo y aceite medido.</td>
+      <td>Merluza congelada, menestra, ajo, aceite de oliva.</td>
+    </tr>
+    <tr>
+      <td>Media</td>
+      <td>Pollo con patata y verduras</td>
+      <td>Patata cocida o microondas. Pollo a la plancha. Verdura salteada. Junta y condimenta.</td>
+      <td>Pechuga pollo, patata, brocoli/calabacin/pimiento.</td>
+    </tr>
+    <tr>
+      <td>Media</td>
+      <td>Bowl de arroz, pavo y verduras</td>
+      <td>Arroz cocido, pavo a la plancha, verduras salteadas. Salsa de yogur/limon si apetece.</td>
+      <td>Arroz, pavo, verduras congeladas o frescas, yogur natural.</td>
+    </tr>
+    <tr>
+      <td>Media</td>
+      <td>Lentejas con verduras y huevo</td>
+      <td>Usa bote de lentejas lavadas. Saltea verduras, anade lentejas y corona con huevo cocido o plancha.</td>
+      <td>Lentejas cocidas, huevos, zanahoria, pimiento, tomate.</td>
+    </tr>
+    <tr>
+      <td>Alta</td>
+      <td>Carne magra con patata y verduras</td>
+      <td>Carne magra a la plancha, patata cocida/asada, verduras. Controla aceite.</td>
+      <td>Ternera magra o carne picada 90%+, patata, verduras.</td>
+    </tr>
+    <tr>
+      <td>Alta</td>
+      <td>Garbanzos salteados con atun y verduras</td>
+      <td>Lava garbanzos, saltea con verduras, anade atun al final. Es rapido y saciante.</td>
+      <td>Garbanzos cocidos, atun, calabacin/pimiento/tomate.</td>
+    </tr>
+  </table>
+
+  <p class="small">Enlaces utiles: <a href="https://www.youtube.com/results?search_query=recetas+cenas+altas+en+proteina+faciles" target="_blank">cenas altas en proteina faciles</a> · <a href="https://www.youtube.com/results?search_query=meal+prep+saludable+alto+en+proteina+espa%C3%B1ol" target="_blank">meal prep saludable en espanol</a></p>
+
+  <h2>Lista de Compra Semana 1</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Proteinas</h3>
+      <ul>
+        <li>Huevos: 12 unidades.</li>
+        <li>Pechuga de pollo/pavo: 1-1,2 kg.</li>
+        <li>Merluza/pescado congelado: 600-800 g.</li>
+        <li>Atun/caballa/sardinas: 4-6 latas.</li>
+        <li>Skyr, yogur griego natural o queso fresco batido: 4-6 unidades/tarrinas.</li>
+        <li>Carne magra o picada 90%+: 400-600 g.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Hidratos y saciedad</h3>
+      <ul>
+        <li>Patatas: 2-3 kg.</li>
+        <li>Arroz: 1 paquete.</li>
+        <li>Avena: 1 paquete.</li>
+        <li>Lentejas cocidas: 2 botes.</li>
+        <li>Garbanzos cocidos: 2 botes.</li>
+        <li>Pan integral si desayunas en casa algun dia.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Verduras sin lechuga</h3>
+      <ul>
+        <li>Verdura congelada/menestra: 2-3 bolsas.</li>
+        <li>Calabacin: 3-4 unidades.</li>
+        <li>Pimientos: 3 unidades.</li>
+        <li>Brocoli o coliflor: 2 unidades o congelado.</li>
+        <li>Tomate: 1-1,5 kg.</li>
+        <li>Zanahoria/cebolla/ajo para base.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Fruta y extras</h3>
+      <ul>
+        <li>Manzanas/naranjas: 6-8 piezas.</li>
+        <li>Platanos: 4-6 piezas.</li>
+        <li>Frutos rojos congelados si encaja presupuesto.</li>
+        <li>Aceite de oliva.</li>
+        <li>Frutos secos, bolsa pequena, racion medida.</li>
+        <li>Especias: pimenton, curry, pimienta, oregano.</li>
+      </ul>
+    </div>
+  </div>
+  <p><strong>Supermercados:</strong> prioriza Lidl/Mercadona para basicos, Family Cash para volumen/ofertas y Consum para completar frescos o productos concretos. Presupuesto recomendado inicial: 70-90 euros/semana, ajustando tras dos compras reales.</p>
+
+  <h2>Seguimiento</h2>
+  <p>Marca lo que ocurre de verdad, no lo que "deberia" haber ocurrido. Esta parte sirve para ajustar semana 2 sin adivinar.</p>
+
+  <table class="tracking">
+    <tr>
+      <th>Dia</th>
+      <th>Entreno</th>
+      <th>Comida y cena</th>
+      <th>Pierna izquierda</th>
+      <th>Notas rapidas</th>
+    </tr>
+    <tr>
+      <td>Lunes</td>
+      <td>
+        <label><input type="checkbox"> Hecho</label>
+        <label><input type="checkbox"> Adaptado</label>
+        <label><input type="checkbox"> No hecho</label>
+      </td>
+      <td>
+        <label><input type="checkbox"> Desayuno fuera controlado</label>
+        <label><input type="checkbox"> Comida fuera controlada</label>
+        <label><input type="checkbox"> Cena en casa controlada</label>
+      </td>
+      <td>
+        <label><input type="checkbox"> Sin empeorar</label>
+        <label><input type="checkbox"> Mas hinchazon/color</label>
+        <label><input type="checkbox"> Pinchazos/dolor</label>
+      </td>
+      <td><input type="text" aria-label="Notas lunes"></td>
+    </tr>
+    <tr>
+      <td>Martes</td>
+      <td>
+        <label><input type="checkbox"> Hecho</label>
+        <label><input type="checkbox"> Adaptado</label>
+        <label><input type="checkbox"> No hecho</label>
+      </td>
+      <td>
+        <label><input type="checkbox"> Desayuno fuera controlado</label>
+        <label><input type="checkbox"> Comida fuera controlada</label>
+        <label><input type="checkbox"> Cena en casa controlada</label>
+      </td>
+      <td>
+        <label><input type="checkbox"> Sin empeorar</label>
+        <label><input type="checkbox"> Mas hinchazon/color</label>
+        <label><input type="checkbox"> Pinchazos/dolor</label>
+      </td>
+      <td><input type="text" aria-label="Notas martes"></td>
+    </tr>
+    <tr>
+      <td>Miercoles</td>
+      <td>
+        <label><input type="checkbox"> Hecho</label>
+        <label><input type="checkbox"> Adaptado</label>
+        <label><input type="checkbox"> No hecho</label>
+      </td>
+      <td>
+        <label><input type="checkbox"> Desayuno fuera controlado</label>
+        <label><input type="checkbox"> Comida fuera controlada</label>
+        <label><input type="checkbox"> Cena en casa controlada</label>
+      </td>
+      <td>
+        <label><input type="checkbox"> Sin empeorar</label>
+        <label><input type="checkbox"> Mas hinchazon/color</label>
+        <label><input type="checkbox"> Pinchazos/dolor</label>
+      </td>
+      <td><input type="text" aria-label="Notas miercoles"></td>
+    </tr>
+    <tr>
+      <td>Jueves</td>
+      <td>
+        <label><input type="checkbox"> Hecho</label>
+        <label><input type="checkbox"> Adaptado</label>
+        <label><input type="checkbox"> No hecho</label>
+      </td>
+      <td>
+        <label><input type="checkbox"> Desayuno fuera controlado</label>
+        <label><input type="checkbox"> Comida fuera controlada</label>
+        <label><input type="checkbox"> Cena en casa controlada</label>
+      </td>
+      <td>
+        <label><input type="checkbox"> Sin empeorar</label>
+        <label><input type="checkbox"> Mas hinchazon/color</label>
+        <label><input type="checkbox"> Pinchazos/dolor</label>
+      </td>
+      <td><input type="text" aria-label="Notas jueves"></td>
+    </tr>
+    <tr>
+      <td>Viernes</td>
+      <td>
+        <label><input type="checkbox"> Hecho</label>
+        <label><input type="checkbox"> Adaptado</label>
+        <label><input type="checkbox"> No hecho</label>
+      </td>
+      <td>
+        <label><input type="checkbox"> Desayuno fuera controlado</label>
+        <label><input type="checkbox"> Comida fuera controlada</label>
+        <label><input type="checkbox"> Cena en casa controlada</label>
+      </td>
+      <td>
+        <label><input type="checkbox"> Sin empeorar</label>
+        <label><input type="checkbox"> Mas hinchazon/color</label>
+        <label><input type="checkbox"> Pinchazos/dolor</label>
+      </td>
+      <td><input type="text" aria-label="Notas viernes"></td>
+    </tr>
+    <tr>
+      <td>Sabado</td>
+      <td>
+        <label><input type="checkbox"> Hecho</label>
+        <label><input type="checkbox"> Adaptado</label>
+        <label><input type="checkbox"> No hecho</label>
+      </td>
+      <td>
+        <label><input type="checkbox"> Desayuno fuera controlado</label>
+        <label><input type="checkbox"> Comida fuera controlada</label>
+        <label><input type="checkbox"> Cena en casa controlada</label>
+      </td>
+      <td>
+        <label><input type="checkbox"> Sin empeorar</label>
+        <label><input type="checkbox"> Mas hinchazon/color</label>
+        <label><input type="checkbox"> Pinchazos/dolor</label>
+      </td>
+      <td><input type="text" aria-label="Notas sabado"></td>
+    </tr>
+    <tr>
+      <td>Domingo</td>
+      <td>
+        <label><input type="checkbox"> Hecho</label>
+        <label><input type="checkbox"> Adaptado</label>
+        <label><input type="checkbox"> No hecho</label>
+      </td>
+      <td>
+        <label><input type="checkbox"> Desayuno fuera controlado</label>
+        <label><input type="checkbox"> Comida fuera controlada</label>
+        <label><input type="checkbox"> Cena en casa controlada</label>
+      </td>
+      <td>
+        <label><input type="checkbox"> Sin empeorar</label>
+        <label><input type="checkbox"> Mas hinchazon/color</label>
+        <label><input type="checkbox"> Pinchazos/dolor</label>
+      </td>
+      <td><input type="text" aria-label="Notas domingo"></td>
+    </tr>
+  </table>
+
+  <div class="grid">
+    <div class="card checklist">
+      <h3>Checklist semanal</h3>
+      <label><input type="checkbox"> 4 entrenamientos completados o adaptados.</label>
+      <label><input type="checkbox"> 5-7 cenas controladas.</label>
+      <label><input type="checkbox"> Peso 3 mananas y calcular media.</label>
+      <label><input type="checkbox"> Cintura 1 vez.</label>
+      <label><input type="checkbox"> Pierna izquierda revisada a diario.</label>
+    </div>
+    <div class="card">
+      <h3>Registro pierna izquierda</h3>
+      <p>Anota cada dia: color, hinchazon, pinchazos, dolor, calor local y si el entrenamiento lo empeoro. Si empeora claramente, se cancela la progresion y manda la revision medica.</p>
+    </div>
+  </div>
+
+  <div class="card soft">
+    <h3>Decision al final de la semana</h3>
+    <p>Marca una sola opcion. Esto evita subir intensidad por sensacion de culpa o bajarla por un mal dia aislado.</p>
+    <div class="score">
+      <label><input type="checkbox"> Repetir semana<br><span class="small">Si hubo 0-2 entrenos o mucha desorganizacion.</span></label>
+      <label><input type="checkbox"> Mantener y pulir<br><span class="small">Si hubo 3-4 entrenos pero cenas/comidas fuera irregulares.</span></label>
+      <label><input type="checkbox"> Progresar suave<br><span class="small">Solo si hubo buena adherencia y la pierna no empeoro.</span></label>
+    </div>
+  </div>
+
+  <h2>Regla de Progresion</h2>
+  <p>Semana 1 no busca records. Si un ejercicio queda facil y no hay sintomas, la semana 2 se sube primero repeticiones, luego series y solo al final peso. La progresion real es entrenar sin liarla.</p>
+</main>
+</body>
+</html>

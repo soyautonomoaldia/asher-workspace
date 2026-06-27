@@ -650,3 +650,44 @@ Verificacion tecnica Trello del 2026-06-22:
 - no se guardan secretos en `nuevo_AD_V01`.
 
 Estado tecnico Trello: desbloqueado para uso operativo interno por Gael como operador central. Esto no autoriza contacto externo, envio de emails, datos personales, pricing, build operativo ni mensajes a P1/P2/P3; cualquier accion real sigue requiriendo gate explicito separado de Salva.
+
+Decision de Salva el 2026-06-26:
+
+> ok a tu recomendacion Gael
+
+Contexto: Salva aporta un informe externo de investigacion sobre SaaS B2B para autonomos con gestion por voz y copiloto administrativo, y pide valorar como encaja en `AD Captura Pack`, si puede complementar lo existente y si conviene continuar o reformular segun tendencias de mercado y dolor monetizable.
+
+Gael crea:
+
+- `FICHA_INCORPORACION_INFORME_MERCADO_AD_CAPTURA_PACK_nuevo_AD_V01.md`
+
+Lectura incorporada:
+
+- el informe encaja como refuerzo de categoria, no como permiso para ampliar MVP;
+- `AD Captura Pack` debe entenderse como capa previa a facturacion, gestoria y software administrativo formal;
+- la alternativa inicial prioritaria sigue siendo WhatsApp, notas, memoria y libreta, no Holded/Quipu/Billin como competidores directos de primer uso;
+- el dolor monetizable queda centrado en vueltas, material, cobros, presupuestos simples y cierres antes de documento fiscal o gestoria;
+- gestoria queda limitada a salida manual posterior: paquete listo para trasladar manualmente;
+- voz, agentes, MCP, conectores y compliance-by-design quedan como tendencias/roadmap hipotetico, no como scope MVP ni permiso operativo.
+
+Elementos no incorporados al MVP actual:
+
+- VeriFactu como gancho principal;
+- facturacion legal;
+- cumplimiento fiscal;
+- pagos, cobros automaticos o conciliacion;
+- integracion con gestor;
+- portal de gestoria;
+- MCP/conectores;
+- agentes autonomos;
+- WhatsApp real;
+- calendario real;
+- OCR/documentos reales;
+- pricing publico;
+- venta o preventa.
+
+Gate de decision actualizado:
+
+> Continuar solo si P1/P2/P3 entienden que el paquete accionable reduce una perdida concreta frente a WhatsApp/notas/memoria antes de facturacion o gestoria.
+
+Esto no autoriza validacion externa nueva, contacto, envio, datos reales, pricing, build operativo, backend, integraciones, posicionamiento publico ni mensajes a P1/P2/P3. Cualquier accion real sigue requiriendo gate explicito separado de Salva.
