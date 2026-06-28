@@ -12,6 +12,7 @@
 ## Active Personal Projects
 
 - Private Finance Copilot: Phase 1 only. Analysis, risk review, broker/tool evaluation, token-cost estimation and decision checklists. No autonomous trading or real-money order execution.
+- Family Travel Advisor skill installed at `/home/salamirin/.openclaw/agents/main/agent/codex-home/skills/family-travel-advisor`; persistent preferences live separately in `/home/salamirin/.openclaw/workspace/memory/topics/family-travel-profile.md`.
 
 ## Local Security Tools
 

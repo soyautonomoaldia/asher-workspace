@@ -7,6 +7,7 @@ import path from "node:path";
 const CONFIG_DIR = process.env.GMAIL_LOCAL_MCP_CONFIG_DIR || "/home/salamirin/.openclaw/private/gmail-local-mcp";
 const TOKEN_PATH = process.env.GMAIL_LOCAL_MCP_TOKEN_PATH || path.join(CONFIG_DIR, "token.json");
 const CLIENT_PATH = process.env.GMAIL_LOCAL_MCP_CLIENT_PATH || path.join(CONFIG_DIR, "credentials.json");
+const MODE = process.env.GMAIL_LOCAL_MCP_MODE || "full";
 const MAX_RESULTS_LIMIT = 25;
 const DEFAULT_BODY_CHARS = 4000;
 const MAX_BODY_CHARS = 12000;
@@ -105,7 +106,7 @@ async function getAccessToken() {
   return refreshAccessToken(token, client);
 }
 
-async function gmailRequest(endpoint, params = {}) {
+async function gmailRequest(endpoint, params = {}, options = {}) {
   const accessToken = await getAccessToken();
   const url = new URL(`https://gmail.googleapis.com/gmail/v1/users/me/${endpoint}`);
   for (const [key, value] of Object.entries(params)) {
@@ -116,10 +117,17 @@ async function gmailRequest(endpoint, params = {}) {
       url.searchParams.set(key, String(value));
     }
   }
+  const method = options.method || "GET";
+  const body = options.body === undefined ? undefined : JSON.stringify(options.body);
+  const headers = { authorization: `Bearer ${accessToken}` };
+  if (body !== undefined) {
+    headers["content-type"] = "application/json";
+    headers["content-length"] = Buffer.byteLength(body);
+  }
   return requestJson(url, {
-    method: "GET",
-    headers: { authorization: `Bearer ${accessToken}` }
-  });
+    method,
+    headers
+  }, body);
 }
 
 function clampNumber(value, fallback, min, max) {
@@ -145,6 +153,26 @@ function collectTextParts(part, output = []) {
   if (part.mimeType === "text/plain" && part.body?.data) output.push(decodeBase64Url(part.body.data));
   for (const child of part.parts || []) collectTextParts(child, output);
   return output;
+}
+
+function normalizeRecipients(value) {
+  if (Array.isArray(value)) return value.map(String).map((item) => item.trim()).filter(Boolean);
+  if (typeof value === "string") return value.split(",").map((item) => item.trim()).filter(Boolean);
+  return [];
+}
+
+function sanitizeHeader(value) {
+  return String(value || "").replace(/[\r\n]+/g, " ").trim();
+}
+
+function encodeHeader(value) {
+  const sanitized = sanitizeHeader(value);
+  if (/^[\x20-\x7E]*$/.test(sanitized)) return sanitized;
+  return `=?UTF-8?B?${Buffer.from(sanitized, "utf8").toString("base64")}?=`;
+}
+
+function base64Url(value) {
+  return Buffer.from(value, "utf8").toString("base64").replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/g, "");
 }
 
 function summarizeMessage(message) {
@@ -229,7 +257,38 @@ async function toolListRecentThreads(args) {
   };
 }
 
-const tools = [
+async function toolSendMessage(args) {
+  const to = normalizeRecipients(args?.to);
+  const cc = normalizeRecipients(args?.cc);
+  const bcc = normalizeRecipients(args?.bcc);
+  const subject = sanitizeHeader(args?.subject);
+  const bodyText = String(args?.bodyText || "");
+  if (!to.length) throw new Error("to is required.");
+  if (!subject) throw new Error("subject is required.");
+  if (!bodyText.trim()) throw new Error("bodyText is required.");
+
+  const headers = [
+    `To: ${to.map(sanitizeHeader).join(", ")}`,
+    cc.length ? `Cc: ${cc.map(sanitizeHeader).join(", ")}` : null,
+    bcc.length ? `Bcc: ${bcc.map(sanitizeHeader).join(", ")}` : null,
+    `Subject: ${encodeHeader(subject)}`,
+    "MIME-Version: 1.0",
+    "Content-Type: text/plain; charset=UTF-8",
+    "Content-Transfer-Encoding: 8bit"
+  ].filter(Boolean);
+  const raw = `${headers.join("\r\n")}\r\n\r\n${bodyText}`;
+  const sent = await gmailRequest("messages/send", {}, {
+    method: "POST",
+    body: { raw: base64Url(raw) }
+  });
+  return {
+    id: sent.id,
+    threadId: sent.threadId,
+    labelIds: sent.labelIds || []
+  };
+}
+
+const readTools = [
   {
     name: "gmail_search_messages",
     description: "Search Gmail messages using Gmail search syntax. Read-only.",
@@ -268,10 +327,49 @@ const tools = [
   }
 ];
 
+const sendTools = [
+  {
+    name: "gmail_send_message",
+    description: "Send a plain-text Gmail message. Requires explicit user-approved use and gmail.send OAuth scope.",
+    inputSchema: {
+      type: "object",
+      required: ["to", "subject", "bodyText"],
+      properties: {
+        to: {
+          oneOf: [
+            { type: "string", description: "Comma-separated recipient email addresses." },
+            { type: "array", items: { type: "string" } }
+          ]
+        },
+        cc: {
+          oneOf: [
+            { type: "string" },
+            { type: "array", items: { type: "string" } }
+          ]
+        },
+        bcc: {
+          oneOf: [
+            { type: "string" },
+            { type: "array", items: { type: "string" } }
+          ]
+        },
+        subject: { type: "string" },
+        bodyText: { type: "string" }
+      }
+    }
+  }
+];
+
+const tools = MODE === "send-only" ? sendTools : [...readTools, ...sendTools];
+
 async function callTool(name, args) {
+  if (MODE === "send-only" && name !== "gmail_send_message") {
+    throw new Error(`Tool disabled in send-only mode: ${name}`);
+  }
   if (name === "gmail_search_messages") return toolSearchMessages(args);
   if (name === "gmail_get_message") return toolGetMessage(args);
   if (name === "gmail_list_recent_threads") return toolListRecentThreads(args);
+  if (name === "gmail_send_message") return toolSendMessage(args);
   throw new Error(`Unknown tool: ${name}`);
 }
 
