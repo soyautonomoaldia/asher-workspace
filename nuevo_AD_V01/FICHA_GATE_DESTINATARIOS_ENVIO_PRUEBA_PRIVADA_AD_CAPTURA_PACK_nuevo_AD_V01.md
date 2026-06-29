@@ -43,6 +43,23 @@ Cerrar, antes de cualquier contacto, los puntos minimos para que Salva pueda apr
 11. criterio de parada;
 12. aprobacion final de ejecucion.
 
+Actualizacion 2026-06-28 por informe de mercado:
+
+Este gate debe medir la tesis reformulada tras `FICHA_INCORPORACION_INFORME_MERCADO_AD_CAPTURA_PACK_nuevo_AD_V01.md`:
+
+> AD Captura Pack como capa previa a facturacion/gestoria que convierte caos operativo en paquetes accionables revisables.
+
+No debe medir interes por facturacion, gestoría operativa, integraciones, portal de gestor, VeriFactu, OCR/documentos reales, WhatsApp real, calendario real, pagos, cobros automaticos, conectores/MCP o agentes autonomos.
+
+La alternativa inicial a contrastar sigue siendo:
+
+- WhatsApp;
+- notas;
+- memoria;
+- libreta;
+- calendario simple;
+- desorden antes de facturacion o gestoria.
+
 ## 2. Perfiles Aceptados
 
 Lista P1-P3 vigente aceptada por Salva:
@@ -81,7 +98,7 @@ Los nombres, emails, telefonos o datos identificables no deben incorporarse a `n
 
 Canal candidato aprobado como base:
 
-> Email desde `soyautomomoaldia@gmail.com`.
+> Email desde `soyautonomoaldia@gmail.com`.
 
 Estado:
 
@@ -113,7 +130,7 @@ Hola,
 Estoy revisando una idea muy inicial para autonomos de reparacion domestica.
 No es una demo, no hay producto que vender y no necesito datos reales tuyos ni de tus clientes.
 
-Seria una conversacion privada de 20-30 minutos usando ejemplos ficticios para entender si una nota rapida convertida en un paquete accionable tendria sentido.
+Seria una conversacion privada de 20-30 minutos usando ejemplos ficticios para entender si una nota rapida convertida en un paquete accionable ayudaria a no perder vueltas, material, cobros, presupuestos simples o cierres antes de pasarlo a una herramienta o gestoria.
 
 No se grabara audio. No se usaran nombres reales, telefonos, direcciones, facturas, fotos, chats, importes reales ni documentos.
 AD no enviara mensajes, no agendara, no cobrara, no facturara y no se conectara a ninguna herramienta.
@@ -129,32 +146,31 @@ Pendiente:
 
 ## 6. Owner De Contacto
 
-Owner candidato:
+Owner actualizado:
 
-> Salva.
+> Mercury como fuente externa autorizada por Salva para operar el envio privado desde `soyautonomoaldia@gmail.com`, sin incorporar nombres, emails, telefonos ni datos identificables a `nuevo_AD_V01`.
 
 Estado:
 
-> Pendiente de aprobacion final.
+> Corregido por decision incorporada el 2026-06-28; ejecucion solo bajo limites de registro anonimo.
 
 Regla:
 
-Asher, Gael, Mercury u otro agente no deben contactar participantes ni enviar emails sin autorizacion explicita nueva.
+Mercury debe gestionar destinatarios concretos fuera del workspace y devolver solo resultado anonimo P1/P2/P3. Asher, Gael u otros agentes no deben contactar participantes ni enviar emails desde el workspace.
 
 ## 7. Owner De Sesion
 
-Owner candidato:
+Owner actualizado:
 
-> Salva conduce la conversacion.
+> Mercury, si la conversacion o respuesta se produce dentro de la fuente externa autorizada.
 
 Alternativa:
 
-> Salva conduce y Asher prepara registro anonimo posterior, solo si Salva lo autoriza.
+> Mercury devuelve solo resultado anonimo P1/P2/P3; Gael consolida el gate sin ver ni registrar datos personales.
 
 Pendiente:
 
-- decidir quien conduce;
-- decidir quien registra;
+- recibir solo salida anonima de Mercury;
 - decidir si se usa llamada, email de ida/vuelta o conversacion privada;
 - decidir si se hace una sesion por participante.
 
@@ -192,11 +208,13 @@ Fecha:
 Perfil: P1 / P2 / P3
 Canal:
 Alternativa actual:
+Perdida concreta previa a facturacion/gestoria:
 Caso mas claro:
 Caso mas flojo:
 Valor percibido: alto / medio / bajo / nulo
 Perdida concreta mencionada:
 Comparacion espontanea con WhatsApp/notas/libreta:
+Salida manual posterior entendida: si / no / dudoso
 Acepta "AD prepara, no ejecuta": si / no / dudoso
 Automatismo exigido:
 Dato real mencionado espontaneamente: si / no
@@ -256,6 +274,7 @@ Bloqueo o parada si:
 - necesita presupuesto legal;
 - necesita integracion;
 - necesita backend o persistencia;
+- necesita gestoria operativa, portal de gestoria, OCR/documentos reales, conectores/MCP o agente autonomo;
 - no entiende que AD prepara y no ejecuta;
 - lo ve como otra lista sin perdida concreta;
 - se discute precio concreto;
@@ -270,6 +289,7 @@ Verde solo si:
 - al menos 2 comparan espontaneamente con WhatsApp/notas/libreta;
 - al menos 2 nombran una perdida concreta;
 - ninguno exige datos reales o integraciones para valorar;
+- al menos 2 entienden que la salida a gestoria/facturacion seria manual y posterior;
 - ningun invalidador duro se activa.
 
 Amarillo si:
@@ -279,6 +299,7 @@ Amarillo si:
 - P2 se acerca a normativa pero no la exige;
 - aparecen dudas de microcopy;
 - se pide automatismo pero acepta fase manual.
+- el valor aparece sobre todo por poder trasladarlo luego a gestoria o facturacion, pero acepta que sea manual y posterior.
 
 Rojo si:
 
@@ -287,6 +308,7 @@ Rojo si:
 - lo perciben como otra lista;
 - no hay perdida concreta;
 - se necesita precio o producto real para opinar.
+- el valor depende de facturacion legal, integracion con gestor, portal, OCR/documentos reales, WhatsApp real, calendario real, conectores/MCP o agentes autonomos.
 
 ## 13. Decision Final Pendiente
 
@@ -297,7 +319,7 @@ Para autorizar envio/contacto, Salva debe aprobar explicitamente:
 - P3 concreto, gestionado fuera del archivo;
 - canal email;
 - texto final;
-- owner de contacto;
+- owner de contacto Mercury como fuente externa autorizada;
 - owner de sesion;
 - consentimiento final;
 - registro anonimo;
@@ -313,7 +335,7 @@ Decision registrada de Salva:
 
 > Ficha de destinatarios/envio aprobada como gate documental.
 
-Esta aprobacion no autoriza enviar. El siguiente paso no es enviar todavia salvo que Salva tambien apruebe de forma explicita los destinatarios concretos y el envio.
+Actualizacion posterior 2026-06-28: la ejecucion queda vinculada a Mercury como fuente externa autorizada y al marco post-informe. El siguiente paso no es ampliar scope ni preparar nuevas fichas; es obtener de Mercury resultado anonimo o bloqueo.
 
 ## 15. Registro De Incorporacion
 
@@ -335,12 +357,12 @@ Asher redacta. Salva decide.
 
 Decision requerida:
 
-Salva debe aprobar destinatarios concretos y envio por separado.
+Salva ya corrigio el owner/fuente externa como Mercury. Sigue prohibido incorporar destinatarios concretos o identificadores al workspace.
 
 Condicion de desbloqueo:
 
-No hay contacto hasta aprobacion explicita de destinatarios concretos, texto final, owner, consentimiento, registro, borrado, invalidadores y ventana de envio.
+No hay registro operativo valido hasta que Mercury devuelva solo salida anonima P1/P2/P3 bajo texto, consentimiento, registro, borrado, invalidadores y ventana aprobados.
 
 Siguiente accion propuesta:
 
-Si Salva quiere ejecutar, debe aprobar destinatarios concretos y envio en una decision separada, sin incorporar datos personales a esta ficha.
+Solicitar a Mercury salida anonima P1/P2/P3 bajo el marco post-informe, sin incorporar datos personales a esta ficha.

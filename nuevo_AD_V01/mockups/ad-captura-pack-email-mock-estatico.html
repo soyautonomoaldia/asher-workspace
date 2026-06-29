@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AD Captura Pack - Mock estatico</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #eef1f4;
+      color: #17202b;
+    }
+    .frame {
+      width: 1180px;
+      min-height: 760px;
+      padding: 38px;
+      display: grid;
+      grid-template-columns: 312px 1fr;
+      gap: 24px;
+    }
+    .panel, .main, .card, .strip {
+      background: #ffffff;
+      border: 1px solid #d8dee6;
+      border-radius: 8px;
+    }
+    .panel {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 26px;
+      font-weight: 800;
+    }
+    .mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      background: #0f766e;
+      color: #ffffff;
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      font-weight: 800;
+    }
+    .label {
+      font-size: 13px;
+      font-weight: 750;
+      color: #697586;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+    .capture-box {
+      background: #f7f9fb;
+      border: 1px solid #d8dee6;
+      border-radius: 8px;
+      padding: 16px;
+      display: grid;
+      gap: 8px;
+    }
+    .quote {
+      margin: 0;
+      font-size: 19px;
+      line-height: 1.35;
+      font-weight: 700;
+      color: #263241;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 34px;
+      padding: 8px 11px;
+      border-radius: 8px;
+      background: #e8f4f2;
+      color: #0f5f59;
+      font-size: 14px;
+      font-weight: 800;
+      width: fit-content;
+    }
+    .side-list {
+      display: grid;
+      gap: 10px;
+    }
+    .side-item {
+      padding: 13px;
+      border-radius: 8px;
+      background: #f7f9fb;
+      font-size: 15px;
+      line-height: 1.3;
+      color: #4a5565;
+      font-weight: 650;
+    }
+    .main {
+      padding: 26px;
+      display: grid;
+      grid-template-rows: auto auto 1fr auto;
+      gap: 18px;
+    }
+    .top {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: start;
+    }
+    h1 {
+      margin: 0 0 6px;
+      font-size: 32px;
+      letter-spacing: 0;
+      line-height: 1.1;
+    }
+    .subtitle {
+      font-size: 17px;
+      color: #697586;
+      font-weight: 650;
+    }
+    .badge {
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      color: #9a3412;
+      padding: 11px 13px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .strip {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+      overflow: hidden;
+    }
+    .strip > div {
+      padding: 15px 16px;
+      border-right: 1px solid #d8dee6;
+    }
+    .strip > div:last-child { border-right: 0; }
+    .strip-title {
+      font-size: 13px;
+      color: #697586;
+      font-weight: 800;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+    .strip-value {
+      font-size: 17px;
+      color: #17202b;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+    .content {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+      align-items: start;
+    }
+    .card {
+      padding: 20px;
+    }
+    h2 {
+      margin: 0 0 14px;
+      font-size: 22px;
+      letter-spacing: 0;
+    }
+    .rows {
+      display: grid;
+      gap: 10px;
+    }
+    .row {
+      display: grid;
+      grid-template-columns: 142px 1fr;
+      gap: 10px;
+      padding: 11px 0;
+      border-bottom: 1px solid #eef1f4;
+      font-size: 16px;
+      line-height: 1.3;
+    }
+    .row:last-child { border-bottom: 0; }
+    .row-key {
+      color: #697586;
+      font-weight: 750;
+    }
+    .row-value {
+      color: #17202b;
+      font-weight: 750;
+    }
+    .action {
+      border-left: 5px solid #0f766e;
+      background: #f3fbf9;
+    }
+    .action-copy {
+      font-size: 21px;
+      line-height: 1.3;
+      font-weight: 800;
+      color: #123f3b;
+      margin-bottom: 14px;
+    }
+    .buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .button {
+      border: 1px solid #cdd5df;
+      border-radius: 8px;
+      background: #ffffff;
+      padding: 11px 14px;
+      font-size: 15px;
+      color: #263241;
+      font-weight: 800;
+    }
+    .button.primary {
+      background: #0f766e;
+      border-color: #0f766e;
+      color: #ffffff;
+    }
+    .limits {
+      display: grid;
+      gap: 10px;
+    }
+    .limit {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 9px;
+      align-items: start;
+      font-size: 15px;
+      line-height: 1.35;
+      color: #4a5565;
+      font-weight: 650;
+    }
+    .icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      background: #edf2f7;
+      color: #4a5565;
+      font-size: 15px;
+      font-weight: 900;
+    }
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: center;
+      padding: 13px 15px;
+      border-radius: 8px;
+      background: #17202b;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 750;
+    }
+    .footer span:last-child {
+      color: #cbd5e1;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <main class="frame" aria-label="Mock estatico de AD Captura Pack">
+    <aside class="panel">
+      <div class="brand"><div class="mark">AD</div><div>Captura Pack</div></div>
+      <div class="capture-box">
+        <div class="label">Entrada ficticia</div>
+        <p class="quote">"Manana volver a revisar fuga en fregadero. Llevar sifon y acordarme de cobrar visita anterior."</p>
+        <div class="pill">Ejemplo inventado</div>
+      </div>
+      <div class="side-list">
+        <div class="side-item">Pensado para no perder vueltas, material, cobros simples o cierres.</div>
+        <div class="side-item">Competidor real: WhatsApp, notas, libreta, memoria y calendario simple.</div>
+        <div class="side-item">Salida posterior manual: revisar y copiar donde corresponda.</div>
+      </div>
+    </aside>
+
+    <section class="main">
+      <div class="top">
+        <div>
+          <h1>Paquete accionable revisable</h1>
+          <div class="subtitle">Una captura rapida convertida en una tarjeta clara antes de facturar o gestionar.</div>
+        </div>
+        <div class="badge">Mock estatico, no operativo</div>
+      </div>
+
+      <div class="strip">
+        <div>
+          <div class="strip-title">Trabajo</div>
+          <div class="strip-value">Fuga bajo fregadero</div>
+        </div>
+        <div>
+          <div class="strip-title">Siguiente accion</div>
+          <div class="strip-value">Volver con sifon</div>
+        </div>
+        <div>
+          <div class="strip-title">Riesgo si se olvida</div>
+          <div class="strip-value">Vuelta y cobro pendiente</div>
+        </div>
+      </div>
+
+      <div class="content">
+        <article class="card">
+          <h2>Campos preparados</h2>
+          <div class="rows">
+            <div class="row"><div class="row-key">Cliente</div><div class="row-value">Alias ficticio: Cliente A</div></div>
+            <div class="row"><div class="row-key">Momento</div><div class="row-value">Manana por la manana</div></div>
+            <div class="row"><div class="row-key">Material</div><div class="row-value">Sifon de fregadero</div></div>
+            <div class="row"><div class="row-key">Pendiente</div><div class="row-value">Revisar fuga y recordar cobro anterior</div></div>
+            <div class="row"><div class="row-key">Estado</div><div class="row-value">Pendiente de revisar manualmente</div></div>
+          </div>
+        </article>
+
+        <article class="card action">
+          <h2>Accion sugerida</h2>
+          <div class="action-copy">Revisar tarjeta antes de salir y decidir que haces tu.</div>
+          <div class="buttons">
+            <div class="button primary">Marcar revisada</div>
+            <div class="button">Editar</div>
+            <div class="button">Descartar</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Lo que AD si prepara</h2>
+          <div class="limits">
+            <div class="limit"><div class="icon">1</div><div>Resume una nota rapida para que no se pierda.</div></div>
+            <div class="limit"><div class="icon">2</div><div>Separa trabajo, material, cobro o presupuesto simple.</div></div>
+            <div class="limit"><div class="icon">3</div><div>Deja una siguiente accion revisable por la persona.</div></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Lo que AD no hace aqui</h2>
+          <div class="limits">
+            <div class="limit"><div class="icon">x</div><div>No envia WhatsApp ni emails.</div></div>
+            <div class="limit"><div class="icon">x</div><div>No agenda, cobra, factura ni conecta gestoria.</div></div>
+            <div class="limit"><div class="icon">x</div><div>No usa datos reales en esta prueba.</div></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="footer">
+        <span>Pregunta de prueba: esto evitaria una perdida concreta frente a WhatsApp/notas/memoria?</span>
+        <span>Responder por email, sin llamada</span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

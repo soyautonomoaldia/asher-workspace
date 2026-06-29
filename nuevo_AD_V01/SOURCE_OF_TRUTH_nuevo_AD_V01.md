@@ -290,7 +290,7 @@ No queda autorizado contactar a nadie ni ejecutar prueba hasta que esos datos es
 
 Decision de Salva el 2026-06-09:
 
-> Que lo prepare Gael y su equipo. Participantes los que seleccione Mercury. Canal de contacto email (soyautomomoaldia@gmail.com). Etc
+> Que lo prepare Gael y su equipo. Participantes los que seleccione Mercury. Canal de contacto email (soyautonomoaldia@gmail.com). Etc
 
 Encargo enviado a Gael el 2026-06-09 para preparar la ficha concreta sin ejecutar nada. Gael crea:
 
@@ -300,7 +300,7 @@ Veredicto de preparacion:
 
 > preparada con condiciones
 
-La ficha define participantes anonimos candidatos por criterio Mercury, canal email candidato `soyautomomoaldia@gmail.com`, texto de invitacion candidato, owner de contacto, owner de sesion, consentimiento final candidato, registro anonimo, almacenamiento, borrado, invalidadores, criterio de parada, criterios de avance y decision final requerida de Salva.
+La ficha define participantes anonimos candidatos por criterio Mercury, canal email candidato `soyautonomoaldia@gmail.com`, texto de invitacion candidato, owner de contacto, owner de sesion, consentimiento final candidato, registro anonimo, almacenamiento, borrado, invalidadores, criterio de parada, criterios de avance y decision final requerida de Salva.
 
 Decision recomendada de Gael: no ejecutar todavia. Pedir a Mercury que confirme, sin nombres reales, que existen 3 perfiles candidatos que cumplen criterios P1-P3; despues Salva debe aprobar destinatarios y envio de forma separada.
 
@@ -452,7 +452,7 @@ Asher creo:
 
 Estado: preparacion final candidata.
 
-La ficha consolida texto final candidato, consentimiento de inicio candidato, canal email privado `soyautomomoaldia@gmail.com`, owner de contacto candidato, owner de sesion candidato, registro anonimo permitido, criterios de parada y condiciones antes de enviar.
+La ficha consolida texto final candidato, consentimiento de inicio candidato, canal email privado `soyautonomoaldia@gmail.com`, owner de contacto candidato, owner de sesion candidato, registro anonimo permitido, criterios de parada y condiciones antes de enviar.
 
 Esta preparacion no autoriza contacto ni envio. Antes de cualquier envio, Salva debe aprobar explicitamente destinatarios concretos gestionados fuera del workspace, texto final, owner de contacto, owner de sesion, consentimiento, ventana de envio, registro anonimo, almacenamiento, borrado, invalidadores y criterio de parada.
 
@@ -464,7 +464,7 @@ La ficha `FICHA_PREPARACION_ENVIO_FINAL_PRUEBA_PRIVADA_AD_CAPTURA_PACK_nuevo_AD_
 
 > envio final concreto aprobado por Salva, ejecucion externa condicionada
 
-Esta aprobacion autoriza la ejecucion del envio solo por el owner/fuente externa que gestione destinatarios fuera del workspace. No autoriza a Asher, Gael, Mercury u otro agente a enviar emails ni contactar participantes desde el workspace.
+Esta aprobacion autoriza la ejecucion del envio solo por el owner/fuente externa que gestione destinatarios fuera del workspace. Actualizacion posterior 2026-06-28: Mercury queda corregido como fuente externa autorizada por Salva para operar el envio privado desde `soyautonomoaldia@gmail.com`, sin incorporar identificadores al workspace. Asher, Gael u otros agentes no quedan autorizados a enviar emails ni contactar participantes desde el workspace.
 
 Condiciones activas:
 
@@ -472,7 +472,7 @@ Condiciones activas:
 - usar el texto final y consentimiento de la ficha;
 - registrar solo aprendizaje anonimo;
 - activar criterios de parada si aparecen datos reales, precio, demo operativa, backend, integraciones o confusion sobre `AD prepara, no ejecuta`;
-- reportar despues solo estado anonimo por P1/P2/P3: enviado/no enviado, acepto/no acepto/sin respuesta, invalidadores sin datos personales.
+- reportar despues solo estado anonimo por P1/P2/P3: enviado/no enviado, acepto/no acepto/sin respuesta, dolor previo a facturacion/gestoria, alternativa actual, salida manual entendida/no entendida e invalidadores sin datos personales.
 
 Decision de Salva el 2026-06-21:
 
@@ -605,7 +605,7 @@ Todo cambio operativo debe escribirse con:
 
 ## Proxima Accion
 
-Si Salva quiere continuar, el siguiente gate es confirmar si el owner/fuente externa ejecuto o no ejecuto el envio final concreto, sin incorporar identificadores al workspace. El registro posterior debe ser anonimo por P1/P2/P3: enviado/no enviado, acepto/no acepto/sin respuesta e invalidadores sin datos personales.
+Si Salva quiere continuar, el siguiente gate es registrar si Mercury, como fuente externa autorizada, ejecuto o no ejecuto el envio final concreto, sin incorporar identificadores al workspace. El registro posterior debe ser anonimo por P1/P2/P3: enviado/no enviado, acepto/no acepto/sin respuesta, dolor previo a facturacion/gestoria, alternativa actual, salida manual entendida/no entendida e invalidadores sin datos personales.
 
 Siguen pendientes como decisiones formales antes de cualquier validacion real: target final, buyer economico, alternativa actual prioritaria, workflow observable, WTP privada, canal, datos permitidos/prohibidos, consentimiento, invalidadores, criterio de parada y decision final de Salva.
 
@@ -691,3 +691,430 @@ Gate de decision actualizado:
 > Continuar solo si P1/P2/P3 entienden que el paquete accionable reduce una perdida concreta frente a WhatsApp/notas/memoria antes de facturacion o gestoria.
 
 Esto no autoriza validacion externa nueva, contacto, envio, datos reales, pricing, build operativo, backend, integraciones, posicionamiento publico ni mensajes a P1/P2/P3. Cualquier accion real sigue requiriendo gate explicito separado de Salva.
+
+Decision de Salva el 2026-06-28:
+
+> Matiz importante: los owners no tienen acceso a Discord. La comunicacion con owners la realiza Gael en OpenClaw y traslada a Discord de manera resumida y unificada.
+
+Decision operativa incorporada:
+
+- Discord `#ad_captura` queda como canal de seguimiento resumido para Salva/Gael, no como canal operativo directo de owners.
+- Gael coordina por OpenClaw, recoge criterio de owners por conversacion interna o entregable, consolida y traslada a Discord solo resumen unificado cuando aporte decision, bloqueo o siguiente accion.
+- Los owners no tienen acceso operativo a Discord y no deben depender de Discord para aportar criterio.
+- Toda decision tomada o resumida en Discord debe terminar en tarjeta Trello actualizada, documento interno actualizado o referencia clara en `SOURCE_OF_TRUTH_nuevo_AD_V01.md`.
+
+Formato minimo para decisiones en `#ad_captura`:
+
+- hecho;
+- supuesto;
+- riesgo;
+- owner;
+- decision requerida;
+- condicion de desbloqueo;
+- siguiente accion propuesta.
+
+Limites activos:
+
+- sin datos personales;
+- sin contacto externo;
+- sin pricing;
+- sin validacion real;
+- sin build operativo;
+- sin backend;
+- sin integraciones;
+- sin pagos;
+- sin mensajes a P1/P2/P3 sin gate explicito de Salva.
+
+Hecho: Salva aprueba usar esta regla corregida como mensaje anclado operativo de `#ad_captura`.
+
+Supuesto: el anclado tecnico en Discord puede requerir accion manual si el runtime de Gael no dispone de permiso/herramienta de pin.
+
+Riesgo: si el mensaje no queda anclado o replicado en Trello/fuente, Discord puede volver a generar confusion sobre acceso de owners o validez de decisiones.
+
+Owner: Gael.
+
+Decision requerida: ninguna adicional sobre la regla; queda aprobada por Salva como criterio operativo interno del canal.
+
+Condicion de desbloqueo: dejar la regla visible en Discord y/o referenciada desde Trello, manteniendo esta incorporacion como fuente formal.
+
+Siguiente accion propuesta: ejecutar una prueba simple de trazabilidad Discord -> Trello -> fuente/ref antes de tratar decisiones sustantivas nuevas por este canal.
+
+Ejecucion de la prueba simple de trazabilidad el 2026-06-28:
+
+- origen: aprobacion de Salva en Discord `#ad_captura` para ejecutar la prueba;
+- accion Trello: Gael crea la tarjeta `Prueba trazabilidad Discord/Trello/fuente - 2026-06-28` en el tablero `AD Captura Pack`, columna `Aprobado / Hecho`;
+- referencia Trello: `https://trello.com/c/64edVKyF`;
+- accion fuente: esta seccion deja incorporado el resultado en `SOURCE_OF_TRUTH_nuevo_AD_V01.md`;
+- resultado: circuito minimo Discord -> Trello -> fuente/ref verificado para una decision inocua de gobierno operativo;
+- limite: esta prueba no autoriza contacto externo, datos reales, pricing, validacion real, build operativo, backend, integraciones, pagos ni mensajes a P1/P2/P3.
+
+Siguiente accion propuesta: usar este circuito solo para decisiones resumidas de gobierno y no abrir decisiones sustantivas nuevas sin formato minimo y gate explicito cuando aplique.
+
+Revision de canales Discord y Trello el 2026-06-28:
+
+Hecho: Salva pide revisar conversaciones anteriores y decidir si hacen falta otros canales Discord y si hay que actualizar Trello.
+
+Lectura operativa:
+
+- no hace falta crear otros canales Discord ahora;
+- `#ad_captura` es suficiente como canal unico de seguimiento resumido Salva/Gael;
+- abrir canales adicionales aumentaria ruido, duplicaria gobierno y chocaria con la regla ya aprobada de no abrir nuevos canales Discord sin decision separada;
+- los owners siguen fuera de Discord y aportan criterio por OpenClaw o entregable interno;
+- Gael consolida y trae a Discord solo resumen unificado cuando aporte decision, bloqueo o siguiente accion.
+
+Actualizacion Trello ejecutada:
+
+- tarjeta `Roles operativos del equipo` actualizada con el matiz de owners fuera de Discord y coordinacion por OpenClaw: `https://trello.com/c/x9FYYFoh`;
+- tarjeta `Reglas de uso del tablero` actualizada con canal unico `#ad_captura`, no crear canales adicionales sin decision separada, y trazabilidad obligatoria: `https://trello.com/c/Wz0c3B2D`.
+
+Riesgo: crear canales por owner, tema o fase puede fragmentar decisiones y hacer que Trello/fuente dejen de ser el centro verificable.
+
+Owner: Gael.
+
+Decision requerida: ninguna adicional si Salva acepta mantener un unico canal Discord.
+
+Condicion de desbloqueo: solo reconsiderar nuevos canales si aparece un uso concreto que `#ad_captura` no pueda resolver sin ruido ni perdida de trazabilidad.
+
+Siguiente accion propuesta: mantener `#ad_captura` como canal unico y usar Trello para todo trabajo verificable.
+
+Decision de Salva el 2026-06-28:
+
+> ok a la siguiente accion propuesta Gael, pero primero se deben adaptar las fichas con el informe de mercado aportado y la modificacion que ello supuso en el source of truth.
+
+Correccion incorporada por Gael:
+
+- `GAEL_FICHA_PRUEBA_CONCRETA_PRIVADA_AD_CAPTURA_PACK_nuevo_AD_V01.md` queda adaptada al marco post-informe.
+- `FICHA_GATE_DESTINATARIOS_ENVIO_PRUEBA_PRIVADA_AD_CAPTURA_PACK_nuevo_AD_V01.md` queda adaptada al marco post-informe.
+- `FICHA_PREPARACION_ENVIO_FINAL_PRUEBA_PRIVADA_AD_CAPTURA_PACK_nuevo_AD_V01.md` queda adaptada al marco post-informe y a la correccion de owner/fuente externa.
+
+Marco de prueba vigente tras la adaptacion:
+
+- AD Captura Pack se evalua como capa previa a facturacion, gestoria y software administrativo formal.
+- La alternativa inicial sigue siendo WhatsApp, notas, memoria, libreta, calendario simple y desorden previo a facturacion/gestoria.
+- El valor a probar es paquete accionable revisable para no perder vueltas, material, cobros, presupuestos simples, cierres o informacion que llega tarde/mal a gestoria o herramienta de facturacion.
+- Gestoria queda limitada a salida manual posterior: paquete listo para trasladar manualmente.
+- No se evalua ni se promete facturacion legal, VeriFactu, cumplimiento fiscal, portal o integracion con gestoria, WhatsApp real, calendario real, OCR/documentos reales, pagos, cobros automaticos, conectores/MCP, agentes autonomos, pricing publico ni preventa.
+
+Correccion de owner/fuente externa:
+
+- Mercury queda registrado como fuente externa autorizada por Salva para operar el envio privado desde `soyautonomoaldia@gmail.com`.
+- Mercury debe gestionar destinatarios concretos fuera del workspace.
+- Mercury no debe incorporar nombres, emails, telefonos ni datos identificables a `nuevo_AD_V01`.
+- Gael no envia emails ni contacta participantes; coordina fuente, Trello y registro anonimo.
+- El registro posterior permitido es solo anonimo por P1/P2/P3: enviado/no enviado, acepto/no acepto/sin respuesta, dolor previo a facturacion/gestoria, alternativa actual, salida manual entendida/no entendida e invalidadores sin datos personales.
+
+Hecho: las fichas operativas quedan alineadas con la modificacion de mercado incorporada el 2026-06-26 y con la correccion de Mercury como fuente externa autorizada.
+
+Supuesto: Mercury dispone fuera del workspace del acceso/capacidad aprobada para operar el Gmail y los destinatarios concretos sin exponer identificadores al proyecto.
+
+Riesgo: si Mercury no puede operar el envio sin registrar datos personales o si el feedback deriva a facturacion, gestoria operativa, integraciones o automatismos, la prueba debe bloquearse o ajustarse; no debe convertirse en backlog.
+
+Owner: Gael coordina fuente/Trello/source; Mercury ejecuta como fuente externa autorizada; Salva decide gates.
+
+Decision requerida: ninguna adicional para adaptar fichas. Sigue pendiente recibir de Mercury solo resultado anonimo P1/P2/P3 o bloqueo.
+
+Condicion de desbloqueo: Mercury debe devolver estado anonimo del envio y cualquier invalidador sin datos personales.
+
+Siguiente accion propuesta: abrir/actualizar el gate `Resultado anonimo P1/P2/P3` en Trello y solicitar a Mercury salida anonima bajo el marco post-informe.
+
+Ejecucion parcial de la siguiente accion el 2026-06-28:
+
+Gael solicita a Mercury salida anonima P1/P2/P3 bajo el marco post-informe, sin datos identificables.
+
+Respuesta de Mercury:
+
+> BLOQUEADO
+>
+> Categoria de bloqueo: falta confirmacion directa valida para comunicacion externa.
+
+Lectura operativa:
+
+- las fichas ya estan adaptadas al informe de mercado;
+- Mercury queda conceptualmente registrado como fuente externa autorizada por Salva en la fuente formal;
+- pero la sesion operativa de Mercury disponible en OpenClaw no considera suficiente esa incorporacion para ejecutar comunicacion externa;
+- no hay evidencia de envio P1/P2/P3;
+- no hay resultado anonimo de participantes;
+- no debe inventarse ejecucion ni respuesta.
+
+Hecho: Mercury no devuelve resultado P1/P2/P3; devuelve bloqueo operativo.
+
+Supuesto: el bloqueo se debe a falta de confirmacion directa operativa disponible en la sesion Mercury, no a rechazo del marco post-informe.
+
+Riesgo: seguir preparando documentos sin resolver esta autorizacion directa mantendria el proyecto en preparacion indefinida.
+
+Owner: Gael coordina; Mercury bloquea ejecucion externa; Salva decide si reautoriza de forma directa o declara bloqueo.
+
+Decision requerida: Salva debe decidir si emite autorizacion directa y operativa a Mercury para comunicacion externa por Gmail, o si se declara bloqueada/parada la prueba P1/P2/P3.
+
+Condicion de desbloqueo: Mercury debe recibir una autorizacion directa valida para comunicacion externa o confirmar que no puede operar el Gmail/fuente externa.
+
+Siguiente accion propuesta: no crear mas fichas; resolver el bloqueo de autorizacion directa de Mercury o cerrar el gate como bloqueado.
+
+Decision posterior de Salva el 2026-06-28:
+
+> Gael apruebo preparar el correo final + una imagen/mock estatico de una sola pantalla.
+
+Gael prepara el paquete final asincrono:
+
+- `CORREO_FINAL_MOCK_ESTATICO_PRUEBA_PRIVADA_AD_CAPTURA_PACK_nuevo_AD_V01.md`
+- `mockups/ad-captura-pack-email-mock-estatico.html`
+- `mockups/ad-captura-pack-email-mock-estatico.png`
+
+Contenido preparado:
+
+- correo final por Gmail, sin llamada ni voz;
+- una unica imagen/mock estatico de paquete accionable revisable;
+- 2-3 preguntas neutrales por email;
+- datos 100% ficticios;
+- limites explicitos: AD prepara tarjeta revisable, no ejecuta acciones.
+
+Esta preparacion no autoriza a Gael, Asher u otros agentes a enviar emails ni contactar participantes desde el workspace. Mercury sigue siendo la fuente externa indicada para operar, si cuenta con autorizacion directa valida y sin incorporar identificadores al workspace.
+
+Condiciones activas:
+
+- no llamada telefonica;
+- no landing publica;
+- no formulario ni tracking;
+- no datos reales;
+- no pricing;
+- no demo operativa;
+- no facturacion, cobros, pagos, gestoria operativa, integraciones, WhatsApp real ni calendario real;
+- registro posterior solo anonimo por P1/P2/P3.
+
+Siguiente accion propuesta: entregar a Mercury el paquete de correo + PNG para que, si su autorizacion directa operativa queda resuelta, use solo ese material y devuelva salida anonima P1/P2/P3.
+
+Correccion posterior de Salva el 2026-06-28:
+
+Salva objeta que Gael haya creado directamente el correo final y el mock. La lectura correcta es que cada owner debe producir o revisar su parte:
+
+- Irinas: visual/mock estatico final, mas visual y menos tecnico.
+- Mercury: correo final Gmail, breve, natural, asincrono y sin llamada.
+- Nathan: limites tecnicos/operativos y ausencia de promesas de demo, backend, integraciones o acciones externas.
+- Asirin: scope, sesgo de aprendizaje e invalidadores.
+- Gael: coordinar y consolidar, no sustituir a los owners.
+
+Artefacto de correccion creado:
+
+- `CORRECCION_OWNER_ENTREGABLES_CORREO_MOCK_AD_CAPTURA_PACK_nuevo_AD_V01.md`
+
+El paquete creado previamente por Gael queda marcado como:
+
+> BORRADOR GAEL NO APROBADO
+
+No debe enviarse, adjuntarse ni tratarse como material final. Debe rehecerse o validarse mediante owners.
+
+Siguiente accion propuesta: solicitar a Irinas, Mercury, Nathan y Asirin sus entregables/revisiones y consolidar una nueva version final para decision de Salva.
+
+Estado operativo de la solicitud:
+
+Gael intento activar la ronda owner el 2026-06-28. El envio a sesiones owner encontro limite temporal de uso de Codex. Los mensajes constan como enviados antes del error en varias sesiones, pero no hay respuestas validas de owners todavia.
+
+No existe material final aprobado.
+
+Reintento programado:
+
+- `2026-06-28T22:16:00+02:00`
+- `Reintentar owners correo mock AD Captura Pack`
+
+Hasta recibir respuesta de owners, el correo y el mock quedan bloqueados como entrega final.
+
+Respuesta owner recibida el 2026-06-28:
+
+Nathan / Tecnico devuelve revision de limites para `Gmail + imagen/mock estatico de una sola pantalla`.
+
+Lectura incorporada:
+
+- viable solo como prueba de comprension/interes;
+- no es demo, producto operativo ni validacion de adopcion;
+- debe salir con revision tecnica/operativa owner antes de envio;
+- imagen unica, estatica, sin estados interactivos, botones funcionales ni flujos posteriores;
+- sin formularios, campos editables, tracking, pixel, analytics, parametros personales ni captura indirecta de comportamiento;
+- sin backend, integraciones, WhatsApp real, calendario real, pagos, cobros, facturacion, gestoria conectada ni automatismos;
+- todo feedback debe quedar en respuesta manual por email.
+
+Copy minimo tecnico exigido en email:
+
+> Esto es una prueba temprana de concepto con una imagen estatica, no un producto operativo. No hay backend, integraciones, WhatsApp, calendario, pagos ni automatismos activos. Solo buscamos feedback por email sobre si la propuesta se entiende y si te resultaria util.
+
+Copy minimo bajo imagen:
+
+> Mock estatico para feedback. Los botones, canales e integraciones mostrados son ilustrativos y no estan activos.
+
+Bloqueo tecnico automatico:
+
+- backend, integracion real, WhatsApp real, calendario real o automatismo;
+- cobros, pagos, facturacion, gestoria conectada o promesa fiscal/administrativa;
+- formulario, encuesta embebida, lead capture o subida de CV/datos;
+- metricas individualizadas sin consentimiento explicito;
+- copy que sugiera producto operativo: "ya puedes usarlo", "activa tu pack", "conecta", "agenda", "te llamamos", "automatizamos por ti".
+
+Riesgo principal segun Nathan:
+
+> Que el candidato interprete el mock como una demo funcional y valide expectativa de ejecucion, no interes real en la propuesta.
+
+Estado:
+
+- revision tecnica recibida;
+- no hay aprobacion final;
+- siguen pendientes Irinas, Mercury y Asirin;
+- el material final sigue bloqueado hasta consolidacion owner y decision de Salva.
+
+Respuesta owner recibida el 2026-06-28:
+
+Asirin / Producto devuelve veredicto:
+
+> AJUSTAR antes de aprobar.
+
+Lectura incorporada:
+
+- el correo debe presentar AD Captura como idea de prueba, no como producto listo;
+- el mock debe ser estatico, una sola imagen o captura simple, con ejemplos ficticios;
+- el foco debe ser tarjeta revisable: captura -> paquete accionable -> siguiente accion manual;
+- la comparacion debe ser contra WhatsApp/notas/libreta/memoria;
+- no debe compararse contra ERP, facturacion, gestoria ni software administrativo;
+- no debe prometer voz real, WhatsApp real, calendario, facturas, pagos, OCR, integraciones, automatismos ni envio a gestor;
+- el candidato no debe enviar datos reales;
+- solo debe responder sobre su forma actual de organizar vueltas, materiales, cobros, presupuestos simples o cierres.
+
+Invalidadores duros segun Asirin:
+
+- respuesta centrada en "la imagen se ve bien" sin mencionar perdida, olvido, retraso, cobro, material, vuelta o cierre;
+- el candidato entiende que AD ejecuta acciones externas o sustituye facturacion/gestoria;
+- pide o entrega datos reales, fotos, facturas, audios, clientes o trabajos identificables;
+- el valor percibido depende de integraciones, WhatsApp real, factura legal, calendario real o automatizacion;
+- no identifica ninguna situacion concreta mejor que su sistema actual.
+
+Preguntas maximas recomendadas:
+
+1. "Hoy, cuando te entra una vuelta, material, cobro pendiente o presupuesto simple, donde lo apuntas y que suele fallar?"
+2. "Viendo este ejemplo ficticio, esto te ayudaria antes de facturar/mandarlo a gestoria, o seguirias igual con WhatsApp/notas/libreta?"
+3. "Que tendria que preparar la tarjeta para que te ahorre una perdida real de tiempo, dinero o seguimiento?"
+
+Señal valida:
+
+- problema concreto propio;
+- comparacion con metodo actual;
+- accion manual posterior identificada;
+- perdida evitable reconocida.
+
+Respuesta amable no valida:
+
+- "se ve bien";
+- "interesante";
+- "podria servir";
+- cualquier respuesta sin caso, sin coste, sin alternativa actual y sin accion posterior.
+
+Estado:
+
+- revision de producto/scope recibida;
+- Asirin exige ajustar;
+- no hay aprobacion final;
+- siguen pendientes Irinas y Mercury;
+- el material final sigue bloqueado hasta consolidacion owner y decision de Salva.
+
+Decision de Salva el 2026-06-29:
+
+> ok a la siguiente accion propuesta Gael. Doy por hecho que la matriz de decision estara en Trello? Asi comenzamos a trabajar como acordamos
+
+Gael crea la matriz operativa en formato Trello:
+
+- `MATRIZ_DECISION_TRELLO_CORREO_MOCK_AD_CAPTURA_PACK_nuevo_AD_V01.md`
+
+Lectura operativa:
+
+- la matriz debe vivir como trabajo operativo en Trello;
+- en este turno no aparece conector operativo de Trello disponible para crear tarjetas directamente desde OpenClaw;
+- la version creada en source queda como estructura canonica para trasladar a Trello;
+- incluye tarjeta madre y cuatro tarjetas owner: Irinas visual, Mercury correo Gmail, Nathan limites tecnicos y Asirin producto/sesgo;
+- Nathan y Asirin constan como recibidos;
+- Irinas y Mercury siguen pendientes;
+- Gael queda limitado a coordinar y consolidar, no a sustituir entregables owner.
+
+Estado final:
+
+- no aprobado;
+- no enviar;
+- no contactar;
+- no usar el borrador de Gael como material final;
+- bloqueado hasta cierre de Irinas + Mercury y consolidacion posterior para decision de Salva.
+
+Siguiente accion propuesta: trasladar la matriz a Trello como cinco tarjetas y pedir cierre explicito de Irinas y Mercury antes de consolidar una version final.
+
+Correccion de Gael el 2026-06-29:
+
+Salva pide revisar el historico porque el conector Trello habia quedado operativo dias antes.
+
+Revision realizada:
+
+- `CORRECCION_MODELO_OPERATIVO_TRELLO_MULTIAGENTE_nuevo_AD_V01.md` confirma que Trello quedo operativo para Gael como operador central desde el 2026-06-22;
+- la API Trello respondio `200`;
+- el tablero `AD Captura Pack` fue materializado;
+- la prueba Discord -> Trello -> fuente quedo verificada el 2026-06-28 con tarjeta real `https://trello.com/c/64edVKyF`;
+- la respuesta anterior de Gael fue incompleta: no debio concluir que no habia conector operativo solo porque la tool Trello no aparecia expuesta en el turno.
+
+Ejecucion corregida:
+
+Gael crea/actualiza en Trello las cinco tarjetas de la matriz:
+
+- Gate: `https://trello.com/c/ngwYSQbl/16-gate-correo-mock-estatico-ad-captura-pack`
+- Irinas: `https://trello.com/c/b4BujfHn/17-irinas-visual-mock-estatico-una-pantalla`
+- Mercury: `https://trello.com/c/7kmbQx1R/18-mercury-correo-gmail-asincrono-p1-p2-p3`
+- Nathan: `https://trello.com/c/yddi8PgU/19-nathan-limites-tecnicos-y-operativos`
+- Asirin: `https://trello.com/c/N1h5yRea/20-asirin-scope-sesgo-e-invalidadores`
+
+Estado Trello inicial:
+
+- gate principal en `Bloqueado`;
+- Irinas y Mercury en `En curso`;
+- Nathan y Asirin registrados como criterio recibido;
+- checklist de cierre owner creada en la tarjeta gate;
+- source y Trello quedan alineados.
+
+Respuesta owner recibida el 2026-06-29:
+
+Mercury / Growth devuelve entregable de correo Gmail y confirma que no ha enviado emails, no ha usado destinatarios reales y no ha registrado identificadores en el workspace.
+
+Asunto propuesto:
+
+> Opinion rapida sobre una idea temprana para no perder pendientes
+
+Cuerpo propuesto por Mercury:
+
+> Hola,
+>
+> Estoy contrastando una idea muy temprana para autonomos de reparacion domestica: apuntar muy rapido una vuelta, material pendiente, cobro recordado, presupuesto por enviar o cierre de trabajo, y verlo despues como una tarjeta revisable.
+>
+> No es una demo ni un producto operativo. Solo te enviaria una imagen estatica con un ejemplo ficticio para pedirte feedback por email, sin llamada, sin voz y sin agenda.
+>
+> Importante: no me envies datos reales. Nada de nombres, telefonos, direcciones, fotos, facturas, importes, chats ni casos de clientes. Si respondes, usa ejemplos inventados o habla en general.
+>
+> Me ayudaria que respondieras a estas 3 preguntas:
+>
+> 1. Se entiende que problema intenta resolver?
+> 2. En que momento de trabajo te podria servir, si te serviria?
+> 3. Que te haria descartarlo frente a WhatsApp, notas o memoria?
+>
+> Gracias,
+> Salva
+
+Actualizacion Trello:
+
+- tarjeta Mercury actualizada y movida a `Aprobado / Hecho`;
+- checklist del gate actualizado marcando `Mercury entrega/revisa correo Gmail final`;
+- Irinas sigue pendiente.
+
+Verificacion API posterior:
+
+- tarjeta Mercury verificada en lista `Aprobado / Hecho`;
+- checklist del gate verificado con Mercury, Nathan y Asirin completos;
+- Irinas, consolidacion Gael y decision Salva siguen incompletos.
+
+Estado final:
+
+- no aprobado;
+- no enviar;
+- no contactar;
+- no usar el borrador de Gael como material final;
+- bloqueado hasta cierre de Irinas y consolidacion posterior para decision de Salva.
+
+Siguiente accion propuesta: esperar cierre de Irinas en Trello; despues Gael consolida correo + visual + limites + scope para decision de Salva.

@@ -11,7 +11,7 @@ Salva pide que Gael y su equipo preparen una ficha de prueba concreta para `AD C
 Instrucciones incorporadas:
 
 - participantes: los que seleccione Mercury;
-- canal de contacto candidato: `soyautomomoaldia@gmail.com`;
+- canal de contacto candidato: `soyautonomoaldia@gmail.com`;
 - no contactar a nadie;
 - no enviar emails;
 - no usar datos reales;
@@ -29,6 +29,30 @@ Instrucciones incorporadas:
 - `FICHA_DECISION_OPERATIVA_PRUEBA_PRIVADA_CONTROLADA_AD_CAPTURA_PACK_nuevo_AD_V01.md`
 - `VERSION_FINAL_AJUSTADA_GUION_METODO_PRUEBA_CONTROLADA_AD_CAPTURA_PACK_nuevo_AD_V01.md`
 - `GAEL_CONSOLIDADO_SIGNOFF_GUION_PRUEBA_CONTROLADA_AD_CAPTURA_PACK_nuevo_AD_V01.md`
+- `FICHA_INCORPORACION_INFORME_MERCADO_AD_CAPTURA_PACK_nuevo_AD_V01.md`
+
+## 1.1 Actualizacion Por Informe De Mercado
+
+Actualizacion 2026-06-28:
+
+Esta ficha debe interpretarse con la modificacion incorporada tras el informe de mercado:
+
+> AD Captura Pack es una capa previa a facturacion, gestoria y software administrativo formal. Compite primero contra WhatsApp, notas, memoria y libreta, no contra Holded, Quipu, Billin ni gestorias.
+
+La prueba concreta no debe medir si el participante quiere un ERP, una herramienta de facturacion, un copiloto fiscal, una integracion con gestoria o automatismos. Debe medir si el paquete accionable reduce una perdida concreta antes del documento fiscal:
+
+- vuelta pendiente olvidada;
+- material no comprado o mal recordado;
+- cobro no reclamado;
+- presupuesto simple no preparado;
+- cierre de trabajo sin resumen util;
+- informacion que llega tarde o mal a gestoria o herramienta de facturacion.
+
+La gestoria solo puede aparecer como salida manual posterior:
+
+> paquete listo para trasladar manualmente a gestoria o herramienta de facturacion.
+
+Si el valor depende de facturacion legal, VeriFactu, integracion con gestor, portal de gestoria, OCR/documentos reales, WhatsApp real, calendario real, pagos, cobros automaticos, MCP/conectores o agentes autonomos, el resultado debe tratarse como ajuste fuerte o bloqueo, no como backlog MVP.
 
 ## 2. Veredicto De Preparacion
 
@@ -42,7 +66,7 @@ No hay permiso para contactar participantes, enviar invitaciones, registrar feed
 
 Objetivo:
 
-> Comprobar, en conversaciones privadas y controladas, si perfiles del target entienden que `AD Captura Pack` convierte capturas simples en paquetes accionables revisables, y si eso resuelve una perdida concreta frente a WhatsApp, notas, libreta o memoria.
+> Comprobar, en conversaciones privadas y controladas, si perfiles del target entienden que `AD Captura Pack` convierte capturas simples en paquetes accionables revisables antes de facturacion/gestoria, y si eso reduce una perdida concreta frente a WhatsApp, notas, libreta o memoria.
 
 La prueba no debe intentar demostrar:
 
@@ -76,6 +100,8 @@ Criterios de seleccion Mercury:
 - excluir perfiles que necesiten factura, cobro, pago, foto, WhatsApp real, calendario real o integracion para evaluar valor;
 - evitar perfiles demasiado cercanos si pueden dar feedback complaciente;
 - registrar como mejor evidencia solo respuestas que comparen espontaneamente contra alternativa actual y nombren perdida concreta.
+- priorizar perfiles capaces de distinguir entre "preparar informacion accionable" y "facturar, enviar, agendar, cobrar o integrar";
+- bloquear perfiles que solo valoren la idea si se convierte en facturacion, gestoría operativa, integracion o automatizacion externa.
 
 Mercury debe bloquear la seleccion si no hay al menos 3 perfiles que cumplan estos criterios sin requerir datos reales.
 
@@ -130,7 +156,7 @@ Exclusiones:
 
 Canal candidato indicado por Salva:
 
-> Email desde `soyautomomoaldia@gmail.com`.
+> Email desde `soyautonomoaldia@gmail.com`.
 
 Estado:
 
@@ -171,7 +197,7 @@ Hola,
 Estoy revisando una idea muy inicial para autonomos de reparacion domestica.
 No es una demo, no hay producto que vender y no necesito datos reales tuyos ni de tus clientes.
 
-Seria una conversacion privada de 20-30 minutos usando ejemplos ficticios para entender si una nota rapida convertida en un paquete accionable tendria sentido.
+Seria una conversacion privada de 20-30 minutos usando ejemplos ficticios para entender si una nota rapida convertida en un paquete accionable ayudaria a no perder vueltas, material, cobros, presupuestos simples o cierres antes de pasarlo a una herramienta o gestoria.
 
 No se grabara audio. No se usaran nombres reales, telefonos, direcciones, facturas, fotos, chats, importes reales ni documentos.
 AD no enviara mensajes, no agendara, no cobrara, no facturara y no se conectara a ninguna herramienta.
@@ -181,7 +207,7 @@ Si te encaja, te propondria una llamada breve. Si no, sin problema.
 
 Condiciones antes de enviar:
 
-- Salva debe aprobar destinatario, texto final y momento de envio;
+- Mercury ejecuta solo como fuente externa autorizada por Salva y con destinatarios gestionados fuera del workspace;
 - Nathan debe aprobar que no se recogen datos prohibidos;
 - Irinas debe aprobar claridad y consentimiento;
 - Mercury debe confirmar que el perfil seleccionado sirve para evidencia y no por conveniencia;
@@ -189,9 +215,13 @@ Condiciones antes de enviar:
 
 ## 8. Owner De Contacto
 
-Owner de contacto candidato:
+Owner de contacto actualizado:
 
-> Salva, usando `soyautomomoaldia@gmail.com`, solo si aprueba la ejecucion final.
+> Mercury como fuente externa autorizada por Salva, usando `soyautonomoaldia@gmail.com` y gestionando destinatarios concretos fuera del workspace.
+
+Condicion:
+
+> Mercury no debe incorporar nombres, emails, telefonos ni datos identificables a `nuevo_AD_V01`; solo puede devolver estado anonimo P1/P2/P3.
 
 Rol de Gael:
 
@@ -203,21 +233,20 @@ Rol de Asher candidato:
 
 No decidido todavia:
 
-- destinatarios;
-- fecha;
-- si Salva conduce la conversacion;
-- si otra persona registra;
+- si Mercury devuelve solo estado de envio o tambien resultado anonimo de conversacion;
+- ventana exacta de salida anonima;
+- si hay bloqueo por falta de respuesta;
 - donde se conserva la ficha anonima.
 
 ## 9. Owner De Sesion
 
-Owner de sesion candidato:
+Owner de sesion actualizado:
 
-> Salva conduce la sesion; Asher o Gael no quedan autorizados a contactar ni conducir sin aprobacion especifica.
+> Mercury, si la conversacion se produce dentro de la fuente externa autorizada, siempre sin trasladar identificadores al workspace.
 
 Alternativa candidata:
 
-> Salva conduce y registra manualmente una ficha anonima al terminar.
+> Mercury devuelve solo ficha anonima P1/P2/P3; Gael consolida el gate sin ver ni registrar datos personales.
 
 Condicion:
 
@@ -259,11 +288,13 @@ Canal: email privado / referido privado
 Perfil aproximado:
 Oficio aproximado:
 Alternativa actual:
+Perdida concreta previa a facturacion/gestoria:
 Caso mas claro:
 Caso mas flojo:
 Valor percibido: alto / medio / bajo / nulo
 Perdida concreta mencionada:
 Comparacion espontanea con WhatsApp/notas/libreta:
+Salida manual posterior entendida: si / no / dudoso
 Acepta "AD prepara, no ejecuta": si / no / dudoso
 Automatismo exigido:
 Dato real mencionado espontaneamente: si / no
@@ -354,6 +385,7 @@ Bloqueo inmediato si:
 - no revisaria tarjetas despues;
 - aparece precio concreto o negociacion;
 - el canal se convierte en outreach frio, grupo, formulario, landing o publicacion.
+- el participante solo ve valor si AD se convierte en herramienta de facturacion, gestoría operativa, integracion, portal, conector, OCR/documentos reales o agente autonomo.
 
 ## 15. Criterio De Parada
 
@@ -365,6 +397,7 @@ Parar la sesion si:
 - se empieza a discutir precio concreto;
 - el participante pide demo operativa;
 - el feedback deriva a ERP, gestoria, fiscalidad, facturacion, cobro o pagos;
+- el valor depende de enviar informacion a gestoria, emitir documentos, conectar herramientas o automatizar tareas externas;
 - el participante no acepta los limites;
 - el owner de sesion no puede registrar anonimo sin detalle sensible.
 
@@ -387,6 +420,7 @@ Resultado verde solo si:
 - al menos 2/3 identifican perdida concreta de tiempo, dinero, vuelta, material, cobro, presupuesto o cierre;
 - al menos 2/3 comparan espontaneamente contra WhatsApp, notas, libreta o memoria;
 - al menos 2/3 ven valor en un paquete accionable manual sin integraciones;
+- al menos 2/3 entienden que la salida a gestoria/facturacion es manual y posterior, no promesa del MVP;
 - ninguno exige datos reales como condicion para opinar;
 - ninguno exige WhatsApp real, calendario real, facturacion, cobro, foto o integracion para ver valor inicial;
 - no se activa ningun invalidador duro.
@@ -399,6 +433,7 @@ Resultado amarillo si:
 - la microcopy genera dudas;
 - cobro, presupuesto o cierre confunden al participante;
 - aparece valor pero no queda claro buyer, canal o alternativa actual.
+- el valor aparece sobre todo por "llevarlo luego a gestoria", pero el participante acepta que sea salida manual posterior.
 
 Resultado rojo si:
 
@@ -407,6 +442,7 @@ Resultado rojo si:
 - exigen WhatsApp real, calendario real, factura, cobro, pago, foto o integracion;
 - necesitan datos reales;
 - el valor se sostiene solo con automatizacion;
+- el valor se sostiene solo con gestoria, facturacion legal, integraciones, OCR/documentos reales, conectores o agentes autonomos;
 - no hay perdida concreta;
 - aparece riesgo de privacidad no controlable.
 
@@ -416,10 +452,10 @@ Antes de ejecutar, Salva debe decidir explicitamente:
 
 1. aprobar o cambiar los perfiles P1-P3 seleccionados por criterio Mercury;
 2. aprobar si se amplia a P4-P5 o se mantiene solo 3 participantes;
-3. aprobar el canal email `soyautomomoaldia@gmail.com` como canal de contacto;
+3. aprobar el canal email `soyautonomoaldia@gmail.com` como canal de contacto;
 4. aprobar texto final de invitacion;
-5. aprobar owner de contacto;
-6. aprobar owner de sesion;
+5. mantener Mercury como owner/fuente externa de contacto;
+6. mantener Mercury como owner/fuente externa de sesion si hay conversacion;
 7. aprobar consentimiento final;
 8. aprobar registro anonimo;
 9. aprobar ubicacion de almacenamiento;
@@ -429,7 +465,7 @@ Antes de ejecutar, Salva debe decidir explicitamente:
 
 Decision recomendada de Gael:
 
-> Aprobar esta ficha solo como preparacion interna. No ejecutar todavia. Pedir a Mercury que confirme, sin nombres reales, que existen 3 perfiles candidatos que cumplen criterios P1-P3; despues Salva debe aprobar destinatarios y envio de forma separada.
+> Usar esta ficha ya adaptada al informe de mercado y pedir a Mercury salida anonima P1/P2/P3. No crear mas preparacion documental salvo bloqueo real.
 
 ## 18. Limite Absoluto
 
