@@ -1118,3 +1118,60 @@ Estado final:
 - bloqueado hasta cierre de Irinas y consolidacion posterior para decision de Salva.
 
 Siguiente accion propuesta: esperar cierre de Irinas en Trello; despues Gael consolida correo + visual + limites + scope para decision de Salva.
+
+Registro Gael el 2026-06-30:
+
+Irinas / UX cierra entregable final para el mock estatico Gmail.
+
+Resumen Irinas:
+
+- una unica imagen estatica vertical;
+- composicion antes/despues: nota rapida ficticia -> tarjeta revisable;
+- sin landing publica, formulario, tracking, CTA comercial ni apariencia de app madura;
+- debe comunicar dentro de la imagen que AD no envia mensajes, no agenda visitas, no cobra, no factura y no se conecta a WhatsApp, calendario ni gestoria;
+- no hay bloqueo UX para cerrar la propuesta visual.
+
+Gael crea el consolidado owner:
+
+- `GAEL_CONSOLIDADO_CORREO_MOCK_OWNER_AD_CAPTURA_PACK_nuevo_AD_V01.md`
+
+Decision de Gael:
+
+- paquete `correo Gmail + una imagen/mock estatico` queda completo como candidato interno para decision de Salva;
+- no queda aprobado para envio;
+- no autoriza contactar P1/P2/P3, enviar emails, usar destinatarios reales, registrar identificadores, publicar landing, activar formulario, tracking, pricing, demo, backend, integraciones ni acciones externas;
+- se incorpora criterio Mercury para correo, Irinas para visual, Nathan para limites tecnicos y Asirin para scope/invalidadores;
+- las preguntas finales se ajustan hacia dolor real frente a WhatsApp/notas/libreta/memoria, no reaccion estetica.
+
+Version integrada candidata:
+
+- asunto: `Opinion rapida sobre una idea temprana para no perder pendientes`;
+- canal: Gmail asincrono;
+- adjunto: una unica imagen/mock estatico con ejemplo 100% ficticio;
+- feedback: respuesta manual por email;
+- preguntas maximas:
+  1. donde apunta hoy una vuelta, material, cobro pendiente o presupuesto simple y que suele fallar;
+  2. si el ejemplo ficticio ayudaria antes de facturar/mandarlo a gestoria o seguiria igual con WhatsApp/notas/libreta/memoria;
+  3. que tendria que preparar la tarjeta para ahorrar una perdida real de tiempo, dinero o seguimiento.
+
+Lectura de evidencia:
+
+- senal valida: problema concreto propio, alternativa actual, accion manual posterior y perdida evitable;
+- respuesta amable no valida: "se ve bien", "interesante" o reaccion estetica sin caso, coste, alternativa actual ni accion posterior;
+- invalidadores: expectativa de automatismos, integraciones, factura legal, gestoria operativa, datos reales, producto disponible o valor dependiente de WhatsApp/calendario/automatizacion.
+
+Actualizacion Trello ejecutada el 2026-06-30:
+
+- tarjeta Irinas `https://trello.com/c/b4BujfHn` actualizada y movida a `Aprobado / Hecho`;
+- tarjeta gate `https://trello.com/c/ngwYSQbl` actualizada con comentario de consolidacion;
+- checklist del gate marcado con `Irinas entrega/revisa visual final` y `Gael consolida version integrada`;
+- tarjeta gate movida a `Revision Salva`.
+
+Estado final tras consolidacion:
+
+- owners cerrados: Asirin, Nathan, Mercury e Irinas;
+- Gael consolida version integrada;
+- pendiente unica: decision de Salva sobre aprobar, ajustar o bloquear;
+- no enviar, no contactar y no ejecutar hasta decision explicita de Salva.
+
+Siguiente accion operativa ejecutada: mover el gate a `Revision Salva` en Trello y dejar el paquete listo para decision. La siguiente decision sustantiva corresponde a Salva.
