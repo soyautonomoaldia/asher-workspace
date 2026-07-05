@@ -95,7 +95,7 @@ Titulo:
 
 Estado actual:
 
-`Pendiente`
+`Recibido - correccion ortografica ES cerrada el 2026-07-04`
 
 Entregable esperado:
 
@@ -112,34 +112,41 @@ Criterio de aprobacion:
 
 > El correo debe pedir feedback asincrono por Gmail sobre una idea temprana con imagen estatica, sin sugerir producto operativo.
 
-Entregable recibido de Mercury:
+Entregable final corregido por Mercury:
 
 Asunto:
 
-> Opinion rapida sobre una idea temprana para no perder pendientes
+> Opinión rápida sobre una idea temprana para no dejarte nada sin cerrar
 
 Cuerpo:
 
 > Hola,
 >
-> Estoy contrastando una idea muy temprana para autonomos de reparacion domestica: apuntar muy rapido una vuelta, material pendiente, cobro recordado, presupuesto por enviar o cierre de trabajo, y verlo despues como una tarjeta revisable.
+> Soy Autónomo al Día y estoy contrastando una idea muy temprana para autónomos de servicios en reparación doméstica: apuntar muy rápido una tarea, material pendiente, cobro recordado, presupuesto por enviar o cierre de trabajo, y verlo después como una tarjeta revisable.
 >
-> No es una demo ni un producto operativo. Solo te enviaria una imagen estatica con un ejemplo ficticio para pedirte feedback por email, sin llamada, sin voz y sin agenda.
+> No es una demo ni un producto operativo. Solo te enviaría una imagen estática con un ejemplo ficticio para pedirte feedback por email, sin llamada, sin voz y sin agenda.
 >
-> Importante: no me envies datos reales. Nada de nombres, telefonos, direcciones, fotos, facturas, importes, chats ni casos de clientes. Si respondes, usa ejemplos inventados o habla en general.
+> Importante: no me envíes datos reales. Nada de nombres, teléfonos, direcciones, fotos, facturas, importes, chats ni casos de clientes. Si respondes, usa ejemplos inventados o habla en general.
 >
-> Me ayudaria que respondieras a estas 3 preguntas:
+> Me ayudaría que respondieras a estas 3 preguntas:
 >
-> 1. Se entiende que problema intenta resolver?
-> 2. En que momento de trabajo te podria servir, si te serviria?
-> 3. Que te haria descartarlo frente a WhatsApp, notas o memoria?
+> 1. Hoy, cuando te entra un aviso, material, cobro pendiente o presupuesto simple, ¿dónde lo apuntas y qué suele fallar?
+> 2. Viendo este ejemplo ficticio, ¿esto te ayudaría antes de facturar o mandarlo a gestoría, o seguirías como hasta ahora con WhatsApp, notas, libreta o memoria?
+> 3. ¿Qué tendría que preparar la tarjeta para que te ahorre una pérdida real de tiempo, dinero o seguimiento?
 >
-> Gracias,
-> Salva
+> Quedamos a la espera de tus comentarios.
+>
+> Saludos y gracias anticipadas,
+>
+> Equipo de Autónomo al Día
 
 Nota de ejecucion:
 
 > Mercury confirma que no ha enviado emails, no ha usado destinatarios reales y no ha registrado identificadores en el workspace.
+
+Nota de cierre 2026-07-04:
+
+> Mercury confirma que esta version es solo correccion ortografica/copy final del asunto y cuerpo Gmail. No ha enviado ningun email, no ha usado destinatarios reales, no ha activado validacion externa y no ha cambiado canal, pricing, demo, integraciones ni promesa operativa.
 
 Bloqueos:
 
@@ -208,9 +215,9 @@ Resumen recibido:
 
 Preguntas maximas recomendadas:
 
-1. Hoy, cuando te entra una vuelta, material, cobro pendiente o presupuesto simple, donde lo apuntas y que suele fallar?
-2. Viendo este ejemplo ficticio, esto te ayudaria antes de facturar/mandarlo a gestoria, o seguirias igual con WhatsApp/notas/libreta?
-3. Que tendria que preparar la tarjeta para que te ahorre una perdida real de tiempo, dinero o seguimiento?
+1. Hoy, cuando te entra una vuelta, material, cobro pendiente o presupuesto simple, ¿dónde lo apuntas y qué suele fallar?
+2. Viendo este ejemplo ficticio, ¿esto te ayudaría antes de facturar/mandarlo a gestoría, o seguirías igual con WhatsApp/notas/libreta?
+3. ¿Qué tendría que preparar la tarjeta para que te ahorre una pérdida real de tiempo, dinero o seguimiento?
 
 Invalidadores:
 
@@ -276,3 +283,20 @@ Actualizacion Mercury 2026-06-29:
 - sigue pendiente Irinas.
 
 Siguiente accion propuesta: solicitar cierre de Irinas en su tarjeta Trello antes de cualquier consolidacion final.
+
+Actualizacion Mercury 2026-07-04:
+
+- Mercury devuelve asunto y cuerpo corregidos con corrector ortografico/copy final ES;
+- confirma que no ha enviado email, no ha usado destinatarios reales, no ha activado validacion externa y no ha cambiado canal, pricing, demo, integraciones ni promesa operativa;
+- tarjeta Mercury movida a `Aprobado / Hecho`;
+- item `Mercury pasa corrector ortografico ES asunto y cuerpo` marcado como completo;
+- item `Salva decide aprobar, ajustar o bloquear` mantenido pendiente;
+- gate movido a `Revision Salva`.
+
+Estado final tras correccion:
+
+- no enviar;
+- no contactar;
+- no ejecutar;
+- Irinas, Nathan, Asirin y Mercury quedan cerrados;
+- pendiente unica: decision de Salva sobre aprobar, ajustar o bloquear.

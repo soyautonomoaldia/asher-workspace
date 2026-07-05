@@ -2,7 +2,7 @@
 
 Fecha: 2026-06-30
 Owner coordinacion: Gael
-Estado: consolidado owner completo para decision de Salva
+Estado: consolidado owner completo para decision de Salva; correccion ortografica ES cerrada por Mercury el 2026-07-04
 
 ## Decision
 
@@ -16,7 +16,7 @@ No autoriza contactar P1/P2/P3, enviar emails, usar destinatarios reales, regist
 
 ### Mercury / Growth
 
-Estado: recibido.
+Estado: recibido y corregido ortograficamente el 2026-07-04.
 
 Entrega:
 
@@ -26,6 +26,7 @@ Entrega:
 - sin envio ejecutado;
 - sin destinatarios reales;
 - sin identificadores registrados en workspace.
+- confirmacion 2026-07-04: Mercury pasa corrector ortografico/copy final ES sobre asunto y cuerpo, sin enviar email, sin usar destinatarios reales, sin activar validacion externa y sin cambiar canal, pricing, demo, integraciones ni promesa operativa.
 
 ### Irinas / UX
 
@@ -69,7 +70,7 @@ Condiciones incorporadas:
 ### Asunto Gmail
 
 ```text
-Opinion rapida sobre una idea temprana para no perder pendientes
+Opinión rápida sobre una idea temprana para no dejarte nada sin cerrar
 ```
 
 ### Cuerpo Gmail
@@ -77,38 +78,44 @@ Opinion rapida sobre una idea temprana para no perder pendientes
 ```text
 Hola,
 
-Estoy contrastando una idea muy temprana para autonomos de reparacion domestica: apuntar muy rapido una vuelta, material pendiente, cobro recordado, presupuesto por enviar o cierre de trabajo, y verlo despues como una tarjeta revisable.
+Soy Autónomo al Día y estoy contrastando una idea muy temprana para autónomos de servicios en reparación doméstica: apuntar muy rápido una tarea, material pendiente, cobro recordado, presupuesto por enviar o cierre de trabajo, y verlo después como una tarjeta revisable.
 
-No es una demo ni un producto operativo. Solo te enviaria una imagen estatica con un ejemplo ficticio para pedirte feedback por email, sin llamada, sin voz y sin agenda.
+No es una demo ni un producto operativo. Solo te enviaría una imagen estática con un ejemplo ficticio para pedirte feedback por email, sin llamada, sin voz y sin agenda.
 
-Importante: no me envies datos reales. Nada de nombres, telefonos, direcciones, fotos, facturas, importes, chats ni casos de clientes. Si respondes, usa ejemplos inventados o habla en general.
+Importante: no me envíes datos reales. Nada de nombres, teléfonos, direcciones, fotos, facturas, importes, chats ni casos de clientes. Si respondes, usa ejemplos inventados o habla en general.
 
-Me ayudaria que respondieras a estas 3 preguntas:
+Me ayudaría que respondieras a estas 3 preguntas:
 
-1. Hoy, cuando te entra una vuelta, material, cobro pendiente o presupuesto simple, donde lo apuntas y que suele fallar?
-2. Viendo este ejemplo ficticio, esto te ayudaria antes de facturar o mandarlo a gestoria, o seguirias igual con WhatsApp, notas, libreta o memoria?
-3. Que tendria que preparar la tarjeta para que te ahorre una perdida real de tiempo, dinero o seguimiento?
+1. Hoy, cuando te entra un aviso, necesitas material, recordar cobro pendiente o realizar presupuesto simple, ¿dónde lo apuntas y qué suele fallar?
+2. Viendo este ejemplo ficticio, ¿esto te ayudaría antes de facturar o mandarlo a gestoría, o seguirías como hasta ahora con WhatsApp, notas, libreta o memoria?
+3. ¿Qué tendría que preparar la tarjeta para que te ahorre una pérdida real de tiempo, dinero o seguimiento?
 
-Gracias,
-Salva
+
+Quedamos a la espera de tus comentarios.
+
+Saludos y gracias anticipadas,
+
+Equipo de Autónomo al Día
 ```
 
 Nota de consolidacion: se mantiene el texto base de Mercury, pero se sustituyen las preguntas por las de Asirin porque fuerzan dolor real, alternativa actual y salida manual. Esta modificacion es de consolidacion, no una autorizacion de envio.
+
+Nota de cierre Mercury 2026-07-04: asunto y cuerpo quedan revisados con corrector ortografico de espanol de Espana. La revision es solo de ortografia/copy final y no autoriza envio.
 
 ### Copy Exacto De La Imagen Estatica
 
 ```text
 AD Captura Pack
 
-De una nota rapida a un paquete revisable
+De una nota rápida a un paquete revisable
 
-Nota rapida ficticia
+Nota rápida ficticia
 "Grifo cocina gotea. Volver jueves. Llevar latiguillo y teflon. Cobro pendiente. Preguntar si quiere cambiar sifon."
 
 AD prepara esto para revisar
 
 Trabajo
-Reparacion sencilla de grifo de cocina
+Reparación sencilla de grifo de cocina
 
 Cliente
 Ejemplo ficticio
@@ -194,4 +201,3 @@ Trello debe quedar actualizado asi:
 - gate principal movido a `Revision Salva`;
 - comentario de consolidacion agregado al gate;
 - source actualizado con este consolidado.
-

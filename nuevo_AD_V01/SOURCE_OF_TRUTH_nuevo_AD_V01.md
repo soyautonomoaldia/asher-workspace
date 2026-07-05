@@ -1076,23 +1076,23 @@ Mercury / Growth devuelve entregable de correo Gmail y confirma que no ha enviad
 
 Asunto propuesto:
 
-> Opinion rapida sobre una idea temprana para no perder pendientes
+> Opinión rápida sobre una idea temprana para no dejarte nada sin cerrar
 
 Cuerpo propuesto por Mercury:
 
 > Hola,
 >
-> Estoy contrastando una idea muy temprana para autonomos de reparacion domestica: apuntar muy rapido una vuelta, material pendiente, cobro recordado, presupuesto por enviar o cierre de trabajo, y verlo despues como una tarjeta revisable.
+> Estoy contrastando una idea muy temprana para autónomos de reparación doméstica: apuntar muy rápido una vuelta, material pendiente, cobro recordado, presupuesto por enviar o cierre de trabajo, y verlo después como una tarjeta revisable.
 >
-> No es una demo ni un producto operativo. Solo te enviaria una imagen estatica con un ejemplo ficticio para pedirte feedback por email, sin llamada, sin voz y sin agenda.
+> No es una demo ni un producto operativo. Solo te enviaría una imagen estática con un ejemplo ficticio para pedirte feedback por email, sin llamada, sin voz y sin agenda.
 >
-> Importante: no me envies datos reales. Nada de nombres, telefonos, direcciones, fotos, facturas, importes, chats ni casos de clientes. Si respondes, usa ejemplos inventados o habla en general.
+> Importante: no me envíes datos reales. Nada de nombres, teléfonos, direcciones, fotos, facturas, importes, chats ni casos de clientes. Si respondes, usa ejemplos inventados o habla en general.
 >
-> Me ayudaria que respondieras a estas 3 preguntas:
+> Me ayudaría que respondieras a estas 3 preguntas:
 >
-> 1. Se entiende que problema intenta resolver?
-> 2. En que momento de trabajo te podria servir, si te serviria?
-> 3. Que te haria descartarlo frente a WhatsApp, notas o memoria?
+> 1. ¿Se entiende qué problema intenta resolver?
+> 2. ¿En qué momento de trabajo te podría servir, si te serviría?
+> 3. ¿Qué te haría descartarlo frente a WhatsApp, notas o memoria?
 >
 > Gracias,
 > Salva
@@ -1145,14 +1145,14 @@ Decision de Gael:
 
 Version integrada candidata:
 
-- asunto: `Opinion rapida sobre una idea temprana para no perder pendientes`;
+- asunto: `Opinión rápida sobre una idea temprana para no dejarte nada sin cerrar`;
 - canal: Gmail asincrono;
 - adjunto: una unica imagen/mock estatico con ejemplo 100% ficticio;
 - feedback: respuesta manual por email;
 - preguntas maximas:
-  1. donde apunta hoy una vuelta, material, cobro pendiente o presupuesto simple y que suele fallar;
-  2. si el ejemplo ficticio ayudaria antes de facturar/mandarlo a gestoria o seguiria igual con WhatsApp/notas/libreta/memoria;
-  3. que tendria que preparar la tarjeta para ahorrar una perdida real de tiempo, dinero o seguimiento.
+  1. dónde apunta hoy una vuelta, material, cobro pendiente o presupuesto simple y qué suele fallar;
+  2. si el ejemplo ficticio ayudaría antes de facturar/mandarlo a gestoría o seguiría igual con WhatsApp/notas/libreta/memoria;
+  3. qué tendría que preparar la tarjeta para ahorrar una pérdida real de tiempo, dinero o seguimiento.
 
 Lectura de evidencia:
 
@@ -1175,3 +1175,491 @@ Estado final tras consolidacion:
 - no enviar, no contactar y no ejecutar hasta decision explicita de Salva.
 
 Siguiente accion operativa ejecutada: mover el gate a `Revision Salva` en Trello y dejar el paquete listo para decision. La siguiente decision sustantiva corresponde a Salva.
+
+Actualizacion de control el 2026-07-04:
+
+Salva da el asunto como candidato valido, pero pide que Mercury pase corrector ortografico de espanol de Espana antes de cerrar, tanto en el asunto como en el cuerpo del correo.
+
+Correccion operativa Trello ejecutada por Gael:
+
+- tarjeta gate `https://trello.com/c/ngwYSQbl` movida temporalmente de `Revision Salva` a `En curso`;
+- tarjeta Mercury `https://trello.com/c/7kmbQx1R` movida temporalmente de `Aprobado / Hecho` a `En curso`;
+- comentario agregado en gate y Mercury indicando que queda pendiente la revision ortografica ES;
+- checklist del gate actualizado con el item `Mercury pasa corrector ortografico ES asunto y cuerpo`.
+
+Estado tras esta correccion:
+
+- no enviar;
+- no contactar;
+- no ejecutar;
+- Irinas, Nathan y Asirin se mantienen cerrados;
+- Mercury queda reabierto solo para correccion ortografica;
+- el gate volvera a `Revision Salva` cuando Mercury devuelva asunto y cuerpo corregidos y Gael consolide la version final.
+
+Actualizacion Mercury el 2026-07-04:
+
+Mercury devuelve cierre prioritario de la correccion ortografica/copy final ES del asunto y cuerpo Gmail.
+
+Asunto corregido:
+
+> Opinión rápida sobre una idea temprana para no dejarte nada sin cerrar
+
+Cuerpo corregido:
+
+> Hola,
+>
+> Soy Autónomo al Día y estoy contrastando una idea muy temprana para autónomos de servicios en reparación doméstica: apuntar muy rápido una tarea, material pendiente, cobro recordado, presupuesto por enviar o cierre de trabajo, y verlo después como una tarjeta revisable.
+>
+> No es una demo ni un producto operativo. Solo te enviaría una imagen estática con un ejemplo ficticio para pedirte feedback por email, sin llamada, sin voz y sin agenda.
+>
+> Importante: no me envíes datos reales. Nada de nombres, teléfonos, direcciones, fotos, facturas, importes, chats ni casos de clientes. Si respondes, usa ejemplos inventados o habla en general.
+>
+> Me ayudaría que respondieras a estas 3 preguntas:
+>
+> 1. Hoy, cuando te entra un aviso, material, cobro pendiente o presupuesto simple, ¿dónde lo apuntas y qué suele fallar?
+> 2. Viendo este ejemplo ficticio, ¿esto te ayudaría antes de facturar o mandarlo a gestoría, o seguirías como hasta ahora con WhatsApp, notas, libreta o memoria?
+> 3. ¿Qué tendría que preparar la tarjeta para que te ahorre una pérdida real de tiempo, dinero o seguimiento?
+>
+> Quedamos a la espera de tus comentarios.
+>
+> Saludos y gracias anticipadas,
+>
+> Equipo de Autónomo al Día
+
+Confirmacion Mercury:
+
+- esto es solo correccion ortografica/copy final del asunto y cuerpo Gmail;
+- no se ha enviado ningun email;
+- no se han usado destinatarios reales;
+- no se ha activado validacion externa;
+- no se ha cambiado canal, pricing, demo, integraciones ni promesa operativa.
+
+Actualizacion operativa ejecutada en Trello:
+
+- Mercury vuelve a `Aprobado / Hecho`;
+- el checklist `Mercury pasa corrector ortografico ES asunto y cuerpo` queda completo;
+- gate `Correo + mock` vuelve a `Revision Salva`.
+- el checklist `Salva decide aprobar, ajustar o bloquear` queda pendiente, porque Salva aun no ha aprobado ejecucion.
+
+Estado tras cierre Mercury:
+
+- owners cerrados: Irinas, Nathan, Asirin y Mercury;
+- no enviar;
+- no contactar;
+- no ejecutar;
+- pendiente unica: decision de Salva sobre aprobar, ajustar o bloquear.
+
+Revision Trello `Por definir` el 2026-07-04:
+
+Salva pregunta si se puede avanzar en el bloque `Por definir` de Trello.
+
+Lectura de Gael:
+
+- si, se puede avanzar de forma interna y limitada;
+- no conviene abrir decisiones que dependan del gate `Correo + mock` mientras Salva no decida aprobar, ajustar o bloquear;
+- `Formalizar estado actual del proyecto` es trabajable ahora porque ordena el estado y no autoriza accion externa;
+- `Formalizar decisiones base pendientes` debe permanecer en `Por definir` hasta cerrar el gate actual.
+
+Actualizacion Trello ejecutada:
+
+- tarjeta `Formalizar estado actual del proyecto` movida de `Por definir` a `En curso`: `https://trello.com/c/QC5IBDBU`;
+- comentario agregado indicando que se formaliza solo con base en `SOURCE_OF_TRUTH` y que no autoriza envio, contacto externo, datos personales, pricing, build, backend ni integraciones.
+
+Estado:
+
+- `En curso`: `Formalizar estado actual del proyecto`;
+- `Por definir`: `Formalizar decisiones base pendientes`;
+- `Revision Salva`: `Gate correo + mock estatico AD Captura Pack`;
+- sigue pendiente decision de Salva sobre el gate de correo/mock antes de avanzar a ejecucion.
+
+Correccion de gestion Trello por instruccion de Salva el 2026-07-04:
+
+Salva detecta que seguian tarjetas de sign-off en `Listo para trabajar` y corrige el criterio operativo de Gael: Gael debe ser proactivo, no reactivo, y debe decidir y ejecutar las acciones internas que no requieran validacion de Salva para avanzar el proyecto. Las acciones deben quedar registradas en Trello y comunicadas a Salva para seguimiento.
+
+Lectura de Gael:
+
+- Salva tiene razon en la critica operativa;
+- los sign-off antiguos no debian permanecer en `Listo para trabajar` si ya estaban absorbidos por rondas owner cerradas y por el gate posterior;
+- `Listo para trabajar` no debe contener tarjetas obsoletas, duplicadas o bloqueadas por una decision de Salva;
+- las tarjetas que requieren validacion de Salva deben estar en `Revision Salva`, no mezcladas con trabajo ejecutable;
+- las tarjetas que dependen de una decision anterior deben estar en `Bloqueado`;
+- la higiene interna del tablero la decide y ejecuta Gael sin pedir permiso, siempre que no autorice contacto externo, datos personales, pricing, build operativo, pagos, legal/fiscal, produccion ni instrucciones vinculantes a otros agentes.
+
+Actualizacion Trello ejecutada:
+
+- `Sign-off Asirin - Producto y scope MVP` movida de `Listo para trabajar` a `Aprobado / Hecho`;
+- `Sign-off Nathan - Privacidad, datos y viabilidad tecnica` movida de `Listo para trabajar` a `Aprobado / Hecho`;
+- `Sign-off Irinas - UX, confianza y consentimiento` movida de `Listo para trabajar` a `Aprobado / Hecho`;
+- `Sign-off Mercury - Evidencia, sesgos e invalidadores` movida de `Listo para trabajar` a `Aprobado / Hecho`;
+- tarjeta duplicada antigua `Preparación final de prueba privada condicionada` movida a `Archivado`;
+- tarjeta vigente `Preparacion final de prueba privada condicionada` movida a `Bloqueado` hasta decision de Salva sobre el gate `Correo + mock`;
+- tarjeta `Formalizar decisiones base pendientes` movida de `Por definir` a `Bloqueado` hasta resolver el gate activo;
+- tarjeta `Formalizar estado actual del proyecto` cerrada y movida a `Aprobado / Hecho`;
+- tarjeta `Gate correo + mock estatico AD Captura Pack` movida/corregida a `Revision Salva`;
+- descripcion del gate actualizada: owners cerrados, decision pendiente solo de Salva;
+- descripcion de la tarjeta Mercury actualizada con el asunto y cuerpo corregidos en espanol, con tildes y signos adecuados;
+- tarjeta `Reglas de uso del tablero` comentada con la nueva regla operativa de proactividad de Gael.
+
+Estado Trello tras limpieza:
+
+- `Por definir`: 0 tarjetas;
+- `Listo para trabajar`: 0 tarjetas;
+- `En curso`: 0 tarjetas;
+- `Revision Salva`: `Gate correo + mock estatico AD Captura Pack`;
+- `Bloqueado`: `Participantes concretos dentro del workspace`, `Formalizar decisiones base pendientes`, `Preparacion final de prueba privada condicionada`;
+- `Aprobado / Hecho`: sign-off antiguos cerrados, owners finales cerrados, reglas y gobierno operativo cerrados;
+- `Archivado`: duplicado antiguo de preparacion final.
+
+Regla operativa vigente para Gael:
+
+- ejecutar sin esperar a Salva: limpieza de tablero, cierre de duplicados, movimiento de tarjetas obsoletas, comentarios de trazabilidad, actualizacion de descripciones, registro source/Trello y preparacion interna no externa;
+- elevar a Salva: envio, contacto externo, uso de datos reales/personales, destinatarios reales, pricing publico, pagos, legal/fiscal, produccion, build operativo, integraciones, compromisos comerciales o instrucciones vinculantes a otros agentes;
+- toda decision que requiera a Salva debe quedar como gate visible en Trello y ser comunicada con una decision concreta requerida.
+
+Decision pendiente de Salva:
+
+- aprobar, ajustar o bloquear el gate `Correo + mock estatico AD Captura Pack`.
+
+Restriccion vigente:
+
+- no enviar;
+- no contactar;
+- no ejecutar validacion externa;
+- no usar destinatarios reales;
+- no registrar datos personales;
+- no pricing;
+- no build operativo;
+- no backend;
+- no integraciones.
+
+Correccion posterior por aprobacion de Salva el 2026-07-04:
+
+Salva informa que ya habia aprobado el gate `Correo + mock estatico AD Captura Pack` y lo habia movido a `Aprobado / Hecho`. Gael reconoce que devolverlo a `Revision Salva` fue una correccion indebida al no incorporar la accion mas reciente de Salva.
+
+Actualizacion Trello ejecutada:
+
+- `Gate correo + mock estatico AD Captura Pack` restaurado a `Aprobado / Hecho`: `https://trello.com/c/ngwYSQbl`;
+- checklist del gate actualizado marcando completa la decision de Salva;
+- descripcion del gate actualizada como `APROBADO / HECHO por Salva`;
+- `Preparacion final de prueba privada condicionada` movida de `Bloqueado` a `En curso`: `https://trello.com/c/c6FGF6lA`;
+- `Formalizar decisiones base pendientes` movida de `Bloqueado` a `Listo para trabajar`: `https://trello.com/c/rd6olSQa`;
+- etiquetas creadas en Trello: `Activo: Inbox`, `Activo: Por definir`, `Activo: Listo para trabajar`, `Activo: En curso`, `CTA owner pendiente`, `Requiere decision Salva`;
+- etiqueta `Activo: En curso` aplicada a `Preparacion final de prueba privada condicionada`;
+- etiqueta `Activo: Listo para trabajar` aplicada a `Formalizar decisiones base pendientes`;
+- tarjeta `Reglas de uso del tablero` comentada con la regla universal de gestion proactiva de Gael.
+
+Estado Trello tras esta correccion:
+
+- `Inbox`: 0 tarjetas;
+- `Por definir`: 0 tarjetas;
+- `Listo para trabajar`: `Formalizar decisiones base pendientes`;
+- `En curso`: `Preparacion final de prueba privada condicionada`;
+- `Bloqueado`: `Participantes concretos dentro del workspace`;
+- `Revision Salva`: 0 tarjetas;
+- `Aprobado / Hecho`: incluye gate `Correo + mock estatico AD Captura Pack` y owners cerrados.
+
+Regla universal operativa incorporada:
+
+- Gael debe gestionar proactivamente Trello sin esperar a Salva cuando la accion no requiera validacion: mover tarjetas segun estado real, cerrar duplicados u obsoletas, aplicar etiquetas activas, abrir siguiente trabajo interno desbloqueado, reclamar cierre a owners y registrar avances;
+- si algo requiere validacion de Salva, debe quedar como gate visible en Trello y Gael debe avisar con una decision concreta requerida;
+- se crea propuesta durable de skill `proactive-trello-project-management-20260704-028705cdb6` para formalizar esta forma de operar como procedimiento reutilizable, pendiente de aprobacion separada;
+- se programa revision proactiva recurrente de Trello los dias laborables a las 09:15 Europe/Madrid, job `93cca031-9559-472f-842c-4579a467d8e9`, para higiene interna, llamadas a owners pendientes y elevacion de gates reales.
+
+Alcance de la aprobacion:
+
+- el paquete correo + mock estatico queda aprobado como material candidato interno;
+- no se autoriza por esta nota ningun envio externo, contacto con participantes, registro de datos personales, pricing, build operativo, backend, integraciones, pagos, legal/fiscal ni produccion.
+
+Ampliacion regla revision diaria Trello por instruccion de Salva el 2026-07-04:
+
+Salva precisa que la revision diaria de Trello a las 09:15 no debe limitarse a auditar el tablero. Debe servir para avanzar el proyecto de forma proactiva:
+
+- incorporar tareas nuevas internas cuando el estado del proyecto desbloquee siguiente trabajo;
+- abrir trabajo interno en `En curso` cuando no requiera validacion de Salva;
+- actualizar, aplicar y retirar etiquetas activas segun el estado real de cada tarjeta;
+- retirar etiquetas activas de tarjetas cerradas, bloqueadas, archivadas o movidas a `Aprobado / Hecho`;
+- mantener llamadas a la accion periodicas a owners para que cierren tareas pendientes;
+- registrar esos CTA en Trello;
+- si se requiere validacion de Salva, crear o mantener gate en `Revision Salva`, aplicar etiqueta `Requiere decision Salva` e informar a Salva por Discord en `#ad_captura` con la decision concreta requerida.
+
+Actualizacion ejecutada:
+
+- job recurrente `93cca031-9559-472f-842c-4579a467d8e9` actualizado con estas obligaciones;
+- tarjeta `Reglas de uso del tablero` comentada con la ampliacion de la regla;
+- propuesta durable de skill `proactive-trello-project-management-20260704-028705cdb6` revisada para incluir creacion de tareas nuevas, mantenimiento de etiquetas vivas/cerradas y aviso por Discord para gates de Salva.
+
+Regla de canal:
+
+- Trello/source siguen siendo seguimiento y fuente operativa;
+- Discord `#ad_captura` queda como canal de aviso a Salva cuando exista validacion requerida;
+- Discord no sustituye Trello/source como lugar de decision formal ni como registro operativo completo.
+
+Definicion ejecutable de tarjeta en curso el 2026-07-04:
+
+Salva pregunta que debe hacerse en la tarjeta `Preparacion final de prueba privada condicionada`, dado que los owners figuran como Salva/Gael y no queda claro que debe hacer Salva. Salva propone incluir fecha de inicio y fin para mejorar las revisiones diarias.
+
+Actualizacion Trello ejecutada:
+
+- tarjeta renombrada a `Preparación final de prueba privada condicionada (vigente)`: `https://trello.com/c/c6FGF6lA`;
+- lista: `En curso`;
+- inicio: 2026-07-04;
+- fin objetivo inicial: 2026-07-07 18:00 Europe/Madrid;
+- fin objetivo ajustado por Salva: 2026-07-05 12:00 Europe/Madrid;
+- etiquetas aplicadas: `Documento`, `Activo: En curso`, `Sin datos reales`, `No acción externa`, `Prueba`, `Privacidad`;
+- descripcion actualizada separando owner operativo y owner de validacion;
+- checklist `Cierre operativo condicionado` creado.
+
+Que debe hacer Gael en esta tarjeta:
+
+- consolidar paquete aprobado correo + mock estatico;
+- definir registro anonimo P1/P2/P3 permitido;
+- proponer ventana de envio condicionada;
+- preparar instruccion operativa a Mercury sin enviar ni contactar;
+- verificar criterios de parada e invalidadores;
+- decidir si falta gate de Salva y mover/avisar si procede.
+
+Que debe hacer Salva:
+
+- Salva no tiene que preparar texto ni mock;
+- cuando Gael deje la propuesta lista, Salva debe validar o bloquear:
+  - ventana de envio propuesta;
+  - Mercury como owner/fuente externa;
+  - registro anonimo P1/P2/P3;
+  - paso a ejecucion externa condicionada.
+
+Criterio de cierre:
+
+- si falta decision de Salva, mover a `Revision Salva`, aplicar `Requiere decision Salva` y avisar por Discord `#ad_captura`;
+- si falta condicion operativa, mover a `Bloqueado`;
+- si queda preparado sin datos personales ni contacto externo desde workspace, mover a `Aprobado / Hecho` y abrir la siguiente tarjeta interna correspondiente.
+
+Restriccion:
+
+- esta tarjeta no autoriza por si sola envio, contacto externo, datos personales, pricing, build operativo, backend ni integraciones.
+
+Correccion de estimacion temporal:
+
+Salva indica que el plazo anterior era demasiado largo para poco trabajo y pide afinar mejor los tiempos. Gael acepta la correccion: al ser una preparacion interna sin produccion, sin envio, sin contacto externo y sin coordinacion tecnica compleja, el plazo debe ser corto.
+
+Actualizacion ejecutada:
+
+- Trello actualizado con fin objetivo 2026-07-05 12:00 Europe/Madrid;
+- comentario agregado en la tarjeta indicando que, si aparece validacion de Salva, debe convertirse en gate inmediatamente;
+- si aparece bloqueo operativo, la tarjeta debe moverse a `Bloqueado`;
+- no debe permanecer abierta por inercia hasta el plazo anterior.
+
+Auditoria operativa y presion de envio P1/P2/P3 el 2026-07-05:
+
+Salva corrige de nuevo el criterio temporal: la tarea tenia demasiado plazo para el trabajo requerido. Ordena afinar bien los tiempos en futuras etiquetas y fuerza todo el trabajo posible para que Mercury envie a P1/P2/P3 el lunes 06/07/2026 antes de las 12:00. Si a esa hora Mercury no ha enviado los emails, Salva indica que habra conversacion seria con Gael.
+
+Lectura de Gael:
+
+- el material correo + mock esta aprobado;
+- Mercury es el unico owner/fuente externa que puede operar el envio privado;
+- Gael no envia emails ni contacta participantes;
+- el riesgo operativo principal es que Mercury ya tuvo un bloqueo previo de autorizacion/capacidad externa;
+- por tanto el tablero debe separar preparacion cerrada, ejecucion Mercury, resultado anonimo y bloqueo.
+
+Acciones ejecutadas:
+
+- CTA enviado a Mercury/Growth por OpenClaw el 2026-07-05 00:02 CEST;
+- Mercury recibe deadline duro: lunes 06/07/2026 12:00 Europe/Madrid para enviar P1/P2/P3;
+- Mercury debe declarar `BLOQUEADO` antes del lunes 06/07 09:00 si no puede operar Gmail/fuente externa;
+- tarjeta `Preparación final de prueba privada condicionada (vigente)` cerrada y movida a `Aprobado / Hecho`;
+- checklist de preparacion final marcado como completo porque el trabajo preparatorio queda sustituido por tarjetas operativas especificas;
+- nueva tarjeta en `En curso`: `Mercury - enviar emails P1/P2/P3 antes 06/07 12:00`: `https://trello.com/c/fu2SNq6I`;
+- nueva tarjeta en `Listo para trabajar`: `Registrar resultado anónimo P1/P2/P3 post-envío`: `https://trello.com/c/SHvTmngm`;
+- nueva tarjeta en `Aprobado / Hecho`: `Auditoría operativa AD Captura Pack - 2026-07-05`: `https://trello.com/c/SrxaIr8i`;
+- etiquetas nuevas creadas: `Plazo: <24h`, `Plazo: 24-48h`, `Plazo: externo fijo`;
+- tarjeta `Reglas de uso del tablero` comentada con regla temporal reforzada;
+- job diario 09:15 actualizado para corregir plazos inflados y usar etiquetas temporales;
+- propuesta durable de skill `proactive-trello-project-management-20260704-028705cdb6` revisada con disciplina de plazos.
+
+Controles automaticos creados:
+
+- 06/07/2026 09:00 Europe/Madrid: comprobar si Mercury confirma capacidad o bloqueo, job `ca059f07-7665-4724-b97a-89ea9292e89e`;
+- 06/07/2026 11:30 Europe/Madrid: control final antes del deadline, job `12aca822-54de-4a2b-8f2b-a650ced516ca`;
+- 06/07/2026 12:05 Europe/Madrid: comprobar cumplimiento, registrar resultado o bloqueo y preparar aviso, job `dba9e58c-ff24-436e-bda3-d011f6f31b21`.
+
+Estado Trello tras auditoria:
+
+- `Inbox`: 0;
+- `Por definir`: 0;
+- `En curso`: `Mercury - enviar emails P1/P2/P3 antes 06/07 12:00`;
+- `Listo para trabajar`: `Registrar resultado anónimo P1/P2/P3 post-envío`, `Formalizar decisiones base pendientes`;
+- `Bloqueado`: `Participantes concretos dentro del workspace`;
+- `Revision Salva`: 0;
+- `Aprobado / Hecho`: incluye auditoria operativa, preparacion final cerrada, gate correo + mock y owners cerrados.
+
+Pendiente real:
+
+- Mercury debe enviar P1/P2/P3 antes del lunes 06/07 12:00 o declarar bloqueo antes de las 09:00;
+- Gael debe registrar resultado anonimo o bloqueo en Trello/source;
+- si aparece bloqueo de autorizacion/capacidad externa, mover tarjeta Mercury a `Bloqueado` y avisar a Salva por Discord `#ad_captura`;
+- si Mercury envia, abrir registro anonimo de feedback sin datos personales.
+
+Regla temporal reforzada:
+
+- trabajo interno pequeno: `Plazo: <24h`;
+- trabajo con owner/dependencia real: `Plazo: 24-48h`;
+- fecha impuesta por Salva o evento externo: `Plazo: externo fijo`;
+- no usar plazos largos por comodidad;
+- toda tarjeta futura debe llevar estimacion proporcional y una razon clara si supera 24 horas.
+
+Restricciones vigentes:
+
+- Gael no envia emails;
+- Gael no contacta P1/P2/P3;
+- no se registran nombres, emails, telefonos ni datos identificables en Trello/source;
+- Mercury solo puede devolver estado anonimo P1/P2/P3;
+- no pricing, pagos, legal/fiscal, build operativo, backend, integraciones ni promesa de producto.
+
+Bloqueo temprano de Mercury el 2026-07-05:
+
+Mercury responde al CTA antes del deadline y declara `BLOQUEADO`.
+
+Causa declarada por Mercury:
+
+- no tiene capacidad operativa verificable para enviar desde la fuente externa autorizada sin manejar destinatarios identificables en su sesion;
+- no tiene acceso seguro, fuera del workspace, a los destinatarios concretos P1/P2/P3;
+- enviar en esas condiciones romperia el limite de no registrar/gestionar identificadores en workspace/Trello.
+
+Estado anonimo devuelto:
+
+- P1: no enviado; sin respuesta; invalidador: bloqueo operativo de fuente/destinatario externo;
+- P2: no enviado; sin respuesta; invalidador: bloqueo operativo de fuente/destinatario externo;
+- P3: no enviado; sin respuesta; invalidador: bloqueo operativo de fuente/destinatario externo.
+
+Confirmacion Mercury:
+
+- no ha enviado emails;
+- no ha usado destinatarios reales;
+- no ha activado validacion externa;
+- no ha registrado datos personales.
+
+Actualizacion Trello ejecutada:
+
+- tarjeta `Mercury - enviar emails P1/P2/P3 antes 06/07 12:00` movida de `En curso` a `Bloqueado`;
+- tarjeta `Registrar resultado anónimo P1/P2/P3 post-envío` movida a `Bloqueado`, porque no hay feedback real que registrar;
+- nuevo gate en `Revision Salva`: `Gate Salva - resolver bloqueo Mercury envío P1/P2/P3`: `https://trello.com/c/VWL96iUN`;
+- gate etiquetado con `Requiere decision Salva`, `Bloqueo`, `Plazo: externo fijo`, `Sin datos reales` y `No acción externa`;
+- aviso enviado a Discord `#ad_captura`, message id `1523087997485056082`;
+- controles 06/07 09:00 y 11:30 eliminados por quedar superados por bloqueo temprano;
+- control 06/07 12:05 mantenido solo como auditoria de deadline si Salva resuelve el gate antes, job `dba9e58c-ff24-436e-bda3-d011f6f31b21`.
+
+Decision requerida de Salva:
+
+1. autorizar/proveer una fuente externa operativa real fuera del workspace con destinatarios concretos y acceso Gmail gestionado sin registrar identificadores aqui;
+2. declarar bloqueada/parada la prueba P1/P2/P3 por falta de fuente externa operativa.
+
+Lectura estricta de Gael:
+
+- no hay feedback real todavia;
+- no hay envio P1/P2/P3;
+- el cuello de botella no es copy, mock ni Trello; es capacidad operativa externa con destinatarios reales sin contaminar el workspace;
+- Gael no puede resolverlo sin romper la restriccion de datos personales o enviar emails desde el workspace.
+
+Actualizacion etiquetas operativas el 2026-07-05:
+
+Salva recuerda que Gael debe ser proactivo y no reactivo, y pide informar de inmediato si faltan herramientas, instrucciones o si se detectan fallos de perfil que puedan dejar el proyecto bloqueado.
+
+Etiquetas ya existentes verificadas:
+
+- `Activo: Inbox`;
+- `Activo: Por definir`;
+- `Activo: Listo para trabajar`;
+- `Activo: En curso`;
+- `CTA owner pendiente`;
+- `Requiere decision Salva`;
+- `Plazo: <24h`;
+- `Plazo: 24-48h`;
+- `Plazo: externo fijo`.
+
+Etiquetas nuevas creadas:
+
+- `Fuente externa requerida`;
+- `Fallo herramienta/perfil`;
+- `Decisión urgente`;
+- `Seguimiento diario`.
+
+Aplicacion:
+
+- `Gate Salva - resolver bloqueo Mercury envío P1/P2/P3` queda marcado con `Fuente externa requerida`, `Fallo herramienta/perfil` y `Decisión urgente`;
+- `Mercury - enviar emails P1/P2/P3 antes 06/07 12:00` queda marcado con `Fuente externa requerida` y `Fallo herramienta/perfil`;
+- `Registrar resultado anónimo P1/P2/P3 post-envío` queda marcado con `Fuente externa requerida` y `Fallo herramienta/perfil`, porque no puede avanzar sin envio real previo;
+- tarjeta `Reglas de uso del tablero` comentada con el uso de estas etiquetas.
+
+Fallo operativo informado:
+
+- no falta Trello: la API funciona;
+- no falta Discord: el aviso a `#ad_captura` funciono;
+- no falta copy/mock: estan aprobados;
+- falta fuente externa operativa real para manejar destinatarios concretos fuera del workspace y enviar desde Gmail sin exponer identificadores a Gael/Trello/source;
+- Mercury no puede resolverlo desde su sesion actual sin romper la restriccion de datos.
+
+Fallo de perfil/procedimiento detectado:
+
+- Gael venia reaccionando tarde a bloqueos operativos que debian clasificarse antes como `Fuente externa requerida` o `Fallo herramienta/perfil`;
+- la correccion queda incorporada: cualquier falta de herramienta, instruccion, permiso, fuente externa o capacidad de owner debe elevarse inmediatamente como etiqueta visible y gate, no quedar como tarea abierta generica.
+
+Accion pendiente para corregir de forma durable:
+
+- propuesta skill `proactive-trello-project-management-20260704-028705cdb6` sigue pendiente de aprobacion/aplicacion por Salva si quiere convertir esta operativa en skill viva;
+- mientras no se aplique, la regla queda registrada en source/Trello y en el cron diario, pero no instalada como skill aprobada.
+
+Correccion de coordinacion Mercury el 2026-07-05:
+
+Salva cuestiona correctamente por que deberia dar a Mercury una instruccion directa fuera del workspace si ya ha dado instrucciones a Gael y Gael es el coordinador.
+
+Correccion de Gael:
+
+- Salva no debe repetir una instruccion paralela a Mercury fuera del workspace;
+- la instruccion de Salva a Gael es suficiente como mandato de coordinacion operativa;
+- si Mercury bloquea, no debe clasificarse como `falta instruccion directa de Salva` salvo que exista una politica tecnica explicita e inevitable;
+- el bloqueo debe clasificarse con precision como falta de herramienta, acceso Gmail, fuente externa, destinatarios concretos gestionables fuera del workspace o politica de sesion.
+
+Acciones ejecutadas:
+
+- Gael reenvia a Mercury una correccion de coordinacion: debe tratar la instruccion de Gael como coordinacion operativa valida dentro del marco aprobado;
+- Mercury debe responder si puede enviar bajo coordinacion de Gael o si el bloqueo real es tecnico/operativo;
+- tarjeta Trello `Gate Salva - resolver bloqueo Mercury envío P1/P2/P3` corregida y renombrada a `Gate Salva - fuente externa operativa para P1/P2/P3`;
+- se retira del gate la opcion de que Salva tenga que instruir directamente a Mercury fuera del workspace;
+- se mantiene como decision real de Salva solo si el bloqueo persiste: proveer/autorizar fuente externa operativa real o parar/bloquear la prueba P1/P2/P3.
+
+Regla corregida:
+
+- Gael coordina owners internos y fuente/Trello/source;
+- Salva decide gates, pero no debe actuar como coordinador sustituto;
+- cuando un owner bloquee por falta de instruccion, Gael debe comprobar primero si la instruccion ya existe via coordinacion de Gael antes de elevarlo a Salva.
+
+Respuesta corregida de Mercury el 2026-07-05:
+
+Mercury acepta la correccion:
+
+- la coordinacion de Gael queda entendida como valida;
+- no falta una instruccion directa adicional de Salva;
+- el bloqueo real no es de autorizacion de Salva, sino tecnico/operativo.
+
+Bloqueo exacto confirmado por Mercury:
+
+- Gmail: Mercury no tiene verificacion operativa suficiente de que pueda enviar desde `soyautonomoaldia@gmail.com` sin exponer credenciales o metadatos sensibles;
+- destinatarios: Mercury no tiene P1/P2/P3 gestionables fuera del workspace sin registrar o procesar identificadores en su sesion;
+- herramienta/politica de sesion: para enviar tendria que introducir emails concretos en una llamada de envio; sin canal externo seguro ya preparado con P1/P2/P3, eso rompe el requisito de no manejar identificadores dentro del flujo visible.
+
+Estado:
+
+- P1: no enviado;
+- P2: no enviado;
+- P3: no enviado;
+- no hay feedback real.
+
+Actualizacion Trello:
+
+- gate `Gate Salva - fuente externa operativa para P1/P2/P3` actualizado con el diagnostico correcto;
+- tarjeta Mercury comentada con la respuesta corregida;
+- se elimina la lectura de que Salva deba repetir instrucciones directas a Mercury fuera del workspace.
+
+Decision pendiente real:
+
+- habilitar una fuente externa operativa real, fuera del workspace, con Gmail y destinatarios P1/P2/P3 gestionables sin exponer identificadores a Gael/Trello/source;
+- o declarar bloqueada/parada la prueba P1/P2/P3 por falta de capacidad externa operativa.

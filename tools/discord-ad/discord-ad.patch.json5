@@ -20,7 +20,7 @@
       enabled: true,
       token: { source: "env", provider: "default", id: "DISCORD_BOT_TOKEN" },
       dmPolicy: "disabled",
-      groupPolicy: "allowlist",
+      groupPolicy: "open",
       guilds: {
         "1517883781615452202": {
           requireMention: true,

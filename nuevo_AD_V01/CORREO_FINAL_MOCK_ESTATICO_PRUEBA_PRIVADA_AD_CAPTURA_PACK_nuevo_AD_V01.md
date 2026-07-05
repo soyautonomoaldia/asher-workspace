@@ -59,26 +59,28 @@ No es una demo, no tiene backend, no captura datos, no integra Gmail, WhatsApp, 
 
 ## Correo Final Para Mercury
 
+Nota 2026-07-04: este bloque queda superado por la version integrada y corregida en `GAEL_CONSOLIDADO_CORREO_MOCK_OWNER_AD_CAPTURA_PACK_nuevo_AD_V01.md`. Se conserva aqui solo trazabilidad del borrador previo. No usar este bloque para envio.
+
 ```text
-Asunto: Opinion rapida por email sobre una idea para autonomos de reparacion
+Asunto: Opinión rápida sobre una idea temprana para no dejarte nada sin cerrar
 
 Hola,
 
-Te escribo para pedirte una opinion rapida por email, sin llamada.
+Te escribo para pedirte una opinión rápida por email, sin llamada.
 
-Estamos revisando una idea muy inicial para autonomos de reparacion domestica: convertir una nota rapida en un paquete accionable revisable, para no perder vueltas, materiales, cobros, presupuestos simples o cierres antes de pasarlo despues a la herramienta o gestoria que uses.
+Estamos revisando una idea muy inicial para autónomos de reparación doméstica: convertir una nota rápida en un paquete accionable revisable, para no perder vueltas, materiales, cobros, presupuestos simples o cierres antes de pasarlo después a la herramienta o gestoría que uses.
 
 No es una demo operativa, no hay producto que vender y no necesito datos reales tuyos ni de tus clientes.
 
-Te adjunto una unica imagen con un ejemplo ficticio. AD no enviaria mensajes, no agendaria, no cobraria, no facturaria y no se conectaria a ninguna herramienta. Solo prepararia una tarjeta para revisar manualmente.
+Te adjunto una única imagen con un ejemplo ficticio. AD no enviaría mensajes, no agendaría, no cobraría, no facturaría y no se conectaría a ninguna herramienta. Solo prepararía una tarjeta para revisar manualmente.
 
-Si te encaja, respondeme a este email con 3-5 lineas:
+Si te encaja, respóndeme a este email con 3-5 líneas:
 
-1. En tu dia a dia, algo asi te habria evitado perder alguna vuelta, material, cobro, presupuesto pendiente o cierre?
-2. Hoy como lo resuelves: WhatsApp, notas, libreta, memoria, calendario u otra cosa?
-3. Al ver el ejemplo, se entiende que AD prepara la tarjeta para revisar, pero no ejecuta nada por ti?
+1. En tu día a día, ¿algo así te habría evitado perder alguna vuelta, material, cobro, presupuesto pendiente o cierre?
+2. Hoy, ¿cómo lo resuelves: WhatsApp, notas, libreta, memoria, calendario u otra cosa?
+3. Al ver el ejemplo, ¿se entiende que AD prepara la tarjeta para revisar, pero no ejecuta nada por ti?
 
-Por favor, no me envies nombres, telefonos, direcciones, fotos, facturas, importes reales, chats ni datos de clientes. Si prefieres no responder, sin problema.
+Por favor, no me envíes nombres, teléfonos, direcciones, fotos, facturas, importes reales, chats ni datos de clientes. Si prefieres no responder, sin problema.
 
 Gracias.
 ```
