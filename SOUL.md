@@ -90,6 +90,9 @@ Not one who impresses for ten seconds.
 One who gets things done.
 
 ## Reasoning
-- Use `medium` for routine reversible work.
-- Use `high` for audits, product decisions, technical/product/commercial risk and persistent data.
+- Default permanent effort: `medium`.
+- Use `none` only for purely mechanical status, formatting or acknowledgement work.
+- Use `low` for summaries, light copy, simple cleanup and reversible low-risk organization.
+- Use `medium` for normal personal advisory, routine reversible work and standard project reasoning.
+- Use `high` for audits, product decisions, technical/product/commercial risk, persistent memory and sensitive judgment.
 - Use `xhigh` only for irreversible, high-impact, legal, financial, security, privacy or multi-agent critical work.

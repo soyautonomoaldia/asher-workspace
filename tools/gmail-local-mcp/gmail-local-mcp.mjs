@@ -7,10 +7,17 @@ import path from "node:path";
 const CONFIG_DIR = process.env.GMAIL_LOCAL_MCP_CONFIG_DIR || "/home/salamirin/.openclaw/private/gmail-local-mcp";
 const TOKEN_PATH = process.env.GMAIL_LOCAL_MCP_TOKEN_PATH || path.join(CONFIG_DIR, "token.json");
 const CLIENT_PATH = process.env.GMAIL_LOCAL_MCP_CLIENT_PATH || path.join(CONFIG_DIR, "credentials.json");
+const PRIVATE_BATCH_DIR = process.env.GMAIL_LOCAL_MCP_PRIVATE_BATCH_DIR || path.join(CONFIG_DIR, "batches");
+const PRIVATE_RUN_DIR = process.env.GMAIL_LOCAL_MCP_PRIVATE_RUN_DIR || path.join(CONFIG_DIR, "batch-runs");
 const MODE = process.env.GMAIL_LOCAL_MCP_MODE || "full";
 const MAX_RESULTS_LIMIT = 25;
 const DEFAULT_BODY_CHARS = 4000;
 const MAX_BODY_CHARS = 12000;
+const MAX_ATTACHMENTS = 5;
+const MAX_ATTACHMENT_BYTES = 20 * 1024 * 1024;
+const MAX_PRIVATE_BATCH_RECIPIENTS = 50;
+const ALLOWED_ATTACHMENT_MIME_TYPES = new Set(["image/png", "application/pdf"]);
+const ALLOWED_BATCH_SEGMENTS = new Set(["P1", "P2", "P3"]);
 
 function jsonRpc(id, result) {
   return JSON.stringify({ jsonrpc: "2.0", id, result });
@@ -161,6 +168,12 @@ function normalizeRecipients(value) {
   return [];
 }
 
+function normalizeOneRecipient(value) {
+  const recipients = normalizeRecipients(value);
+  if (recipients.length !== 1) throw new Error("Each private batch recipient must contain exactly one email.");
+  return recipients[0];
+}
+
 function sanitizeHeader(value) {
   return String(value || "").replace(/[\r\n]+/g, " ").trim();
 }
@@ -172,7 +185,75 @@ function encodeHeader(value) {
 }
 
 function base64Url(value) {
-  return Buffer.from(value, "utf8").toString("base64").replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/g, "");
+  const buffer = Buffer.isBuffer(value) ? value : Buffer.from(value, "utf8");
+  return buffer.toString("base64").replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/g, "");
+}
+
+function base64Mime(buffer) {
+  return buffer.toString("base64").replace(/.{1,76}/g, "$&\r\n").trimEnd();
+}
+
+function escapeMimeParameter(value) {
+  return sanitizeHeader(value).replace(/\\/g, "\\\\").replace(/"/g, "\\\"");
+}
+
+function inferAttachmentMime(filePath, explicitMimeType) {
+  const mimeType = sanitizeHeader(explicitMimeType).toLowerCase();
+  if (mimeType) return mimeType;
+  const ext = path.extname(filePath).toLowerCase();
+  if (ext === ".png") return "image/png";
+  if (ext === ".pdf") return "application/pdf";
+  return "";
+}
+
+function validateAttachmentContent(mimeType, data, filePath) {
+  if (mimeType === "image/png") {
+    const pngSignature = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
+    if (data.length < pngSignature.length || !data.subarray(0, pngSignature.length).equals(pngSignature)) {
+      throw new Error(`Attachment is not a valid PNG: ${filePath}`);
+    }
+  }
+  if (mimeType === "application/pdf" && data.subarray(0, 5).toString("ascii") !== "%PDF-") {
+    throw new Error(`Attachment is not a valid PDF: ${filePath}`);
+  }
+}
+
+async function normalizeAttachments(value) {
+  if (value === undefined || value === null) return [];
+  if (!Array.isArray(value)) throw new Error("attachments must be an array.");
+  if (value.length > MAX_ATTACHMENTS) throw new Error(`attachments supports at most ${MAX_ATTACHMENTS} files.`);
+
+  const attachments = [];
+  let totalBytes = 0;
+  for (const item of value) {
+    if (!item || typeof item !== "object" || Array.isArray(item)) {
+      throw new Error("Each attachment must be an object.");
+    }
+    const filePath = String(item.path || "").trim();
+    if (!filePath) throw new Error("attachment.path is required.");
+    const resolvedPath = path.resolve(filePath);
+    const stat = await fs.stat(resolvedPath);
+    if (!stat.isFile()) throw new Error(`Attachment is not a file: ${resolvedPath}`);
+    if (stat.size <= 0) throw new Error(`Attachment is empty: ${resolvedPath}`);
+    if (stat.size > MAX_ATTACHMENT_BYTES) {
+      throw new Error(`Attachment is too large: ${resolvedPath}. Maximum is ${MAX_ATTACHMENT_BYTES} bytes.`);
+    }
+    totalBytes += stat.size;
+    if (totalBytes > MAX_ATTACHMENT_BYTES) {
+      throw new Error(`Attachments are too large together. Maximum is ${MAX_ATTACHMENT_BYTES} bytes.`);
+    }
+
+    const mimeType = inferAttachmentMime(resolvedPath, item.mimeType);
+    if (!ALLOWED_ATTACHMENT_MIME_TYPES.has(mimeType)) {
+      throw new Error(`Unsupported attachment MIME type for ${resolvedPath}. Only PNG and PDF are allowed.`);
+    }
+    const data = await fs.readFile(resolvedPath);
+    validateAttachmentContent(mimeType, data, resolvedPath);
+    const filename = sanitizeHeader(item.filename || path.basename(resolvedPath));
+    if (!filename) throw new Error(`Attachment filename is required: ${resolvedPath}`);
+    attachments.push({ path: resolvedPath, filename, mimeType, data });
+  }
+  return attachments;
 }
 
 function summarizeMessage(message) {
@@ -263,28 +344,217 @@ async function toolSendMessage(args) {
   const bcc = normalizeRecipients(args?.bcc);
   const subject = sanitizeHeader(args?.subject);
   const bodyText = String(args?.bodyText || "");
+  const attachments = await normalizeAttachments(args?.attachments);
   if (!to.length) throw new Error("to is required.");
   if (!subject) throw new Error("subject is required.");
   if (!bodyText.trim()) throw new Error("bodyText is required.");
 
-  const headers = [
-    `To: ${to.map(sanitizeHeader).join(", ")}`,
-    cc.length ? `Cc: ${cc.map(sanitizeHeader).join(", ")}` : null,
-    bcc.length ? `Bcc: ${bcc.map(sanitizeHeader).join(", ")}` : null,
-    `Subject: ${encodeHeader(subject)}`,
-    "MIME-Version: 1.0",
-    "Content-Type: text/plain; charset=UTF-8",
-    "Content-Transfer-Encoding: 8bit"
-  ].filter(Boolean);
-  const raw = `${headers.join("\r\n")}\r\n\r\n${bodyText}`;
-  const sent = await gmailRequest("messages/send", {}, {
-    method: "POST",
-    body: { raw: base64Url(raw) }
-  });
+  const sent = await sendGmailMessage({ to, cc, bcc, subject, bodyText, attachments });
   return {
     id: sent.id,
     threadId: sent.threadId,
     labelIds: sent.labelIds || []
+  };
+}
+
+async function sendGmailMessage({ to, cc = [], bcc = [], subject, bodyText, attachments = [] }) {
+  const commonHeaders = [
+    `To: ${to.map(sanitizeHeader).join(", ")}`,
+    cc.length ? `Cc: ${cc.map(sanitizeHeader).join(", ")}` : null,
+    bcc.length ? `Bcc: ${bcc.map(sanitizeHeader).join(", ")}` : null,
+    `Subject: ${encodeHeader(subject)}`,
+    "MIME-Version: 1.0"
+  ].filter(Boolean);
+
+  let raw;
+  if (!attachments.length) {
+    const headers = [
+      ...commonHeaders,
+      "Content-Type: text/plain; charset=UTF-8",
+      "Content-Transfer-Encoding: 8bit"
+    ];
+    raw = Buffer.from(`${headers.join("\r\n")}\r\n\r\n${bodyText}`, "utf8");
+  } else {
+    const boundary = `openclaw-gmail-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+    const chunks = [
+      Buffer.from([
+        ...commonHeaders,
+        `Content-Type: multipart/mixed; boundary="${boundary}"`,
+        "",
+        `--${boundary}`,
+        "Content-Type: text/plain; charset=UTF-8",
+        "Content-Transfer-Encoding: 8bit",
+        "",
+        bodyText,
+        ""
+      ].join("\r\n"), "utf8")
+    ];
+    for (const attachment of attachments) {
+      chunks.push(Buffer.from([
+        `--${boundary}`,
+        `Content-Type: ${attachment.mimeType}; name="${escapeMimeParameter(attachment.filename)}"`,
+        "Content-Transfer-Encoding: base64",
+        `Content-Disposition: attachment; filename="${escapeMimeParameter(attachment.filename)}"`,
+        "",
+        base64Mime(attachment.data),
+        ""
+      ].join("\r\n"), "utf8"));
+    }
+    chunks.push(Buffer.from(`--${boundary}--`, "utf8"));
+    raw = Buffer.concat(chunks);
+  }
+  const sent = await gmailRequest("messages/send", {}, {
+    method: "POST",
+    body: { raw: base64Url(raw) }
+  });
+  return sent;
+}
+
+function privateBatchPath(batchId) {
+  const normalized = String(batchId || "").trim();
+  if (!/^[a-zA-Z0-9][a-zA-Z0-9._-]{2,80}$/.test(normalized)) {
+    throw new Error("batchId must be 3-81 characters and contain only letters, numbers, dot, underscore or dash.");
+  }
+  return path.join(PRIVATE_BATCH_DIR, `${normalized}.json`);
+}
+
+function firstNonEmpty(...values) {
+  for (const value of values) {
+    const text = String(value || "");
+    if (text.trim()) return text;
+  }
+  return "";
+}
+
+function selectBatchText(batch, recipient) {
+  const segment = recipient.segment;
+  return {
+    subject: sanitizeHeader(firstNonEmpty(
+      recipient.subject,
+      batch.subjectBySegment?.[segment],
+      batch.subject
+    )),
+    bodyText: firstNonEmpty(
+      recipient.bodyText,
+      batch.bodyTextBySegment?.[segment],
+      batch.bodyText
+    )
+  };
+}
+
+function initializeAggregate() {
+  return {
+    total: { queued: 0, sent: 0, failed: 0 },
+    bySegment: {
+      P1: { queued: 0, sent: 0, failed: 0 },
+      P2: { queued: 0, sent: 0, failed: 0 },
+      P3: { queued: 0, sent: 0, failed: 0 }
+    }
+  };
+}
+
+function incrementAggregate(aggregate, segment, field) {
+  aggregate.total[field] += 1;
+  aggregate.bySegment[segment][field] += 1;
+}
+
+function validatePrivateBatch(batch) {
+  if (!batch || typeof batch !== "object" || Array.isArray(batch)) {
+    throw new Error("Private batch file must contain a JSON object.");
+  }
+  if (!Array.isArray(batch.recipients)) {
+    throw new Error("Private batch file must contain recipients array.");
+  }
+  if (batch.recipients.length < 1) throw new Error("Private batch has no recipients.");
+  if (batch.recipients.length > MAX_PRIVATE_BATCH_RECIPIENTS) {
+    throw new Error(`Private batch supports at most ${MAX_PRIVATE_BATCH_RECIPIENTS} recipients.`);
+  }
+
+  const seen = new Set();
+  return batch.recipients.map((item) => {
+    if (!item || typeof item !== "object" || Array.isArray(item)) {
+      throw new Error("Each private batch recipient must be an object.");
+    }
+    const segment = sanitizeHeader(item.segment).toUpperCase();
+    if (!ALLOWED_BATCH_SEGMENTS.has(segment)) {
+      throw new Error("Each private batch recipient must use segment P1, P2 or P3.");
+    }
+    const to = normalizeOneRecipient(item.to);
+    const dedupeKey = to.toLowerCase();
+    if (seen.has(dedupeKey)) throw new Error("Private batch contains duplicate recipients.");
+    seen.add(dedupeKey);
+
+    const text = selectBatchText(batch, { ...item, segment });
+    if (!text.subject) throw new Error("Private batch subject is required for every recipient.");
+    if (!text.bodyText.trim()) throw new Error("Private batch bodyText is required for every recipient.");
+
+    return { segment, to, subject: text.subject, bodyText: text.bodyText };
+  });
+}
+
+async function toolSendPrivateBatch(args) {
+  const batchId = String(args?.batchId || "").trim();
+  const execute = Boolean(args?.execute);
+  const batch = await readJson(privateBatchPath(batchId));
+  if (execute && batch.approved !== true) {
+    throw new Error("Private batch must contain approved=true before execute=true can send.");
+  }
+  const recipients = validatePrivateBatch(batch);
+  const aggregate = initializeAggregate();
+  const privateResults = [];
+  const startedAt = new Date().toISOString();
+
+  for (const recipient of recipients) {
+    incrementAggregate(aggregate, recipient.segment, "queued");
+    if (!execute) continue;
+    try {
+      const sent = await sendGmailMessage({
+        to: [recipient.to],
+        subject: recipient.subject,
+        bodyText: recipient.bodyText,
+        attachments: []
+      });
+      incrementAggregate(aggregate, recipient.segment, "sent");
+      privateResults.push({
+        segment: recipient.segment,
+        status: "sent",
+        messageId: sent.id || null,
+        threadId: sent.threadId || null
+      });
+    } catch {
+      incrementAggregate(aggregate, recipient.segment, "failed");
+      privateResults.push({
+        segment: recipient.segment,
+        status: "failed"
+      });
+    }
+  }
+
+  if (execute) {
+    const completedAt = new Date().toISOString();
+    const runId = `${batchId}-${completedAt.replace(/[^0-9TZ]/g, "")}`;
+    const runLog = {
+      batchId,
+      runId,
+      startedAt,
+      completedAt,
+      aggregate,
+      identifiersStored: false,
+      results: privateResults
+    };
+    await writeJson(path.join(PRIVATE_RUN_DIR, `${runId}.json`), runLog);
+    await writeJson(path.join(PRIVATE_RUN_DIR, `${batchId}.latest.json`), runLog);
+  }
+
+  return {
+    batchId,
+    mode: execute ? "sent" : "dry-run",
+    aggregate,
+    identifiersExposed: false,
+    attachmentsUsed: false,
+    note: execute
+      ? "Private batch execution completed. This result intentionally omits recipients and message ids."
+      : "Dry run only. No Gmail messages were sent."
   };
 }
 
@@ -330,7 +600,7 @@ const readTools = [
 const sendTools = [
   {
     name: "gmail_send_message",
-    description: "Send a plain-text Gmail message. Requires explicit user-approved use and gmail.send OAuth scope.",
+    description: "Send a plain-text Gmail message, optionally with PNG/PDF attachments from local paths. Requires explicit user-approved use and gmail.send OAuth scope.",
     inputSchema: {
       type: "object",
       required: ["to", "subject", "bodyText"],
@@ -354,7 +624,39 @@ const sendTools = [
           ]
         },
         subject: { type: "string" },
-        bodyText: { type: "string" }
+        bodyText: { type: "string" },
+        attachments: {
+          type: "array",
+          maxItems: MAX_ATTACHMENTS,
+          description: "Optional local PNG/PDF attachments. Each file must be at most 20 MB; total attachment bytes are capped at 20 MB.",
+          items: {
+            type: "object",
+            required: ["path"],
+            properties: {
+              path: { type: "string", description: "Local file path to a PNG or PDF attachment." },
+              filename: { type: "string", description: "Optional filename shown to recipients." },
+              mimeType: { type: "string", enum: ["image/png", "application/pdf"] }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    name: "gmail_send_private_batch",
+    description: "Send an approved private Gmail batch by batchId without exposing recipient identifiers in tool arguments or results. Reads recipients from the server-side private batch directory and returns only aggregate counts.",
+    inputSchema: {
+      type: "object",
+      required: ["batchId"],
+      properties: {
+        batchId: {
+          type: "string",
+          description: "Private batch id. The server reads ${GMAIL_LOCAL_MCP_PRIVATE_BATCH_DIR}/<batchId>.json; do not pass recipient emails."
+        },
+        execute: {
+          type: "boolean",
+          description: "False or omitted performs a dry-run. True sends only if the private batch file contains approved=true."
+        }
       }
     }
   }
@@ -363,13 +665,14 @@ const sendTools = [
 const tools = MODE === "send-only" ? sendTools : [...readTools, ...sendTools];
 
 async function callTool(name, args) {
-  if (MODE === "send-only" && name !== "gmail_send_message") {
+  if (MODE === "send-only" && !sendTools.some((tool) => tool.name === name)) {
     throw new Error(`Tool disabled in send-only mode: ${name}`);
   }
   if (name === "gmail_search_messages") return toolSearchMessages(args);
   if (name === "gmail_get_message") return toolGetMessage(args);
   if (name === "gmail_list_recent_threads") return toolListRecentThreads(args);
   if (name === "gmail_send_message") return toolSendMessage(args);
+  if (name === "gmail_send_private_batch") return toolSendPrivateBatch(args);
   throw new Error(`Unknown tool: ${name}`);
 }
 

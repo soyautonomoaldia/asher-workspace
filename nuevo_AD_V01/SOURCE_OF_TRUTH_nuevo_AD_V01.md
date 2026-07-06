@@ -33,6 +33,22 @@ No hay permiso para:
 - integraciones;
 - credenciales.
 
+Regla universal RGPD para cualquier accion externa:
+
+Toda accion externa que implique datos personales o profesionales identificables debe incluir revision RGPD previa antes de pedir aprobacion de envio, contacto, validacion, formulario, CRM, Gmail, llamadas o cualquier outreach.
+
+Antes de cualquier gate externo con datos identificables, Gael debe confirmar explicitamente:
+
+- responsable;
+- finalidad;
+- base juridica;
+- origen de datos;
+- conservacion;
+- derechos;
+- oposicion/no contacto;
+- datos prohibidos;
+- criterio de borrado.
+
 ## Objetivo De Esta Fase
 
 Crear una base de decision solida antes de validar.
@@ -1663,3 +1679,1220 @@ Decision pendiente real:
 
 - habilitar una fuente externa operativa real, fuera del workspace, con Gmail y destinatarios P1/P2/P3 gestionables sin exponer identificadores a Gael/Trello/source;
 - o declarar bloqueada/parada la prueba P1/P2/P3 por falta de capacidad externa operativa.
+
+Decision de Salva el 2026-07-05:
+
+> si, habilitamos una fuente externa real fuera del workspace para Gmail + destinatarios
+
+Interpretacion operativa estricta:
+
+- Salva elige la opcion de habilitar una fuente externa operativa real;
+- la fuente externa debe operar fuera del workspace;
+- Gmail, destinatarios concretos, credenciales, emails, telefonos, nombres, metadatos sensibles y cualquier identificador personal no pueden incorporarse a `nuevo_AD_V01`, Trello ni source;
+- Gael no queda autorizado a recibir, registrar, procesar ni enviar identificadores personales;
+- Mercury u otra fuente externa solo puede operar si puede hacerlo sin exponer identificadores al workspace y sin introducir credenciales o metadatos sensibles en sesiones visibles;
+- dentro del workspace solo se podra registrar resultado anonimo por P1/P2/P3: enviado/no enviado, acepto/no acepto/sin respuesta, dolor previo a facturacion/gestoria, alternativa actual, salida manual entendida/no entendida e invalidadores;
+- la prueba sigue limitada a correo Gmail asincrono con mock estatico de una pantalla y sin llamada, demo operativa, backend, formulario, tracking, pricing, pagos, cobros, facturacion, gestoria conectada, WhatsApp real, calendario real, integraciones ni automatismos.
+
+Estado tras la decision:
+
+- el bloqueo por falta de decision de fuente externa queda resuelto;
+- queda pendiente verificar que la fuente externa real existe y puede operar Gmail + destinatarios P1/P2/P3 fuera del workspace bajo estas restricciones;
+- si la fuente externa no puede cumplir estas restricciones, la prueba vuelve a quedar bloqueada y no debe forzarse desde Gael/Trello/source.
+
+Correccion de Gael el 2026-07-05:
+
+Salva corrige correctamente la interpretacion anterior de Gael. Revisada la fuente activa, la fuente externa concreta no esta pendiente de definir:
+
+- canal de comunicacion: Gmail;
+- cuenta/canal aprobado: `soyautonomoaldia@gmail.com`;
+- owner/fuente externa autorizada por Salva: Mercury;
+- funcion de Mercury: operar el envio privado y gestionar destinatarios concretos fuera del workspace;
+- funcion de Gael: coordinar fuente/Trello/source y registrar solo resultado anonimo;
+- restriccion vigente: no incorporar nombres, emails, telefonos, credenciales, metadatos sensibles ni identificadores personales a `nuevo_AD_V01`, Trello ni source.
+
+La decision de Salva `si, habilitamos una fuente externa real fuera del workspace para Gmail + destinatarios` debe interpretarse como confirmacion/refuerzo de este marco ya definido, no como apertura de una nueva busqueda de fuente.
+
+Estado corregido:
+
+- fuente externa concreta identificada: Mercury;
+- canal concreto identificado: Gmail desde `soyautonomoaldia@gmail.com`;
+- permisos/autorizacion de Salva para que Mercury opere ese canal: concedidos en la fuente formal;
+- pendiente real: que Mercury ejecute o confirme capacidad operativa efectiva con Gmail + destinatarios fuera del workspace sin exponer identificadores;
+- si Mercury vuelve a bloquear, el bloqueo debe clasificarse como fallo operativo/capacidad/acceso/destinatarios de Mercury, no como falta de definicion de fuente externa ni falta de instruccion de Salva.
+
+Medida correctiva de Gael el 2026-07-05:
+
+Salva alerta de forma critica que Gael esta cometiendo errores de memoria y pidiendo perdon en vez de operar con suficiente disciplina. La alerta queda aceptada como fallo de proceso de Gael.
+
+Medidas inmediatas obligatorias para Gael en `nuevo_AD_V01`:
+
+- antes de interpretar cualquier gate, owner, permiso, bloqueo, canal, destinatario, Trello o estado de validacion, Gael debe buscar y leer la fuente activa con terminos concretos del caso;
+- Gael debe separar siempre `definido`, `pendiente`, `bloqueado` y `contradictorio`;
+- un fallo de ejecucion de Mercury no puede degradar decisiones ya tomadas sobre canal, cuenta, owner o permiso;
+- si Salva cuestiona la memoria de Gael, Gael debe verificar la fuente antes de responder, no defender ni completar desde memoria conversacional;
+- cualquier correccion de Gael debe cerrar con estado operativo corregido y siguiente accion, no solo disculpa.
+
+Propuesta durable creada:
+
+- skill proposal pendiente `source-first-gate-discipline-20260705-862082dd79`;
+- objetivo: forzar consulta de fuente activa antes de gates AD y evitar degradar decisiones ya cerradas;
+- estado: pendiente de aprobacion/aplicacion explicita por Salva.
+
+Decision de Salva el 2026-07-05:
+
+> ok, aplica la skill Gael y presentame un plan de acción para toda la semana y hoy tienes que conseguir que Mercury envíe 10 email a sus P1/P2/P3
+
+Accion ejecutada:
+
+- skill proposal `source-first-gate-discipline-20260705-862082dd79` aplicada como skill viva;
+- Gael verifica la fuente activa antes de operar;
+- queda confirmado que Mercury es la fuente externa definida, Gmail es el canal, `soyautonomoaldia@gmail.com` es la cuenta/canal aprobado y la autorizacion de Salva no esta pendiente.
+
+Nuevo objetivo operativo de Salva:
+
+- Mercury debe enviar hoy 10 emails reales desde `soyautonomoaldia@gmail.com`;
+- destinatarios gestionados por Mercury fuera del workspace;
+- segmentos: P1/P2/P3, con reparto minimo recomendado 3/3/3 y el email 10 al segmento con mejor encaje disponible;
+- el workspace no puede recibir ni registrar nombres, emails, telefonos, credenciales, metadatos sensibles ni identificadores;
+- salida permitida: solo resultado anonimo por P1/P2/P3.
+
+Instruccion enviada por Gael a Mercury:
+
+- ejecutar 10 emails hoy con el asunto/cuerpo final corregido y el mock estatico aprobado;
+- confirmar capacidad operativa en 30 minutos;
+- si bloquea, clasificar causa como acceso Gmail, destinatarios externos, herramienta de envio, politica de sesion u otro tecnico;
+- no alegar falta de autorizacion de Salva ni fuente no definida.
+
+Respuesta de Mercury:
+
+> CAPACIDAD OPERATIVA: NO
+>
+> Bloqueo operativo: destinatarios externos.
+>
+> Causa concreta y verificable: no tengo un canal externo operativo ya preparado que me permita gestionar los 10 destinatarios P1/P2/P3 fuera del workspace y ejecutar el envio sin introducir emails concretos en esta sesion/tool call. Eso romperia la restriccion de no exponer identificadores ni metadatos sensibles en OpenClaw.
+
+Escalada adicional de Gael:
+
+- Gael pregunta si Mercury puede operar manualmente fuera de OpenClaw, usando Gmail `soyautonomoaldia@gmail.com` y una fuente/lista externa propia, sin pegar destinatarios ni credenciales en la sesion.
+
+Respuesta de Mercury:
+
+> MANUAL EXTERNO: NO
+> - Motivo unico: no tengo fuente/lista.
+> - Falta una fuente/lista externa operativa con 10 destinatarios P1/P2/P3 gestionable fuera de OpenClaw, sin introducir identificadores ni credenciales en esta sesion.
+
+Estado corregido:
+
+- definido: Mercury, Gmail, `soyautonomoaldia@gmail.com`, permiso de Salva y paquete correo + mock;
+- bloqueado: ejecucion de 10 emails hoy por falta de fuente/lista externa de 10 destinatarios gestionable por Mercury fuera de OpenClaw;
+- no bloqueado: autorizacion de Salva, canal, copy, mock, coordinacion de Gael;
+- condicion de desbloqueo hoy: Mercury necesita una fuente/lista externa operativa de 10 destinatarios P1/P2/P3 fuera de OpenClaw, sin exponer identificadores al workspace.
+
+Controles creados por Gael para el 2026-07-05:
+
+- 08:00 CEST: verificar si Mercury dispone de fuente/lista externa de 10 destinatarios P1/P2/P3 fuera de OpenClaw; si existe, instruir envio inmediato;
+- 12:00 CEST: exigir estado anonimo de envio o bloqueo operativo exacto;
+- 18:00 CEST: cierre del dia con resultado anonimo o bloqueo final clasificado.
+
+Plan de accion semanal de Gael, semana 2026-07-05 a 2026-07-12:
+
+Domingo 2026-07-05:
+
+- objetivo critico: conseguir 10 envios reales por Mercury desde `soyautonomoaldia@gmail.com`;
+- condicion de exito: Mercury opera una fuente/lista externa fuera de OpenClaw y devuelve solo resultado anonimo por P1/P2/P3;
+- condicion de bloqueo: Mercury no dispone de fuente/lista externa y no puede enviar sin exponer identificadores.
+
+Lunes 2026-07-06:
+
+- si hay envios: registrar respuestas anonimas, separar comprension, utilidad, alternativa actual e invalidadores;
+- si no hay envios: cierre formal de bloqueo operativo de Mercury y decision de Salva sobre cambiar fuente externa, proveer lista fuera del workspace o parar la prueba.
+
+Martes 2026-07-07:
+
+- consolidar evidencia anonima disponible;
+- clasificar por P1/P2/P3: entiende/no entiende, utilidad concreta/no utilidad, alternativa actual, rechazo por expectativa de integraciones/facturacion/WhatsApp/calendario;
+- preparar decision `seguir / ajustar / parar`.
+
+Miercoles 2026-07-08:
+
+- si hay senales suficientes: ajustar hipotesis de target y workflow sin ampliar MVP;
+- si hay senales debiles o sesgo de cortesia: recomendar parar o redisenar prueba;
+- no abrir pricing, build, backend, integraciones ni datos reales.
+
+Jueves 2026-07-09:
+
+- cerrar ficha de aprendizaje de prueba privada;
+- identificar si AD Captura Pack tiene dolor observable frente a WhatsApp/notas/memoria antes de facturacion o gestoria;
+- preparar gate de decision para Salva.
+
+Viernes 2026-07-10:
+
+- presentar recomendacion ejecutiva: continuar con otra microprueba, ajustar target/copy/mock o parar;
+- si continua, definir siguiente prueba sin aumentar superficie legal, tecnica ni de datos.
+
+Sabado/Domingo 2026-07-11/12:
+
+- no ejecutar nuevas acciones externas sin gate separado;
+- limpiar source/Trello, cerrar bloqueos obsoletos y dejar solo proxima decision verificable.
+
+Correccion operativa de Salva sobre BBDD destinatarios el 2026-07-05:
+
+Salva corrige a Gael: si Mercury no tiene fuente/lista externa operativa, Gael debe aportar solucion y Mercury debe buscar/generar una BBDD operativa en una carpeta de trabajo, no limitarse a devolver el problema.
+
+Instruccion correctiva enviada por Gael a Mercury:
+
+- dejar de tratar la falta de lista como bloqueo final;
+- crear una BBDD operativa de prospeccion para la prueba en una carpeta de trabajo bajo control operativo de Mercury;
+- no crearla en `nuevo_AD_V01`, Trello ni source;
+- no pegar nombres, emails, telefonos, credenciales ni metadatos sensibles en la conversacion con Gael;
+- generar al menos 20 candidatos brutos y seleccionar 10 finales;
+- segmentos validos: P1 fontaneria/reparacion rapida, P2 electricista de reparacion rapida domestica sencilla, P3 reparacion domestica general;
+- usar solo datos profesionales publicamente publicados por negocios/profesionales, webs publicas, fichas comerciales publicas, directorios publicos o contactos profesionales accesibles para outreach B2B;
+- descartar fuentes privadas, filtradas, sensibles, scraping agresivo o cuentas personales no profesionales;
+- priorizar emails profesionales publicados, porque el canal aprobado es Gmail/email;
+- enviar desde `soyautonomoaldia@gmail.com` solo si puede hacerlo sin exponer destinatarios ni credenciales en OpenClaw;
+- devolver solo estado anonimo por P1/P2/P3.
+
+Respuesta de Mercury:
+
+> BLOQUEO REAL: imposibilidad de mantener destinatarios fuera de OpenClaw.
+>
+> Herramienta exacta que falta: un canal operativo externo/no visible para buscar, guardar la BBDD y enviar desde Gmail sin que los destinatarios pasen por filesystem, sesion, tool calls o trazas de OpenClaw.
+>
+> Con las herramientas disponibles aqui, crear la BBDD o enviar por Gmail obligaria a procesar o introducir emails concretos dentro de OpenClaw. Eso incumple la restriccion activa de no exponer nombres, emails, telefonos, credenciales ni metadatos sensibles en Gael/source/Trello/OpenClaw.
+
+Estado source-first tras la correccion:
+
+- solucion correcta identificada: Mercury debe generar la BBDD, no esperar a que Salva la aporte;
+- bloqueo anterior `falta lista` queda reclasificado como insuficiente;
+- bloqueo actual preciso: falta canal operativo externo/no visible o permiso de tratamiento temporal para que Mercury maneje emails profesionales publicos en una carpeta privada de trabajo sin incorporarlos a source/Trello/Gael;
+- decision real de desbloqueo: mantener restriccion estricta `sin identificadores en OpenClaw` y exigir herramienta externa real, o relajarla de forma controlada para permitir BBDD temporal privada con emails profesionales publicos, retencion minima y borrado posterior.
+
+Actualizacion de ejecucion tras autorizacion de BBDD temporal:
+
+Gael interpreta la correccion de Salva como autorizacion operativa para una relajacion controlada:
+
+- Mercury puede crear una BBDD temporal en carpeta de trabajo bajo su control operativo;
+- datos permitidos: solo contactos profesionales publicamente publicados por negocios/profesionales, fuente publica, segmento P1/P2/P3, razon de encaje y estado de envio;
+- datos prohibidos en `nuevo_AD_V01`, Trello, source o conversacion con Gael: nombres, emails, telefonos, URLs identificables, credenciales y metadatos concretos;
+- uso limitado: solo envio de la prueba de 10 emails y seguimiento minimo;
+- salida hacia Gael: solo agregados anonimos por P1/P2/P3;
+- retencion: minima; si no hay capacidad clara de retencion, borrar BBDD tras envio y conservar solo agregados.
+
+Gael envia a Mercury nueva orden:
+
+- generar 20 candidatos brutos;
+- seleccionar 10 finales con reparto objetivo 3 P1 / 3 P2 / 3 P3 / 1 mejor encaje;
+- enviar desde `soyautonomoaldia@gmail.com`;
+- devolver solo conteo anonimo o causa exacta.
+
+Respuesta de Mercury:
+
+> BLOQUEO PERFIL/HERRAMIENTA: acceso Gmail/envio.
+>
+> Causa exacta: la herramienta Gmail disponible en esta sesion solo permite enviar mensajes de texto plano y no permite adjuntar `mockups/ad-captura-pack-email-mock-estatico.png`. El paquete aprobado exige correo + mock estatico; enviar sin el mock romperia el material autorizado.
+>
+> No es falta de lista: la BBDD temporal esta autorizada, pero no procede generar/procesar contactos profesionales si el canal de envio disponible no puede ejecutar el paquete aprobado completo.
+
+Accion de Gael para no perder avance:
+
+- separar carriles;
+- Carril A: Mercury debe generar ya la BBDD temporal autorizada y devolver solo `BBDD_READY` con conteos anonimos brutos/finales por P1/P2/P3;
+- Carril B: el envio queda pendiente de resolver por limitacion tecnica de adjunto/mock;
+- no se autoriza a Mercury a enviar sin el mock aprobado salvo decision separada de Salva.
+
+Estado actual:
+
+- bloqueo por falta de lista: corregido;
+- BBDD temporal: autorizada y solicitada a Mercury;
+- envio de 10 emails: bloqueado por herramienta Gmail texto plano sin adjunto;
+- decision operativa siguiente: aprobar una variante de envio compatible con texto plano, por ejemplo enlace publico al mock o correo sin mock, o habilitar herramienta Gmail con adjuntos.
+
+Correccion de gobierno de aprobacion de borradores el 2026-07-05:
+
+Salva corrige a Gael: Mercury debe elaborar los borradores de los correos y Salva debe aprobarlos antes de cualquier envio a P1/P2/P3. Gael no debe saltar de preparacion operativa a envio sin pasar por aprobacion explicita del texto final por Salva.
+
+Regla operativa vigente:
+
+- Mercury prepara borradores por segmento P1/P2/P3;
+- Salva aprueba, ajusta o rechaza los borradores antes de envio;
+- Mercury no envia emails ni prepara batch final de envio hasta aprobacion explicita posterior de Salva;
+- ningun bloqueo puede presentarse como salida final si no incluye propuesta/solucion ejecutable, alternativa y trabajo que si puede avanzar mientras tanto;
+- respuestas internas tipo `REPLY_SKIP` o similares no son respuestas validas para Salva y no deben sustituir una actualizacion operativa clara.
+
+Instruccion correctiva enviada por Gael a Mercury:
+
+- no enviar ningun email todavia;
+- devolver `DRAFTS_READY` si puede elaborar borradores sin usar destinatarios reales;
+- incluir asunto y cuerpo para P1, P2 y P3;
+- adaptar el texto por segmento, sin nombres, emails ni datos identificables;
+- respetar validacion privada, mock estatico si el canal lo permite, respuesta manual por email, sin pricing, sin demo, sin integraciones, sin promesas y sin automatismos;
+- si hay bloqueo, devolver `BLOCKED_WITH_PROPOSAL` con causa exacta, propuesta A ejecutable hoy, propuesta B alternativa, decision concreta requerida y trabajo que si puede avanzar.
+
+Respuesta de Mercury:
+
+> DRAFTS_READY
+>
+> No se ha enviado ningun email.
+
+Borradores entregados por Mercury, pendientes de aprobacion de Salva:
+
+P1 - Fontaneria/reparacion rapida
+
+Asunto:
+
+> Opinion rapida sobre una idea temprana para no dejarte nada sin cerrar
+
+Cuerpo:
+
+> Hola,
+>
+> Soy Autonomo al Dia y estoy contrastando una idea muy temprana para autonomos de fontaneria y reparaciones rapidas: apuntar en pocos segundos un aviso, material pendiente, cobro recordado, presupuesto simple o cierre de trabajo, y revisarlo despues como una tarjeta clara.
+>
+> No es una demo ni un producto operativo. Si el canal lo permite, adjuntaria una imagen estatica con un ejemplo ficticio para pedir feedback por email, sin llamada, sin voz y sin agenda.
+>
+> Importante: no me envies datos reales. Nada de nombres, telefonos, direcciones, fotos, facturas, importes, chats ni casos de clientes. Si respondes, usa ejemplos inventados o habla en general.
+>
+> Me ayudaria saber:
+> 1. Cuando te entra un aviso o queda algo pendiente, donde lo apuntas y que suele fallar?
+> 2. Viendo el ejemplo ficticio, te ayudaria antes de facturar o mandarlo a gestoria, o seguirias con WhatsApp, notas, libreta o memoria?
+> 3. Que tendria que incluir la tarjeta para ahorrarte una perdida real de tiempo, dinero o seguimiento?
+>
+> Gracias,
+> Equipo de Autonomo al Dia
+
+P2 - Electricista/reparacion domestica sencilla
+
+Asunto:
+
+> Opinion rapida sobre una idea temprana para no dejarte nada sin cerrar
+
+Cuerpo:
+
+> Hola,
+>
+> Soy Autonomo al Dia y estoy contrastando una idea muy temprana para autonomos electricistas de reparacion domestica sencilla: apuntar rapido un aviso, material pendiente, cobro recordado, presupuesto simple o cierre de trabajo, y verlo despues como una tarjeta revisable.
+>
+> No es una demo ni un producto operativo. Si el canal lo permite, adjuntaria una imagen estatica con un ejemplo ficticio para pedir feedback por email, sin llamada, sin voz y sin agenda.
+>
+> Importante: no me envies datos reales. Nada de nombres, telefonos, direcciones, fotos, facturas, importes, chats ni casos de clientes. Tampoco busco validar normativa, certificaciones ni trabajos industriales. Si respondes, usa ejemplos inventados o habla en general.
+>
+> Me ayudaria saber:
+> 1. En reparaciones domesticas sencillas, donde apuntas avisos y pendientes, y que se te suele escapar?
+> 2. Viendo el ejemplo ficticio, te ayudaria antes de facturar o mandarlo a gestoria, o seguirias con WhatsApp, notas, libreta o memoria?
+> 3. Que tendria que preparar la tarjeta para ahorrarte una perdida real de tiempo, dinero o seguimiento?
+>
+> Gracias,
+> Equipo de Autonomo al Dia
+
+P3 - Reparacion domestica general
+
+Asunto:
+
+> Opinion rapida sobre una idea temprana para no dejarte nada sin cerrar
+
+Cuerpo:
+
+> Hola,
+>
+> Soy Autonomo al Dia y estoy contrastando una idea muy temprana para autonomos de reparacion domestica general: apuntar rapido un trabajo corto, material pendiente, cobro recordado, presupuesto simple o cierre de tarea, y revisarlo despues como una tarjeta clara.
+>
+> No es una demo ni un producto operativo. Si el canal lo permite, adjuntaria una imagen estatica con un ejemplo ficticio para pedir feedback por email, sin llamada, sin voz y sin agenda.
+>
+> Importante: no me envies datos reales. Nada de nombres, telefonos, direcciones, fotos, facturas, importes, chats ni casos de clientes. Si respondes, usa ejemplos inventados o habla en general.
+>
+> Me ayudaria saber:
+> 1. Cuando haces trabajos cortos, compras material o queda un cobro pendiente, donde lo apuntas y que suele fallar?
+> 2. Viendo el ejemplo ficticio, te ayudaria antes de facturar o mandarlo a gestoria, o seguirias con WhatsApp, notas, libreta o memoria?
+> 3. Que tendria que incluir la tarjeta para ahorrarte una perdida real de tiempo, dinero o seguimiento?
+>
+> Gracias,
+> Equipo de Autonomo al Dia
+
+Estado tras la correccion:
+
+- borradores P1/P2/P3: entregados por Mercury;
+- envio: no ejecutado;
+- aprobacion de Salva: pendiente;
+- siguiente decision de Salva: aprobar, ajustar o rechazar los borradores antes de cualquier envio.
+
+Correccion de bloqueo BBDD sin propuesta el 2026-07-05:
+
+Gael exige a Mercury reformular el bloqueo de BBDD porque una respuesta `BBDD_BLOCKED` sin solucion ejecutable no cumple la regla de Salva.
+
+Respuesta corregida de Mercury:
+
+> BBDD_BLOCKED_WITH_PROPOSAL
+>
+> Estado anonimo de BBDD actual:
+> - Brutos: P1=3, P2=0, P3=0.
+> - Finales: P1=3, P2=0, P3=0.
+> - 10 emails profesionales publicos disponibles: no.
+>
+> Causa exacta del bloqueo:
+> La busqueda web publica accesible desde esta sesion no alcanza suficientes contactos con email profesional publico y encaje verificable P1/P2/P3, especialmente P2 y P3.
+>
+> Propuesta A ejecutable hoy:
+> Usar una herramienta externa de busqueda/directorio con navegador real o API de busqueda comercial bajo control operativo de Mercury, guardar una BBDD temporal privada con solo contactos profesionales publicos, seleccionar 10 finales y devolver a Gael solo conteos anonimos.
+>
+> Propuesta B alternativa:
+> Autorizar una mini-BBDD temporal asistida por un humano operativo fuera de OpenClaw: esa persona busca 20 contactos publicos P1/P2/P3, Mercury solo recibe/gestiona la BBDD en carpeta temporal privada y devuelve agregados, sin volcar identificadores a Gael/source/Trello.
+>
+> Decision concreta necesaria:
+> Salva/Gael deben decidir si habilitan hoy una herramienta externa de busqueda/navegador/API para Mercury o si autorizan apoyo humano externo para construir la BBDD temporal sin exponer identificadores.
+>
+> Trabajo que puedo avanzar ya:
+> Mantener los borradores P1/P2/P3 listos para revision de Salva, preparar criterios anonimos de seleccion final, plantilla de estado de BBDD sin identificadores y checklist de borrado/retencion minima post-prueba.
+
+Estado:
+
+- BBDD actual insuficiente: P1=3 finales, P2=0, P3=0;
+- bloqueo ya no puede cerrarse como excusa sin solucion;
+- soluciones sobre la mesa: herramienta externa de busqueda/navegador/API para Mercury o apoyo humano externo fuera de OpenClaw;
+- mientras tanto, el entregable util disponible para Salva son los borradores P1/P2/P3 pendientes de aprobacion.
+
+Criterio operativo de Gael tras `BBDD_BLOCKED_WITH_PROPOSAL`:
+
+- recomendacion preferente: Propuesta A, habilitar a Mercury una herramienta externa de busqueda/directorio/navegador/API bajo su control operativo, porque mantiene owner unico, trazabilidad anonima hacia Gael y menor riesgo de dispersion de datos;
+- Propuesta B solo debe usarse como contingencia si A no puede habilitarse hoy, porque introduce un humano operativo adicional fuera de OpenClaw y aumenta riesgo de coordinacion, privacidad y calidad de seleccion;
+- Gael no aprueba por su cuenta herramienta externa nueva ni apoyo humano externo porque afecta operativa externa y tratamiento de contactos profesionales;
+- trabajo que si debe avanzar sin decision adicional: Mercury debe preparar criterios anonimos de seleccion final, plantilla de estado BBDD sin identificadores y checklist de borrado/retencion minima;
+- decision pendiente de Salva: aprobar A, aprobar B, o parar la prueba externa si ninguna via operativa cumple privacidad y ejecucion.
+
+Entrega preparatoria anonima de Mercury tras instruccion de Gael:
+
+Mercury responde `BBDD_PREP_READY`.
+
+Artefactos preparados sin identificadores:
+
+- criterios anonimos de seleccion final P1/P2/P3;
+- criterios comunes: contacto profesional publicamente publicado por negocio/profesional o directorio legitimo, email profesional publico, actividad actual suficiente, encaje con reparacion domestica, preferencia por autonomos/microservicios de decision directa y exclusion de datos privados o no profesionales;
+- P1: fontaneria, averias, reparacion rapida, urgencias domesticas, pequenos trabajos o mantenimiento de agua/desatascos, priorizando seguimiento manual de avisos/material/cobros/cierre;
+- P2: electricista de reparacion domestica sencilla, con exclusion dura de normativa, certificaciones, boletines, industrial, comunidades complejas, fotos obligatorias, calendario real o integraciones;
+- P3: reparacion domestica general, manitas, mantenimiento del hogar o trabajos cortos variados, priorizando material pendiente, cobros manuales, presupuestos simples y cierre de tareas;
+- reparto objetivo: 3 P1, 3 P2, 3 P3 y decimo email al segmento con mejor encaje disponible;
+- plantilla anonima de estado BBDD: brutos por segmento, descartes agregados por causa, finales por segmento, segmento del email 10, estado de envio, estado mock, retencion y borrado;
+- checklist de borrado/retencion minima: mantener BBDD fuera de `nuevo_AD_V01`, Trello, source y conversacion; no copiar identificadores; borrar tabla con emails/fuentes identificables tras envio o cancelacion salvo seguimiento minimo aprobado; conservar solo agregados anonimos;
+- riesgos de sesgo identificados: presencia web/SEO, sesgo urbano, sesgo de canal email, falsos positivos P2 por normativa/boletines/industria y falsos positivos P3 por empresas multiservicio grandes;
+- mitigaciones: reparto 3/3/3 antes del decimo, razon breve de encaje por segmento, exclusiones duras P2, priorizar trabajos cortos/material/cobros/seguimiento simple, registrar descartes agregados y tratar resultados como prueba exploratoria debil.
+
+Estado tras `BBDD_PREP_READY`:
+
+- preparacion metodologica de BBDD: lista;
+- BBDD real de 10 contactos: no lista;
+- envio: no ejecutado;
+- aprobacion de borradores por Salva: pendiente;
+- decision de herramienta/fuente para obtener 10 contactos: pendiente;
+- siguiente desbloqueo recomendado por Gael: aprobar Propuesta A para Mercury, o si no es viable hoy, decidir explicitamente entre Propuesta B controlada o parar prueba externa.
+
+Decision de Salva sobre recomendacion de Gael el 2026-07-05:
+
+> aprobada tu recomendacion Gael
+
+Interpretacion source-first:
+
+- queda aprobada la recomendacion preferente de Gael: Propuesta A;
+- Mercury puede usar una herramienta externa de busqueda/directorio/navegador/API bajo su control operativo para construir una BBDD temporal privada con contactos profesionales publicos;
+- Mercury no debe volcar nombres, emails, telefonos, URLs identificables, credenciales ni metadatos concretos a Gael, Trello, source u OpenClaw;
+- salida permitida hacia Gael: solo conteos anonimos por P1/P2/P3, descartes agregados, estado de envio/mock y borrado/retencion minima;
+- esta aprobacion no autoriza por si sola a Gael a ver destinatarios ni a registrar identificadores;
+- esta aprobacion no degrada la regla vigente de que Mercury redacta, Salva aprueba y Mercury solo envia bajo aprobacion operativa explicita del batch/material final;
+- si Propuesta A no puede ejecutarse hoy, Mercury debe devolver bloqueo con solucion: causa exacta, trabajo avanzado, y activacion propuesta de Propuesta B controlada o alternativa equivalente sin identificadores en workspace.
+
+Respuesta de Mercury tras aprobacion de Propuesta A:
+
+> A_BLOCKED_WITH_B_READY
+
+Causa exacta:
+
+- Propuesta A no es viable hoy en la sesion Mercury porque no hay herramienta externa real de busqueda/directorio/navegador/API habilitada;
+- las vias accesibles desde la sesion disponible se reducen a fetch/parsing HTTP y no alcanzan senal suficiente o estable para completar 10 finales P1/P2/P3;
+- BBDD parcial temporal: brutos P1=3, P2=0, P3=0; finales P1=3, P2=0, P3=0; 10 emails disponibles: no.
+
+Trabajo ya preparado:
+
+- borradores P1/P2/P3 listos para aprobacion de Salva;
+- criterios anonimos de seleccion final listos;
+- plantilla agregada de estado de BBDD lista;
+- checklist de borrado/retencion minima listo;
+- riesgos de sesgo y mitigaciones listos.
+
+Propuesta B lista para ejecutar:
+
+- apoyo humano externo controlado fuera de OpenClaw;
+- buscar 20 contactos profesionales publicos P1/P2/P3;
+- seleccionar 10 finales con reparto 3 P1 / 3 P2 / 3 P3 / 1 mejor encaje;
+- guardar solo en carpeta temporal privada bajo control operativo de Mercury;
+- no volcar identificadores a Gael, source, Trello u OpenClaw;
+- devolver solo agregados anonimos.
+
+Decision concreta necesaria para activar B:
+
+- Salva debe autorizar apoyo humano externo controlado para busqueda y seleccion de contactos profesionales publicos;
+- obligacion: no compartir nombres, emails, telefonos, URLs ni fuentes identificables en canales visibles;
+- retencion: minima; borrar identificadores tras envio/cancelacion salvo seguimiento minimo aprobado y conservar solo agregados anonimos.
+
+Estado tecnico de envio:
+
+- envio no ejecutado;
+- sigue pendiente resolver mock/adjunto: habilitar Gmail con adjunto PNG aprobado o aprobar variante de texto plano compatible antes de cualquier envio.
+
+Preparacion de contingencia B por Mercury:
+
+Mercury responde:
+
+> B_HANDOFF_READY
+
+Contenido operativo sin identificadores:
+
+- instrucciones para apoyo humano externo controlado fuera de OpenClaw/Trello/source/conversaciones visibles;
+- busqueda solo de contactos profesionales publicamente publicados por negocio/profesional o directorio comercial legitimo;
+- BBDD temporal privada con minimo 20 candidatos brutos y 10 finales;
+- reparto final objetivo: 3 P1 / 3 P2 / 3 P3 / 1 mejor encaje disponible;
+- no usar datos privados, filtrados, sensibles, cuentas personales no profesionales ni scraping agresivo;
+- campos privados que no deben salir de la carpeta controlada: alias interno, segmento, fuente publica consultada, email profesional publico, nombre comercial/profesional si aparece publicamente, razon de encaje, causa de descarte, estado, fecha de consulta y nota de retencion/borrado;
+- campos agregados permitidos hacia Gael: brutos por segmento, descartes agregados por causa, finales por segmento, segmento del email 10, estado de envio, estado mock y estado de retencion/borrado;
+- exclusiones duras: sin email profesional publico, solo telefono/formulario/WhatsApp/redes, datos privados/sensibles, fuente dudosa, empresas grandes/franquicias, P2 fuera de alcance, o casos que exijan llamada/demo/precio/facturacion/pagos/gestoria/integracion/automatismo;
+- sesgos a controlar: SEO/directorios, urbano, canal email, falsos positivos P2 y multiservicios grandes en P3;
+- retencion: identificadores solo en carpeta temporal privada; borrar si no se aprueba envio; si se aprueba, conservar solo durante ventana minima necesaria; tras cierre, conservar solo agregados anonimos;
+- antes de enviar debe existir: BBDD final agregada 10, borradores aprobados por Salva, decision tecnica sobre mock, confirmacion de no volcado de identificadores, retencion definida y aprobacion operativa final del batch/envio.
+
+Recomendacion actual de Gael:
+
+- activar Propuesta B controlada si Salva quiere mantener el objetivo de 10 emails hoy, porque Propuesta A ya fue aprobada y quedo bloqueada por ausencia de herramienta externa real disponible para Mercury;
+- no autorizar envio hasta que existan BBDD final agregada, borradores aprobados y decision tecnica sobre mock/adjunto o texto plano.
+
+Control cron 08:00 CEST del 2026-07-05 sobre 10 emails Mercury:
+
+Gael aplica disciplina source-first y revisa la fuente activa con terminos Mercury/Gmail/10 emails/fuente/lista. Estado confirmado antes de preguntar a Mercury:
+
+- definido: Mercury como fuente externa autorizada, Gmail como canal y `soyautonomoaldia@gmail.com` como cuenta/canal aprobado;
+- objetivo vigente: 10 emails reales P1/P2/P3, con destinatarios gestionados fuera de OpenClaw y salida solo anonima;
+- ultimo estado registrado: Propuesta A bloqueada por falta de herramienta externa real, Propuesta B preparada pero pendiente de activacion, BBDD real de 10 contactos no lista.
+
+Verificacion operativa enviada a Mercury sin pedir ni aceptar identificadores.
+
+Respuesta de Mercury:
+
+> LIST_NOT_READY: no tengo una fuente/lista externa completa de 10 destinatarios P1/P2/P3 fuera de OpenClaw.
+>
+> Causa concreta y unica: Propuesta B preparada pero no activada/autorizada con apoyo humano externo; Propuesta A quedo bloqueada por falta de herramienta externa real de busqueda/directorio/navegador/API.
+
+Resultado del control:
+
+- Mercury no tiene fuente/lista externa completa de 10 destinatarios P1/P2/P3 fuera de OpenClaw;
+- no procede instruir envio inmediato desde `soyautonomoaldia@gmail.com`;
+- se mantiene bloqueo por destinatarios externos/lista insuficiente;
+- no se inventan destinatarios ni se incorporan nombres, emails, telefonos, URLs o datos identificables a `nuevo_AD_V01`;
+- siguiente desbloqueo sigue siendo activar Propuesta B controlada o habilitar herramienta externa real efectiva para Mercury, ademas de resolver aprobacion de borradores y mock/adjunto antes de cualquier envio.
+
+Control cron 12:00 CEST del 2026-07-05 sobre 10 emails Mercury:
+
+Gael aplica disciplina source-first y parte del estado ya incorporado en source:
+
+- Mercury es la fuente externa autorizada por Salva;
+- Gmail y `soyautonomoaldia@gmail.com` son canal/cuenta aprobados;
+- no esta permitido aceptar como bloqueo falta de autorizacion, fuente indefinida o necesidad de nueva confirmacion de Salva;
+- el control solo puede verificar fuente/lista externa operativa y capacidad real de envio, con salida anonima por P1/P2/P3.
+
+Verificacion operativa enviada a Mercury sin pedir ni aceptar identificadores.
+
+Respuesta de Mercury:
+
+> OPERATIONAL_BLOCK
+> P1: enviados=0
+> P2: enviados=0
+> P3: enviados=0
+> Bloqueo exacto: fuente/lista externa insuficiente
+> Trabajo avanzado: brutos P1=3/P2=0/P3=0; finales P1=3/P2=0/P3=0; borradores P1/P2/P3 preparados; paquete B_HANDOFF_READY preparado
+> Desbloqueo concreto: activar apoyo humano externo controlado o herramienta externa real de busqueda/directorio/navegador/API para completar 20 brutos y 10 finales sin exponer identificadores en OpenClaw
+
+Resultado del control 12:00:
+
+- P1: 0 enviados;
+- P2: 0 enviados;
+- P3: 0 enviados;
+- email 10: no aplica;
+- mock/adjunto: no enviado;
+- retencion/borrado: no aplica a envio porque no hay batch final enviado; se mantiene regla de no volcar identificadores a source/Trello/OpenClaw;
+- bloqueo operativo exacto: fuente/lista externa insuficiente, no falta de autorizacion ni fuente indefinida;
+- trabajo avanzado anonimo: P1 tiene 3 brutos/finales; P2 y P3 siguen en 0; borradores P1/P2/P3 y paquete B_HANDOFF_READY preparados;
+- desbloqueo minimo: activar apoyo humano externo controlado o una herramienta externa real de busqueda/directorio/navegador/API para completar minimo 20 brutos y 10 finales, sin exponer identificadores en OpenClaw.
+
+Control cron 18:00 CEST del 2026-07-05 sobre 10 emails Mercury:
+
+Gael aplica disciplina source-first y parte del estado ya incorporado en source:
+
+- Mercury es la fuente externa autorizada por Salva;
+- Gmail y `soyautonomoaldia@gmail.com` son canal/cuenta aprobados;
+- el bloqueo no puede reclasificarse como falta de permiso de Salva, fuente indefinida o necesidad de nueva autorizacion general;
+- el cierre solo debe registrar resultado anonimo o bloqueo final del dia.
+
+Verificacion operativa enviada a Mercury sin pedir ni aceptar identificadores.
+
+Respuesta de Mercury:
+
+> Estado: NOT_SENT_BLOCKED
+> Conteo anonimo enviado: P1=0 / P2=0 / P3=0
+> Conteo BBDD anonimo final disponible: P1=3 / P2=0 / P3=0
+> Bloqueo exacto final: destinatarios externos/capacidad Mercury; no hay fuente/lista externa completa ni herramienta real suficiente para cerrar 10 destinatarios P1/P2/P3 fuera de OpenClaw.
+> Siguiente accion concreta ejecutable: activar apoyo humano externo controlado o herramienta externa real de busqueda/directorio/API para construir BBDD temporal privada 3/3/3+1, sin volcar identificadores a OpenClaw; despues probar Gmail/adjunto de forma tecnica y preparar batch final para aprobacion operativa.
+
+Resultado de cierre 18:00:
+
+- emails enviados: 0;
+- P1 enviados: 0;
+- P2 enviados: 0;
+- P3 enviados: 0;
+- BBDD anonima disponible: P1=3, P2=0, P3=0;
+- bloqueo final del dia: destinatarios externos/capacidad Mercury, no permiso de Salva;
+- no se incorporan nombres, emails, telefonos, URLs, fuentes identificables, credenciales ni metadatos sensibles a `nuevo_AD_V01`;
+- siguiente accion clara: activar apoyo humano externo controlado o herramienta externa real efectiva para Mercury, completar BBDD temporal privada 3/3/3+1, validar tecnicamente Gmail/adjunto sin envio real y preparar batch final para aprobacion operativa de Salva antes de cualquier envio.
+
+Actualizacion rutina proactiva Gael el 2026-07-05:
+
+Salva confirma que Gael debe operar como orquestador proactivo y no esperar a que Salva pregunte para avanzar trabajo interno aprobado.
+
+Regla operativa:
+
+- Gael mantiene Trello al 100% cuando Trello sea el tablero aprobado;
+- Gael revisa fuente activa, Trello, Discord `#ad_captura` y estado de owners;
+- Gael puede decidir y ejecutar trabajo interno desbloqueado: mover tarjetas, crear/actualizar checklists, clasificar bloqueos, ajustar deadlines razonables, pedir entregables a owners dentro del modelo aprobado, cerrar tareas obsoletas, proponer mejoras y actualizar source si refleja estado verificado o decision ya tomada;
+- Gael debe publicar update corto en Discord `#ad_captura` tras cada revision, en formato diff-only: cambios, bloqueos, siguiente accion y gate Salva si aplica;
+- Gael solo eleva gate Salva si hay accion externa, contacto real, datos personales, pricing publico, produccion/build operativo, legal/fiscal/privacy, nuevo owner/modelo, gasto/pago o compromiso irreversible.
+
+Cron actualizado:
+
+- job: `93cca031-9559-472f-842c-4579a467d8e9`;
+- nombre: `Revision proactiva Gael AD 12-20`;
+- horario: `0 12,20 * * 1-5` Europe/Madrid, exacto;
+- entrega: Discord `#ad_captura`, channel `1517883886506606642`;
+- estado: activo;
+- reemplaza la revision anterior de 09:15 laborables.
+
+Regla de fechas en Trello incorporada el 2026-07-05:
+
+Salva instruye que, desde hoy, cada etiqueta de Trello usada por Gael para seguimiento operativo debe incluir fecha de inicio y entrega.
+
+Interpretacion operativa estricta:
+
+- toda tarjeta activa debe tener fecha de inicio y fecha/hora de entrega visibles en Trello o en la descripcion si Trello no permite el campo exacto;
+- toda etiqueta operativa temporal o de seguimiento creada o aplicada por Gael desde esta fecha debe quedar vinculada a `Inicio: AAAA-MM-DD` y `Entrega: AAAA-MM-DD HH:MM` en la tarjeta correspondiente;
+- las etiquetas estructurales globales del tablero, como `Documento`, `Sin datos reales`, `No accion externa`, `Privacidad`, `Producto`, `UX`, `Gate` o `Bloqueo`, no deben renombrarse con una fecha fija porque son categorias reutilizables del tablero;
+- si una etiqueta temporal nueva representa plazo, estado activo, CTA owner, decision Salva o seguimiento diario, Gael debe registrar inicio y entrega al crear/aplicar la etiqueta y corregirla en la revision proactiva si falta;
+- las revisiones 12:00 y 20:00 deben detectar tarjetas activas sin inicio/entrega y corregirlas o moverlas a bloqueo si no puede definirse una entrega verificable.
+
+Actualizacion Trello ejecutada:
+
+- tarjeta `Reglas de uso del tablero`: `https://trello.com/c/Wz0c3B2D`;
+- comentario añadido con la regla de inicio/entrega para etiquetas operativas y tarjetas activas.
+
+Autorizacion controlada de Salva el 2026-07-05 para desbloquear BBDD temporal Mercury:
+
+Salva autoriza a Mercury a construir una BBDD temporal privada/controlada de validacion con 10 candidatos: 3 P1, 3 P2, 3 P3 y 1 reserva, usando solo fuentes publicas profesionales/gremiales/directorios/webs de empresa/colegios o equivalentes, limitadas a los perfiles P1/P2/P3 definidos para AD Captura Pack.
+
+Condiciones obligatorias:
+
+- la BBDD con identificadores reales no puede guardarse en `nuevo_AD_V01`, Trello, source ni comentarios operativos visibles;
+- identificadores permitidos solo si son profesionales y publicamente publicados: nombre comercial/profesional, web/fuente publica, email profesional publico y segmento P1/P2/P3;
+- prohibido usar datos privados, telefonos personales, direcciones personales, clientes reales, facturas, fotos, importes o informacion sensible;
+- Mercury debe trabajar la BBDD en archivo temporal privado/controlado separado del source operativo;
+- Gael solo recibira metricas agregadas y anonimas: candidatos encontrados, descartados, segmento, fuente general, criterios de descarte y estado del batch;
+- no hay permiso de envio real por Gmail;
+- antes de cualquier envio real debe existir gate separado de Salva aprobando destinatarios agregados, borrador final, canal, mock/adjunto o texto plano, retencion/borrado y batch final;
+- tras envio o cancelacion, la BBDD temporal debe borrarse salvo aprobacion explicita de retencion minima concreta por Salva;
+- si Mercury no puede operar la BBDD privada sin exponer identificadores en OpenClaw/Trello/source, debe marcar bloqueo operativo real y proponer alternativa.
+
+Estado operativo:
+
+- bloqueo anterior por falta de autorizacion/fuente externa queda desbloqueado para busqueda publica profesional controlada;
+- sigue bloqueado cualquier envio, contacto real, pricing publico, uso de datos reales de negocio/cliente, integracion, credencial, pago o accion irreversible;
+- Gael traslada encargo a Mercury con salida estrictamente anonima;
+- estado del encargo Mercury: recibido el resultado agregado/anonimo;
+- no se han recibido ni guardado identificadores reales en source/Trello/OpenClaw visible por parte de Gael.
+
+Resultado agregado Mercury sobre BBDD temporal privada:
+
+- estado: `PARTIAL`;
+- candidatos brutos por segmento: P1=10 / P2=0 / P3=0;
+- finales por segmento: P1=3 / P2=0 / P3=0 + reserva=P1;
+- descartes agregados por causa: perfil grande o fuera de alcance=3; duplicado=1; sin email profesional publico=8;
+- fuentes generales usadas sin identificadores concretos: buscadores web generales, webs profesionales publicas y directorios/resultados comerciales publicos;
+- Mercury confirma que no volco identificadores en source/Trello/OpenClaw visible y que no pego destinatarios ni BBDD en chat;
+- estado de archivo temporal privado: creado;
+- riesgos de sesgo restantes: muestra sesgada a P1, P2/P3 no cubiertos, sesgo hacia negocios con email publico/presencia web, calidad insuficiente para batch 3/3/3+1;
+- no procede gate de envio porque el batch objetivo no esta completo;
+- siguiente desbloqueo requerido: completar P2/P3 mediante apoyo humano externo controlado o herramienta/directorio/API mejor antes de pedir aprobacion de borrador final, canal, mock/adjunto o texto plano, retencion/borrado y batch final.
+
+Regla FinOps permanente aprobada por Salva el 2026-07-05:
+
+- `low`: tramite, confirmaciones, mover estado, comentar Trello, resumenes simples y tareas mecanicas;
+- `medium`: trabajo normal operativo y default general;
+- `high`: gates, auditorias, decisiones comerciales/producto/tecnicas con riesgo, privacidad, validacion o configuracion de equipo;
+- `xhigh`: legal, financiero, seguridad critica, privacidad con datos reales, produccion, credenciales, billing, perdida de datos o decisiones irreversibles;
+- los agentes solo deben justificar explicitamente el esfuerzo cuando usen `high` o `xhigh`, indicando en una linea el riesgo o gate que lo justifica;
+- no hace falta justificar `low` o `medium` en tareas normales;
+- Gael debe vigilar semanalmente si aparecen sesiones mecanicas con consumo anomalo de tokens y proponer correccion.
+
+Segunda pasada Mercury P2/P3 autorizada por Salva el 2026-07-05:
+
+Salva no acepta el resultado `PARTIAL` como bloqueo estructural todavia. La lectura operativa es que encontrar P1 pero 0 candidatos P2/P3 apunta a busqueda incompleta, fuentes mal elegidas o filtros demasiado estrechos.
+
+Instruccion para Mercury:
+
+- no buscar mas P1;
+- objetivo: completar 3 P2 + 3 P3;
+- mantener todas las restricciones de privacidad anteriores;
+- reportar solo agregados anonimos: candidatos brutos P2/P3, candidatos finales P2/P3, descartes por criterio, tipo de fuente usada y motivo exacto si no completa el batch;
+- fuentes sugeridas: asociaciones o gremios de electricistas, instaladores autorizados, directorios profesionales locales, empresas de reparacion domestica general, multiservicios domesticos, directorios sectoriales o municipales con contacto profesional publico;
+- no hay autorizacion de envio, Gmail, outreach, contacto real ni gate de envio hasta completar 3/3/3+1;
+- si tras esta segunda pasada Mercury no completa P2/P3, debe entregar diagnostico util: fuentes exploradas por categoria, criterios que eliminaron candidatos, si el problema es fuente, filtro, segmento o herramienta, y propuesta concreta de desbloqueo.
+
+Ejecucion Gael:
+
+- regla FinOps y segunda pasada Mercury registradas en source;
+- encargo enviado a Mercury; estado: recibido resultado agregado/anonimo;
+- cron semanal FinOps creado: `60f773f0-30a4-40df-838c-d61b1fd56368`, lunes 09:30 Europe/Madrid, entrega Discord `#ad_captura`;
+- Trello actualizado con comentario sin identificadores en `Reglas de uso del tablero`: accion `6a4acf2724c0e145dd108160`.
+
+Resultado segunda pasada Mercury P2/P3:
+
+- estado: `OPERATIONAL_BLOCK`;
+- candidatos brutos P2/P3: P2=0 / P3=0;
+- candidatos finales P2/P3: P2=0 / P3=0;
+- descartes agregados por criterio: sin email profesional publico=8; perfil grande o fuera de alcance=3; duplicado=1;
+- fuentes generales usadas sin identificadores concretos: buscadores web generales, directorios/resultados profesionales publicos, webs profesionales/empresas de servicios domesticos, consultas dirigidas a gremios/asociaciones y reparacion domestica;
+- Mercury confirma que no volco identificadores en source/Trello/OpenClaw visible, no pego destinatarios ni BBDD en chat y no envio emails;
+- estado de archivo temporal privado: actualizado;
+- diagnostico Mercury: problema de herramienta/fuente; la busqueda HTTP/directorios accesibles desde su runtime no entrega P2/P3 con email profesional publico y senal verificable sin procesos largos/no fiables; el filtro P2/P3 ya se flexibilizo a reparacion domestica positiva, por lo que no parece solo filtro demasiado estrecho;
+- propuesta Mercury: apoyo humano externo controlado o herramienta/directorio/API comercial con navegador real para P2/P3, guardando identificadores solo en carpeta temporal privada y devolviendo solo agregado anonimo;
+- no se activa gate de envio.
+
+Lectura Gael:
+
+- no se acepta como bloqueo de mercado ni de segmento;
+- si tras dos pasadas Mercury devuelve P2=0/P3=0, el bloqueo es operativo/capacidad de busqueda de Mercury, no evidencia de que no existan candidatos;
+- el coste/tiempo de esta segunda pasada queda marcado como incidencia FinOps/operativa: una busqueda acotada P2/P3 no debe quedar abierta de forma prolongada sin update intermedio ni corte temprano.
+
+Decision de Salva sobre incidencia Mercury el 2026-07-06:
+
+- no se autoriza una tercera pasada igual con Mercury;
+- no se abre gate de envio;
+- no se interpreta P2/P3=0 como inexistencia de mercado;
+- se registra como incapacidad operativa con la herramienta/fuente actual;
+- la busqueda queda parada hasta aprobar un desbloqueo nuevo.
+
+Post-mortem breve Mercury:
+
+- fuentes exploradas por categoria: buscadores web generales, directorios profesionales/locales accesibles publicamente, resultados sectoriales de gremios/asociaciones, webs profesionales de servicios domesticos/electricidad/reparacion general, consultas orientadas a electricistas de reparacion domestica, manitas, multiservicios y mantenimiento del hogar;
+- criterio de aceptacion: contacto profesional publicamente publicado, email profesional visible, senal positiva de encaje P2 o P3 y ausencia de datos privados/sensibles;
+- criterios de rechazo: sin email profesional publico, duplicado, fuente no parseable/no verificable, perfil grande o fuera de alcance, P2 dominado por normativa/industrial/certificacion sin senal clara de reparacion domestica sencilla, P3 demasiado amplio o no orientado a trabajos cortos domesticos;
+- limitacion concreta: runtime limitado a busqueda/fetch HTTP y parsing limitado; sin navegador/directorio/API comercial fiable para descubrir y verificar suficientes contactos P2/P3 sin exponer identificadores ni alargar procesos no fiables;
+- causa de P2/P3=0: las fuentes accesibles devolvieron paginas sin email profesional publico, resultados no parseables, duplicados o perfiles fuera de encaje; Mercury no pudo verificar P2/P3 con calidad minima y privacidad operativa;
+- necesidad para completar batch: apoyo humano externo controlado o herramienta/directorio/API con navegador real, trabajando en carpeta temporal privada, con salida solo agregada anonima y borrado/retencion minima definida antes de cualquier gate de envio.
+
+Correccion obligatoria de Salva el 2026-07-06 sobre definicion P1/P2/P3 y criterios de aceptacion:
+
+Salva no aprueba todavia la Opcion A de apoyo humano externo. Antes debe corregirse la definicion operativa porque el resultado P2/P3=0 puede indicar sobre-filtrado y mala definicion, no ausencia real de candidatos.
+
+Regla corregida sobre email profesional publico:
+
+- `email profesional publico` no significa email con dominio corporativo;
+- para autonomos y microempresas se aceptan Gmail, Hotmail, Outlook, Yahoo u otros correos genericos si estan publicados en un contexto profesional verificable: web del negocio, directorio profesional, ficha publica, asociacion, anuncio profesional o perfil comercial;
+- no se acepta email obtenido de fuentes privadas;
+- no se acepta email personal sin contexto profesional;
+- no se aceptan datos de clientes;
+- no se aceptan telefonos/direcciones personales no necesarios;
+- no se acepta scraping invasivo ni fuentes no legitimas.
+
+Definicion corregida de segmentos por trabajo observable:
+
+- P1: fontaneria/reparacion rapida domestica. Incluye fontaneros, reparadores de fugas, desatascos, pequenos arreglos de agua, termos, grifos y sanitarios. Se aceptan autonomos y microempresas locales.
+- P2: electricidad domestica sencilla. Incluye electricistas que hagan averias domesticas, enchufes, luces, cuadros basicos, pequenas reparaciones y mantenimiento electrico de vivienda/local pequeno. No se excluye por mencionar boletines, instalaciones o certificacion si tambien hay senal de reparacion domestica o servicio local. Se excluyen solo perfiles claramente industriales, obra grande, ingenieria, alta tension o empresas grandes sin decision directa.
+- P3: reparacion domestica general / multiservicios. Incluye manitas, multiservicios, mantenimiento del hogar, pequenos arreglos, persianas, cerraduras simples, montaje, reparaciones varias y mantenimiento local. No se exige especialidad unica porque P3 agrupa trabajos cortos domesticos. Se excluyen reformas integrales, constructoras grandes, decoracion/interiorismo puro, limpieza pura o servicios sin relacion con reparacion/mantenimiento.
+
+Criterio minimo de aceptacion corregido:
+
+Aceptar candidato si cumple todo lo siguiente:
+
+- contacto profesional publicado publicamente;
+- actividad compatible con P1/P2/P3;
+- indicio de trabajos domesticos cortos o mantenimiento local;
+- email visible publicado en contexto profesional, aunque sea Gmail, Hotmail, Outlook, Yahoo u otro generico;
+- ausencia de datos privados o sensibles;
+- apariencia de autonomo, profesional local o microempresa de decision directa.
+
+Criterio de descarte corregido:
+
+No descartar solo por:
+
+- usar Gmail, Hotmail, Outlook, Yahoo u otro email generico;
+- tener web simple;
+- aparecer en directorios;
+- mencionar certificaciones;
+- ofrecer mas servicios ademas del segmento;
+- ser microempresa en vez de autonomo individual.
+
+Descartar solo por:
+
+- no tener email/contacto profesional publico usable;
+- ser claramente empresa grande, industrial o fuera de alcance;
+- fuente no verificable;
+- duplicado;
+- servicio no domestico o no relacionado con reparacion/mantenimiento;
+- datos personales no profesionales.
+
+Accion operativa corregida:
+
+- reabrir busqueda P2/P3 solo despues de aplicar estos criterios corregidos;
+- objetivo: 3 P2 + 3 P3;
+- no buscar mas P1;
+- reportar solo agregados anonimos;
+- no volcar identificadores en source, Trello u OpenClaw;
+- no envio, no Gmail, no outreach sin gate separado;
+- no hacer una tercera pasada con los criterios anteriores;
+- si con esta definicion corregida Mercury vuelve a dar P2/P3=0, entonces evaluar apoyo humano externo o herramienta/directorio mejor.
+
+Resultado Mercury de busqueda P2/P3 con definicion corregida, recibido el 2026-07-06 antes de las 00:50 CEST:
+
+- estado: `ZERO`;
+- candidatos brutos anonimos: P2=0 / P3=0;
+- candidatos finales anonimos: P2=0 / P3=0;
+- descartes agregados por criterio corregido: busqueda timeout/bloqueo=8; sin email publico en contexto profesional=2;
+- tipos de fuente usados, sin identificadores concretos: buscadores web generales, directorios profesionales/locales, webs de negocio/profesionales, resultados sectoriales publicos y anuncios/perfiles comerciales publicos;
+- Mercury confirma que no volco nombres, emails, telefonos, URLs, ubicaciones ni fuentes identificables en source, Trello u OpenClaw visible;
+- Mercury confirma que no envio emails y que no hubo contacto real;
+- diagnostico Mercury: problema principal de herramienta/fuente. Con filtro corregido, el bloqueo no fue exigir dominio corporativo ni excluir boletines/certificacion; las fuentes accesibles por el runtime devolvieron bloqueos/timeouts o paginas sin email publico verificable en contexto profesional P2/P3;
+- propuesta Mercury: usar herramienta/directorio/API con navegador real o apoyo humano externo controlado para localizar P2/P3, guardando identificadores solo en temporal privado y devolviendo solo agregados;
+- gate de envio sigue cerrado hasta aprobacion separada de Salva.
+
+Lectura Gael:
+
+- el resultado `ZERO` tras definicion corregida ya no debe leerse como error de definicion P1/P2/P3;
+- tampoco prueba ausencia de mercado ni ausencia real de candidatos P2/P3;
+- el bloqueo vigente queda reclasificado como capacidad/fuente/herramienta para descubrimiento verificable de contactos P2/P3, no como validacion negativa del segmento;
+- siguientes opciones evaluables: herramienta/directorio/API con navegador real o apoyo humano externo controlado, manteniendo identificadores fuera de source/Trello/OpenClaw y sin envio hasta gate separado.
+
+Decision de Salva el 2026-07-06 sobre redefinicion de muestra:
+
+Salva revisa el historico documental y no aprueba todavia apoyo humano externo ni herramienta/API nueva.
+
+La causa principal no queda cerrada como `capacidad Mercury`. La lectura vigente pasa a ser fallo de definicion operativa y muestra:
+
+- P1 funciona porque esta alineado con el target real: fontaneria/reparacion rapida domestica;
+- P2 anterior, basado en electricista domestico general, queda mal definido para busqueda porque se contamina con normativa, boletines, instalaciones, certificaciones, reforma, industria y seguridad tecnica;
+- los propios documentos ya advertian que electricistas generalistas debian quedar bloqueados salvo micro-nicho verificable;
+- P3 anterior, reparacion domestica general, era demasiado amplio porque mezcla manitas, multiservicios, reformas, mantenimiento, persianas, cerraduras, montaje, empresas grandes y servicios no comparables;
+- los resultados P2/P3 anteriores se reclasifican como fallo de definicion/muestra, no como senal de mercado ni solo como fallo de Mercury.
+
+Decision operativa:
+
+- no seguir buscando 3/3/3 con la definicion anterior;
+- no reabrir electricistas como P2 general;
+- electricistas salen de la muestra principal por ahora;
+- solo se reabriran electricistas si se define un micro-nicho verificable y localizable.
+
+Nueva definicion operativa de muestra:
+
+P1 - Core:
+
+Fontanero autonomo o microequipo de reparacion domestica rapida y pequenos avisos.
+
+Ejemplos:
+
+- fugas;
+- desatascos;
+- grifos;
+- termos;
+- sanitarios;
+- vueltas;
+- material;
+- cobros;
+- cierres.
+
+P2 - Adyacente cercano:
+
+Reparador domestico local / manitas / multiservicios pequeno, siempre centrado en trabajos cortos domesticos.
+
+Ejemplos:
+
+- persianas;
+- cerraduras simples;
+- montaje;
+- arreglos menores;
+- mantenimiento del hogar;
+- pequenas reparaciones varias.
+
+Exclusiones P2:
+
+- reformas integrales;
+- constructoras;
+- limpieza pura;
+- decoracion/interiorismo;
+- empresas grandes.
+
+P3 - Segundo candidato comercial:
+
+Climatizacion/HVAC residencial o pequeno comercio, solo mantenimiento, avisos, revisiones, presupuestos simples y seguimiento.
+
+Exclusiones P3:
+
+- RITE complejo;
+- SAT maduro;
+- instalaciones industriales;
+- certificaciones como nucleo;
+- partes tecnicos complejos;
+- stock;
+- GMAO.
+
+Nuevo objetivo de BBDD temporal privada/controlada:
+
+- 10 candidatos totales;
+- 5 P1 core;
+- 3 P2 adyacente cercano;
+- 2 P3 HVAC exploratorio.
+
+Condiciones mantenidas:
+
+- solo contactos profesionales publicamente publicados;
+- Gmail, Hotmail, Outlook, Yahoo u otros correos genericos son validos si aparecen en contexto profesional verificable;
+- no volcar identificadores en source, Trello u OpenClaw;
+- Gael solo recibe agregados anonimos;
+- no envio, no Gmail, no outreach ni contacto real sin gate separado.
+
+Estado:
+
+- source actualizado con redefinicion antes de cualquier nueva busqueda;
+- Trello debe actualizarse con la misma reclasificacion y objetivo;
+- no hay autorizacion para apoyo humano externo, herramienta/API nueva, envio, Gmail, outreach ni contacto real.
+
+Autorizacion de Salva el 2026-07-06 a las 00:58 CEST:
+
+Salva aprueba la siguiente accion propuesta por Gael: reabrir busqueda con Mercury usando la nueva muestra 5/3/2.
+
+Condiciones:
+
+- entrega antes de la 01:05 CEST del 2026-07-06;
+- usar la muestra nueva: 5 P1 core, 3 P2 adyacente cercano, 2 P3 HVAC exploratorio;
+- no usar apoyo humano externo;
+- no usar herramienta/API nueva;
+- mantener las condiciones de privacidad y salida anonima;
+- no envio, Gmail, outreach ni contacto real sin gate separado.
+
+Estado del encargo:
+
+- Gael debe trasladar encargo a Mercury inmediatamente;
+- resultado recibido antes de la 01:05 CEST.
+
+Resultado Mercury busqueda 5/3/2, recibido el 2026-07-06 antes de la 01:05 CEST:
+
+- estado: `COMPLETE`;
+- candidatos brutos anonimos: P1=6 / P2=4 / P3=3;
+- candidatos finales anonimos: P1=5 / P2=3 / P3=2;
+- reserva anonima: segmento=P1;
+- descartes agregados por criterio: sin email publico en contexto profesional=10; fuera de alcance muestra 5/3/2=3; fuente no parseable=1;
+- tipos de fuente usados, sin identificadores concretos: buscadores web generales, directorios/resultados profesionales publicos, webs de negocio/profesionales y anuncios/perfiles comerciales publicos;
+- Mercury confirma que no volco nombres, emails, telefonos, URLs concretas, ubicaciones exactas ni fuentes identificables en source, Trello u OpenClaw visible;
+- Mercury confirma que no envio ningun email y que no hubo contacto real;
+- estado temporal privado: actualizado;
+- diagnostico: muestra 5/3/2 completada con la definicion corregida.
+
+Estado tras resultado:
+
+- el objetivo anonimo de BBDD temporal privada/controlada 5/3/2 queda completado;
+- no se autoriza envio real;
+- siguiente gate separado de Salva: aprobar o bloquear batch agregado, borrador final, canal, mock/adjunto o texto plano, y regla de retencion/borrado antes de cualquier envio.
+
+Aceptacion de Salva del resultado `COMPLETE` Mercury 5/3/2 el 2026-07-06:
+
+Salva acepta el resultado `COMPLETE` de Mercury:
+
+- brutos anonimos: P1=6 / P2=4 / P3=3;
+- finales anonimos: P1=5 / P2=3 / P3=2;
+- reserva anonima: P1;
+- sin identificadores en source, Trello u OpenClaw visible;
+- sin envio, Gmail, outreach ni contacto real.
+
+Lectura vigente:
+
+- el bloqueo anterior queda reclasificado como fallo de definicion/muestra, no como senal negativa de mercado;
+- la nueva muestra 5/3/2 es valida para preparar el gate de envio;
+- no se autoriza todavia ningun envio.
+
+Gate separado preparado:
+
+- `GATE_ENVIO_MUESTRA_5_3_2_AD_CAPTURA_PACK_nuevo_AD_V01.md`
+- Trello: `https://trello.com/c/MvWuQcn0/25-gate-salva-envio-muestra-5-3-2-ad-captura-pack`
+
+El gate incluye batch agregado final, fuentes usadas solo por categoria agregada, borrador final de email, canal propuesto Gmail desde cuenta aprobada, decision recomendada de texto plano sin adjunto en primer contacto, regla de retencion/borrado de BBDD temporal, riesgos, criterio de parada, registro posterior anonimo y confirmacion explicita de no envio hasta aprobacion final de Salva.
+
+Aprendizaje operativo incorporado:
+
+- antes de escalar a herramienta, API o apoyo humano, Gael debe revisar si la definicion de muestra esta bloqueando la ejecucion;
+- en este caso, redefinir P1/P2/P3 desbloqueo el trabajo;
+- cuando una busqueda devuelve cero en segmentos adyacentes, no se debe clasificar automaticamente como falta de mercado ni como incapacidad de herramienta: primero hay que auditar definicion observable, criterios de aceptacion/descarte, fuentes y mezcla de muestra.
+
+Correccion operativa de Salva sobre Discord el 2026-07-06:
+
+Salva corrige la clasificacion de Gael sobre Discord:
+
+- no debe clasificarse como `Discord no disponible`;
+- Discord esta habilitado globalmente;
+- el canal `#ad_captura` esta configurado;
+- ya existe registro previo de aviso enviado correctamente;
+- el problema real de este turno es de exposicion de herramienta/capacidad en el runtime actual de Gael;
+- el agente `saas` tiene Trello asignado, pero no consta `discord` como skill/capacidad visible en la sesion actual.
+
+Regla operativa incorporada:
+
+Gael debe distinguir siempre:
+
+- canal configurado;
+- credencial/cuenta disponible;
+- herramienta visible en la sesion;
+- permiso operativo para usarla.
+
+Clasificacion vigente:
+
+- canal Discord configurado: si;
+- canal `#ad_captura` configurado: si;
+- credencial/cuenta Discord disponible globalmente: si, segun correccion de Salva;
+- herramienta/capacidad Discord visible en sesion Gael: no expuesta de forma operativa completa en este turno;
+- permiso operativo para publicar updates de proyecto aprobados: si, dentro del marco de actualizaciones operativas sin datos sensibles.
+
+Estado operativo:
+
+- source actualizado;
+- Trello actualizado con la correccion;
+- Trello pendiente Discord: `https://trello.com/c/BtMKzPIa/26-pendiente-aviso-discord-capacidad-no-expuesta-sesion-gael`;
+- queda pendiente solo el aviso Discord del gate 5/3/2;
+- el pendiente debe describirse como `capacidad Discord no expuesta en sesion Gael`, no como ausencia de Discord ni bloqueo de proyecto.
+
+Autorizacion de Salva el 2026-07-06 para preparacion Mercury del paquete de emails 5/3/2:
+
+Salva autoriza preparacion, no envio. No hay autorizacion de envio real, Gmail, outreach ni contacto con destinatarios hasta aprobacion final separada.
+
+Encargo trasladado a Mercury:
+
+- preparar borrador final de email apto para P1/P2/P3, con microvariantes si aportan claridad;
+- sin pricing;
+- sin prometer demo, producto operativo, automatismos, integraciones, facturacion, cobros, WhatsApp real ni calendario real;
+- dejar claro que es una idea temprana y que no se piden datos reales;
+- mantener batch solo agregado: P1=5, P2=3, P3=2, reserva=P1;
+- decidir texto plano/enlace/PNG/PDF/no adjuntar;
+- proponer retencion/borrado;
+- preparar ficha breve de gate final para Salva.
+
+Resultado Mercury:
+
+- borrador base preparado con tres preguntas neutrales por email;
+- microvariantes por segmento: P1 fontaneria/reparacion rapida domestica; P2 reparadores domesticos/manitas/multiservicios pequenos; P3 climatizacion residencial/mantenimiento de aire acondicionado;
+- batch agregado confirmado: P1=5 / P2=3 / P3=2 / reserva=P1;
+- recomendacion mock/adjunto: texto plano sin adjunto en primer envio;
+- motivo: menor riesgo de entregabilidad y menor expectativa de producto/demo operativo;
+- retencion propuesta: conservar BBDD temporal solo hasta decision de envio o cancelacion; si se cancela, borrar identificadores y conservar solo agregados anonimos; si se aprueba envio, conservar identificadores solo durante ventana minima de envio/respuesta definida por Salva; tras cierre, borrar emails, nombres/fuentes identificables y metadatos concretos salvo aprobacion separada;
+- Mercury confirma que los identificadores siguen fuera de source/Trello/OpenClaw visible;
+- Mercury confirma que no envio ningun email.
+
+Actualizacion de artefacto:
+
+- `GATE_ENVIO_MUESTRA_5_3_2_AD_CAPTURA_PACK_nuevo_AD_V01.md` actualizado con el borrador Mercury y recomendacion texto plano sin adjunto.
+
+Gate final pendiente de Salva:
+
+- aprobar o bloquear batch agregado;
+- texto final;
+- canal Gmail;
+- formato texto plano sin adjunto o gate separado para PNG/PDF;
+- ventana de envio;
+- retencion/borrado;
+- criterio de parada;
+- aprendizaje anonimo posterior: respuestas por segmento, senales de dolor, alternativa actual, objeciones, invalidadores y calidad de evidencia.
+
+Decision de Salva el 2026-07-06 a las 01:43 CEST sobre gate final de envio muestra 5/3/2:
+
+Salva aprueba el envio real una sola vez para este batch, bajo condiciones estrictas:
+
+- batch aprobado: P1=5 / P2=3 / P3=2 / reserva=P1;
+- canal aprobado: Gmail desde la cuenta aprobada;
+- envio individual;
+- sin adjunto;
+- sin mock;
+- sin tracking;
+- sin CC/CCO visible entre destinatarios;
+- texto aprobado: cuerpo base Mercury con microvariante por segmento, sustituyendo `perdida real` por `perdida tipica de tiempo, seguimiento o memoria` y anadiendo al final `Si no te interesa o prefieres que no vuelva a escribirte, dimelo y no insisto.`;
+- ventana aprobada: lunes 2026-07-06 en horario laboral Espana, preferiblemente entre 09:30 y 12:30 CEST;
+- si no es posible ejecutar en esa ventana, no enviar y proponer nueva ventana antes de cualquier envio;
+- retencion: conservar la BBDD temporal solo durante la ventana minima de envio y respuesta, con fecha limite de 14 dias naturales desde el envio; despues borrar nombres, emails, fuentes identificables y metadatos concretos; conservar solo agregados anonimos por segmento;
+- registro posterior permitido: enviado/no enviado, respuesta/no respuesta, P1/P2/P3, senales de dolor, alternativa actual, objeciones, invalidadores y calidad de evidencia;
+- prohibido registrar: nombres, emails, telefonos, URLs identificables, ubicaciones, datos de clientes, importes, fotos, facturas, chats o cualquier identificador concreto;
+- criterio de parada: parar ante peticion de no contacto, rebote relevante, confusion de producto/demo, respuesta negativa clara o cualquier riesgo reputacional.
+
+Condicion operativa vigente:
+
+- Mercury/fuente externa controlada debe ejecutar si puede hacerlo sin exponer identificadores en source, Trello u OpenClaw visible;
+- Gael no debe recibir destinatarios ni enviar emails desde el workspace;
+- si Mercury no puede ejecutar desde Gmail bajo estas condiciones, debe devolver `no enviado` y bloqueo anonimo.
+
+Estado temporal:
+
+- la aprobacion se recibe y registra fuera de la ventana de envio, a la 01:43 CEST;
+- Gael debe trasladar la orden a Mercury y/o programar reactivacion operativa para la ventana aprobada.
+
+Resultado operativo Mercury tras recibir la orden, 2026-07-06 01:46 CEST:
+
+- estado: `NO ENVIADO`;
+- no se ha usado Gmail;
+- no se ha enviado ningun email;
+- no se ha contactado a destinatarios;
+- no se han pegado identificadores ni BBDD en OpenClaw visible;
+- motivo del bloqueo: el canal Gmail disponible para Mercury exige introducir cada destinatario en la llamada visible de herramienta, lo que expondria identificadores y romperia la condicion aprobada por Salva;
+- clasificacion: bloqueo operativo de privacidad/canal, no bloqueo de autorizacion ni de batch/texto;
+- opcion minima para ejecutar: habilitar/corregir un canal Gmail privado/controlado de Mercury que lea la BBDD temporal privada por referencia interna o batch id y envie desde la cuenta aprobada sin registrar destinatarios en tool calls;
+- si el canal oculto/no visible queda listo antes de la ventana aprobada, se podria ejecutar dentro de lunes 2026-07-06 09:30-12:30 CEST;
+- si no queda listo, no enviar y pedir a Salva nueva ventana antes de cualquier envio.
+
+Actualizacion Trello:
+
+- tarjeta `Gate Salva - envio muestra 5/3/2 AD Captura Pack` comentada con estado `NO ENVIADO` y bloqueo operativo de privacidad/canal;
+- tarjeta movida de `Revision Salva` a `Bloqueado`;
+- URL: `https://trello.com/c/MvWuQcn0/25-gate-salva-envio-muestra-5-3-2-ad-captura-pack`.
+
+Correccion de ejecucion ordenada por Salva el 2026-07-06:
+
+Salva no acepta sacar el envio a una via manual dependiente de Salva. La decision aprobada sigue siendo que Mercury envie por Gmail desde la cuenta aprobada, sin consumir mas tiempo de Salva y sin exponer identificadores. Batch, texto, muestra, canal Gmail, texto plano, ausencia de adjunto/mock/tracking y condiciones de privacidad siguen aprobados; no se reabre gate de negocio.
+
+Orden operativa corregida:
+
+- Mercury debe enviar por Gmail si dispone de canal privado/controlado que no exponga destinatarios en tool calls visibles;
+- no puede usar herramienta visible que obligue a introducir destinatarios en llamadas visibles;
+- el canal valido debe leer la BBDD temporal privada ya preparada mediante referencia interna o batch id, no por emails pegados en conversacion;
+- salida permitida: enviados/no enviados por segmento, rebotes agregados e incidencias agregadas;
+- salida prohibida: nombres, emails, telefonos, URLs, ubicaciones, fuentes identificables o cualquier identificador concreto en OpenClaw, Trello, source, Discord o comentarios;
+- si el runtime de Mercury no tiene ese canal, se clasifica como fallo de configuracion operativa del canal Gmail privado, no como nuevo gate ni como tarea manual para Salva.
+
+Resultado de correccion trasladada a Mercury:
+
+- estado Mercury: `NO ENVIADO - FALLO CONFIG GMAIL PRIVADO`;
+- no se ha usado Gmail;
+- no se ha enviado ningun email;
+- no se ha contactado a destinatarios;
+- no se han volcado identificadores;
+- correccion tecnica concreta: habilitar flujo Gmail privado/controlado en entorno autorizado de Mercury, fuera de tool calls visibles, con entrada por referencia interna o batch id de la BBDD temporal, logs anonimizados y salida solo agregada por P1/P2/P3;
+- motivo tecnico: el canal Gmail visible actual exige pasar cada destinatario en la llamada de herramienta y por tanto incumple la condicion aprobada de privacidad.
+
+Resultado de dry-run privado Mercury, 2026-07-06:
+
+- estado: `BLOCKED`;
+- dry-run: `FAIL`;
+- envio: P1=0 / P2=0 / P3=0;
+- rebotes agregados: P1=0 / P2=0 / P3=0;
+- Gmail/contacto: cero Gmail, cero contacto, cero identificadores volcados;
+- herramienta privada: existe `gmail_send_private_batch`;
+- motivo tecnico concreto: batch privado no encontrado o no aprobado en el directorio privado del canal Gmail;
+- condicion incumplida: no existe archivo de batch aprobado 5/3/2 con `approved: true` ejecutable por `batchId` sin exponer identificadores;
+- clasificacion: bloqueo tecnico-operativo de preparacion del batch privado, no bloqueo de negocio, texto, muestra, canal, autorizacion ni formato.
+
+Accion de desbloqueo vigente:
+
+- crear o corregir en la carpeta privada/controlada del Gmail AD el archivo batch 5/3/2 aprobado con `approved: true`;
+- no pasar destinatarios en llamadas visibles ni registrar BBDD en OpenClaw, Trello, source, Discord o comentarios;
+- repetir primero dry-run con solo `{ "batchId": "<batch-id>" }`;
+- si el dry-run devuelve solo agregados y no expone identificadores, ejecutar despues con solo `{ "batchId": "<batch-id>", "execute": true }`;
+- si vuelve a fallar, el fallo debe volver como causa tecnica concreta sin identificadores: OAuth, Gmail API, batch privado mal formado, herramienta no visible o envio rechazado.
+
+Auditoria Trello por pregunta de Salva el 2026-07-06 02:36 CEST:
+
+Salva pregunta si esta todo actualizado. Resultado estricto: al inicio de la auditoria, source estaba actualizado, pero Trello tenia deriva visual.
+
+Derivas detectadas:
+
+- `Gate Salva - envio muestra 5/3/2 AD Captura Pack` estaba sin etiquetas ni fechas completas y no reflejaba con suficiente claridad el bloqueo tecnico actual;
+- `Gate Salva - fuente externa operativa para P1/P2/P3` seguia en `Revision Salva`, aunque ya estaba sustituido por el gate especifico 5/3/2;
+- `Mercury - enviar emails P1/P2/P3 antes 06/07 12:00` seguia como bloqueo antiguo, duplicando el bloqueo real;
+- `Pendiente aviso Discord - capacidad no expuesta sesion Gael` seguia como pendiente, aunque el aviso operativo ya se estaba realizando por `#ad_captura`;
+- `Formalizar decisiones base pendientes` seguia activo sin inicio/entrega visible;
+- `Registrar resultado anonimo P1/P2/P3 post-envio` necesitaba reflejar que depende del envio o bloqueo final del gate 5/3/2.
+
+Correcciones Trello ejecutadas:
+
+- `Gate Salva - envio muestra 5/3/2 AD Captura Pack`: actualizado con estado `NO ENVIADO - BLOQUEADO TECNICO`, inicio 2026-07-06 01:46 CEST, entrega objetivo 2026-07-06 09:30 CEST, etiquetas de bloqueo tecnico/plazo y lista `Bloqueado`: `https://trello.com/c/MvWuQcn0`;
+- `Gate Salva - fuente externa operativa para P1/P2/P3`: movido a `Aprobado / Hecho` como historico sustituido, sin etiquetas activas: `https://trello.com/c/VWL96iUN`;
+- `Mercury - enviar emails P1/P2/P3 antes 06/07 12:00`: movido a `Aprobado / Hecho` como historico sustituido por el gate 5/3/2: `https://trello.com/c/fu2SNq6I`;
+- `Pendiente aviso Discord - capacidad no expuesta sesion Gael`: movido a `Aprobado / Hecho` porque el aviso en Discord queda ejecutado en esta verificacion: `https://trello.com/c/BtMKzPIa`;
+- `Formalizar decisiones base pendientes`: mantenido en `Listo para trabajar`, con inicio 2026-07-06 02:36 CEST y entrega objetivo 2026-07-06 20:00 CEST: `https://trello.com/c/rd6olSQa`;
+- `Registrar resultado anonimo P1/P2/P3 post-envio`: descripcion actualizada con inicio 2026-07-06 12:00 CEST, entrega objetivo 2026-07-06 18:00 CEST y dependencia del envio/bloqueo final: `https://trello.com/c/SHvTmngm`.
+
+Estado corregido:
+
+- Trello queda alineado con source;
+- el bloqueo vigente unico del envio es tecnico-operativo: batch privado Gmail 5/3/2 no encontrado o no aprobado con `approved: true`;
+- no hay gate nuevo de Salva sobre negocio, texto, canal, muestra o formato;
+- siguiente accion real: corregir batch privado Gmail y repetir dry-run por `batchId` sin exponer identificadores.
+
+Correccion critica RGPD de Salva el 2026-07-06:
+
+El gate de envio 5/3/2 no puede considerarse completo ni ejecutable porque faltaba una validacion legal basica: derecho de informacion RGPD al destinatario.
+
+Clasificacion de incidencia:
+
+- fallo de criterio/gate legal de Gael;
+- no es bloqueo tecnico, de negocio, texto, muestra, canal, autorizacion ni privacidad interna;
+- antes de presentar el envio como aprobable debio comprobarse si el email informaba al destinatario sobre responsable, finalidad, base juridica, origen, conservacion, derechos y oposicion/no contacto.
+
+Decision vigente:
+
+- no se envia ningun email hasta corregir este punto;
+- el gate 5/3/2 queda condicionado a incorporar un pie legal breve RGPD al final del email, no en el cuerpo principal;
+- el cierre de oposicion/no contacto queda integrado en el pie legal final;
+- el responsable exacto del proyecto queda confirmado como `Autónomo al Día`;
+- despues de la correccion, Salva debe aprobar el gate final corregido antes de reactivar dry-run o envio.
+
+Pie legal final que debe incorporarse al email:
+
+```text
+Privacidad: Responsable: Autónomo al Día. Contacto: soyautonomoaldia@gmail.com. Te escribimos para pedir feedback puntual sobre una idea temprana para autónomos y pequeños servicios de reparación doméstica, usando un contacto profesional publicado en fuentes públicas. No queremos datos reales de clientes ni información sensible. Conservaremos los identificadores un máximo de 14 días para gestionar este envío/respuesta y después solo quedarán aprendizajes agregados anónimos. Puedes pedir acceso, rectificación, supresión, oposición o limitación respondiendo a este email. Si no te interesa o prefieres que no vuelva a escribirte, dímelo y no insisto.
+```
+
+Cierre definitivo de gate RGPD indicado por Salva:
+
+- responsable exacto: `Autónomo al Día`;
+- el texto final debe usar el pie legal breve anterior al final del email;
+- no se ejecuta el envio hasta aprobacion final explicita de Salva sobre esta version corregida.
+
+Aprobacion final RGPD de Salva el 2026-07-06:
+
+Salva informa que ha aprobado en Trello el gate `Gate envio muestra 5/3/2`.
+
+Estado corregido:
+
+- gate RGPD final aprobado;
+- asunto final aprobado: `Opinión rápida sobre una idea temprana para no dejarte nada sin cerrar`;
+- cuerpo final aprobado con pie legal breve RGPD al final;
+- responsable exacto: `Autónomo al Día`;
+- no cambia la regla de privacidad interna: no se pueden exponer destinatarios en OpenClaw, Trello, source, Discord ni tool calls visibles;
+- siguiente paso tecnico permitido: reactivar el flujo privado `gmail_send_private_batch` solo por `batchId`, primero en dry-run y despues envio real solo si el dry-run devuelve agregados sin identificadores.
+
+Estado tecnico vigente del batch privado:
+
+- ultimo dry-run privado: `FAIL`;
+- motivo: batch privado 5/3/2 no encontrado o no aprobado con `approved: true` en el directorio privado Gmail;
+- Gmail/contacto: cero Gmail, cero contacto, cero identificadores volcados;
+- accion operativa: Mercury debe corregir/crear el batch privado aprobado y repetir dry-run con solo `{ "batchId": "<batch-id>" }`, sin destinatarios visibles.
+
+Actualizacion Trello tras correccion RGPD:
+
+- etiqueta `Legal/RGPD` creada en Trello;
+- tarjeta `Gate Salva - envio muestra 5/3/2 AD Captura Pack` movida a `Revision Salva`;
+- etiquetas aplicadas: `Gate`, `Bloqueo`, `Privacidad`, `Requiere decision Salva`, `Decision urgente`, `Plazo: externo fijo`, `Legal/RGPD`;
+- inicio mantenido: 2026-07-06 01:46 CEST;
+- entrega objetivo corregida: 2026-07-06 09:30 CEST para dejar gate legal listo o bloqueado formalmente;
+- comentario Trello incorporado: el bloqueo principal pasa a ser RGPD/legal; no se envia ni se reactiva dry-run hasta incorporar bloque minimo de privacidad, confirmar responsable/razon social y obtener aprobacion final corregida de Salva.
+
+Estado corregido final tras esta auditoria:
+
+- source y Trello quedan alineados;
+- el envio 5/3/2 no esta autorizado para ejecucion hasta correccion/aprobacion RGPD;
+- el bloqueo tecnico Gmail privado queda subordinado: solo procede resolverlo despues de cerrar el gate legal;
+- siguiente accion real: preparar texto final con bloque RGPD y pedir a Salva confirmacion de responsable/razon social + aprobacion final corregida.
