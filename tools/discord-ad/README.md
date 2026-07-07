@@ -11,6 +11,8 @@ Objetivo: usar Discord como canal operativo privado para el equipo AD sin mezcla
 - Server ID: `1517883781615452202`.
 - Canal detectado: `#ad_captura`.
 - Channel ID: `1517883886506606642`.
+- Canal adicional activado para nuevo proyecto: `#ad-voz-electricistas`.
+- Channel ID: `1523434046170988705`.
 - Bot detectado por token local: `openclaw AD` (`1517892719718957236`).
 - Verificacion final: tras reinicio de gateway, el bot resolvio el servidor/canal y respondio en `#ad_captura` como Gael.
 
@@ -21,6 +23,7 @@ Servidor privado actual:
 - Nombre: `El servidor de AD_captura`
 - Canales:
   - `#ad_captura`
+  - `#ad-voz-electricistas`
 
 Opcionales para mas adelante:
 
@@ -34,6 +37,8 @@ Opcionales para mas adelante:
 - `#tecnico-nathan`
 
 Nota 2026-06-22: Salva confirma que por ahora Discord queda limitado a `#ad_captura`. No abrir estos canales sin decision separada.
+
+Nota 2026-07-07: Salva autoriza activar `#ad-voz-electricistas` para Gael. Mantener `requireMention: true`.
 
 ## Bot Discord
 
@@ -88,6 +93,7 @@ systemctl --user restart openclaw-gateway.service
 ## Routing esperado
 
 - `#ad_captura` -> Gael (`agentId: saas`).
+- `#ad-voz-electricistas` -> Gael (`agentId: saas`).
 
 Regla inicial: `requireMention: true` en todos los canales para evitar ruido.
 

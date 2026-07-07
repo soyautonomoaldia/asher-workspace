@@ -280,6 +280,31 @@ Estado tecnico del batch privado tras aprobacion RGPD:
 - Gmail/contacto: cero Gmail, cero contacto, cero identificadores volcados;
 - accion operativa: Mercury debe corregir/crear el batch privado aprobado y repetir dry-run con solo `{ "batchId": "<batch-id>" }`.
 
+Actualizacion de prevalencia tras nueva respuesta Mercury:
+
+- gate RGPD/texto/canal/muestra: aprobado;
+- estado de ejecucion: `NO ENVIADO - BLOQUEADO TECNICO`;
+- dry-run privado: `FAIL`;
+- envio: P1=0 / P2=0 / P3=0;
+- rebotes agregados: P1=0 / P2=0 / P3=0;
+- motivo tecnico vigente: batch privado 5/3/2 aprobado no existe en la carpeta privada del canal Gmail y no hay BBDD temporal privada suficiente para crearlo sin inventar destinatarios;
+- herramienta privada: existe, pero falta el archivo privado aprobado con `approved: true` y destinatarios finales 5/3/2;
+- confirmacion: cero Gmail, cero contacto, cero identificadores visibles;
+- siguiente desbloqueo: recuperar o recrear BBDD temporal privada 5/3/2 dentro del entorno privado controlado y repetir dry-run privado solo por `batchId`.
+
+Reactivacion operativa cron, 2026-07-06 09:23 CEST:
+
+- orden reenviada a Mercury con la correccion vigente: no pedir ejecucion manual a Salva; ejecutar solo si existe canal Gmail privado/controlado por referencia interna o `batchId`;
+- resultado Mercury: `NO ENVIADO - FALLO CONFIG GMAIL PRIVADO`;
+- canal Gmail privado/controlado: disponible como herramienta por `batchId`, pero sin batch privado 5/3/2 aprobado ejecutable;
+- batch privado aprobado 5/3/2: no encontrado como batch ejecutable aprobado en el directorio privado del MCP;
+- envio real: P1=0 / P2=0 / P3=0;
+- no enviados: P1=5 / P2=3 / P3=2;
+- rebotes agregados: P1=0 / P2=0 / P3=0;
+- incidencias agregadas: 1 bloqueo tecnico de configuracion privada;
+- confirmacion: cero Gmail, cero contacto real y cero identificadores registrados en source/Trello/OpenClaw visible;
+- escalada tecnica concreta: crear o activar en el directorio privado del MCP un batch 5/3/2 con `batchId` valido, `approved: true`, envio individual en texto plano, sin adjuntos, sin tracking y con segmentacion P1/P2/P3 interna; despues ejecutar dry-run privado y solo enviar si devuelve agregados correctos.
+
 ## Aprendizaje operativo
 
 Antes de escalar a herramienta, API o apoyo humano, Gael debe revisar si la definicion de muestra esta bloqueando la ejecucion.

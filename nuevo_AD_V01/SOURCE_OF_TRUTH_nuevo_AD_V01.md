@@ -2881,6 +2881,27 @@ Estado tecnico vigente del batch privado:
 - Gmail/contacto: cero Gmail, cero contacto, cero identificadores volcados;
 - accion operativa: Mercury debe corregir/crear el batch privado aprobado y repetir dry-run con solo `{ "batchId": "<batch-id>" }`, sin destinatarios visibles.
 
+Reactivacion tecnica Mercury tras aprobacion final RGPD:
+
+Gael traslada a Mercury la orden de corregir/crear batch privado aprobado, ejecutar primero dry-run por `batchId` sin destinatarios visibles y ejecutar envio real solo si el dry-run devuelve agregados sin identificadores.
+
+Respuesta Mercury:
+
+- estado: `BLOCKED`;
+- dry-run: `FAIL`;
+- envio: P1=0 / P2=0 / P3=0;
+- rebotes agregados: P1=0 / P2=0 / P3=0;
+- motivo tecnico: batch privado 5/3/2 aprobado no existe en la carpeta privada del canal Gmail y no hay BBDD temporal privada suficiente para crearlo sin inventar destinatarios;
+- herramienta privada: existe, pero falta el archivo privado aprobado con `approved: true` y destinatarios finales 5/3/2;
+- confirmacion: cero Gmail, cero contacto, cero identificadores visibles.
+
+Clasificacion vigente:
+
+- gate RGPD/texto/canal/muestra aprobado;
+- bloqueo actual: tecnico-operativo de batch privado/BBDD temporal, no decision de Salva;
+- no procede inventar destinatarios ni reconstruir BBDD en canales visibles;
+- siguiente desbloqueo requiere recuperar o recrear la BBDD temporal privada 5/3/2 dentro del entorno privado controlado sin exponer identificadores, o declarar perdida del batch privado y volver a preparar BBDD temporal bajo el procedimiento aprobado.
+
 Actualizacion Trello tras correccion RGPD:
 
 - etiqueta `Legal/RGPD` creada en Trello;
@@ -2896,3 +2917,273 @@ Estado corregido final tras esta auditoria:
 - el envio 5/3/2 no esta autorizado para ejecucion hasta correccion/aprobacion RGPD;
 - el bloqueo tecnico Gmail privado queda subordinado: solo procede resolverlo despues de cerrar el gate legal;
 - siguiente accion real: preparar texto final con bloque RGPD y pedir a Salva confirmacion de responsable/razon social + aprobacion final corregida.
+
+Correccion de prevalencia tras aprobacion final RGPD y nueva respuesta Mercury:
+
+- la nota anterior de `pendiente RGPD` queda historica y sustituida por la aprobacion final comunicada por Salva en Trello;
+- responsable final confirmado: `Autónomo al Día`;
+- gate RGPD/texto/canal/muestra: aprobado;
+- estado de ejecucion: `NO ENVIADO - BLOQUEADO TECNICO`;
+- dry-run privado: `FAIL`;
+- envio: P1=0 / P2=0 / P3=0;
+- rebotes agregados: P1=0 / P2=0 / P3=0;
+- motivo tecnico vigente: el batch privado 5/3/2 aprobado no existe en la carpeta privada del canal Gmail y no hay BBDD temporal privada suficiente para crearlo sin inventar destinatarios;
+- herramienta privada: existe, pero falta el archivo privado aprobado con `approved: true` y destinatarios finales 5/3/2;
+- confirmacion: cero Gmail, cero contacto, cero identificadores visibles;
+- clasificacion: bloqueo tecnico-operativo de batch privado/BBDD temporal, no bloqueo legal, de negocio, texto, muestra, canal, formato ni autorizacion de Salva;
+- siguiente desbloqueo: recuperar o recrear la BBDD temporal privada 5/3/2 dentro del entorno privado controlado, sin exponer identificadores, y repetir dry-run privado solo por `batchId`.
+
+Correccion operativa grave de custodia/preflight, 2026-07-06:
+
+Salva no acepta que una muestra o BBDD temporal se marque como `COMPLETE` si no existe el artefacto privado ejecutable que permite continuar el flujo. La muestra 5/3/2 y el gate RGPD/texto/canal/muestra siguen aprobados, pero el resultado operativo anterior queda corregido: el problema vigente no es legal, texto, canal Gmail, autorizacion, muestra ni decision de Salva; es ruptura de cadena de custodia de la BBDD temporal privada y del batch ejecutable.
+
+Accion obligatoria trasladada a Mercury:
+
+- si Mercury conserva la BBDD temporal privada, debe crear el archivo batch aprobado en la carpeta privada del canal Gmail AD, con `approved: true`, texto final aprobado con pie RGPD, P1=5 / P2=3 / P3=2, sin exponer destinatarios, y ejecutar dry-run solo con `{ "batchId": "<batch-id>" }`;
+- si Mercury no conserva la BBDD temporal privada, debe declararlo explicitamente como perdida/no persistencia del artefacto privado, explicar por que reporto `COMPLETE` sin dejar batch ejecutable, recrear la BBDD temporal bajo el mismo procedimiento aprobado sin pedir nueva decision de negocio a Salva, y crear el batch privado ejecutable antes de volver a marcar `COMPLETE`.
+
+Regla obligatoria desde esta correccion:
+
+Ningun resultado de BBDD puede marcarse como `COMPLETE` si no existe:
+
+1. batch privado creado;
+2. `batchId` definido;
+3. `approved: true` cuando proceda;
+4. dry-run tecnico posible;
+5. salida agregada sin identificadores;
+6. ruta privada confirmada sin mostrar destinatarios.
+
+Clasificacion vigente: fallo operativo de custodia/preflight, no bloqueo de Salva. No se reabre busqueda todavia, no se pide otro gate a Salva y no se rediagnostica lo ya diagnosticado. La prioridad unica es resolver el batch privado ejecutable.
+
+Respuesta corregida de Mercury tras la correccion de custodia/preflight:
+
+- estado: `CUSTODY_FAILURE_REBUILDING`;
+- perdida/no persistencia: Mercury declara que no conserva BBDD temporal privada suficiente ni artefacto privado ejecutable 5/3/2;
+- batch privado: no existe;
+- `batchId`: no existe aun;
+- `approved: true`: no validable porque falta el archivo privado;
+- dry-run: no ejecutado porque no hay batch privado completo que validar;
+- ruta privada: confirmada sin listar contenido identificable;
+- motivo de custodia: Mercury reporto `COMPLETE` por conteo agregado de muestra, pero no materializo el artefacto obligatorio de continuidad: archivo batch privado en carpeta Gmail AD con destinatarios, texto final, `approved: true` y dry-run posible;
+- accion interna en curso: reconstruccion bajo el mismo procedimiento aprobado, sin nuevo gate y sin exponer identificadores;
+- resultado actual de reconstruccion: P1 recuperable, P2/P3 insuficientes con las fuentes accesibles del runtime;
+- regla operativa aplicada: no se creara batch parcial ni se volvera a marcar `COMPLETE` hasta que existan batch privado, `batchId`, `approved: true` y dry-run agregado;
+- confirmacion: cero Gmail, cero contacto, cero identificadores visibles.
+
+Aceptacion de Salva de `CUSTODY_FAILURE_REBUILDING` y condicion estricta de cierre:
+
+Salva acepta la reclasificacion como `CUSTODY_FAILURE_REBUILDING`, pero fija una condicion estricta: no se aceptara ningun nuevo `COMPLETE` de Mercury si no viene acompanado de todos estos elementos:
+
+1. batch privado creado;
+2. `batchId` definido;
+3. `approved: true`;
+4. dry-run agregado ejecutado correctamente;
+5. salida agregada P1/P2/P3 sin identificadores;
+6. ruta privada confirmada sin mostrar destinatarios;
+7. confirmacion de cero exposicion en OpenClaw/Trello/source/Discord.
+
+Regla interpretativa: `COMPLETE` significa ejecutable, no narrado. No se aceptan estados completos basados solo en conteos agregados.
+
+Si Mercury no puede reconstruir el batch, debe devolver fallo tecnico especifico no atribuible a Salva:
+
+- perdida de BBDD temporal;
+- falta de acceso a carpeta privada;
+- fallo de formato batch;
+- fallo de permisos;
+- fallo MCP;
+- fallo OAuth/Gmail;
+- imposibilidad de reconstruccion sin exponer identificadores.
+
+Estado operativo mantenido: bloqueo operativo de custodia/preflight hasta que exista `CUSTODY_FAILURE_REBUILT_READY` con dry-run valido. No se abren nuevos gates, no se pide nueva decision de negocio, no se mueve a legal/RGPD y no se reclasifica como decision de Salva.
+
+Seguimiento cron de custodia/preflight Mercury, 2026-07-06 03:30 CEST:
+
+Mercury no entrega `CUSTODY_FAILURE_REBUILT_READY`. El estado operativo pasa de reconstruccion abierta a fallo tecnico especifico no atribuible a Salva:
+
+- estado vigente: `CUSTODY_REBUILD_TECHNICAL_FAILURE`;
+- causa tecnica declarada: perdida/no persistencia de BBDD temporal privada suficiente y del artefacto ejecutable 5/3/2, mas imposibilidad de reconstruccion privada completa sin exponer identificadores con las herramientas/fuentes disponibles del runtime;
+- batch privado creado: no;
+- `batchId`: no existe;
+- `approved: true`: no aplicable porque no existe batch privado ejecutable;
+- dry-run agregado: no ejecutado porque no hay batch privado completo que validar;
+- salida agregada de reconstruccion: P1 recuperable; P2/P3 insuficientes o no verificables con las fuentes accesibles;
+- Gmail/contacto: cero envio, cero contacto;
+- exposicion: cero identificadores visibles en OpenClaw/Trello/source/Discord segun confirmacion de Mercury;
+- regla aplicada: no se acepta `COMPLETE`, no se crea batch parcial, no se abre gate de Salva, no se reabre busqueda como decision de negocio y no se reclasifica como legal/RGPD.
+
+Clasificacion mantenida: bloqueo operativo de custodia/preflight. Para desbloquear, sigue siendo necesario `CUSTODY_FAILURE_REBUILT_READY` con batch privado creado, `batchId`, `approved: true`, dry-run agregado correcto, salida P1/P2/P3 sin identificadores, ruta privada confirmada y cero exposicion.
+
+Ultima oportunidad operativa aprobada por Salva el 2026-07-06:
+
+Salva aprueba la siguiente accion propuesta por Gael: ordenar a Mercury la reconstruccion completa del batch privado AD 5/3/2 desde cero dentro del scope ya aprobado. Esta aprobacion no abre un nuevo gate de negocio, no mueve el asunto a legal/RGPD y no cambia la clasificacion: sigue siendo bloqueo operativo de custodia/preflight.
+
+Orden trasladada a Mercury:
+
+- rehacer la BBDD temporal privada bajo el procedimiento ya aprobado;
+- generar de nuevo el batch P1=5 / P2=3 / P3=2;
+- crear el archivo batch privado en la carpeta privada del canal Gmail AD;
+- incluir `approved: true`;
+- usar el texto final aprobado con pie RGPD;
+- ejecutar dry-run tecnico solo con `{ "batchId": "<batch-id>" }`;
+- devolver solo salida agregada P1/P2/P3 sin nombres, emails, telefonos, URLs identificables ni datos personales;
+- confirmar ruta privada sin mostrar destinatarios;
+- confirmar cero exposicion en OpenClaw/Trello/source/Discord.
+
+Estados admitidos a partir de esta orden:
+
+- `CUSTODY_FAILURE_REBUILT_READY`: solo si existe batch privado ejecutable, `batchId`, `approved: true`, dry-run agregado correcto, salida agregada P1/P2/P3 sin identificadores, ruta privada confirmada sin destinatarios y cero exposicion.
+- `CUSTODY_REBUILD_TECHNICAL_FAILURE_FINAL`: si Mercury no puede reconstruirlo, con causa tecnica concreta no atribuible a Salva: perdida de BBDD temporal, falta de acceso a carpeta privada, fallo de formato batch, fallo de permisos, fallo MCP, fallo OAuth/Gmail, imposibilidad de reconstruccion sin exponer identificadores u otra causa tecnica especifica.
+
+Regla vigente: `COMPLETE` queda prohibido para resultados narrados o conteos agregados. `COMPLETE` significa ejecutable y verificable por dry-run privado.
+
+Resultado de la ultima oportunidad operativa Mercury, 2026-07-06:
+
+Mercury no entrega `CUSTODY_FAILURE_REBUILT_READY`. Devuelve estado final:
+
+`CUSTODY_REBUILD_TECHNICAL_FAILURE_FINAL`
+
+Causa tecnica concreta: imposibilidad de reconstruccion sin exponer identificadores.
+
+Detalle agregado:
+
+- BBDD temporal privada suficiente: no persiste;
+- batch privado creado: no;
+- `batchId`: no existe;
+- `approved: true`: no aplicable porque no hay batch;
+- dry-run agregado: no ejecutado porque no hay batch privado completo que validar;
+- ruta privada: confirmada sin mostrar destinatarios;
+- exposicion: cero Gmail, cero envio, cero contacto real y cero identificadores visibles en OpenClaw/Trello/source/Discord segun confirmacion Mercury.
+
+Lectura operativa de Gael: la via Mercury queda fallida para ejecutar el envio 5/3/2 desde el runtime actual sin exponer identificadores. Esto no invalida automaticamente el proyecto AD ni la hipotesis de producto; invalida este tramo operativo concreto de captacion controlada con Mercury como fuente/operador bajo las restricciones actuales.
+
+Siguiente desbloqueo real, si Salva decide continuar la prueba externa: sustituir la via Mercury por una fuente/herramienta privada que pueda crear y custodiar BBDD + batch ejecutable por referencia interna sin exponer identificadores, o parar la prueba externa y volver a fase interna/documental.
+
+Aprobacion de Salva de la siguiente accion propuesta, 2026-07-06:
+
+Salva aprueba que Gael ejecute la accion recomendada tras el fallo final Mercury: cerrar la via Mercury para este tramo operativo y preparar un plan de rescate de validacion externa de 72 horas.
+
+Artefacto creado:
+
+- `PLAN_RESCATE_VALIDACION_EXTERNA_AD_CAPTURA_PACK_nuevo_AD_V01.md`
+
+Reglas del plan:
+
+- no se autoriza outreach, envio real, contacto, nueva BBDD con identificadores, formulario, CRM, scraping operativo, Gmail real ni herramienta externa con datos personales hasta que exista una via privada verificable;
+- la via Mercury queda cerrada para ejecutar la muestra 5/3/2 bajo el runtime actual;
+- AD no se cancela automaticamente por este fallo operativo;
+- la decision a 72 horas sera una de estas: `GO_VALIDACION_PRIVADA`, `CAMBIO_CANAL`, `PAUSA_EXTERNA` o `STOP_AD`.
+
+Siguiente accion operativa de Gael: ejecutar Dia 1 del plan, auditoria de via privada, y devolver una de estas salidas: `VIA_PRIVADA_CANDIDATA`, `NO_VIA_PRIVADA` o `CANAL_ALTERNATIVO_RECOMENDADO`.
+
+Resultado Dia 1 del plan de rescate, 2026-07-06:
+
+Salida: `NO_VIA_PRIVADA`.
+
+Motivo: la via privada de Mercury queda fallida; no existe batch ejecutable, `batchId`, `approved: true` ni dry-run agregado; Gael no tiene una herramienta directa usable para crear/custodiar BBDD privada y ejecutar envio por referencia interna sin destinatarios visibles; las herramientas de busqueda/navegador sirven para investigacion, pero no resuelven custodia privada de destinatarios ni batch ejecutable.
+
+Decision operativa de Gael: no insistir con email 5/3/2 hasta que exista una herramienta/fuente privada real. Se activa Dia 2 del plan: diseno de validacion alternativa sin contacto real ni identificadores.
+
+Reactivacion operativa cron AD 5/3/2, 2026-07-06 09:23 CEST:
+
+Gael verifica el source activo y el gate de envio 5/3/2. Se contacta de nuevo a Mercury con la correccion vigente: no pedir ejecucion manual a Salva; ejecutar solo si Mercury dispone de canal Gmail privado/controlado que lea BBDD temporal por referencia interna o `batchId`, sin exponer destinatarios en tool calls visibles.
+
+Resultado Mercury:
+
+`NO ENVIADO - FALLO CONFIG GMAIL PRIVADO`
+
+Registro agregado:
+
+- envio real: P1=0 / P2=0 / P3=0;
+- no enviados: P1=5 / P2=3 / P3=2;
+- rebotes agregados: P1=0 / P2=0 / P3=0;
+- incidencias agregadas: 1 bloqueo tecnico de configuracion privada;
+- causa: existe herramienta privada por `batchId`, pero no existe batch privado 5/3/2 aprobado ejecutable en el directorio privado del MCP;
+- confirmacion: cero Gmail, cero contacto real y cero identificadores visibles registrados.
+
+Escalada tecnica concreta: crear o activar en el directorio privado del MCP un batch 5/3/2 con `batchId` valido, `approved: true`, envio individual en texto plano, sin adjuntos, sin tracking y segmentacion P1/P2/P3 interna; ejecutar dry-run privado y solo enviar si devuelve agregados correctos.
+
+Revision proactiva Gael 2026-07-06 12:00 CEST:
+
+Fuentes revisadas: source activo, Trello `AD Captura Pack`, Discord `#ad_captura` y estado owner Mercury/tarjetas pendientes.
+
+Hecho:
+
+- Trello refleja que la via Mercury para el envio 5/3/2 queda cerrada por `CUSTODY_REBUILD_TECHNICAL_FAILURE_FINAL`;
+- el plan `PLAN_RESCATE_VALIDACION_EXTERNA_AD_CAPTURA_PACK_nuevo_AD_V01.md` esta en curso;
+- Dia 1 del plan queda como `NO_VIA_PRIVADA`;
+- Gael completa el diseno interno de Dia 2 con salida `CANAL_ALTERNATIVO_RECOMENDADO`;
+- canal candidato de Dia 2: formulario privado anonimo sin identificadores, solo como diseno, no como ejecucion;
+- Trello se corrige: `Formalizar decisiones base pendientes` deja de tener `dueComplete=true` mientras sigue abierta; `Plan rescate validacion externa AD - 72h` queda con inicio, entrega, etiqueta `Activo: En curso`, etiqueta `Seguimiento diario` y checklist Dia 2 completado.
+
+Supuesto:
+
+- un formulario anonimo privado podria medir dolor, alternativa actual e invalidadores con menor riesgo que email 5/3/2, siempre que no capture identificadores ni active tracking.
+
+Riesgo:
+
+- convertir el formulario anonimo en canal externo real sin gate de Salva, consentimiento, herramienta concreta y criterio de parada repetiria el error de preparar ejecucion antes de tener custodia y privacidad verificables.
+
+Owner:
+
+- Gael coordina plan 72h, Trello y fuente;
+- Salva decide cualquier cambio de canal externo;
+- Mercury queda cerrado para este tramo 5/3/2 bajo runtime actual.
+
+Decision requerida:
+
+- no hay decision requerida para el diseno interno de Dia 2;
+- si se quiere ejecutar el cambio de canal, Salva debe aprobar por separado formulario anonimo privado, texto de consentimiento, herramienta sin tracking identificable, fuente externa de distribucion, registro agregado e invalidadores.
+
+Condicion de desbloqueo:
+
+- para `CAMBIO_CANAL`: aprobacion explicita de Salva sobre los puntos anteriores;
+- si no se aprueba o no existe herramienta sin identificadores, el Dia 3 debe tender a `PAUSA_EXTERNA`.
+
+Siguiente accion propuesta:
+
+- en la revision de las 20:00 preparar decision Dia 3: `CAMBIO_CANAL` si Salva aprueba gate de formulario anonimo privado, o `PAUSA_EXTERNA` si no hay via externa segura.
+
+Control deadline Mercury 2026-07-06 12:05 CEST:
+
+Fuentes revisadas: source activo, Trello `AD Captura Pack` y Discord `#ad_captura`.
+
+Resultado:
+
+- no consta resolucion nueva de Salva del gate antiguo `Gate Salva - resolver bloqueo Mercury envio P1/P2/P3`;
+- el gate operativo antiguo ya estaba sustituido por el fallo final de custodia/preflight Mercury y por el plan de rescate 72h;
+- Mercury no envio antes de las 12:00;
+- registro anonimo: enviados P1=0 / P2=0 / P3=0; no enviados P1=5 / P2=3 / P3=2;
+- no hay respuestas, dolor, alternativa actual, objeciones ni invalidadores de participantes que registrar;
+- cero Gmail, cero contacto real, cero identificadores visibles.
+
+Decision operativa de Gael:
+
+- no repetir CTA a Mercury;
+- mantener bloqueado `Registrar resultado anonimo P1/P2/P3 post-envio`;
+- preparar resumen para Salva dentro del plan 72h: via Mercury cerrada; decision pendiente solo si Salva quiere cambiar a formulario anonimo privado o pausar validacion externa.
+
+Revision proactiva Gael 2026-07-06 20:00 CEST:
+
+Fuentes revisadas: source activo, Trello `AD Captura Pack`, Discord `#ad_captura` y estado owner Mercury/tarjetas pendientes.
+
+Resultado:
+
+- no consta aprobacion nueva de Salva para cambiar a formulario anonimo privado;
+- no existe via privada verificable nueva para email 5/3/2;
+- Mercury sigue cerrado para este tramo por `CUSTODY_REBUILD_TECHNICAL_FAILURE_FINAL`;
+- enviados P1=0 / P2=0 / P3=0; no enviados P1=5 / P2=3 / P3=2;
+- cero outreach, cero Gmail, cero contacto real y cero identificadores visibles;
+- Trello queda ajustado para reflejar Dia 3 preparado, no ejecutado.
+
+Decision operativa preparada para Dia 3:
+
+`PAUSA_EXTERNA` por defecto si antes del cierre del plan 72h no aparece aprobacion explicita de Salva para `CAMBIO_CANAL` ni una herramienta/fuente privada verificable.
+
+Condicion para no pausar:
+
+- Salva aprueba cambio a formulario anonimo privado con consentimiento, herramienta concreta sin tracking identificable, fuente externa, registro agregado e invalidadores; o
+- aparece una via privada verificable con batch/referencia interna, dry-run agregado y cero exposicion de identificadores.
+
+Gate vigente:
+
+Solo si se quiere avanzar externamente: aprobar o rechazar el cambio de canal a formulario anonimo privado bajo las condiciones anteriores. Sin ese gate, Gael no debe preparar outreach, formulario real, publicacion, CRM, scraping operativo ni Gmail.

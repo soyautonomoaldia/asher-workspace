@@ -29,6 +29,9 @@
             "1517883886506606642": {
               requireMention: true,
             },
+            "1523434046170988705": {
+              requireMention: true,
+            },
           },
         },
       },
@@ -49,6 +52,18 @@
         peer: {
           kind: "channel",
           id: "1517883886506606642",
+        },
+      },
+      agentId: "saas",
+    },
+    {
+      type: "route",
+      match: {
+        channel: "discord",
+        guildId: "1517883781615452202",
+        peer: {
+          kind: "channel",
+          id: "1523434046170988705",
         },
       },
       agentId: "saas",
