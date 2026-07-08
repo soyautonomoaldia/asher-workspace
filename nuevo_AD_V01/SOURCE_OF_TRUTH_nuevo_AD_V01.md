@@ -14,6 +14,8 @@ Para cualquier agente, decision o tarea, solo cuenta lo escrito en:
 
 Si una conclusion no esta incorporada aqui, no es operativa.
 
+Excepcion de gobierno autorizada: AD_VOZ_electricistas queda autorizado como línea separada de AD Captura/nuevo_AD_V01, con source propio en `/AD_VOZ_electricistas`, sin heredar decisiones de AD Captura, y sujeto a gates explícitos de privacidad, datos reales, contacto externo, build, piloto, producción, pricing e integraciones. Esta referencia no incorpora AD_VOZ_electricistas como producto de nuevo_AD_V01 ni mezcla sus decisiones de producto.
+
 ## Estado Actual
 
 nuevo_AD_V01 esta en definicion.
@@ -3187,3 +3189,82 @@ Condicion para no pausar:
 Gate vigente:
 
 Solo si se quiere avanzar externamente: aprobar o rechazar el cambio de canal a formulario anonimo privado bajo las condiciones anteriores. Sin ese gate, Gael no debe preparar outreach, formulario real, publicacion, CRM, scraping operativo ni Gmail.
+
+Ejecucion cron Dia 2 rescate validacion externa, 2026-07-07 09:00 CEST:
+
+Objetivo ejecutado: disenar validacion alternativa si email no es viable, sin contacto real, sin outreach y sin datos identificables.
+
+Resultado agregado:
+
+- salida: `CANAL_ALTERNATIVO_RECOMENDADO`;
+- canal recomendado: formulario privado anonimo sin identificadores, distribuible solo por fuente externa autorizada y con consentimiento/limites visibles antes de responder;
+- medicion permitida solo como diseno: dolor previo a facturacion/gestoria, alternativa actual, perdida concreta, descarte frente a WhatsApp/notas/libreta/memoria e invalidadores;
+- canal descartado principal: email 5/3/2 por Mercury, porque sigue sin existir batch privado ejecutable, `batchId`, `approved: true` ni dry-run agregado sin exponer destinatarios;
+- canales no recomendados para rescate inmediato: entrevista directa por mayor riesgo RGPD/contacto personal, landing privada por build/publicacion/tracking/ruido de posicionamiento, intermediario manual no verificable por repetir el problema de custodia;
+- ejecucion real: cero formulario creado, cero publicacion, cero Gmail, cero contacto, cero outreach, cero BBDD nueva y cero identificadores visibles;
+- decision real requerida: si Salva quiere avanzar externamente, debe aprobar por separado cambio de canal a formulario anonimo privado, texto de consentimiento, herramienta concreta sin tracking identificable, fuente externa de distribucion, registro agregado, invalidadores y criterio de parada.
+
+Revision proactiva Gael 2026-07-07 12:00 CEST:
+
+Fuentes revisadas: source activo, Trello `AD Captura Pack`, Discord `#ad_captura` y estado owner Mercury/tarjetas pendientes.
+
+Hecho:
+
+- no consta aprobacion nueva de Salva para `CAMBIO_CANAL`;
+- no existe via privada verificable nueva para email 5/3/2;
+- Mercury sigue cerrado para este tramo por `CUSTODY_REBUILD_TECHNICAL_FAILURE_FINAL`;
+- el plan 72h sigue en curso con Dia 2 completado y Dia 3 pendiente;
+- Trello se corrige: `Registrar resultado anonimo P1/P2/P3 post-envio` pasa a `Aprobado / Hecho` como historico de no-envio final, con enviados P1=0/P2=0/P3=0, no enviados P1=5/P2=3/P3=2, respuestas=0 y cero identificadores visibles.
+
+Riesgo:
+
+- mantener tarjetas vencidas como bloqueos activos puede duplicar el bloqueo real y distraer del plan 72h vigente.
+
+Owner:
+
+- Gael coordina Trello/source y plan 72h;
+- Salva decide cualquier cambio de canal externo.
+
+Decision requerida:
+
+- ninguna para el cierre historico de Trello;
+- si se quiere avanzar externamente, sigue haciendo falta aprobacion separada de formulario anonimo privado con consentimiento, herramienta sin tracking identificable, fuente externa, registro agregado, invalidadores y criterio de parada.
+
+Siguiente accion propuesta:
+
+- mantener Dia 3 orientado a `PAUSA_EXTERNA` por defecto si no aparece gate `CAMBIO_CANAL` o una via privada verificable antes del cierre del plan 72h.
+
+Decision operativa de Gael:
+
+Mantener Dia 2 como diseno interno completado. Sin aprobacion expresa de Salva o sin herramienta privada verificable, el cierre de Dia 3 debe tender a `PAUSA_EXTERNA`, no a preparar outreach.
+
+Revision proactiva Gael 2026-07-07 20:00 CEST:
+
+Fuentes revisadas: source activo, Trello `AD Captura Pack`, Discord `#ad_captura` y estado owner Mercury/tarjetas pendientes.
+
+Hecho:
+
+- no consta aprobacion nueva de Salva para `CAMBIO_CANAL`;
+- no existe via privada verificable nueva para email 5/3/2;
+- Discord `#ad_captura` no anade decision nueva desde la revision 12:00;
+- no hay salida Mercury posterior util; la via Mercury sigue cerrada por `CUSTODY_REBUILD_TECHNICAL_FAILURE_FINAL`;
+- el plan 72h sigue en curso: Dia 2 completado, Dia 3 pendiente y orientado a `PAUSA_EXTERNA` por defecto al cierre si no aparece gate o via segura;
+- Trello actualizado: `Formalizar decisiones base pendientes` pasa a entrega objetivo 2026-07-09 20:00 CEST para cerrarse despues del plan 72h, no mientras sigue abierto el gate de canal externo.
+
+Riesgo:
+
+- formalizar decisiones base antes de cerrar `CAMBIO_CANAL` / `PAUSA_EXTERNA` puede convertir hipotesis abiertas en decisiones falsas.
+
+Owner:
+
+- Gael coordina Trello/source y plan 72h;
+- Salva decide cualquier cambio de canal externo.
+
+Decision requerida:
+
+- ninguna para el ajuste interno de deadline;
+- si se quiere avanzar externamente, sigue haciendo falta aprobacion separada de formulario anonimo privado con consentimiento, herramienta sin tracking identificable, fuente externa, registro agregado, invalidadores y criterio de parada.
+
+Siguiente accion propuesta:
+
+- mantener plan 72h; si no aparece aprobacion `CAMBIO_CANAL` ni via privada verificable, cerrar Dia 3 hacia `PAUSA_EXTERNA`.

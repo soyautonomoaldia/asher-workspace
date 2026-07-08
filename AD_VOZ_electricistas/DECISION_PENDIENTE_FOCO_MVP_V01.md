@@ -6,8 +6,10 @@ Elegir el foco inicial del MVP:
 
 1. Gestion diaria de trabajos por voz.
 2. Presupuesto/facturacion por voz.
+3. Cobro/seguimiento por voz.
+4. Otro dolor operativo que aparezca en la respuesta escrita del familiar.
 
-No conviene mezclar ambos como foco principal antes de validar el dolor real.
+No conviene mezclar focos antes de validar el dolor real. El foco queda pendiente de respuesta de Salva/familiar al email asincronico.
 
 ## Opcion A - Gestion diaria de trabajos por voz
 
@@ -61,13 +63,37 @@ No conviene mezclar ambos como foco principal antes de validar el dolor real.
 - Puede exigir precision alta desde el primer dia.
 - Si el usuario no presupuesta a menudo, el uso baja.
 
+## Opcion C - Cobro/seguimiento por voz
+
+### Promesa
+
+"Dicta lo que queda pendiente de cobrar o seguir y la herramienta te recuerda que cerrar."
+
+### Incluye
+
+- Captura por voz de trabajos terminados.
+- Estado pendiente de cobrar o pendiente de respuesta.
+- Recordatorios.
+- Texto copiable para seguimiento.
+
+### Ventajas
+
+- Dolor economico potencialmente directo.
+- Menos complejo que facturacion completa.
+- Puede conectar gestion diaria con resultado de negocio.
+
+### Riesgos
+
+- Puede depender de datos de clientes y comunicaciones sensibles.
+- Si el problema real esta antes, en presupuesto o agenda, llega tarde al flujo.
+
 ## Recomendacion Gael
 
-Empezar por Opcion A: gestion diaria de trabajos por voz, con presupuesto simple como salida opcional.
+No cerrar foco todavia. Como hipotesis provisional, Opcion A parece menos riesgosa para un primer prototipo, pero no debe imponerse antes de la respuesta escrita del familiar.
 
-Razon: para un primer usuario familiar, el aprendizaje clave es si la voz reduce friccion diaria. Si la herramienta no se usa cada dia, la parte de presupuestos/facturacion tampoco tendra base operativa.
+Razon: para un primer usuario familiar, el aprendizaje clave es localizar el punto de friccion mas frecuente y valioso. Si la respuesta muestra que el dolor economico esta en presupuestos o cobros, el MVP debe reflejarlo aunque gestion diaria parezca mas sencilla.
 
-## Criterio para decidir tras entrevista
+## Criterio para decidir tras email asincronico
 
 Elegir gestion diaria si:
 
@@ -81,6 +107,14 @@ Elegir presupuesto/facturacion si:
 - Hace presupuestos varias veces por semana.
 - Ya tiene trabajos controlados, pero le pesa convertirlos en documento/importe.
 
+Elegir cobro/seguimiento si:
+
+- El problema principal son trabajos hechos que quedan sin cerrar o cobrar.
+- Pierde tiempo recordando a quien debe llamar, cobrar o enviar resumen.
+- La utilidad se puede probar sin facturacion legal completa.
+
 ## Gate
 
-Salva valida el foco antes de prototipo o piloto.
+Salva valida el foco despues de recibir la respuesta escrita del familiar y antes de cualquier prototipo accionable, build, piloto, datos reales, pricing o integracion.
+
+No se piden entradas reales ni datos reales sin gate completo y aprobacion explicita de Salva. El gate de privacidad validado solo define limites; no autoriza piloto, prueba operativa, audios reales, documentos, facturas, direcciones completas, contacto externo, build, pricing ni integraciones.
