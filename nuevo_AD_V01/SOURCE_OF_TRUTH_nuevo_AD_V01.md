@@ -3268,3 +3268,86 @@ Decision requerida:
 Siguiente accion propuesta:
 
 - mantener plan 72h; si no aparece aprobacion `CAMBIO_CANAL` ni via privada verificable, cerrar Dia 3 hacia `PAUSA_EXTERNA`.
+
+Revision proactiva Gael 2026-07-08 12:00 CEST:
+
+Fuentes revisadas: source activo, Trello `AD Captura Pack`, Discord `#ad_captura` y estado owner Mercury/tarjetas pendientes.
+
+Hecho:
+
+- no consta aprobacion nueva de Salva para `CAMBIO_CANAL`;
+- no existe via privada verificable nueva para email 5/3/2;
+- Discord `#ad_captura` no anade decision nueva desde la revision 2026-07-07 20:00;
+- Mercury sigue cerrado para este tramo por `CUSTODY_REBUILD_TECHNICAL_FAILURE_FINAL`;
+- cero outreach, cero Gmail, cero contacto real y cero identificadores visibles;
+- el plan 72h queda cerrado hacia `PAUSA_EXTERNA`;
+- Trello actualizado: `Plan rescate validacion externa AD - 72h` pasa a `Aprobado / Hecho`, checklist Dia 3 completado y vencimiento cerrado;
+- Trello actualizado: `Formalizar decisiones base pendientes` pasa a `En curso`, con entrega objetivo mantenida 2026-07-09 20:00 CEST.
+
+Riesgo:
+
+- si se abre un canal externo sin herramienta concreta, consentimiento, registro agregado e invalidadores, se repetiria el fallo de custodia/privacidad del tramo Mercury.
+
+Owner:
+
+- Gael coordina Trello/source y formalizacion interna;
+- Salva decide cualquier reactivacion externa o cambio de canal.
+
+Decision requerida:
+
+- ninguna para cerrar el plan 72h hacia `PAUSA_EXTERNA` ni para abrir la formalizacion interna;
+- si se quiere avanzar externamente, sigue haciendo falta aprobacion separada de formulario anonimo privado con consentimiento, herramienta sin tracking identificable, fuente externa, registro agregado, invalidadores y criterio de parada.
+
+Siguiente accion propuesta:
+
+- formalizar decisiones base pendientes como aprobadas, bloqueadas o no aprobadas sin autorizar accion externa.
+
+Decision de Salva en Discord `#ad_captura` el 2026-07-08 12:08 CEST:
+
+> se paraliza todo Gael
+
+Interpretacion operativa:
+
+- AD Captura Pack queda en pausa total operativa;
+- cero outreach;
+- cero Gmail;
+- cero formulario real;
+- cero build;
+- cero validacion externa;
+- cero coordinacion nueva con owners;
+- cero uso o tratamiento de identificadores;
+- la formalizacion interna abierta a las 12:00 queda congelada salvo trazabilidad minima.
+
+Revision proactiva Gael 2026-07-08 20:00 CEST:
+
+Fuentes revisadas: source activo, Trello `AD Captura Pack`, Discord `#ad_captura` y estado owner Mercury/tarjetas pendientes.
+
+Hecho:
+
+- la decision prevalente desde la revision 12:00 es la pausa total indicada por Salva en Discord;
+- no hay instrucciones nuevas que desbloqueen `CAMBIO_CANAL`, validacion externa, Gmail, formulario, build ni owners;
+- no hay subagentes activos ni salida nueva de Mercury;
+- Trello actualizado: `Formalizar decisiones base pendientes` pasa de `En curso` a `Bloqueado`, sin etiqueta activa ni vencimiento operativo, por pausa total;
+- se conserva el plan 72h cerrado hacia `PAUSA_EXTERNA` como historico;
+- cero outreach, cero Gmail, cero formulario, cero contacto real y cero identificadores visibles.
+
+Riesgo:
+
+- avanzar formalizacion interna durante la pausa puede generar decision implicita o presion de ejecucion contraria a la instruccion directa de Salva.
+
+Owner:
+
+- Gael mantiene solo trazabilidad minima de Trello/source/Discord;
+- Salva decide cualquier reactivacion.
+
+Decision requerida:
+
+- ninguna ahora; la decision vigente es pausar todo.
+
+Condicion de desbloqueo:
+
+- nueva instruccion explicita de Salva indicando que trabajo se reactiva y con que limites.
+
+Siguiente accion propuesta:
+
+- mantener pausa total operativa y no abrir trabajo nuevo hasta decision explicita de Salva.
