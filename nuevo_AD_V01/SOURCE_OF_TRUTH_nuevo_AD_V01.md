@@ -3351,3 +3351,18 @@ Condicion de desbloqueo:
 Siguiente accion propuesta:
 
 - mantener pausa total operativa y no abrir trabajo nuevo hasta decision explicita de Salva.
+
+Orden de Salva en Discord `#ad_captura` el 2026-07-09 20:16 CEST:
+
+> Gael paraliza los updates hasta nueva orden
+
+Interpretacion operativa:
+
+- se mantienen paralizados los updates proactivos por Discord hasta nueva orden explicita de Salva;
+- esta orden no desbloquea trabajo de proyecto ni modifica la pausa total operativa vigente del 2026-07-08;
+- Gael solo debe responder si es interpelado directamente, si hay una instruccion nueva de Salva o si existe un riesgo operativo que requiera trazabilidad minima;
+- Trello/source no deben recibir actividad nueva salvo trazabilidad minima necesaria para registrar instrucciones de Salva o preservar el estado de pausa.
+
+Condicion de desbloqueo:
+
+- nueva orden explicita de Salva reactivando updates, trabajo operativo o un alcance concreto.
