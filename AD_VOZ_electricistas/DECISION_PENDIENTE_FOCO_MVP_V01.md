@@ -118,3 +118,17 @@ Elegir cobro/seguimiento si:
 Salva valida el foco despues de recibir la respuesta escrita del familiar y antes de cualquier prototipo accionable, build, piloto, datos reales, pricing o integracion.
 
 No se piden entradas reales ni datos reales sin gate completo y aprobacion explicita de Salva. El gate de privacidad validado solo define limites; no autoriza piloto, prueba operativa, audios reales, documentos, facturas, direcciones completas, contacto externo, build, pricing ni integraciones.
+
+## Aclaracion puntual autorizada - 2026-07-12
+
+Salva no aprueba todavia el foco MVP. Antes de aprobar, ajustar o bloquear, decide pedir una aclaracion al familiar:
+
+> Si la herramienta no envia WhatsApps, no cobra, no factura y no automatiza gestiones, pero te permite dictar por voz rapidamente lo ocurrido en una obra y te deja una ficha escrita y ordenada para revisar despues materiales, trabajo realizado, presupuesto pendiente, aviso o cobro, te seguiria ahorrando tiempo real frente a WhatsApp + agenda + tarde de ordenador?
+
+Criterio:
+
+- Respuesta afirmativa clara: permite aprobar foco estrecho de captura administrativa pre-facturacion por voz.
+- Respuesta afirmativa con condiciones: ajustar foco/copy antes de cualquier prototipo.
+- Respuesta negativa o dependiente de automatizacion real: bloquear este enfoque.
+
+No se construye todavia. Gael no contacta al familiar ni envia mensajes externos; Salva conserva la accion externa.

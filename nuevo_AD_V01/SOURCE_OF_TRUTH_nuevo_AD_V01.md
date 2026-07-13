@@ -3366,3 +3366,20 @@ Interpretacion operativa:
 Condicion de desbloqueo:
 
 - nueva orden explicita de Salva reactivando updates, trabajo operativo o un alcance concreto.
+
+Correccion de higiene de fuente el 2026-07-12:
+
+- Salva aclara que las respuestas analizadas pertenecen al email enviado para `AD_VOZ_electricistas`, no al proyecto activo `nuevo_AD_V01`.
+- Gael invalida y retira de esta fuente la lectura anterior que las trataba como evidencia del gate `Correo + mock estatico AD Captura Pack`.
+- Esa respuesta no debe usarse como evidencia, input de mock/copy, criterio owner ni desbloqueo para `nuevo_AD_V01`.
+- No se autoriza construccion, ampliacion de alcance ni ajuste del gate de `nuevo_AD_V01` basado en esas respuestas.
+
+Accion correctiva:
+
+- borrar el consolidado contaminado `GAEL_CONSOLIDADO_RESPUESTA_ANONIMA_GATE_CORREO_MOCK_AD_CAPTURA_PACK.md`;
+- corregir Trello para que el gate no conserve como decision ni evidencia esa respuesta externa a `nuevo_AD_V01`;
+- avisar a los owners internos de que sus respuestas anteriores quedan invalidadas para `nuevo_AD_V01`.
+
+Regla reforzada:
+
+- ninguna respuesta, encuesta, email o feedback de otra linea como `AD_VOZ_electricistas` puede entrar en `nuevo_AD_V01` salvo que Salva apruebe explicitamente un anexo o migracion de evidencia.

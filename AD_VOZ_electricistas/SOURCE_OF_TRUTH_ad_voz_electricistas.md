@@ -92,7 +92,47 @@ El guion/cuestionario fue validado y corregido por Salva. El email asincronico f
 
 El gate de privacidad y datos prohibidos fue validado por Salva solo como definicion de limites. No autoriza piloto, datos reales, audios reales, documentos, facturas, direcciones completas, prueba operativa, contacto externo, build, pricing, produccion ni integraciones.
 
-La decision pendiente es de foco: gestion diaria de trabajos, presupuesto/facturacion por voz, cobros/seguimiento u otro dolor que emerja de la respuesta escrita. Estado actual: en espera de respuesta escrita.
+La decision pendiente es de foco: gestion diaria de trabajos, presupuesto/facturacion por voz, cobros/seguimiento u otro dolor que emerja de la respuesta escrita.
+
+Actualizacion 2026-07-12:
+
+- Salva aporta la respuesta escrita recibida del familiar, ya tratada dentro de `AD_VOZ_electricistas` y no dentro de `nuevo_AD_V01`.
+- Gael consulta a Producto, Tecnico, UX y Growth/Mercury con instruccion explicita de no usar AD Captura ni `nuevo_AD_V01`.
+- El equipo converge en que la respuesta apunta a dolor administrativo con impacto economico: trabajos, material, trabajo realizado, presupuestos y cobros.
+- La herramienta actual declarada es WhatsApp escrito + agenda, con administracion posterior en ordenador.
+- La expectativa es captura comoda desde movil/AirPods y ahorro neto de tiempo; la mencion de automatizar gestiones se trata como riesgo de scope, no como permiso.
+- Foco MVP recomendado para decision de Salva: `captura administrativa pre-facturacion por voz`, con ficha escrita revisable y salida manual/copiable.
+- No se autoriza construccion, piloto, datos reales, pricing, produccion, integraciones, WhatsApp real, agenda real, cobros, facturacion legal ni automatizaciones.
+- Decision pendiente de Salva: aprobar foco provisional estrecho, pedir aclaracion adicional al familiar o bloquear si el valor depende de automatizacion real.
+
+Actualizacion posterior 2026-07-12:
+
+- Salva no aprueba todavia el foco MVP.
+- Salva decide pedir una aclaracion puntual al familiar antes de aprobar, ajustar o bloquear.
+- La aclaracion pertenece solo a `AD_VOZ_electricistas`; no tiene impacto en `nuevo_AD_V01`.
+- Gael no contacta al familiar ni envia mensajes externos; la accion externa corresponde a Salva.
+- Pregunta autorizada para enviar:
+
+> Si la herramienta no envia WhatsApps, no cobra, no factura y no automatiza gestiones, pero te permite dictar por voz rapidamente lo ocurrido en una obra y te deja una ficha escrita y ordenada para revisar despues materiales, trabajo realizado, presupuesto pendiente, aviso o cobro, te seguiria ahorrando tiempo real frente a WhatsApp + agenda + tarde de ordenador?
+
+- Criterio de decision tras la respuesta:
+  - Si confirma ahorro real sin automatizacion: aprobar foco estrecho.
+  - Si confirma utilidad parcial pero con friccion o matices: ajustar foco/copy antes de prototipo.
+  - Si el valor depende de automatizacion real, WhatsApp real, cobro, facturacion o gestiones automaticas: bloquear avance del MVP en este enfoque.
+- No se construye todavia.
+
+Revision de inputs 2026-07-12:
+
+- Salva confirma que ha enviado la aclaracion al familiar.
+- Salva pide revisar el concepto de inputs para no quedar parados ni mezclar planos.
+- Gael consulta a Producto, Tecnico, UX y Growth/Mercury con marco estricto.
+- Consenso: el input del MVP a validar es voz; la salida es ficha escrita/revisable y texto copiable/manual.
+- WhatsApp, agenda y ordenador son comparador/habito actual, no inputs del MVP.
+- Texto escrito no es input principal salvo autorizacion futura de Salva.
+- AirPods es contexto posible, no compromiso tecnico.
+- Avance interno permitido mientras llega la respuesta: definir frases ficticias de dictado, campos minimos, flujo conceptual y criterios de decision. No build.
+- Avance ejecutado: se crea `DEFINICION_INPUTS_OUTPUTS_Y_AVANCE_INTERNO_2026_07_12.md` con definicion de input/output, no-inputs, criterios de lectura, 8 frases ficticias/controladas, campos minimos y flujo conceptual.
+- Trello actualizado: la tarjeta `Obtener 5-10 frases anonimizadas/controladas de captura por voz` pasa a `Hecho`; `Disenar prototipo baja fidelidad 4 pantallas tras foco MVP` sigue bloqueada hasta decision de foco.
 
 ## Artefactos internos
 
@@ -102,6 +142,9 @@ La decision pendiente es de foco: gestion diaria de trabajos, presupuesto/factur
 - `DECISION_PENDIENTE_FOCO_MVP_V01.md`: decision pendiente entre posibles focos, con recomendacion provisional no vinculante.
 - `PROTOCOLO_OPERATIVO_AD_VOZ_ELECTRICISTAS_V01.md`: protocolo operativo entre Source of Truth, Trello y Discord; define autonomia de Gael, gates de Salva, estructura de Trello y regla FinOps.
 - `PLANTILLA_ANALISIS_RESPUESTA_EMAIL_ELECTRICISTA_V01.md`: plantilla para procesar la respuesta escrita, puntuar foco MVP y extraer frases anonimizadas/controladas.
+- `ANALISIS_RESPUESTA_EMAIL_ELECTRICISTA_2026_07_12.md`: analisis limpio en equipo de la respuesta recibida, con dolor principal, herramienta actual, expectativa, riesgo de scope, matriz de foco, recomendacion MVP y fuera de alcance.
+- `BORRADOR_EMAIL_ACLARACION_AHORRO_SIN_AUTOMATIZACION_2026_07_12.md`: borrador de email para que Salva pida la aclaracion puntual al familiar antes de aprobar, ajustar o bloquear foco MVP.
+- `DEFINICION_INPUTS_OUTPUTS_Y_AVANCE_INTERNO_2026_07_12.md`: consolidado de inputs/outputs, no-inputs, criterios de lectura de la respuesta y avance interno permitido sin build.
 
 ## Trello operativo
 
@@ -129,8 +172,15 @@ Tarjetas iniciales:
 - Analizar respuesta escrita y recomendar foco MVP.
 - Gobierno y gates reforzados.
 
+Actualizacion Trello 2026-07-12:
+
+- `Decision foco MVP tras respuesta escrita`: sigue en `Pendiente Salva`, esperando respuesta a la aclaracion enviada.
+- `Obtener 5-10 frases anonimizadas/controladas de captura por voz`: movida a `Hecho` tras crear el consolidado de inputs/outputs y 8 frases ficticias.
+- `Disenar prototipo baja fidelidad 4 pantallas tras foco MVP`: se mantiene bloqueada; no hay foco MVP aprobado.
+
 ## Siguiente accion propuesta
 
-1. Esperar la respuesta escrita del familiar al email asincronico.
-2. Procesarla con `PLANTILLA_ANALISIS_RESPUESTA_EMAIL_ELECTRICISTA_V01.md`.
-3. Decidir foco MVP con Salva tras la respuesta: gestion diaria, presupuesto/facturacion simple, cobro/seguimiento u otro dolor operativo.
+1. Salva envia, si lo desea, la aclaracion puntual al familiar con la pregunta autorizada.
+2. Mientras llega la respuesta, Gael mantiene preparado el marco de input voz -> ficha escrita revisable -> salida manual.
+3. Gael registra la respuesta de forma controlada solo en `AD_VOZ_electricistas`.
+4. Con esa respuesta, decidir: aprobar foco estrecho, ajustar o bloquear si el valor depende de automatizacion real.
