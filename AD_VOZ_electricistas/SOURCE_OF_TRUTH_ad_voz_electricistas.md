@@ -145,6 +145,9 @@ Revision de inputs 2026-07-12:
 - `ANALISIS_RESPUESTA_EMAIL_ELECTRICISTA_2026_07_12.md`: analisis limpio en equipo de la respuesta recibida, con dolor principal, herramienta actual, expectativa, riesgo de scope, matriz de foco, recomendacion MVP y fuera de alcance.
 - `BORRADOR_EMAIL_ACLARACION_AHORRO_SIN_AUTOMATIZACION_2026_07_12.md`: borrador de email para que Salva pida la aclaracion puntual al familiar antes de aprobar, ajustar o bloquear foco MVP.
 - `DEFINICION_INPUTS_OUTPUTS_Y_AVANCE_INTERNO_2026_07_12.md`: consolidado de inputs/outputs, no-inputs, criterios de lectura de la respuesta y avance interno permitido sin build.
+- `ANALISIS_RESPUESTA_ACLARACION_AHORRO_SIN_AUTOMATIZACION_2026_07_13.md`: correccion de contexto y analisis de la respuesta a la aclaracion puntual, tratada solo dentro de `AD_VOZ_electricistas`.
+- `FICHA_DECISION_POST_ACLARACION_AHORRO_2026_07_13.md`: ficha de decision para Salva con tres opciones tras la respuesta a la aclaracion: ajustar a mock conceptual, pedir otra aclaracion o bloquear enfoque.
+- `FICHA_PREVIA_MOCK_CONCEPTUAL_AD_VOZ_2026_07_13.md`: ficha previa del mock conceptual aprobada solo como alcance pendiente de decision de Salva antes de crear cualquier mock.
 
 ## Trello operativo
 
@@ -178,9 +181,44 @@ Actualizacion Trello 2026-07-12:
 - `Obtener 5-10 frases anonimizadas/controladas de captura por voz`: movida a `Hecho` tras crear el consolidado de inputs/outputs y 8 frases ficticias.
 - `Disenar prototipo baja fidelidad 4 pantallas tras foco MVP`: se mantiene bloqueada; no hay foco MVP aprobado.
 
+Actualizacion 2026-07-13:
+
+- Salva aporta la respuesta del familiar a la aclaracion puntual.
+- Gael corrige una interpretacion erronea previa: esta respuesta pertenece solo a `AD_VOZ_electricistas`, no a `nuevo_AD_V01` ni a `AD Captura`.
+- La respuesta se analiza en `ANALISIS_RESPUESTA_ACLARACION_AHORRO_SIN_AUTOMATIZACION_2026_07_13.md`.
+- Lectura: el familiar esperaba facturacion y automatizacion de gestiones; el criterio de valor es ahorro real de horas, no simple organizacion.
+- Clasificacion segun el criterio previo: utilidad parcial con matices fuertes.
+- No queda aprobado el foco estrecho tal cual.
+- No queda bloqueado definitivamente, porque el familiar dice que habria que llevarlo a la practica para saber si es comodo y si ahorra tiempo.
+- No se debe enviar otro email ni avanzar a build, piloto, datos reales, facturacion, cobros, WhatsApp real, agenda real, automatizaciones, pricing, produccion ni integraciones.
+- Decision pendiente: Salva debe decidir entre ajustar hacia un mock conceptual muy controlado, pedir otra aclaracion o bloquear este enfoque.
+
+Ficha de decision creada:
+
+- `FICHA_DECISION_POST_ACLARACION_AHORRO_2026_07_13.md`.
+- Opcion A: ajustar a mock conceptual controlado.
+- Opcion B: pedir otra aclaracion.
+- Opcion C: bloquear enfoque.
+- Recomendacion Gael: Opcion A, solo como mock conceptual interno/controlado y sin build ni envio al familiar hasta aprobacion separada del material exacto.
+
+Decision de Salva 2026-07-13:
+
+> Gael apruebo la opcion A
+
+Interpretacion:
+
+- Salva aprueba ajustar hacia un mock conceptual controlado.
+- Esta decision no autoriza crear mock final, enviarlo al familiar, construir producto, usar datos reales, facturar, cobrar, automatizar, integrar WhatsApp/agenda ni producir.
+- Queda autorizado preparar una ficha previa del mock conceptual.
+
+Ejecucion:
+
+- Gael crea `FICHA_PREVIA_MOCK_CONCEPTUAL_AD_VOZ_2026_07_13.md`.
+- La ficha define objetivo de aprendizaje, pantalla recomendada, copy limite, datos ficticios permitidos, datos prohibidos, criterios de exito y criterios de bloqueo.
+- El mock conceptual sigue pendiente de aprobacion de Salva antes de crearse.
+
 ## Siguiente accion propuesta
 
-1. Salva envia, si lo desea, la aclaracion puntual al familiar con la pregunta autorizada.
-2. Mientras llega la respuesta, Gael mantiene preparado el marco de input voz -> ficha escrita revisable -> salida manual.
-3. Gael registra la respuesta de forma controlada solo en `AD_VOZ_electricistas`.
-4. Con esa respuesta, decidir: aprobar foco estrecho, ajustar o bloquear si el valor depende de automatizacion real.
+1. Salva revisa `FICHA_PREVIA_MOCK_CONCEPTUAL_AD_VOZ_2026_07_13.md` y decide aprobar, ajustar o bloquear.
+2. Si Salva aprueba la ficha, Gael podra preparar un mock conceptual estatico con datos ficticios y someterlo de nuevo a aprobacion antes de cualquier envio o uso externo.
+3. Mantener bloqueado cualquier build, piloto, datos reales, facturacion, cobros, WhatsApp real, agenda real, automatizaciones, pricing, produccion e integraciones.
