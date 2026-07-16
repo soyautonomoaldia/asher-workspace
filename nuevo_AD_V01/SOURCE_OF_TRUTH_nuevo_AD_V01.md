@@ -3383,3 +3383,35 @@ Accion correctiva:
 Regla reforzada:
 
 - ninguna respuesta, encuesta, email o feedback de otra linea como `AD_VOZ_electricistas` puede entrar en `nuevo_AD_V01` salvo que Salva apruebe explicitamente un anexo o migracion de evidencia.
+
+Revision proactiva Gael 2026-07-15 12:00 CEST:
+
+Fuentes revisadas: source activo, Trello `AD Captura Pack`, Discord `#ad_captura` y estado owner Mercury/tarjetas pendientes.
+
+Hecho:
+
+- Trello conserva pausa/bloqueo operativo vigente: cero outreach, cero Gmail, cero formulario, cero contacto real y cero identificadores visibles.
+- No consta instruccion nueva de Salva que reactive trabajo operativo, canal externo, owners o updates proactivos fuera de esta ejecucion cron.
+- Higiene Trello aplicada: `Fallo final custodia/preflight Mercury batch 5/3/2` queda sin `dueComplete`, sin etiqueta `Plazo: externo fijo` y mantiene bloqueo tecnico/privacidad.
+- Higiene Trello aplicada: `Registrar resultado anonimo P1/P2/P3 post-envio` queda sin `dueComplete` y mantiene bloqueo por ausencia de envio real/via privada verificable.
+
+Supuesto:
+
+- Esta higiene no reabre trabajo; solo evita senales visuales falsas de plazo completado en tarjetas bloqueadas.
+
+Riesgo:
+
+- Mantener marcas de vencimiento completado en bloqueos sin fecha puede sugerir cierre operativo falso o prioridad vencida inexistente.
+
+Owner:
+
+- Gael mantiene Trello/source como trazabilidad minima.
+- Salva decide cualquier reactivacion.
+
+Decision requerida:
+
+- Ninguna para esta higiene interna.
+
+Condicion de desbloqueo:
+
+- Nueva instruccion explicita de Salva reactivando trabajo, updates, canal externo u owners.
