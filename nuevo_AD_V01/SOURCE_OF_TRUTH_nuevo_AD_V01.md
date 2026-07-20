@@ -3415,3 +3415,16 @@ Decision requerida:
 Condicion de desbloqueo:
 
 - Nueva instruccion explicita de Salva reactivando trabajo, updates, canal externo u owners.
+
+Cancelacion de updates proactivos Gael el 2026-07-19 21:01 CEST:
+
+Orden de Salva en Discord `#ad_captura`:
+
+> AD Gael, cancela las actualizaciones de estado de las 12h y las 20h
+
+Ejecucion:
+
+- cron `93cca031-9559-472f-842c-4579a467d8e9` (`Revision proactiva Gael AD 12-20`) deshabilitado en runtime OpenClaw;
+- horario cancelado: `0 12,20 * * 1-5` Europe/Madrid;
+- entrega cancelada: Discord `#ad_captura`, channel `1517883886506606642`;
+- estado operativo: no deben ejecutarse updates proactivos recurrentes de las 12:00 ni de las 20:00 hasta nueva orden explicita de Salva.
