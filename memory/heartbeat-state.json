@@ -1,6 +1,6 @@
 {
   "lastCheck": {
-    "timestamp": "2026-07-25T04:34:42+02:00",
+    "timestamp": "2026-07-26T04:33:42+02:00",
     "status": "WARN",
     "summary": "WARN: errores repetidos en logs del gateway en las ultimas 2 horas: 20. Impacto: revisar estabilidad/ruido operativo. Siguiente accion recomendada: inspeccionar logs antes de reactivar notificaciones.",
     "checks": {
@@ -9,7 +9,7 @@
       "heartbeatSilent": true,
       "stuckSessions": false,
       "oldOpenclawHooksCpu": false,
-      "diskUsagePercent": 25,
+      "diskUsagePercent": 26,
       "sshListening": false,
       "notify": true,
       "gatewayRecentLog": true,
