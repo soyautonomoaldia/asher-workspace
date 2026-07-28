@@ -148,6 +148,10 @@ Revision de inputs 2026-07-12:
 - `ANALISIS_RESPUESTA_ACLARACION_AHORRO_SIN_AUTOMATIZACION_2026_07_13.md`: correccion de contexto y analisis de la respuesta a la aclaracion puntual, tratada solo dentro de `AD_VOZ_electricistas`.
 - `FICHA_DECISION_POST_ACLARACION_AHORRO_2026_07_13.md`: ficha de decision para Salva con tres opciones tras la respuesta a la aclaracion: ajustar a mock conceptual, pedir otra aclaracion o bloquear enfoque.
 - `FICHA_PREVIA_MOCK_CONCEPTUAL_AD_VOZ_2026_07_13.md`: ficha previa del mock conceptual aprobada solo como alcance pendiente de decision de Salva antes de crear cualquier mock.
+- `mockups/ad-voz-electricistas-mock-conceptual.html`: mock conceptual estatico creado tras aprobacion de Salva de la ficha previa. Usa solo datos ficticios, no tiene backend, no captura voz real, no integra servicios y no autoriza envio externo.
+- `MARCO_PRODUCTO_4_SEMANAS_AD_VOZ_ELECTRICISTAS_2026_07_28.md`: marco operativo actualizado por instruccion de Salva para planificar producto web/movil con voz, IA, UX/UI visual, seguimiento de obras, OCR a consultar, seguridad/RGPD y fases de trabajo hacia uso controlado en septiembre.
+- `PLAN_OPERATIVO_4_SEMANAS_AD_VOZ_ELECTRICISTAS_2026_07_28.md`: plan operativo aprobado sobre escenario mas probable, con V1 recortada a captura por voz, seguimiento visual de obras y bandeja administrativa revisable; OCR y automatizaciones quedan evaluadas/planificadas, no completas ni activadas en V1.
+- `ACTIVACION_SEMANA_1_AD_VOZ_2026_07_28.md`: activacion operativa de Semana 1 con encargos enviados a Producto/Asirin, UX/Irinas y Tecnico/Nathan, y bloqueo tecnico registrado para Growth/Mercury por timeout de gateway.
 
 ## Trello operativo
 
@@ -222,3 +226,215 @@ Ejecucion:
 1. Salva revisa `FICHA_PREVIA_MOCK_CONCEPTUAL_AD_VOZ_2026_07_13.md` y decide aprobar, ajustar o bloquear.
 2. Si Salva aprueba la ficha, Gael podra preparar un mock conceptual estatico con datos ficticios y someterlo de nuevo a aprobacion antes de cualquier envio o uso externo.
 3. Mantener bloqueado cualquier build, piloto, datos reales, facturacion, cobros, WhatsApp real, agenda real, automatizaciones, pricing, produccion e integraciones.
+
+## Auditoria comunicacion 2026-07-28
+
+Salva pregunta por que no recibio comunicacion de avance de `AD_VOZ_electricistas`.
+
+Revision ejecutada por Gael:
+
+- source activo de `AD_VOZ_electricistas` revisado;
+- protocolo operativo revisado;
+- source de `nuevo_AD_V01` revisado solo para comprobar reglas de separacion y ordenes generales de updates;
+- crons OpenClaw revisados.
+
+Resultado:
+
+- el ultimo avance real registrado fue el 2026-07-13: Salva aprobo la Opcion A y Gael preparo `FICHA_PREVIA_MOCK_CONCEPTUAL_AD_VOZ_2026_07_13.md`;
+- esa ficha quedo pendiente de aprobacion de Salva antes de crear cualquier mock;
+- no consta un cron recurrente especifico para `AD_VOZ_electricistas`;
+- el cron general `Revision proactiva Gael AD 12-20` consta deshabilitado desde la orden de cancelacion de updates de AD;
+- la comunicacion corta de cierre/gate debio elevarse igualmente tras preparar la ficha, aunque no hubiera cron especifico.
+
+Lectura de responsabilidad:
+
+- no fue un bloqueo de producto;
+- no fue falta de trabajo interno;
+- fue un fallo operativo de comunicacion y de seguimiento visual del gate por parte de Gael.
+
+Estado actual:
+
+- `AD_VOZ_electricistas` queda pendiente de decision de Salva sobre `FICHA_PREVIA_MOCK_CONCEPTUAL_AD_VOZ_2026_07_13.md`;
+- no crear mock, no enviar material al familiar, no build, no datos reales, no piloto, no facturacion, no cobros, no WhatsApp real, no agenda real, no automatizaciones, no pricing, no produccion ni integraciones hasta aprobacion explicita.
+
+Siguiente accion propuesta:
+
+- Salva decide si aprueba, ajusta o bloquea la ficha previa del mock conceptual.
+- Si Salva aprueba, Gael prepara el mock conceptual estatico con datos ficticios y lo devuelve para aprobacion antes de cualquier uso externo.
+
+## Ejecucion mock conceptual 2026-07-28
+
+Decision de Salva:
+
+> apruebo la ficha Gael, crea el mock
+
+Interpretacion:
+
+- Salva aprueba `FICHA_PREVIA_MOCK_CONCEPTUAL_AD_VOZ_2026_07_13.md`;
+- queda autorizado crear un mock conceptual estatico interno con datos ficticios;
+- no queda autorizado enviarlo al familiar, usarlo con datos reales, iniciar build, piloto, pricing, produccion, facturacion, cobros, WhatsApp real, agenda real, automatizaciones ni integraciones.
+
+Ejecucion:
+
+- Gael crea `mockups/ad-voz-electricistas-mock-conceptual.html`;
+- formato: HTML estatico auto-contenido;
+- estructura: dictado simulado, ficha generada y salida manual;
+- limites visibles dentro del mock: no factura, no cobra, no envia WhatsApps, no automatiza gestiones y no es una app operativa;
+- datos usados: ficticios y no identificables.
+
+Validacion:
+
+- sin scripts;
+- sin enlaces externos;
+- sin dependencias externas;
+- menciones a WhatsApp solo como comparador o negacion funcional;
+- no contiene nombres reales, telefonos, direcciones, importes reales, facturas reales, fotos, documentos ni audios reales.
+
+Estado actual:
+
+- mock conceptual creado;
+- pendiente aprobacion de Salva sobre el material exacto antes de cualquier envio o uso externo.
+
+Siguiente accion propuesta:
+
+- Salva revisa el mock y decide aprobarlo, pedir ajustes o bloquearlo antes de mostrarlo al familiar.
+
+## Rechazo mock V0 2026-07-28
+
+Feedback de Salva:
+
+> el mock no genera impacto ni visualmente ni por contenido/experiencia de usuario
+
+Correccion de Gael:
+
+- el mock V0 fue creado directamente por Gael;
+- no fue encargado ni revisado por el equipo antes de presentarlo;
+- no debe enviarse al familiar;
+- no debe tratarse como material aprobado;
+- no sirve como prueba de impacto, contenido ni experiencia de usuario.
+
+Decision operativa:
+
+- `mockups/ad-voz-electricistas-mock-conceptual.html` queda marcado como V0 rechazado para uso externo;
+- el siguiente intento requiere brief de aprendizaje mas fuerte y revision UX/Producto antes de volver a presentarlo a Salva;
+- mantener activas las restricciones: no envio externo, no datos reales, no build, no piloto, no facturacion, no cobros, no WhatsApp real, no agenda real, no automatizaciones, no pricing, no produccion ni integraciones.
+
+Siguiente accion propuesta:
+
+- rehacer el enfoque del mock desde cero con criterio UX/Producto y una pregunta de aprendizaje mas fuerte antes de crear V1.
+
+## Marco producto aclarado por Salva 2026-07-28
+
+Salva aclara punto por punto que la exposicion anterior no debe tratarse como un objetivo nuevo a fijar de forma comoda, sino como correccion de contradicciones del source y marco real esperado para `AD_VOZ_electricistas`.
+
+Decision real trasladada:
+
+- desarrollar una aplicacion web y movil para el familiar autonomo electricista;
+- reducir gestion administrativa diaria;
+- incluir seguimiento de obras como modulo aprobado;
+- usar comandos de voz, inteligencia artificial e interfaz altamente visual;
+- planificar cuatro semanas para que en septiembre pueda empezar a utilizarla en su dia a dia;
+- trabajar bajo directrices del familiar, canalizadas por Salva;
+- incorporar requisitos tecnicos y de diseno como criterios operativos.
+
+Correcciones de alcance:
+
+- el marco estrecho anterior queda superado como marco suficiente de producto;
+- el proyecto debe pasar de estrecho a amplio por fases, no por salto directo a ERP completo;
+- automatizaciones externas siguen sin ejecutarse ahora, pero deben figurar en plan de trabajo y roadmap;
+- build/desarrollo pasa a requerir direccion tecnica;
+- OCR debe consultarse con el familiar antes de aprobar alcance;
+- facturacion, fiscalidad y datos sensibles quedan bloqueados parcialmente, con RGPD presente en modelo de datos, cifrado, almacenamiento y limites;
+- UX/UI debe buscar impacto, claridad y uso real, no baja fidelidad sin fuerza;
+- seguimiento de obras pasa de opcional a modulo aprobado;
+- requisitos tecnicos y de diseno quedan como criterios operativos.
+
+Artefacto creado:
+
+- `MARCO_PRODUCTO_4_SEMANAS_AD_VOZ_ELECTRICISTAS_2026_07_28.md`.
+
+Restricciones que siguen vigentes:
+
+- no enviar nada al familiar sin aprobacion de Salva;
+- no usar datos reales, audios reales, tickets reales, facturas reales, fotos reales, documentos reales, direcciones, telefonos, datos fiscales ni datos bancarios sin gate RGPD especifico;
+- no activar OCR real sobre documentos reales sin consulta previa al familiar y gate separado;
+- no activar facturacion legal, cobros, WhatsApp real, agenda real, gestoria ni automatizaciones externas sin gate separado;
+- no produccion ni uso real en septiembre hasta decision final de piloto/control de Salva.
+
+Siguiente accion propuesta:
+
+- Salva revisa las contradicciones y el marco operativo; si lo valida, Gael debe convertirlo en plan Trello/source de cuatro semanas con owners, gates, entregables y criterios de exito.
+
+## Aprobacion escenario mas probable y plan operativo 2026-07-28
+
+Decision de Salva:
+
+> ok al escenario mas probable para comenzar con la siguiente accion propuesta Gael
+
+Interpretacion:
+
+- queda aprobado usar el escenario mas probable como base operativa;
+- V1 se recorta a tres nucleos: captura por voz, seguimiento visual de obras y bandeja administrativa revisable;
+- OCR y automatizaciones quedan en evaluacion/planificacion, no como entrega completa obligatoria de V1;
+- el objetivo sigue siendo preparar uso controlado en septiembre si se superan los gates de UX, tecnico y RGPD.
+
+Ejecucion:
+
+- Gael crea `PLAN_OPERATIVO_4_SEMANAS_AD_VOZ_ELECTRICISTAS_2026_07_28.md`;
+- el plan cubre 2026-07-28 a 2026-08-23;
+- incluye owners, tarjetas operativas, gates semanales, criterios de exito, criterios de bloqueo, estructura Trello y restricciones.
+
+Estado Trello:
+
+- el plan queda listo para traslado a Trello;
+- en este turno no consta conector Trello expuesto en runtime;
+- si Trello sigue sin estar disponible, source queda como estado canonico y Gael debe reportar bloqueo tecnico exacto de tablero.
+
+Siguiente accion operativa:
+
+- activar Semana 1: alcance V1, preguntas cerradas al familiar, modelo de datos preliminar, mapa V1/V1.5/futuro y decision tecnica inicial web responsive/PWA.
+
+## Regla universal de mando operativo 2026-07-28
+
+Instruccion de Salva:
+
+- Gael debe ser lider del proyecto y avanzar siempre que no requiera aprobacion de Salva;
+- Gael no debe quedarse esperando a que Salva mande trabajo;
+- si una validacion de Salva es necesaria y no llega, Gael debe recordarla por canales autorizados para reducir tiempos de espera;
+- los plazos son innegociables y deben gestionarse con rigor;
+- Gael es orquestador: coordina al equipo y no ejecuta tareas especializadas que correspondan a otros owners.
+
+Aplicacion inmediata en `AD_VOZ_electricistas`:
+
+- Gael activa Semana 1 sin pedir nueva aprobacion;
+- Gael coordina Producto, UX, Tecnico y Growth/Mercury con entregables concretos;
+- Gael consolida, controla gates y mantiene source/Trello;
+- tareas especializadas de UX, arquitectura, validacion de adopcion y viabilidad tecnica deben venir de sus owners antes de pasar a mock/build;
+- si Trello o Discord no estan disponibles en runtime, Gael debe registrar el bloqueo tecnico exacto y mantener source como estado canonico hasta recuperacion.
+
+## Activacion Semana 1 ejecutada 2026-07-28
+
+Base:
+
+- Salva aprueba comenzar la siguiente accion operativa;
+- aplica regla universal de mando: Gael avanza sin esperar nuevas ordenes cuando no hay gate de Salva.
+
+Ejecucion:
+
+- Gael crea `ACTIVACION_SEMANA_1_AD_VOZ_2026_07_28.md`;
+- Producto/Asirin activado para alcance V1 y mapa V1/V1.5/futuro;
+- UX/Irinas activada para criterios UX/UI V1 y prevencion del fallo V0;
+- Tecnico/Nathan activado para arquitectura, modelo de datos, voz/IA/OCR y seguridad;
+- Growth/Mercury intentado dos veces, bloqueado por `gateway timeout`.
+
+Impacto del bloqueo Mercury:
+
+- no bloquea tareas de Producto/UX/Tecnico;
+- si no se recupera antes del consolidado, adopcion/growth quedara marcada como pendiente, no validada.
+
+Siguiente accion:
+
+- recibir entregables de owners;
+- reintentar Mercury cuando runtime lo permita;
+- consolidar Semana 1 para decision de Salva;
+- trasladar a Trello cuando exista conector operativo visible.

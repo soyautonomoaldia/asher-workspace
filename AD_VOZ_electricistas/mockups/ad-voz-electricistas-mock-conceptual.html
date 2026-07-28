@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AD Voz Electricistas - Mock conceptual</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #eef2f6;
+      color: #18212f;
+    }
+
+    .page {
+      width: min(1180px, 100%);
+      min-height: 760px;
+      margin: 0 auto;
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 330px minmax(0, 1fr);
+      gap: 18px;
+    }
+
+    .panel,
+    .screen,
+    .card,
+    .notice,
+    .summary-bar {
+      background: #ffffff;
+      border: 1px solid #d9e1ea;
+      border-radius: 8px;
+    }
+
+    .panel {
+      padding: 22px;
+      display: grid;
+      align-content: start;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      background: #155e75;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 850;
+    }
+
+    .brand-name {
+      min-width: 0;
+      font-size: 25px;
+      font-weight: 850;
+      line-height: 1.08;
+    }
+
+    .tag {
+      display: inline-flex;
+      width: fit-content;
+      min-height: 30px;
+      align-items: center;
+      justify-content: center;
+      padding: 7px 10px;
+      border-radius: 8px;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      color: #9a3412;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .section-label {
+      margin: 0 0 7px;
+      font-size: 12px;
+      color: #637083;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .voice-card {
+      padding: 15px;
+      border-radius: 8px;
+      background: #f6f9fc;
+      border: 1px solid #d9e1ea;
+      display: grid;
+      gap: 10px;
+    }
+
+    .wave {
+      display: grid;
+      grid-template-columns: repeat(14, 1fr);
+      gap: 4px;
+      align-items: center;
+      height: 38px;
+      padding: 0 2px;
+    }
+
+    .wave span {
+      display: block;
+      border-radius: 999px;
+      background: #155e75;
+    }
+
+    .wave span:nth-child(1) { height: 10px; opacity: 0.35; }
+    .wave span:nth-child(2) { height: 18px; opacity: 0.55; }
+    .wave span:nth-child(3) { height: 28px; opacity: 0.8; }
+    .wave span:nth-child(4) { height: 16px; opacity: 0.55; }
+    .wave span:nth-child(5) { height: 34px; opacity: 0.95; }
+    .wave span:nth-child(6) { height: 20px; opacity: 0.65; }
+    .wave span:nth-child(7) { height: 30px; opacity: 0.85; }
+    .wave span:nth-child(8) { height: 14px; opacity: 0.5; }
+    .wave span:nth-child(9) { height: 26px; opacity: 0.75; }
+    .wave span:nth-child(10) { height: 34px; opacity: 0.95; }
+    .wave span:nth-child(11) { height: 18px; opacity: 0.55; }
+    .wave span:nth-child(12) { height: 26px; opacity: 0.75; }
+    .wave span:nth-child(13) { height: 12px; opacity: 0.4; }
+    .wave span:nth-child(14) { height: 20px; opacity: 0.65; }
+
+    .dictation {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.36;
+      color: #263241;
+      font-weight: 780;
+    }
+
+    .side-list {
+      display: grid;
+      gap: 9px;
+    }
+
+    .side-item {
+      padding: 12px;
+      border-radius: 8px;
+      background: #f6f9fc;
+      border: 1px solid #e3e9f0;
+      color: #485568;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.32;
+    }
+
+    .screen {
+      padding: 22px;
+      display: grid;
+      grid-template-rows: auto auto minmax(0, 1fr) auto;
+      gap: 16px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 18px;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: 32px;
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      max-width: 670px;
+      color: #637083;
+      font-size: 16px;
+      line-height: 1.35;
+      font-weight: 680;
+    }
+
+    .status {
+      display: grid;
+      gap: 4px;
+      min-width: 164px;
+      padding: 11px 12px;
+      border-radius: 8px;
+      border: 1px solid #b6e2d6;
+      background: #effaf6;
+      color: #0f5c4b;
+      text-align: right;
+    }
+
+    .status strong {
+      font-size: 14px;
+      line-height: 1.1;
+    }
+
+    .status span {
+      font-size: 12px;
+      line-height: 1.2;
+      font-weight: 750;
+    }
+
+    .notice {
+      padding: 13px 14px;
+      background: #fff7ed;
+      color: #8a3a0c;
+      font-size: 14px;
+      line-height: 1.35;
+      font-weight: 800;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: minmax(0, 1.04fr) minmax(310px, 0.96fr);
+      gap: 16px;
+      align-items: start;
+    }
+
+    .card {
+      padding: 18px;
+      min-width: 0;
+    }
+
+    .card h2 {
+      margin: 0 0 13px;
+      font-size: 21px;
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    .fields {
+      display: grid;
+      gap: 0;
+    }
+
+    .field {
+      display: grid;
+      grid-template-columns: 140px minmax(0, 1fr);
+      gap: 12px;
+      padding: 11px 0;
+      border-bottom: 1px solid #edf1f5;
+      font-size: 15px;
+      line-height: 1.32;
+    }
+
+    .field:last-child {
+      border-bottom: 0;
+    }
+
+    .key {
+      color: #637083;
+      font-weight: 800;
+    }
+
+    .value {
+      color: #18212f;
+      font-weight: 780;
+      overflow-wrap: anywhere;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      min-height: 30px;
+      padding: 7px 10px;
+      border-radius: 8px;
+      background: #edf7fa;
+      color: #155e75;
+      border: 1px solid #c5e8ef;
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .manual {
+      border-left: 5px solid #155e75;
+      background: #f3f9fb;
+    }
+
+    .manual-copy {
+      margin: 0 0 14px;
+      color: #163744;
+      font-size: 21px;
+      line-height: 1.28;
+      font-weight: 850;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-bottom: 14px;
+    }
+
+    .button {
+      min-height: 36px;
+      padding: 9px 12px;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+      color: #243244;
+      font-size: 14px;
+      font-weight: 850;
+    }
+
+    .button.primary {
+      background: #155e75;
+      border-color: #155e75;
+      color: #ffffff;
+    }
+
+    .limit-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .limit {
+      display: grid;
+      grid-template-columns: 26px minmax(0, 1fr);
+      gap: 9px;
+      color: #485568;
+      font-size: 14px;
+      line-height: 1.34;
+      font-weight: 700;
+    }
+
+    .limit-mark {
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      background: #e7edf3;
+      color: #485568;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .summary-bar {
+      padding: 14px 15px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+      gap: 14px;
+      background: #18212f;
+      color: #ffffff;
+      font-size: 14px;
+      line-height: 1.35;
+      font-weight: 780;
+    }
+
+    .summary-bar span:last-child {
+      color: #cbd5e1;
+    }
+
+    @media (max-width: 860px) {
+      .page {
+        padding: 14px;
+        grid-template-columns: 1fr;
+      }
+
+      .screen {
+        padding: 16px;
+      }
+
+      .header,
+      .summary-bar {
+        grid-template-columns: 1fr;
+        display: grid;
+      }
+
+      .status {
+        text-align: left;
+      }
+
+      .content {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      .field {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page" aria-label="Mock conceptual AD Voz Electricistas">
+    <aside class="panel">
+      <div class="brand">
+        <div class="brand-mark">AD</div>
+        <div class="brand-name">Voz Electricistas</div>
+      </div>
+
+      <div class="tag">Mock conceptual con datos ficticios</div>
+
+      <section class="voice-card" aria-label="Dictado simulado">
+        <p class="section-label">Dictado simulado</p>
+        <div class="wave" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <p class="dictation">"Obra Cocina Norte: cambiado diferencial, usado cable y dos automaticos, pendiente revisar presupuesto."</p>
+      </section>
+
+      <section>
+        <p class="section-label">Comparador actual</p>
+        <div class="side-list">
+          <div class="side-item">WhatsApp escrito, agenda y revision posterior en ordenador.</div>
+          <div class="side-item">Riesgo a validar: que esto ahorre tiempo real y no solo ordene mejor.</div>
+          <div class="side-item">Sin voz real, sin clientes reales y sin automatizaciones en este mock.</div>
+        </div>
+      </section>
+    </aside>
+
+    <section class="screen">
+      <header class="header">
+        <div>
+          <h1>Ficha revisable desde un dictado de obra</h1>
+          <div class="subtitle">Una nota de voz simulada se convierte en campos claros para revisar despues, preparar una accion manual y copiar un resumen si sirve.</div>
+        </div>
+        <div class="status">
+          <strong>Estado: revisar</strong>
+          <span>No es una app operativa</span>
+        </div>
+      </header>
+
+      <div class="notice">No factura, no cobra, no envia WhatsApps y no automatiza gestiones. Solo convierte un dictado en una ficha revisable para ahorrar tiempo al ordenar despues.</div>
+
+      <div class="content">
+        <article class="card">
+          <h2>Ficha generada</h2>
+          <div class="fields">
+            <div class="field">
+              <div class="key">Tipo</div>
+              <div class="value">Trabajo + material + presupuesto pendiente</div>
+            </div>
+            <div class="field">
+              <div class="key">Obra / alias</div>
+              <div class="value">Cocina Norte</div>
+            </div>
+            <div class="field">
+              <div class="key">Trabajo hecho</div>
+              <div class="value">Cambiado diferencial y revisado cuadro basico.</div>
+            </div>
+            <div class="field">
+              <div class="key">Material usado</div>
+              <div class="value">
+                <div class="chips">
+                  <span class="chip">Cable</span>
+                  <span class="chip">2 automaticos</span>
+                  <span class="chip">Diferencial</span>
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <div class="key">Pendiente</div>
+              <div class="value">Revisar presupuesto antes de cerrar administracion.</div>
+            </div>
+            <div class="field">
+              <div class="key">Siguiente accion</div>
+              <div class="value">Revisar ficha y decidir manualmente si copiar resumen o preparar presupuesto.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card manual">
+          <h2>Salida manual</h2>
+          <p class="manual-copy">Trabajo en Cocina Norte: diferencial cambiado, cable y dos automaticos usados. Revisar presupuesto pendiente.</p>
+          <div class="button-row" aria-label="Botones no funcionales">
+            <div class="button primary">Copiar resumen</div>
+            <div class="button">Marcar revisado</div>
+            <div class="button">Editar ficha</div>
+          </div>
+          <div class="limit-list">
+            <div class="limit"><div class="limit-mark">!</div><div>Botones no funcionales: solo representan acciones manuales futuras.</div></div>
+            <div class="limit"><div class="limit-mark">!</div><div>El valor a comprobar es ahorro real frente a WhatsApp + agenda + ordenador.</div></div>
+            <div class="limit"><div class="limit-mark">!</div><div>Si solo parece organizacion bonita, el enfoque no queda validado.</div></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Lo que prepara</h2>
+          <div class="limit-list">
+            <div class="limit"><div class="limit-mark">1</div><div>Captura una nota ficticia de obra como texto revisable.</div></div>
+            <div class="limit"><div class="limit-mark">2</div><div>Separa trabajo realizado, material usado y pendiente administrativo.</div></div>
+            <div class="limit"><div class="limit-mark">3</div><div>Deja una siguiente accion manual antes de ordenar en ordenador.</div></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Lo que no hace</h2>
+          <div class="limit-list">
+            <div class="limit"><div class="limit-mark">x</div><div>No usa audio real ni datos reales de clientes.</div></div>
+            <div class="limit"><div class="limit-mark">x</div><div>No crea facturas, cobros, mensajes, agenda ni gestoria.</div></div>
+            <div class="limit"><div class="limit-mark">x</div><div>No autoriza build, piloto, pricing, produccion ni integraciones.</div></div>
+          </div>
+        </article>
+      </div>
+
+      <footer class="summary-bar">
+        <span>La duda a resolver: esto te ahorra tiempo real o solo te lo deja mas organizado?</span>
+        <span>Uso externo pendiente de aprobacion expresa de Salva sobre el material exacto.</span>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
