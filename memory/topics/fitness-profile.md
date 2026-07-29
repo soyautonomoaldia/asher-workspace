@@ -20,9 +20,9 @@
 - Mobile-first dashboard source: `/home/salamirin/.openclaw/workspace/salva_notion_import/Asesor Fitness - Salva Dashboard Movil.md`
 - API runner: `/home/salamirin/.openclaw/workspace/salva_notion_import/scripts/run_notion_fitness_dashboard.sh`
 - Private Notion env: `/home/salamirin/.openclaw/private/notion-fitness.env`
-- Current weekly routine source: `/home/salamirin/.openclaw/workspace/fitness-advisor/notion/Rutina Fitness Salva - Semana 2026-07-21.md`
-- Current weekly routine Notion import ZIP: `/home/salamirin/.openclaw/workspace/fitness-advisor/dist/rutina-fitness-salva-semana-2026-07-21-notion.zip`
-- Current weekly routine Notion page: `https://app.notion.com/p/Rutina-Fitness-Salva-Semana-2026-07-21-3a3c4abf41a781f4ad0cec7f1a51bf31`
+- Current weekly routine source: `/home/salamirin/.openclaw/workspace/fitness-advisor/notion/Rutina Fitness Salva - Semana 2026-07-27.md`
+- Current weekly routine Notion import ZIP: `/home/salamirin/.openclaw/workspace/fitness-advisor/dist/rutina-fitness-salva-semana-2026-07-27-notion.zip`
+- Current weekly routine Notion page: `https://app.notion.com/p/Rutina-Fitness-Salva-Semana-3-2026-07-27-3a9c4abf41a781ea9adde9c9b5a0d836`
 
 ## Operating Preferences
 
@@ -31,6 +31,7 @@
 - Keep messages short, concrete and action-oriented.
 - Avoid motivational fluff. Use practical nudges, simple choices and honest course correction.
 - Do not create noise: reminders should have a clear action and a low failure cost.
+- Weekly routine pages must keep the same structure as the first S1 routine: ficha visual, checklist semanal, registro diario table, decision final, week table, quick exercise links, flexible dinners, shopping list and eating-out rules. Add safety/supplementation only as a final extra block, not by changing the main layout.
 - Supplement advice should be conservative: list what something is usually used for, possible usefulness, risk signals and what to confirm before use. Do not give medical dosing or treatment instructions.
 
 ## Current Baseline Plan

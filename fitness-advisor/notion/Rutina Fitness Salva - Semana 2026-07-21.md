@@ -1,173 +1,134 @@
-# Rutina Fitness Salva - Semana 2026-07-21
+# Rutina Fitness Salva - Semana 2 - 2026-07-21
 
-Objetivo de la semana: aumentar carga de tronco superior, construir fondo fisico con cardio en exterior o casa, mantener control de cenas y usar suplementacion solo con criterio seguro.
+Fase 0: perdida de peso, habito y seguridad.  
+Material: eliptica, mancuernas ajustables, kettlebell 6 kg, esterilla, rodillo, cuerda y banco/aparato abdominal.
 
-> Seguridad: antes de entrenar revisa pierna izquierda: color, hinchazon, pinchazos, dolor y calor local. Si empeora, cambia la sesion por movilidad suave, paseo tranquilo o descanso. No es semana para heroicidades.
+> Prioridad medica: con deficit de proteina C, pierna izquierda con coloracion, hinchazon y pinchazos, este plan evita alta intensidad. Si aparece dolor fuerte, calor local, aumento claro de hinchazon/color, falta de aire, dolor toracico, mareo importante o sensacion rara repentina: parar y valorar ayuda medica.
 
-## Hoy
+## Ficha visual
 
-- [ ] Revisar pierna izquierda: color, hinchazon, pinchazos, dolor y calor local.
-- [ ] Elegir sesion del dia o fallback.
-- [ ] Entrenar en esfuerzo 4-6/10, maximo 7/10.
-- [ ] No aguantar la respiracion.
-- [ ] Cumplir cena objetivo.
-- [ ] Registrar si hay suplemento nuevo, efecto raro o duda.
+Sin ficha visual nueva esta semana. Usar esta pagina como fuente principal.
 
-## Resumen Semanal
+## Checklist semanal
 
-| Dia | Sesion | Duracion | Objetivo |
-|---|---:|---:|---|
-| Martes | Superior A + cardio suave | 60 min | Empuje/tiron base y activacion cardiovascular |
-| Miercoles | Cardio zona 2 exterior/casa | 60 min | Fondo fisico sin impacto |
-| Jueves | Superior B + core | 60 min | Espalda, hombro, brazos y control |
-| Viernes | Descanso activo | 30-45 min | Recuperar sin perder ritmo |
-| Sabado | Superior C + cardio corto | 60 min | Volumen de tronco superior |
-| Domingo | Cardio suave + movilidad | 60 min | Base aerobica y descarga |
+- [ ] 3 sesiones de fuerza superior completadas o adaptadas.
+- [ ] 2 sesiones de cardio base completadas o adaptadas.
+- [ ] 5 cenas controladas.
+- [ ] Peso 3 mananas y calcular media, si es posible.
+- [ ] Cintura 1 vez, si es posible.
+- [ ] Pierna izquierda revisada a diario.
 
-## Sesiones Detalladas
+## Registro diario
 
-### Martes - Superior A + Fondo
+| Dia | Entreno | Comida y cena | Pierna izquierda | Notas rapidas |
+|---|---|---|---|---|
+| Lunes | [ ] Hecho [ ] Adaptado [ ] No hecho | [ ] Desayuno fuera controlado [ ] Comida fuera controlada [ ] Cena en casa controlada | [ ] Sin empeorar [ ] Mas hinchazon/color [ ] Pinchazos/dolor |  |
+| Martes | [ ] Hecho [ ] Adaptado [ ] No hecho | [ ] Desayuno fuera controlado [ ] Comida fuera controlada [ ] Cena en casa controlada | [ ] Sin empeorar [ ] Mas hinchazon/color [ ] Pinchazos/dolor |  |
+| Miercoles | [ ] Hecho [ ] Adaptado [ ] No hecho | [ ] Desayuno fuera controlado [ ] Comida fuera controlada [ ] Cena en casa controlada | [ ] Sin empeorar [ ] Mas hinchazon/color [ ] Pinchazos/dolor |  |
+| Jueves | [ ] Hecho [ ] Adaptado [ ] No hecho | [ ] Desayuno fuera controlado [ ] Comida fuera controlada [ ] Cena en casa controlada | [ ] Sin empeorar [ ] Mas hinchazon/color [ ] Pinchazos/dolor |  |
+| Viernes | [ ] Hecho [ ] Adaptado [ ] No hecho | [ ] Desayuno fuera controlado [ ] Comida fuera controlada [ ] Cena en casa controlada | [ ] Sin empeorar [ ] Mas hinchazon/color [ ] Pinchazos/dolor |  |
+| Sabado | [ ] Hecho [ ] Adaptado [ ] No hecho | [ ] Desayuno fuera controlado [ ] Comida fuera controlada [ ] Cena en casa controlada | [ ] Sin empeorar [ ] Mas hinchazon/color [ ] Pinchazos/dolor |  |
+| Domingo | [ ] Hecho [ ] Adaptado [ ] No hecho | [ ] Desayuno fuera controlado [ ] Comida fuera controlada [ ] Cena en casa controlada | [ ] Sin empeorar [ ] Mas hinchazon/color [ ] Pinchazos/dolor |  |
 
-**Calentamiento, 10 min**
+## Decision al final de la semana
 
-- Eliptica suave o caminata.
-- Movilidad de hombros, cuello suave y columna toracica.
+Marca una sola opcion:
 
-**Fuerza, 35 min**
+- [ ] Repetir semana: si hubo 0-2 entrenos o mucha desorganizacion.
+- [ ] Mantener y pulir: si hubo 3-4 entrenos pero cenas/comidas fuera irregulares.
+- [ ] Progresar suave: solo si hubo buena adherencia y la pierna no empeoro.
 
-- [Press en suelo con mancuernas](https://www.youtube.com/results?search_query=press+suelo+mancuernas+tecnica): 3 x 10-12.
-- [Remo apoyado con mancuerna](https://www.youtube.com/results?search_query=remo+con+mancuerna+apoyado+tecnica): 3 x 10-12 por lado.
-- [Press hombro sentado con mancuernas](https://www.youtube.com/results?search_query=press+hombro+sentado+mancuernas+tecnica): 3 x 8-10.
-- [Curl biceps con mancuernas](https://www.youtube.com/results?search_query=curl+biceps+mancuernas+tecnica): 2 x 12.
-- [Extension triceps apoyado](https://www.youtube.com/results?search_query=extension+triceps+mancuerna+apoyado+tecnica): 2 x 12 por lado.
+## Semana 2
 
-**Cardio y cierre, 15 min**
+| Dia | Sesion | Duracion | Notas |
+|---|---|---:|---|
+| Martes | Superior A + cardio suave | 60 min | Empuje/tiron base y activacion cardiovascular. |
+| Miercoles | Cardio zona 2 exterior/casa | 60 min | Fondo fisico sin impacto. Puedes hablar, pero no cantar. |
+| Jueves | Superior B + core | 60 min | Espalda, hombro, brazos y control. |
+| Viernes | Descanso activo | 30-45 min | Recuperar sin perder ritmo. |
+| Sabado | Superior C + cardio corto | 60 min | Volumen de tronco superior, sin apneas. |
+| Domingo | Cardio suave + movilidad | 60 min | Base aerobica y descarga. |
 
-- 10 min eliptica o caminata rapida suave.
-- 5 min movilidad hombros/espalda.
+## Enlaces rapidos de ejercicios
 
-### Miercoles - Cardio Base
+- [Press en suelo con mancuernas](https://www.youtube.com/results?search_query=press+suelo+mancuernas+tecnica)
+- [Remo con mancuerna apoyado](https://www.youtube.com/results?search_query=remo+con+mancuerna+apoyado+tecnica)
+- [Press de hombro sentado](https://www.youtube.com/results?search_query=press+hombro+sentado+mancuernas+tecnica)
+- [Curl biceps con mancuernas](https://www.youtube.com/results?search_query=curl+biceps+mancuernas+tecnica)
+- [Extension de triceps apoyado](https://www.youtube.com/results?search_query=extension+triceps+mancuerna+apoyado+tecnica)
+- [Elevaciones laterales con mancuernas](https://www.youtube.com/results?search_query=elevaciones+laterales+mancuernas+tecnica)
+- [Curl martillo](https://www.youtube.com/results?search_query=curl+martillo+mancuernas+tecnica)
+- [Dead bug](https://www.youtube.com/results?search_query=dead+bug+ejercicio+tecnica+espa%C3%B1ol)
+- [Cardio zona 2 caminando](https://www.youtube.com/results?search_query=cardio+zona+2+caminar+explicacion)
+- [Movilidad general suave](https://www.youtube.com/results?search_query=movilidad+general+suave+principiantes)
 
-**Opcion exterior**
+## Detalle de sesiones
 
-- 50 min caminata rapida zona 2. Puedes hablar, pero no cantar.
-- 10 min movilidad suave.
+### Martes - Superior A + cardio suave
 
-**Opcion casa**
+- 10 min: eliptica suave o caminata.
+- Press suelo con mancuernas: 3 x 10-12.
+- Remo apoyado: 3 x 10-12 por lado.
+- Press hombro sentado: 3 x 8-10.
+- Curl biceps: 2 x 12.
+- Extension triceps apoyado: 2 x 12 por lado.
+- 10 min: eliptica o caminata rapida suave.
+- 5 min: movilidad hombros/espalda.
 
-- 40 min eliptica suave-moderada.
-- 10 min movilidad.
-- 10 min respiracion/cooldown.
+### Miercoles - Cardio zona 2 exterior/casa
 
-Enlaces utiles:
+- Exterior: 50 min caminata rapida zona 2 + 10 min movilidad suave.
+- Casa: 40 min eliptica suave-moderada + 10 min movilidad + 10 min respiracion/cooldown.
 
-- [Caminar en zona 2 explicado](https://www.youtube.com/results?search_query=cardio+zona+2+caminar+explicacion)
-- [Movilidad suave de cadera y espalda](https://www.youtube.com/results?search_query=movilidad+suave+cadera+espalda)
+### Jueves - Superior B + core
 
-### Jueves - Superior B + Core
+- 10 min calentamiento suave.
+- Remo apoyado: 4 x 10.
+- Press suelo: 3 x 8-10.
+- Elevaciones laterales ligeras: 2 x 12-15.
+- Curl martillo: 3 x 10-12.
+- Triceps apoyado o por encima, ligero: 2 x 10-12.
+- Dead bug: 3 x 6-8 por lado.
+- 10 min movilidad y descarga.
 
-**Calentamiento, 10 min**
-
-- Eliptica o caminar suave.
-- Movilidad hombros/escapulas.
-
-**Fuerza, 40 min**
-
-- [Remo apoyado con mancuerna](https://www.youtube.com/results?search_query=remo+con+mancuerna+apoyado+tecnica): 4 x 10.
-- [Press en suelo con mancuernas](https://www.youtube.com/results?search_query=press+suelo+mancuernas+tecnica): 3 x 8-10.
-- [Elevaciones laterales con mancuernas](https://www.youtube.com/results?search_query=elevaciones+laterales+mancuernas+tecnica): 2 x 12-15.
-- [Curl martillo](https://www.youtube.com/results?search_query=curl+martillo+mancuernas+tecnica): 3 x 10-12.
-- [Extension de triceps con mancuerna](https://www.youtube.com/results?search_query=extension+triceps+mancuerna+tecnica): 2 x 10-12.
-- [Dead bug](https://www.youtube.com/results?search_query=dead+bug+ejercicio+tecnica+espa%C3%B1ol): 3 x 6-8 por lado.
-
-**Cierre, 10 min**
-
-- Movilidad suave y descarga.
-
-### Viernes - Descanso Activo
+### Viernes - Descanso activo
 
 - 30-45 min paseo suave si la pierna esta estable.
 - 10 min movilidad.
 - Si hay fatiga alta o pierna rara: descanso total.
 
-Enlace util:
+### Sabado - Superior C + cardio corto
 
-- [Movilidad general suave](https://www.youtube.com/results?search_query=movilidad+general+suave+principiantes)
-
-### Sabado - Superior C + Cardio Corto
-
-**Calentamiento, 10 min**
-
-- Eliptica suave o caminar.
-
-**Circuito superior, 30 min**
-
-Hacer 3 rondas tranquilas:
-
-- [Press suelo con mancuernas](https://www.youtube.com/results?search_query=press+suelo+mancuernas+tecnica): 10 reps.
-- [Remo apoyado con mancuerna](https://www.youtube.com/results?search_query=remo+con+mancuerna+apoyado+tecnica): 10 por lado.
-- [Press hombro sentado](https://www.youtube.com/results?search_query=press+hombro+sentado+mancuernas+tecnica): 8-10 reps.
-- [Curl biceps](https://www.youtube.com/results?search_query=curl+biceps+mancuernas+tecnica): 12 reps.
-- [Triceps apoyado](https://www.youtube.com/results?search_query=extension+triceps+mancuerna+apoyado+tecnica): 12 por lado.
-
-Descanso 60-90 segundos entre ejercicios si hace falta.
-
-**Cardio y cierre, 20 min**
-
+- 10 min calentamiento.
+- Circuito superior, 3 rondas tranquilas:
+  - Press suelo: 10 reps.
+  - Remo apoyado: 10 por lado.
+  - Press hombro sentado: 8-10.
+  - Curl biceps: 12.
+  - Triceps apoyado: 12 por lado.
+- Descanso 60-90 segundos entre ejercicios si hace falta.
 - 15 min eliptica o caminata ligera.
 - 5 min movilidad.
 
-### Domingo - Fondo Suave + Revision
+### Domingo - Cardio suave + movilidad
 
 - 45-50 min caminata exterior o eliptica zona 2.
 - 10-15 min movilidad: espalda, cadera, tobillos y respiracion.
-- Revision semanal: entrenos, cenas, pierna, peso/cintura si existe, suplementacion.
+- Cerrar registro semanal y elegir decision.
 
-## Checklist Semanal
+## Cenas flexibles
 
-- [ ] 3 sesiones de fuerza superior completadas o adaptadas.
-- [ ] 2 sesiones de cardio base completadas o adaptadas.
-- [ ] Pierna izquierda sin empeorar.
-- [ ] 5 cenas controladas.
-- [ ] 3 mananas de peso registradas, si es posible.
-- [ ] 1 medicion de cintura, si es posible.
-- [ ] Decision domingo: repetir, mantener y pulir, o progresar suave.
+| Hambre | Cena | Paso a paso | Compra |
+|---|---|---|---|
+| Ligera | Tortilla de 2-3 huevos con calabacin/pimiento + yogur proteico | Saltea verdura 6-8 min, anade huevo batido, cuaja lento. Yogur al final si falta proteina. | Huevos, calabacin, pimiento, skyr o queso fresco batido. |
+| Ligera | Merluza con menestra | Plancha u horno para la merluza. Menestra congelada salteada con ajo y aceite medido. | Merluza congelada, menestra, ajo, aceite de oliva. |
+| Media | Pollo con patata y verduras | Patata cocida o microondas. Pollo a la plancha. Verdura salteada. Junta y condimenta. | Pechuga pollo, patata, brocoli/calabacin/pimiento. |
+| Media | Bowl de arroz, pavo y verduras | Arroz cocido, pavo a la plancha, verduras salteadas. Salsa de yogur/limon si apetece. | Arroz, pavo, verduras congeladas o frescas, yogur natural. |
+| Media | Lentejas con verduras y huevo | Usa bote de lentejas lavadas. Saltea verduras, anade lentejas y corona con huevo cocido o plancha. | Lentejas cocidas, huevos, zanahoria, pimiento, tomate. |
+| Alta | Carne magra con patata y verduras | Carne magra a la plancha, patata cocida/asada, verduras. Controla aceite. | Ternera magra o carne picada 90%+, patata, verduras. |
+| Alta | Garbanzos salteados con atun y verduras | Lava garbanzos, saltea con verduras, anade atun al final. Es rapido y saciante. | Garbanzos cocidos, atun, calabacin/pimiento/tomate. |
 
-## Comidas Y Cenas De La Semana
-
-Regla simple: cada comida principal debe tener proteina clara, verdura o legumbre, y un hidrato ajustado al hambre/actividad.
-
-### Desayunos
-
-| Situacion | Opcion |
-|---|---|
-| En casa | Yogur griego/skyr + avena + fruta |
-| En casa | Tortilla 2-3 huevos + pan integral + tomate |
-| Con clientes | Cafe + tostada integral con tomate y jamon, atun o tortilla |
-| Prisa | Batido de proteina o yogur alto en proteina + fruta |
-
-### Comidas
-
-| Tipo de dia | Opcion |
-|---|---|
-| Entreno fuerza | Pollo/pavo + arroz o patata + verduras |
-| Cardio o descanso | Pescado/atun/huevos + verduras + legumbre o patata moderada |
-| Comida fuera | Proteina clara + verdura sin lechuga como base + un hidrato |
-| Mucha hambre | Lentejas o garbanzos con proteina extra y verduras |
-
-### Cenas
-
-| Hambre | Cena | Notas |
-|---|---|---|
-| Ligera | Tortilla 2-3 huevos con calabacin/pimiento + yogur proteico | Rapida y saciante |
-| Ligera | Merluza con menestra | Muy buena para cerrar el dia |
-| Media | Pollo con patata y verduras | Buena tras fuerza |
-| Media | Bowl de arroz, pavo y verduras | Controlar cantidad de arroz |
-| Media | Lentejas con verduras y huevo | Practica y barata |
-| Alta | Carne magra con patata y verduras | Usar si hay hambre real |
-| Alta | Garbanzos salteados con atun y verduras | Saciante, sin complicacion |
-
-## Lista De Compra
+## Lista de compra base
 
 ### Proteinas
 
@@ -179,7 +140,7 @@ Regla simple: cada comida principal debe tener proteina clara, verdura o legumbr
 - Carne magra o picada 90%+: 400-600 g.
 - Proteina en polvo solo si ya la usas o si ayuda a llegar a proteina sin desplazar comida real.
 
-### Hidratos Y Saciedad
+### Hidratos y saciedad
 
 - Patatas: 2-3 kg.
 - Arroz: 1 paquete.
@@ -189,7 +150,7 @@ Regla simple: cada comida principal debe tener proteina clara, verdura o legumbr
 - Pan integral si desayunas en casa algun dia.
 - Fruta facil: platanos, manzanas o frutos rojos.
 
-### Verduras Sin Depender De Lechuga
+### Verduras sin lechuga
 
 - Verdura congelada/menestra: 2-3 bolsas.
 - Calabacin: 3-4 unidades.
@@ -198,52 +159,36 @@ Regla simple: cada comida principal debe tener proteina clara, verdura o legumbr
 - Tomate: 1-1,5 kg.
 - Zanahoria/cebolla/ajo para base.
 
-### Extras Utiles
+### Fruta y extras
 
+- Manzanas/naranjas: 6-8 piezas.
+- Platanos: 4-6 piezas.
+- Frutos rojos congelados si encaja presupuesto.
 - Aceite de oliva.
-- Especias: pimenton, curry, ajo, pimienta.
-- Caldo bajo en sal si ayuda a cocinar legumbres/verduras.
-- Cafe/infusiones si ayudan a cerrar cenas sin picoteo.
+- Frutos secos, bolsa pequena, racion medida.
+- Especias: pimenton, curry, pimienta, oregano.
 
-## Suplementacion Segura
+## Reglas para comer fuera
 
-Los suplementos son opcionales. Primero comida, entrenamiento, descanso e hidratacion.
+### Desayuno con clientes
 
-### Checklist
+- Cafe + tostada integral con tomate y jamon, atun o tortilla.
+- Si hay yogur/skyr + fruta, buena opcion.
+- Evita rutina de bolleria, zumo y bocadillo enorme.
+- Regla: proteina primero, dulce solo ocasional.
+
+### Comida con clientes
+
+- Proteina clara: pollo, pescado, ternera magra, huevos, marisco o legumbre.
+- Verdura sin lechuga: parrillada, tomate, menestra, crema, gazpacho.
+- Un hidrato: patata, arroz, pan, pasta o legumbre. No todos a la vez.
+- Postre: fruta o cafe.
+- Alcohol: mejor agua; si toca vino, una copa.
+
+## Suplementacion segura
 
 - [ ] Lista actualizada de lo que tomas: suplemento, dosis si la sabes, marca, motivo y fecha de inicio.
 - [ ] No anadir nada nuevo sin revisar objetivo, utilidad probable, riesgos y confirmacion necesaria.
 - [ ] No probar varios suplementos nuevos a la vez.
 - [ ] Vigilar moratones inusuales, sangrado, sangrado nasal, heces negras, dolor de cabeza fuerte, mareo, palpitaciones, alergia, molestias gastrointestinales o empeoramiento de pierna.
 - [ ] Cuidado especial con productos asociados a coagulacion, circulacion o "blood flow": vitamina K, omega-3 alto, curcuma/curcumina, ginkgo, extracto de ajo, nattokinase, vitamina E alta o mezclas vasculares.
-
-### Formato Para Evaluar Propuestas
-
-| Propuesta | Para que sirve | Utilidad probable | Senales de riesgo | Confirmar antes |
-|---|---|---|---|---|
-| Proteina en polvo | Ayudar a llegar a proteina diaria si no llegas con comida | Media/alta si hay deficit real de proteina | Digestivo, alergias/intolerancias, exceso si desplaza comida real | Objetivo de proteina y tolerancia |
-| Creatina | Fuerza, masa muscular y rendimiento en esfuerzos repetidos | Media/alta para fuerza, si no hay contraindicaciones | Molestias digestivas, retencion de agua percibida; revisar si hay enfermedad renal | Medico/farmaceutico si hay patologia renal o medicacion relevante |
-| Vitamina D | Corregir deficit si analitica lo muestra | Alta si hay deficit; baja si no lo hay | Exceso por megadosis, calcio alto, sintomas digestivos o debilidad | Analitica y pauta sanitaria |
-| Magnesio | Calambres/sueno en algunas personas, si hay deficit o baja ingesta | Media/baja segun contexto | Diarrea, interacciones con algunos farmacos | Medicacion y tolerancia digestiva |
-| Omega-3 | Salud cardiovascular general si baja ingesta de pescado | Media; no imprescindible si comes pescado azul | Cuidado por posible efecto sobre sangrado en dosis altas | Medico/farmaceutico por contexto de coagulacion |
-
-No tomar la tabla como orden de compra. Es una lista de evaluacion prudente.
-
-## Seguimiento Diario
-
-| Dia | Entreno | Cena | Pierna | Suplementos | Notas |
-|---|---|---|---|---|---|
-| Martes | [ ] Hecho [ ] Adaptado [ ] No hecho | [ ] Controlada [ ] Mejorable | [ ] Sin empeorar [ ] Empeora | [ ] Sin cambios [ ] Revisar |  |
-| Miercoles | [ ] Hecho [ ] Adaptado [ ] No hecho | [ ] Controlada [ ] Mejorable | [ ] Sin empeorar [ ] Empeora | [ ] Sin cambios [ ] Revisar |  |
-| Jueves | [ ] Hecho [ ] Adaptado [ ] No hecho | [ ] Controlada [ ] Mejorable | [ ] Sin empeorar [ ] Empeora | [ ] Sin cambios [ ] Revisar |  |
-| Viernes | [ ] Hecho [ ] Adaptado [ ] No hecho | [ ] Controlada [ ] Mejorable | [ ] Sin empeorar [ ] Empeora | [ ] Sin cambios [ ] Revisar |  |
-| Sabado | [ ] Hecho [ ] Adaptado [ ] No hecho | [ ] Controlada [ ] Mejorable | [ ] Sin empeorar [ ] Empeora | [ ] Sin cambios [ ] Revisar |  |
-| Domingo | [ ] Hecho [ ] Adaptado [ ] No hecho | [ ] Controlada [ ] Mejorable | [ ] Sin empeorar [ ] Empeora | [ ] Sin cambios [ ] Revisar |  |
-
-## Decision Del Domingo
-
-Marca una:
-
-- [ ] Repetir: si hubo 0-2 entrenos, semana caotica o pierna peor.
-- [ ] Mantener y pulir: si hubo 3-4 entrenos pero comida/cenas irregulares.
-- [ ] Progresar suave: solo si hubo buena adherencia y la pierna no empeoro.

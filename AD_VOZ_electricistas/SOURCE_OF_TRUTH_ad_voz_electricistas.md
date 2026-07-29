@@ -438,3 +438,28 @@ Siguiente accion:
 - reintentar Mercury cuando runtime lo permita;
 - consolidar Semana 1 para decision de Salva;
 - trasladar a Trello cuando exista conector operativo visible.
+
+## Consolidado parcial Semana 1 2026-07-28
+
+Gael crea:
+
+- `CONSOLIDADO_PARCIAL_SEMANA_1_AD_VOZ_2026_07_28.md`
+
+Estado:
+
+- Producto/Asirin entregado: `ASIRIN_ALCANCE_V1_PRODUCTO_AD_VOZ_2026_07_28.md`, veredicto aprobado con condiciones;
+- UX/Irinas entregado: `IRINAS_CRITERIOS_UX_UI_V1_AD_VOZ_2026_07_28.md`;
+- Tecnico/Nathan entregado tras reintento: `NATHAN_ARQUITECTURA_MODELO_DATOS_V1_AD_VOZ_2026_07_28.md`, veredicto aprobado con condiciones;
+- Growth/Mercury pendiente por bloqueo tecnico: dos intentos con `gateway timeout` y un reintento posterior aceptado por OpenClaw pero sin archivo creado en la ventana corta de control; falta `MERCURY_ADOPCION_PREGUNTAS_FAMILIAR_V1_AD_VOZ_2026_07_28.md`.
+
+Decision operativa:
+
+- Semana 1 queda parcialmente avanzada, no cerrada, por falta de Mercury/adopcion y gate de Salva;
+- no se permite build, prototipo operativo, piloto, datos reales, audios reales, OCR real, facturacion, cobros, WhatsApp real, agenda real, automatizaciones, produccion ni uso con familiar;
+- alcance V1 y preguntas al familiar pueden prepararse como borrador para gate de Salva, pero no como cierre validado por todo el equipo.
+
+Siguiente accion:
+
+- reintentar coordinacion con Growth/Mercury;
+- preparar borrador de gate de Salva con alcance V1, preguntas al familiar y nota de que Mercury/adopcion sigue pendiente;
+- si el runtime sigue bloqueado, registrar bloqueo tecnico exacto y cerrar Semana 1 como parcial sin desbloquear build.
